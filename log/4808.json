@@ -1,0 +1,1954 @@
+{
+  "id": 4808,
+  "dialogue_code": "dialogue_4808sXmj",
+  "status_code": 2,
+  "user": [
+    25,
+    215
+  ],
+  "username": [
+    "operator_0025tpXO",
+    "customer_0215OCMG"
+  ],
+  "task": 5078,
+  "task_name": "main2_2058",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "大阪",
+          "pricerange": "普通",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "name",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 2,
+          "day": "4/7",
+          "stay": 3
+        },
+        "book": {
+          "people": 1,
+          "day": "4/7",
+          "stay": 3
+        }
+      },
+      "attraction": {
+        "info": {
+          "city": "大阪",
+          "wifi": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "priceinfo"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "大阪",
+          "cashless": "対応"
+        },
+        "info": {
+          "city": "大阪",
+          "cashless": "dontcare"
+        },
+        "reqt": [
+          "jumbo",
+          "reference"
+        ],
+        "book": {
+          "day": "4/7",
+          "time": "12:40",
+          "departurepoint": "hotel",
+          "arrivalpoint": "attraction"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．予算は<b style='color:blue;'>普通</b>が希望です．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>4/7</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>1</b>に変更します．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称，料金情報</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "希望に合うところが見つからない場合は，キャッシュレス払いの可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>ジャンボタクシー対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>4/7</b>です．時間は<b style='color:blue;'>12:40</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "priceinfo",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "jumbo",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "attraction",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪へ旅行予定なのですが、予算が普通くらいのレストランがある宿泊施設を探してください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 16:15:52"
+    },
+    {
+      "role": 0,
+      "content": "大阪で、予算が普通のレストランがある宿泊施設は、大阪マリオット都ホテルです。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "大阪マリオット都ホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669824963640,
+          "selectedResults": [
+            "大阪マリオット都ホテル"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 16:16:35",
+      "book": {
+        "hotel": {
+          "name": "大阪マリオット都ホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。2人で4/7から3泊の予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪マリオット都ホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 16:16:59"
+    },
+    {
+      "role": 0,
+      "content": "その条件だと予約に失敗してしまいました。少し条件を変更していただけないでしょうか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "大阪マリオット都ホテル",
+              "value": {
+                "people": "2",
+                "day": [
+                  4,
+                  7
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1669825030913,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 16:17:17",
+      "book": {
+        "hotel": {
+          "name": "大阪マリオット都ホテル",
+          "value": {
+            "people": "2",
+            "day": [
+              4,
+              7
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1669825030913,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "であれば1人に人数を変更してください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪マリオット都ホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 16:17:35"
+    },
+    {
+      "role": 0,
+      "content": "予約成功しました。予約番号は88646です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "大阪マリオット都ホテル",
+              "value": {
+                "people": "1",
+                "day": [
+                  4,
+                  7
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1669825059284,
+              "success": true,
+              "ref": "88646"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 16:17:49",
+      "book": {
+        "hotel": {
+          "name": "大阪マリオット都ホテル",
+          "value": {
+            "people": "1",
+            "day": [
+              4,
+              7
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1669825059284,
+          "success": true,
+          "ref": "88646"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、Wi-Fiが無料で使える観光名所も調べてほしいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪マリオット都ホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88646",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 16:18:08"
+    },
+    {
+      "role": 0,
+      "content": "大阪には、WiFi無料の観光名所は１９件ありますが、大阪城天守閣をお勧めします。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669825098936,
+          "selectedResults": [
+            "大阪城天守閣"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 16:18:59",
+      "book": {
+        "hotel": {
+          "name": "大阪マリオット都ホテル",
+          "value": {
+            "people": "1",
+            "day": [
+              4,
+              7
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。料金情報を知りたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪マリオット都ホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88646",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "大阪城天守閣",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 16:19:16"
+    },
+    {
+      "role": 0,
+      "content": "中学生以下は無料、大人は６００円です。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 16:19:35",
+      "book": {
+        "hotel": {
+          "name": "大阪マリオット都ホテル",
+          "value": {
+            "people": "1",
+            "day": [
+              4,
+              7
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。最後に、キャッシュレス払いできるタクシー会社を探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪マリオット都ホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88646",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "大阪城天守閣",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "中学生以下は無料、大人は６００円",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 16:20:03"
+    },
+    {
+      "role": 0,
+      "content": "大阪にはキャッシュレス対応のタクシーがなさそうです。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [],
+          "timestamp": 1669825211061
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 16:20:27",
+      "book": {
+        "hotel": {
+          "name": "大阪マリオット都ホテル",
+          "value": {
+            "people": "1",
+            "day": [
+              4,
+              7
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。じゃあキャッシュレス払いできなくてもいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪マリオット都ホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88646",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "大阪城天守閣",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "中学生以下は無料、大人は６００円",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 16:20:42"
+    },
+    {
+      "role": 0,
+      "content": "ならば、関西空港リムジン株式会社がおすすめです。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "関西空港リムジン株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669825244057,
+          "selectedResults": [
+            "関西空港リムジン株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 16:20:55",
+      "book": {
+        "hotel": {
+          "name": "大阪マリオット都ホテル",
+          "value": {
+            "people": "1",
+            "day": [
+              4,
+              7
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "関西空港リムジン株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。ジャンボタクシーは対応していますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪マリオット都ホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88646",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "大阪城天守閣",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "中学生以下は無料、大人は６００円",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 16:21:12"
+    },
+    {
+      "role": 0,
+      "content": "はい、対応しています。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "関西空港リムジン株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 16:21:20",
+      "book": {
+        "hotel": {
+          "name": "大阪マリオット都ホテル",
+          "value": {
+            "people": "1",
+            "day": [
+              4,
+              7
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "関西空港リムジン株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではそちらのタクシー会社で、4/7の12:40に大阪マリオット都ホテルから大阪城天守閣まで予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪マリオット都ホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88646",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "大阪城天守閣",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "中学生以下は無料、大人は６００円",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "対応あり",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 16:21:58"
+    },
+    {
+      "role": 0,
+      "content": "予約成功しました。予約番号は73029です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "関西空港リムジン株式会社",
+              "value": {
+                "day": [
+                  4,
+                  7
+                ],
+                "time": "12:40",
+                "departurepoint": "大阪マリオット都ホテル",
+                "arrivalpoint": "大阪城天守閣"
+              },
+              "timestamp": 1669825337092,
+              "success": true,
+              "ref": "73029"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 16:22:28",
+      "book": {
+        "hotel": {
+          "name": "大阪マリオット都ホテル",
+          "value": {
+            "people": "1",
+            "day": [
+              4,
+              7
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "関西空港リムジン株式会社",
+          "value": {
+            "day": [
+              4,
+              7
+            ],
+            "time": "12:40",
+            "departurepoint": "大阪マリオット都ホテル",
+            "arrivalpoint": "大阪城天守閣"
+          },
+          "timestamp": 1669825337092,
+          "success": true,
+          "ref": "73029"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪マリオット都ホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88646",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "大阪城天守閣",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "中学生以下は無料、大人は６００円",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "対応あり",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "73029",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 16:22:38"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 16:22:43"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 16:22:44"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:04",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "大阪",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "大阪マリオット都ホテル",
+      "value": {
+        "people": "1",
+        "day": [
+          4,
+          7
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "関西空港リムジン株式会社",
+      "value": {
+        "day": [
+          4,
+          7
+        ],
+        "time": "12:40",
+        "departurepoint": "大阪マリオット都ホテル",
+        "arrivalpoint": "大阪城天守閣"
+      },
+      "timestamp": 1669825337092,
+      "success": true,
+      "ref": "73029"
+    }
+  }
+}

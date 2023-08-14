@@ -1,0 +1,3135 @@
+{
+  "id": 2085,
+  "dialogue_code": "dialogue_2085DUDN",
+  "status_code": 2,
+  "user": [
+    20,
+    251
+  ],
+  "username": [
+    "operator_0020cvID",
+    "customer_0251Yuvr"
+  ],
+  "task": 2905,
+  "task_name": "fixed_85",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "札幌",
+          "station": "ロープウェイ入口停留所",
+          "withrestaurant": "有り"
+        },
+        "info": {
+          "city": "札幌",
+          "station": "dontcare",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "checkintime"
+        ]
+      },
+      "restaurant": {
+        "info": {
+          "city": "札幌",
+          "parking": "有り(無料)",
+          "area": "西区"
+        },
+        "reqt": [
+          "name",
+          "genre",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "1/25",
+          "time": "13:30"
+        }
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "札幌",
+          "parking": "有り(無料)",
+          "area": "南区",
+          "station": "新さっぽろ駅"
+        },
+        "info": {
+          "city": "札幌",
+          "parking": "有り(無料)",
+          "area": "dontcare",
+          "station": "新さっぽろ駅"
+        },
+        "reqt": [
+          "accesstime",
+          "address"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>札幌</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．最寄り駅が<b style='color:blue;'>ロープウェイ入口停留所</b>のところにしてください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，最寄り駅は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>チェックイン開始時刻</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>西区</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，ジャンル</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>1/25</b>です．時間は<b style='color:blue;'>13:30</b>です．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>南区</b>です．最寄り駅が<b style='color:blue;'>新さっぽろ駅</b>のところにしてください．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>近辺の駅からの所要時間，住所</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "checkintime",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "shopping",
+        "accesstime",
+        ""
+      ],
+      [
+        3,
+        "shopping",
+        "address",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant",
+      "shopping"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "札幌への旅行を計画しているのですが、当日の宿泊先を探しています。色々お伺いしてもよろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:10:44"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。何か他の希望の要件はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1667329850899
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:10:56",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "最寄り駅がロープウェイ入口停留所で、レストランが併設されている所ってありますかね？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:11:37"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。条件に合う宿泊施設は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "ロープウェイ入口停留所",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1667329908589
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "ロープウェイ入口停留所",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:11:57",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、最寄り駅は考慮しないので、レストランが併設されている所ってありますかね？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:12:33"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、札幌グランドホテルはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "札幌グランドホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667329965779,
+          "selectedResults": [
+            "札幌グランドホテル"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:12:56",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "良さそうですね。そちらのチェックイン開始時刻ってわかりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:13:28"
+    },
+    {
+      "role": 0,
+      "content": "はい。チェックイン開始時刻は15:00です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "札幌グランドホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:13:44",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。それと、当日食事もしたいので、飲食店についてもお伺いしたいのですがよろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:14:24"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。何か他の希望の要件はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "札幌グランドホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:14:34",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "西区で探して欲しいです。駐車場が無料だとありがたいのですが。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:15:07"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、ピカンティ 札幌琴似店はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "西区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ピカンティ 札幌琴似店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667330133893,
+          "selectedResults": [
+            "ピカンティ 札幌琴似店",
+            "ピカンティ 札幌琴似店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "西区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:15:46",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ピカンティ 札幌琴似店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらのお店はどんなジャンルの料理ですかね？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ピカンティ 札幌琴似店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:16:09"
+    },
+    {
+      "role": 0,
+      "content": "はい。ジャンルはカレー, 郷土料理になります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "西区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ピカンティ 札幌琴似店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "西区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:16:24",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ピカンティ 札幌琴似店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。出来れば、このままこちらのお店を予約したいのですが、よろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ピカンティ 札幌琴似店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "カレー・郷土料理",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:17:04"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。詳細な情報をお伺いしていいですか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "西区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ピカンティ 札幌琴似店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "西区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:17:19",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ピカンティ 札幌琴似店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。1月25日の13時30分で、人数は3人でお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ピカンティ 札幌琴似店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "カレー・郷土料理",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:17:53"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、56511です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "西区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ピカンティ 札幌琴似店",
+              "value": {
+                "people": "3",
+                "day": [
+                  1,
+                  25
+                ],
+                "time": "13:30"
+              },
+              "timestamp": 1667330289905,
+              "success": true,
+              "ref": "56511"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "西区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:18:16",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ピカンティ 札幌琴似店",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              25
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 1667330289905,
+          "success": true,
+          "ref": "56511"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！それと、当日買い物もしたいのですが、こちらについても聞いても大丈夫でしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ピカンティ 札幌琴似店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "カレー・郷土料理",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "56511",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:18:58"
+    },
+    {
+      "role": 0,
+      "content": "はい。ご案内させていただきます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "西区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ピカンティ 札幌琴似店",
+              "value": {
+                "people": "3",
+                "day": [
+                  1,
+                  25
+                ],
+                "time": "13:30"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "西区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:19:16",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ピカンティ 札幌琴似店",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              25
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "南区で、最寄り駅が新さっぽろ駅とかだと嬉しいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ピカンティ 札幌琴似店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "カレー・郷土料理",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "56511",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:19:50"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。条件に合うお買い物の店舗は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "南区",
+            "station": "新さっぽろ駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667330408950
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "西区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "南区",
+          "station": "新さっぽろ駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:20:19",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ピカンティ 札幌琴似店",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              25
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか、では、最寄り駅はそのままで、無料の駐車場がある所とかってありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ピカンティ 札幌琴似店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "カレー・郷土料理",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "56511",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:20:45"
+    },
+    {
+      "role": 0,
+      "content": "エリアは南区に指定されなくてよろしかったですか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "南区",
+            "station": "新さっぽろ駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "西区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "南区",
+          "station": "新さっぽろ駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:21:24",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ピカンティ 札幌琴似店",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              25
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。大丈夫です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ピカンティ 札幌琴似店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "カレー・郷土料理",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "56511",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:21:31"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、カテプリはいかがでしょうか？ジャンルはショッピングモールになります。エリアは厚別区です。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "新さっぽろ駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667330499273,
+          "selectedResults": [
+            "カテプリ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "西区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新さっぽろ駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:22:03",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ピカンティ 札幌琴似店",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              25
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらで大丈夫です。そちらの住所をお伺いしてもよろしいですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ピカンティ 札幌琴似店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "カレー・郷土料理",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "56511",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:22:29"
+    },
+    {
+      "role": 0,
+      "content": "はい。住所は北海道札幌市厚別区厚別中央2条5丁目7番です。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "新さっぽろ駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "西区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新さっぽろ駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:22:40",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ピカンティ 札幌琴似店",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              25
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。こちらの場所の近辺の駅からの所要時間とかってわかりますかね？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ピカンティ 札幌琴似店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "カレー・郷土料理",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "56511",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "北海道札幌市厚別区厚別中央2条5丁目7番",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:23:07"
+    },
+    {
+      "role": 0,
+      "content": "はい。新さっぽろ駅から徒歩で1分、また、新札幌駅から徒歩で1分となっております。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "新さっぽろ駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "西区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新さっぽろ駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:23:26",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ピカンティ 札幌琴似店",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              25
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。これで当日は大丈夫そうです。長々とすみません。ありがとうございました！",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ピカンティ 札幌琴似店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "カレー・郷土料理",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "56511",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "さっぽろ駅から徒歩で1分新札幌駅から徒歩で1分",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "address",
+          "北海道札幌市厚別区厚別中央2条5丁目7番",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:24:00"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "新さっぽろ駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "西区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新さっぽろ駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:24:09",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ピカンティ 札幌琴似店",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              25
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 19:24:15"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 19:24:17"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:09",
+  "final_state": {
+    "restaurant": {
+      "city": "札幌",
+      "name": null,
+      "genre": null,
+      "area": "西区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "札幌",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "",
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "札幌",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": "新さっぽろ駅",
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "札幌グランドホテル",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "ピカンティ 札幌琴似店",
+      "value": {
+        "people": "3",
+        "day": [
+          1,
+          25
+        ],
+        "time": "13:30"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

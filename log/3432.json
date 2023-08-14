@@ -1,0 +1,2433 @@
+{
+  "id": 3432,
+  "dialogue_code": "dialogue_3432GHMR",
+  "status_code": 2,
+  "user": [
+    22,
+    207
+  ],
+  "username": [
+    "operator_0022UfuU",
+    "customer_0207aJor"
+  ],
+  "task": 3702,
+  "task_name": "main2_682",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "京都",
+          "parking": "有り(無料)",
+          "pricerange": "普通"
+        },
+        "reqt": [
+          "name",
+          "closed",
+          "area"
+        ]
+      },
+      "hotel": {
+        "info": {
+          "city": "京都",
+          "wifi": "有り(無料)",
+          "genre": "シティホテル",
+          "area": "山科区"
+        },
+        "reqt": [
+          "name",
+          "address",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "1/3",
+          "stay": 2
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "京都",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "jumbo",
+          "reference"
+        ],
+        "book": {
+          "day": "1/3",
+          "time": "16:40",
+          "departurepoint": "restaurant",
+          "arrivalpoint": "hotel"
+        }
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．予算は<b style='color:blue;'>普通</b>が希望です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，定休日，エリア</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．宿のタイプは<b style='color:blue;'>シティホテル</b>です．地区は<b style='color:blue;'>山科区</b>です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，住所</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>1/3</b>です．宿泊日数は<b style='color:blue;'>2</b>泊です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号，ジャンボタクシー対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>1/3</b>です．時間は<b style='color:blue;'>16:40</b>です．出発地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．目的地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "closed",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "area",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "address",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "jumbo",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "今度京都に行くのですが、飲食店を探しています。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 07:30:17"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。御条件伺います。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669534227286
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 07:30:37",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予算は普通で、駐車場を無料で利用できるところがいいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 07:30:58"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それでは牛々亭はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "牛々亭",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669534273018,
+          "selectedResults": [
+            "牛々亭"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 07:31:23",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。そちらの定休日とエリアを教えていただけますか。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "牛々亭",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 07:31:46"
+    },
+    {
+      "role": 0,
+      "content": "定休日は12月31日と1月1日のみです。エリアは中京区でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "牛々亭",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 07:32:17",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、当日の宿泊施設を探しています。山科区で、Wi-Fiが無料のシティホテルはありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "牛々亭",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "12月31日と1月1日",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "中京区",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 07:33:04"
+    },
+    {
+      "role": 0,
+      "content": "お待たせ致しました。京都山科 ホテル山楽がございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "シティホテル",
+            "area": "山科区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "京都山科 ホテル山楽",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669534416378,
+          "selectedResults": [
+            "京都山科 ホテル山楽"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": "シティホテル",
+          "area": "山科区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 07:33:44",
+      "book": {
+        "hotel": {
+          "name": "京都山科 ホテル山楽",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらの住所が知りたいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "牛々亭",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "12月31日と1月1日",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "中京区",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都山科 ホテル山楽",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 07:34:11"
+    },
+    {
+      "role": 0,
+      "content": "住所は京都府京都市山科区安朱桟敷町23でございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "シティホテル",
+            "area": "山科区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "京都山科 ホテル山楽",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": "シティホテル",
+          "area": "山科区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 07:34:30",
+      "book": {
+        "hotel": {
+          "name": "京都山科 ホテル山楽",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。では、1/3に３名で２泊、予約をお願いできますでしょうか。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "牛々亭",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "12月31日と1月1日",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "中京区",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都山科 ホテル山楽",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "京都府京都市山科区安朱桟敷町23",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 07:35:02"
+    },
+    {
+      "role": 0,
+      "content": "お待たせ致しました。予約番号87983でお取りさせていただきました。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "シティホテル",
+            "area": "山科区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "京都山科 ホテル山楽",
+              "value": {
+                "people": "3",
+                "day": [
+                  1,
+                  3
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1669534515355,
+              "success": true,
+              "ref": "87983"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": "シティホテル",
+          "area": "山科区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 07:35:25",
+      "book": {
+        "hotel": {
+          "name": "京都山科 ホテル山楽",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              3
+            ],
+            "stay": "2"
+          },
+          "timestamp": 1669534515355,
+          "success": true,
+          "ref": "87983"
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、当日タクシーを使いたいのですが、キャッシュレス払いができるところはありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "牛々亭",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "12月31日と1月1日",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "中京区",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都山科 ホテル山楽",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "京都府京都市山科区安朱桟敷町23",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "87983",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 07:35:50"
+    },
+    {
+      "role": 0,
+      "content": "お待たせ致しました。では、高速タクシー株式会社はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [],
+          "timestamp": 1669534560278
+        },
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669534563330,
+          "selectedResults": [
+            "高速タクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": "シティホテル",
+          "area": "山科区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 07:36:21",
+      "book": {
+        "hotel": {
+          "name": "京都山科 ホテル山楽",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              3
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらの電話番号と、ジャンボタクシーに対応しているかを知りたいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "牛々亭",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "12月31日と1月1日",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "中京区",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都山科 ホテル山楽",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "京都府京都市山科区安朱桟敷町23",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "87983",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "高速タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 07:37:09"
+    },
+    {
+      "role": 0,
+      "content": "はい、電話番号は0756015588です。ジャンボタクシーにも対応しております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": "シティホテル",
+          "area": "山科区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 07:37:37",
+      "book": {
+        "hotel": {
+          "name": "京都山科 ホテル山楽",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              3
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、1/3の16:40で、牛々亭から、京都山科 ホテル山楽まで予約をお願いできますでしょうか。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "牛々亭",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "12月31日と1月1日",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "中京区",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都山科 ホテル山楽",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "京都府京都市山科区安朱桟敷町23",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "87983",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "高速タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0756015588",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "可能",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 07:38:35"
+    },
+    {
+      "role": 0,
+      "content": "お待たせ致しました。予約番号82977でお取りさせていただきました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  1,
+                  3
+                ],
+                "time": "16:40",
+                "departurepoint": "牛々亭",
+                "arrivalpoint": "京都山科 ホテル山楽"
+              },
+              "timestamp": 1669534732952,
+              "success": true,
+              "ref": "82977"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": "シティホテル",
+          "area": "山科区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 07:38:59",
+      "book": {
+        "hotel": {
+          "name": "京都山科 ホテル山楽",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              3
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              1,
+              3
+            ],
+            "time": "16:40",
+            "departurepoint": "牛々亭",
+            "arrivalpoint": "京都山科 ホテル山楽"
+          },
+          "timestamp": 1669534732952,
+          "success": true,
+          "ref": "82977"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。以上です、お世話になりました。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "牛々亭",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "12月31日と1月1日",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "中京区",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都山科 ホテル山楽",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "京都府京都市山科区安朱桟敷町23",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "87983",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "高速タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0756015588",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "可能",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "82977",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 07:39:24"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。またお待ちしております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  1,
+                  3
+                ],
+                "time": "16:40",
+                "departurepoint": "牛々亭",
+                "arrivalpoint": "京都山科 ホテル山楽"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": "シティホテル",
+          "area": "山科区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 07:39:37",
+      "book": {
+        "hotel": {
+          "name": "京都山科 ホテル山楽",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              3
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              1,
+              3
+            ],
+            "time": "16:40",
+            "departurepoint": "牛々亭",
+            "arrivalpoint": "京都山科 ホテル山楽"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-27 07:39:47"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-27 07:39:50"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:55",
+  "final_state": {
+    "restaurant": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "京都",
+      "name": null,
+      "genre": "シティホテル",
+      "area": "山科区",
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "京都",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "京都山科 ホテル山楽",
+      "value": {
+        "people": "3",
+        "day": [
+          1,
+          3
+        ],
+        "stay": "2"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "牛々亭",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "高速タクシー株式会社",
+      "value": {
+        "day": [
+          1,
+          3
+        ],
+        "time": "16:40",
+        "departurepoint": "牛々亭",
+        "arrivalpoint": "京都山科 ホテル山楽"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

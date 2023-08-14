@@ -1,0 +1,1814 @@
+{
+  "id": 5002,
+  "dialogue_code": "dialogue_5002qrfv",
+  "status_code": 2,
+  "user": [
+    23,
+    295
+  ],
+  "username": [
+    "operator_0023FhKj",
+    "customer_0295bduP"
+  ],
+  "task": 5272,
+  "task_name": "main2_2252",
+  "task_content": {
+    "goals": {
+      "attraction": {
+        "fail_info": {
+          "city": "大阪",
+          "wifi": "有り(無料)"
+        },
+        "info": {
+          "city": "大阪",
+          "wifi": "有り(有料)"
+        },
+        "reqt": [
+          "name",
+          "opentime"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "大阪",
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "6/24",
+          "time": "14:30",
+          "departurepoint": "オリエンタルホテル ユニバーサル・シティ",
+          "arrivalpoint": "attraction"
+        },
+        "book": {
+          "day": "6/24",
+          "time": "15:00",
+          "departurepoint": "オリエンタルホテル ユニバーサル・シティ",
+          "arrivalpoint": "attraction"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "大阪",
+          "day": "6/24",
+          "area": "港区"
+        },
+        "reqt": [
+          "maxtemperature",
+          "mintemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "attraction": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合う場所が見つからない場合は，<b style='color:blue;'>有料</b>のWi-Fiでもよいものとします．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称，営業時間</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>6/24</b>です．時間は<b style='color:blue;'>14:30</b>です．出発地は<b style='color:blue;'>オリエンタルホテル ユニバーサル・シティ</b>というところです．目的地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>15:00</b>に変更します．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>6/24</b>です．地区は<b style='color:blue;'>港区</b>です．",
+        "<b style='color:green;'>最高気温，最低気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "opentime",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "maxtemperature",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "mintemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "attraction",
+      "taxi",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪へ旅行の予定です。無料でWi-Fiを利用できる観光名所を探しています。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:03:38"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。無料でWi-Fiを利用できる場所はありませんでした。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669788237539
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:04:44",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、Wi-Fi有料ではどこかありますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:05:04"
+    },
+    {
+      "role": 0,
+      "content": "はい。空庭温泉 OSAKA BAY TOWERが見つかりました。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": "有り(有料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669788311826,
+          "selectedResults": [
+            "空庭温泉 OSAKA BAY TOWER"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(有料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:05:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました！そちらの営業時間を教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "空庭温泉 OSAKA BAY TOWER",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:06:43"
+    },
+    {
+      "role": 0,
+      "content": "はい。11時から21時となっております。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": "有り(有料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(有料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:07:24",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、当日利用できるタクシーを探しています。キャッシュレス・ジャンボタクシーの利用可能な会社がいいです。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "空庭温泉 OSAKA BAY TOWER",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "11時から21時",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:08:38"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。近畿タクシー株式会社はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "近鉄タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669788545286,
+          "selectedResults": [
+            "近鉄タクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(有料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:09:43",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "近鉄タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ではその会社の電話番号を教えてください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "空庭温泉 OSAKA BAY TOWER",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "11時から21時",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:10:15"
+    },
+    {
+      "role": 0,
+      "content": "はい。電話番号は0570069001となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "近鉄タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(有料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:10:50",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "近鉄タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！6/24の14:30で予約をお願いします。オリエンタルホテル　ユニバーサル・シティを出発して、空庭温泉 OSAKA BAY TOWERへ向かいます。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "空庭温泉 OSAKA BAY TOWER",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "11時から21時",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0570069001",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "近畿タクシー株式会社",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:12:16"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その時間ですと予約が取れませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "近鉄タクシー株式会社",
+              "value": {
+                "day": [
+                  6,
+                  24
+                ],
+                "time": "14:30",
+                "departurepoint": "オリエンタルホテル　ユニバーサル・シティ",
+                "arrivalpoint": "空庭温泉 OSAKA BAY TOWER"
+              },
+              "timestamp": 1669788790842,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(有料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:13:43",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "近鉄タクシー株式会社",
+          "value": {
+            "day": [
+              6,
+              24
+            ],
+            "time": "14:30",
+            "departurepoint": "オリエンタルホテル　ユニバーサル・シティ",
+            "arrivalpoint": "空庭温泉 OSAKA BAY TOWER"
+          },
+          "timestamp": 1669788790842,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうでしたか。では15:00ではいかがでしょうか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "空庭温泉 OSAKA BAY TOWER",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "11時から21時",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0570069001",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "近畿タクシー株式会社",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:13:57"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。予約が取れました。予約番号は9847です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "近鉄タクシー株式会社",
+              "value": {
+                "day": [
+                  6,
+                  24
+                ],
+                "time": "15:00",
+                "departurepoint": "オリエンタルホテル　ユニバーサル・シティ",
+                "arrivalpoint": "空庭温泉 OSAKA BAY TOWER"
+              },
+              "timestamp": 1669788848417,
+              "success": true,
+              "ref": "9847"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(有料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:14:43",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "近鉄タクシー株式会社",
+          "value": {
+            "day": [
+              6,
+              24
+            ],
+            "time": "15:00",
+            "departurepoint": "オリエンタルホテル　ユニバーサル・シティ",
+            "arrivalpoint": "空庭温泉 OSAKA BAY TOWER"
+          },
+          "timestamp": 1669788848417,
+          "success": true,
+          "ref": "9847"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！最後に、6/24の港区の最高気温と最低気温を伺いたいのですが。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "空庭温泉 OSAKA BAY TOWER",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "11時から21時",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0570069001",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "近畿タクシー株式会社",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "9847",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:15:45"
+    },
+    {
+      "role": 0,
+      "content": "はい。最高気温が29.2度で最低気温は20.6度です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "大阪",
+            "area": "港区",
+            "day": [
+              6,
+              24
+            ]
+          },
+          "book": [],
+          "timestamp": 1669788979840,
+          "selectedResults": [
+            "6/24 大阪 港区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(有料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "大阪",
+          "area": "港区",
+          "day": [
+            6,
+            24
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:17:21",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "近鉄タクシー株式会社",
+          "value": {
+            "day": [
+              6,
+              24
+            ],
+            "time": "15:00",
+            "departurepoint": "オリエンタルホテル　ユニバーサル・シティ",
+            "arrivalpoint": "空庭温泉 OSAKA BAY TOWER"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。大変お世話になりました！",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "空庭温泉 OSAKA BAY TOWER",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "11時から21時",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0570069001",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "近畿タクシー株式会社",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "9847",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "29.2度",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "20.6度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:17:45"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 06:17:58"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 06:17:58"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:05",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": "有り(有料)",
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "大阪",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": "大阪",
+      "area": "港区",
+      "day": [
+        6,
+        24
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "近鉄タクシー株式会社",
+      "value": {
+        "day": [
+          6,
+          24
+        ],
+        "time": "15:00",
+        "departurepoint": "オリエンタルホテル　ユニバーサル・シティ",
+        "arrivalpoint": "空庭温泉 OSAKA BAY TOWER"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

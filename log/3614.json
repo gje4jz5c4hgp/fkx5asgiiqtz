@@ -1,0 +1,1998 @@
+{
+  "id": 3614,
+  "dialogue_code": "dialogue_3614FYCX",
+  "status_code": 2,
+  "user": [
+    14,
+    227
+  ],
+  "username": [
+    "operator_0014xhrR",
+    "customer_0227Cbai"
+  ],
+  "task": 3884,
+  "task_name": "main2_864",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "札幌",
+          "area": "北区",
+          "genre": "鍋"
+        },
+        "reqt": [
+          "name",
+          "pricerange",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 3,
+          "day": "12/8",
+          "time": "12:40"
+        },
+        "book": {
+          "people": 3,
+          "day": "12/8",
+          "time": "13:30"
+        }
+      },
+      "shopping": {
+        "info": {
+          "city": "札幌",
+          "genre": "お土産",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "札幌",
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "12/8",
+          "time": "14:20",
+          "departurepoint": "restaurant",
+          "arrivalpoint": "shopping"
+        }
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>札幌</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．地区は<b style='color:blue;'>北区</b>です．ジャンルは<b style='color:blue;'>鍋</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，値段帯</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>12/8</b>です．時間は<b style='color:blue;'>12:40</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>13:30</b>に変更します．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．ジャンルは<b style='color:blue;'>お土産</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>12/8</b>です．時間は<b style='color:blue;'>14:20</b>です．出発地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．目的地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "pricerange",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "shopping",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "札幌に旅行を計画しています。北区で鍋が食べられる飲食店を探してほしいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:58:37"
+    },
+    {
+      "role": 0,
+      "content": "承知いたしました。しゃぶしゃぶ温野菜 北24条店のみ該当がございます。いかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "鍋",
+            "area": "北区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "しゃぶしゃぶ温野菜 北24条店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669622335740,
+          "selectedResults": [
+            "しゃぶしゃぶ温野菜 北24条店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": "鍋",
+          "area": "北区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:59:22",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "しゃぶしゃぶ温野菜 北24条店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そのお店の値段帯はどのようになっていますか。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "しゃぶしゃぶ温野菜 北24条店",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:59:57"
+    },
+    {
+      "role": 0,
+      "content": "しゃぶしゃぶ温野菜 北24条店の価格帯は普通に設定されております。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "鍋",
+            "area": "北区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "しゃぶしゃぶ温野菜 北24条店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": "鍋",
+          "area": "北区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:00:16",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "しゃぶしゃぶ温野菜 北24条店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そのお店の予約をお願いします。12/8の12:40に人数は３人です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "しゃぶしゃぶ温野菜 北24条店",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:01:02"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。頂いた条件ですとご予約が出来ませんでした。いかがいたしましょうか",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "鍋",
+            "area": "北区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "しゃぶしゃぶ温野菜 北24条店",
+              "value": {
+                "people": "3",
+                "day": [
+                  12,
+                  8
+                ],
+                "time": "12:40"
+              },
+              "timestamp": 1669622476826,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": "鍋",
+          "area": "北区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:01:37",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "しゃぶしゃぶ温野菜 北24条店",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              8
+            ],
+            "time": "12:40"
+          },
+          "timestamp": 1669622476826,
+          "success": false,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では時間を13:30に変更でお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "しゃぶしゃぶ温野菜 北24条店",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:02:04"
+    },
+    {
+      "role": 0,
+      "content": "しゃぶしゃぶ温野菜 北24条店、12月8日13：30から3名様でご予約が完了しました。予約番号は98687でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "鍋",
+            "area": "北区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "しゃぶしゃぶ温野菜 北24条店",
+              "value": {
+                "people": "3",
+                "day": [
+                  12,
+                  8
+                ],
+                "time": "13:30"
+              },
+              "timestamp": 1669622527873,
+              "success": true,
+              "ref": "98687"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": "鍋",
+          "area": "北区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:02:44",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "しゃぶしゃぶ温野菜 北24条店",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              8
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 1669622527873,
+          "success": true,
+          "ref": "98687"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。他に、お土産を買うお店を探しています。駐車場が無料で使えるのが希望です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "しゃぶしゃぶ温野菜 北24条店",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "98687",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:03:45"
+    },
+    {
+      "role": 0,
+      "content": "札幌のお土産扱い店舗で無料駐車場ありですと、ポケモンセンターサッポロのみ該当がございます。いかがでしょうか。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "お土産",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669622660987
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": "鍋",
+          "area": "北区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "お土産",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:04:38",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "しゃぶしゃぶ温野菜 北24条店",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              8
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、キャッシュレス払いのできるジャンボタクシーを利用したいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "しゃぶしゃぶ温野菜 北24条店",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "98687",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ポケモンセンターサッポロ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:05:46"
+    },
+    {
+      "role": 0,
+      "content": "札幌のジャンボタクシー対応でしたらつばめ自動車(株)がございます。他にも11件該当がございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "つばめ自動車(株)",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669622759268,
+          "selectedResults": [
+            "つばめ自動車(株)"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": "鍋",
+          "area": "北区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "お土産",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "札幌",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:06:27",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "しゃぶしゃぶ温野菜 北24条店",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              8
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "つばめ自動車(株)",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そのつばめ自動車(株)にします。電話番号を教えていただいてもいいですか。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "しゃぶしゃぶ温野菜 北24条店",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "98687",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ポケモンセンターサッポロ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:07:06"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。0118751211でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "恊和交通(株)",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": "鍋",
+          "area": "北区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "お土産",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "札幌",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:08:51",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "しゃぶしゃぶ温野菜 北24条店",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              8
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "恊和交通(株)",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。12/8の14:20にしゃぶしゃぶ温野菜 北24条店からポケモンセンターサッポロで予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "しゃぶしゃぶ温野菜 北24条店",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "98687",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ポケモンセンターサッポロ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "恊和交通(株)",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0118751211",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:10:18"
+    },
+    {
+      "role": 0,
+      "content": "12月8日14:20出発でしゃぶしゃぶ温野菜 北24条店からポケモンセンターサッポロの予約をお取りしました。予約番号は65301でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "恊和交通(株)",
+              "value": {
+                "day": [
+                  12,
+                  8
+                ],
+                "time": "14:20",
+                "departurepoint": "しゃぶしゃぶ温野菜 北24条店",
+                "arrivalpoint": "ポケモンセンターサッポロ"
+              },
+              "timestamp": 1669623039489,
+              "success": true,
+              "ref": "65301"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": "鍋",
+          "area": "北区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "お土産",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "札幌",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:11:22",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "しゃぶしゃぶ温野菜 北24条店",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              8
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "恊和交通(株)",
+          "value": {
+            "day": [
+              12,
+              8
+            ],
+            "time": "14:20",
+            "departurepoint": "しゃぶしゃぶ温野菜 北24条店",
+            "arrivalpoint": "ポケモンセンターサッポロ"
+          },
+          "timestamp": 1669623039489,
+          "success": true,
+          "ref": "65301"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。これで大丈夫です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "しゃぶしゃぶ温野菜 北24条店",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "98687",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ポケモンセンターサッポロ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "恊和交通(株)",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0118751211",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "65301",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:11:38"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "恊和交通(株)",
+              "value": {
+                "day": [
+                  12,
+                  8
+                ],
+                "time": "14:20",
+                "departurepoint": "しゃぶしゃぶ温野菜 北24条店",
+                "arrivalpoint": "ポケモンセンターサッポロ"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": "鍋",
+          "area": "北区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "お土産",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "札幌",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:11:44",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "しゃぶしゃぶ温野菜 北24条店",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              8
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "恊和交通(株)",
+          "value": {
+            "day": [
+              12,
+              8
+            ],
+            "time": "14:20",
+            "departurepoint": "しゃぶしゃぶ温野菜 北24条店",
+            "arrivalpoint": "ポケモンセンターサッポロ"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 08:11:52"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [
+            1
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "キャッシュレス対応とジャンボタクシー対応の会社を求められたところ、誤ってジャンボタクシー対応の会社を回答、後に予約前に訂正し改めて情報をお伝えしました。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 08:12:46"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:56",
+  "final_state": {
+    "restaurant": {
+      "city": "札幌",
+      "name": null,
+      "genre": "鍋",
+      "area": "北区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "札幌",
+      "name": null,
+      "genre": "お土産",
+      "area": null,
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": "札幌",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "しゃぶしゃぶ温野菜 北24条店",
+      "value": {
+        "people": "3",
+        "day": [
+          12,
+          8
+        ],
+        "time": "13:30"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "恊和交通(株)",
+      "value": {
+        "day": [
+          12,
+          8
+        ],
+        "time": "14:20",
+        "departurepoint": "しゃぶしゃぶ温野菜 北24条店",
+        "arrivalpoint": "ポケモンセンターサッポロ"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

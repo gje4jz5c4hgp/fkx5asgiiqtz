@@ -1,0 +1,2128 @@
+{
+  "id": 1763,
+  "dialogue_code": "dialogue_1763zokn",
+  "status_code": 2,
+  "user": [
+    9,
+    239
+  ],
+  "username": [
+    "operator_0009Tmbt",
+    "customer_0239vzdO"
+  ],
+  "task": 1933,
+  "task_name": "main_1613",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "info": {
+          "city": "那覇",
+          "area": "小禄",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "那覇",
+          "jumbo": "対応",
+          "cashless": "対応"
+        },
+        "info": {
+          "city": "那覇",
+          "jumbo": "対応",
+          "cashless": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "9/13",
+          "time": "10:40",
+          "departurepoint": "shopping",
+          "arrivalpoint": "たびの邸宅 沖縄那覇"
+        },
+        "book": {
+          "day": "9/13",
+          "time": "11:30",
+          "departurepoint": "shopping",
+          "arrivalpoint": "たびの邸宅 沖縄那覇"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "那覇",
+          "day": "9/13",
+          "area": "本庁"
+        },
+        "reqt": [
+          "weather"
+        ]
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>那覇</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．地区は<b style='color:blue;'>小禄</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "希望に合うところが見つからない場合は，キャッシュレス払いの可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>9/13</b>です．時間は<b style='color:blue;'>10:40</b>です．出発地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．目的地は<b style='color:blue;'>たびの邸宅 沖縄那覇</b>というところです．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>11:30</b>に変更します．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>9/13</b>です．地区は<b style='color:blue;'>本庁</b>です．",
+        "<b style='color:green;'>天気</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "weather",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "taxi",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "那覇へ旅行に行くんですが、買い物ができるところを探してほしいです！",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:50:53"
+    },
+    {
+      "role": 0,
+      "content": "希望条件などは、ありますか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:51:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "地区は小禄で、駐車場無料のところでお願いします！",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:51:12"
+    },
+    {
+      "role": 0,
+      "content": "LEO & JOEは、いかがですか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": "小禄",
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667213489565,
+          "selectedResults": [
+            "LEO & JOE"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:51:38",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね！タクシー会社も探していただけますか？ジャンボタクシーを利用したいのと、キャッシュレス払いができるところでお願いします！",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:52:12"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。　その条件では、見つかりませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1667213553922
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:52:32",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、キャッシュレス払いじゃなくても大丈夫です。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:52:36"
+    },
+    {
+      "role": 0,
+      "content": "大栄交通は、いかがですか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "大栄交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667213567591,
+          "selectedResults": [
+            "大栄交通"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:52:56",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大栄交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。電話番号は分かりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:53:02"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は、0989465005です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "大栄交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:53:20",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大栄交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "助かります。予約もお願いします！LEO & JOEを出発して、たびの邸宅 沖縄那覇までお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "大栄交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0989465005",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:54:03"
+    },
+    {
+      "role": 0,
+      "content": "日時は、どうされますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "大栄交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": "LEO & JOE",
+                "arrivalpoint": "たびの邸宅 沖縄那覇"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:54:47",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大栄交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": "LEO & JOE",
+            "arrivalpoint": "たびの邸宅 沖縄那覇"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "9/13の10:40出発でお願いします！",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "大栄交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0989465005",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:54:54"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。　その条件では、予約出来ませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "大栄交通",
+              "value": {
+                "day": [
+                  9,
+                  13
+                ],
+                "time": "10:40",
+                "departurepoint": "LEO & JOE",
+                "arrivalpoint": "たびの邸宅 沖縄那覇"
+              },
+              "timestamp": 1667213714682,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:55:18",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大栄交通",
+          "value": {
+            "day": [
+              9,
+              13
+            ],
+            "time": "10:40",
+            "departurepoint": "LEO & JOE",
+            "arrivalpoint": "たびの邸宅 沖縄那覇"
+          },
+          "timestamp": 1667213714682,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では11:30だとどうでしょう？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "大栄交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0989465005",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:55:31"
+    },
+    {
+      "role": 0,
+      "content": "予約が完了しました。　予約番号は、91249です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "大栄交通",
+              "value": {
+                "day": [
+                  9,
+                  13
+                ],
+                "time": "11:30",
+                "departurepoint": "LEO & JOE",
+                "arrivalpoint": "たびの邸宅 沖縄那覇"
+              },
+              "timestamp": 1667213743692,
+              "success": true,
+              "ref": "91249"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:55:51",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大栄交通",
+          "value": {
+            "day": [
+              9,
+              13
+            ],
+            "time": "11:30",
+            "departurepoint": "LEO & JOE",
+            "arrivalpoint": "たびの邸宅 沖縄那覇"
+          },
+          "timestamp": 1667213743692,
+          "success": true,
+          "ref": "91249"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。最後に、本庁の9/13の天気を教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "大栄交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0989465005",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "91249",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:56:19"
+    },
+    {
+      "role": 0,
+      "content": "天気は、雨時々曇です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "那覇",
+            "area": "本庁",
+            "day": [
+              9,
+              13
+            ]
+          },
+          "book": [],
+          "timestamp": 1667213804089,
+          "selectedResults": [
+            "9/13 那覇 本庁 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "那覇",
+          "area": "本庁",
+          "day": [
+            9,
+            13
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:56:54",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大栄交通",
+          "value": {
+            "day": [
+              9,
+              13
+            ],
+            "time": "11:30",
+            "departurepoint": "LEO & JOE",
+            "arrivalpoint": "たびの邸宅 沖縄那覇"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "助かりました！色々とありがとうございました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "大栄交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0989465005",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "91249",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "雨時々曇",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:57:10"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はありますか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "那覇",
+            "area": "本庁",
+            "day": [
+              9,
+              13
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "那覇",
+          "area": "本庁",
+          "day": [
+            9,
+            13
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:57:14",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大栄交通",
+          "value": {
+            "day": [
+              9,
+              13
+            ],
+            "time": "11:30",
+            "departurepoint": "LEO & JOE",
+            "arrivalpoint": "たびの邸宅 沖縄那覇"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "これで大丈夫です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "大栄交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0989465005",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "91249",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "雨時々曇",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:57:18"
+    },
+    {
+      "role": 0,
+      "content": "承知致しました。　ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "那覇",
+            "area": "本庁",
+            "day": [
+              9,
+              13
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "那覇",
+          "area": "本庁",
+          "day": [
+            9,
+            13
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:57:22",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大栄交通",
+          "value": {
+            "day": [
+              9,
+              13
+            ],
+            "time": "11:30",
+            "departurepoint": "LEO & JOE",
+            "arrivalpoint": "たびの邸宅 沖縄那覇"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 10:57:28"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 10:57:36"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:06",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "那覇",
+      "name": null,
+      "genre": null,
+      "area": "小禄",
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": "那覇",
+      "name": null,
+      "cashless": null,
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": "那覇",
+      "area": "本庁",
+      "day": [
+        9,
+        13
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "大栄交通",
+      "value": {
+        "day": [
+          9,
+          13
+        ],
+        "time": "11:30",
+        "departurepoint": "LEO & JOE",
+        "arrivalpoint": "たびの邸宅 沖縄那覇"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

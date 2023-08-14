@@ -1,0 +1,1777 @@
+{
+  "id": 3462,
+  "dialogue_code": "dialogue_3462yCdi",
+  "status_code": 2,
+  "user": [
+    22,
+    255
+  ],
+  "username": [
+    "operator_0022UfuU",
+    "customer_0255dhLh"
+  ],
+  "task": 3732,
+  "task_name": "main2_712",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "fail_info": {
+          "city": "京都",
+          "area": "東山区",
+          "station": "太秦天神川駅"
+        },
+        "info": {
+          "city": "京都",
+          "area": "東山区",
+          "station": "dontcare"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "restaurant": {
+        "info": {
+          "city": "京都",
+          "parking": "有り(無料)",
+          "pricerange": "普通"
+        },
+        "reqt": [
+          "genre",
+          "opentime"
+        ]
+      },
+      "attraction": {
+        "info": {
+          "city": "京都",
+          "genre": "テーマパーク"
+        },
+        "reqt": [
+          "priceinfo",
+          "accesstime"
+        ]
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．地区は<b style='color:blue;'>東山区</b>です．最寄り駅が<b style='color:blue;'>太秦天神川駅</b>のところにしてください．",
+        "希望に合うところが見つからない場合は，最寄り駅は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．予算は<b style='color:blue;'>普通</b>が希望です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>ジャンル，営業時間</b>を聞いてください．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．ジャンルは<b style='color:blue;'>テーマパーク</b>です．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>料金情報，近辺の駅からの所要時間</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "opentime",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "priceinfo",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "accesstime",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "restaurant",
+      "attraction"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都へ旅行に行くので、買い物ができるところを探してください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 11:04:39"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。何かご希望などはありますか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669806285715
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 11:04:53",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "東山区のお店で、最寄り駅が太秦天神川駅のお店だといいのですが。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 11:05:11"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件ではお探しすることが出来ませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "東山区",
+            "station": "太秦天神川駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669806329631
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "東山区",
+          "station": "太秦天神川駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 11:05:35",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では東山区のお店ならどこでもいいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 11:05:44"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それではURAGNOはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "東山区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669806352911,
+          "selectedResults": [
+            "URAGNO"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "東山区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 11:06:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらにします。次に食事ができるお店を探してください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "URAGNO",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 11:06:29"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。100件ほどございますが、御条件伺います。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669806413270
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "東山区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 11:07:07",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予算は普通のお店で、無料駐車場があるところがいいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "URAGNO",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 11:07:30"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それでは牛々亭はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669806456891
+        },
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "牛々亭",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669806460931,
+          "selectedResults": [
+            "牛々亭"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "東山区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 11:07:50",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらはどんなジャンルのお店でしょうか？あと営業時間を教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "URAGNO",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 11:08:12"
+    },
+    {
+      "role": 0,
+      "content": "ジャンルは焼肉・ホルモンでございます。営業時間は12時から14時と17時から25時でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "牛々亭",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "東山区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 11:08:37",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと観光できるところとして、テーマパークを探しています。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "URAGNO",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "焼肉・ホルモン",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "12時から14時、17時から25時",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 11:09:23"
+    },
+    {
+      "role": 0,
+      "content": "お待たせ致しました。それではVIVAスクエア京都はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "テーマパーク",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669806592543,
+          "selectedResults": [
+            "VIVAスクエア京都",
+            "東映太秦映画村",
+            "VIVAスクエア京都"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "テーマパーク",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "東山区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 11:10:07",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの料金情報と近辺の駅からの所要時間を教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "URAGNO",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "焼肉・ホルモン",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "12時から14時、17時から25時",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 11:10:26"
+    },
+    {
+      "role": 0,
+      "content": "はい、料金情報は企画により異なるとのことです。近辺の駅からですと、梅小路京都西駅から徒歩で1分、又は、京都駅から徒歩で15分でございます。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "テーマパーク",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "テーマパーク",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "東山区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 11:11:04",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。以上となります。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "URAGNO",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "焼肉・ホルモン",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "12時から14時、17時から25時",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "企画により異なる",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "梅小路京都西駅から徒歩で1分、京都駅から徒歩で15分",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 11:11:31"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。またお待ちしております。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "テーマパーク",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "テーマパーク",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "東山区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 11:11:37",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "牛々亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 11:11:43"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 11:12:52"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:55",
+  "final_state": {
+    "restaurant": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "京都",
+      "name": null,
+      "genre": "テーマパーク",
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": "東山区",
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "牛々亭",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

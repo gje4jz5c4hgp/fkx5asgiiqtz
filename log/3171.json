@@ -1,0 +1,2031 @@
+{
+  "id": 3171,
+  "dialogue_code": "dialogue_3171axQZ",
+  "status_code": 2,
+  "user": [
+    20,
+    260
+  ],
+  "username": [
+    "operator_0020cvID",
+    "customer_0260Fgsc"
+  ],
+  "task": 3441,
+  "task_name": "main2_421",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "札幌",
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "info": {
+          "city": "札幌",
+          "parking": "dontcare",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "札幌",
+          "parking": "有り(無料)",
+          "genre": "食料品"
+        },
+        "info": {
+          "city": "札幌",
+          "parking": "dontcare",
+          "genre": "食料品"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "restaurant": {
+        "info": {
+          "city": "札幌",
+          "area": "中央区",
+          "wifi": "有り(無料)",
+          "pricerange": "普通"
+        },
+        "reqt": [
+          "accesstime",
+          "priceinfo",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 4,
+          "day": "8/8",
+          "time": "13:20"
+        },
+        "book": {
+          "people": 3,
+          "day": "8/8",
+          "time": "13:20"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>札幌</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，駐車場の有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．ジャンルは<b style='color:blue;'>食料品</b>です．",
+        "希望に合うところが見つからない場合は，駐車場の有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．地区は<b style='color:blue;'>中央区</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．予算は<b style='color:blue;'>普通</b>が希望です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>近辺の駅からの所要時間，料金情報</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>8/8</b>です．時間は<b style='color:blue;'>13:20</b>です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>3</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "restaurant",
+        "accesstime",
+        ""
+      ],
+      [
+        3,
+        "restaurant",
+        "priceinfo",
+        ""
+      ],
+      [
+        3,
+        "restaurant",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "shopping",
+      "restaurant"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "札幌への旅行を計画していて、当日の宿泊施設を探しています。駐車場が無料でレストランが併設されているところがいいのですが。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 23:47:03"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。条件に合う宿泊施設は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1669506439742
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 23:47:31",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では駐車場は無くても良いです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 23:48:05"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、札幌グランドホテルはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "札幌グランドホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669506493929,
+          "selectedResults": [
+            "札幌グランドホテル"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 23:48:23",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そこにしようと思います。また、当日の買い物が出来るところも探しています。駐車場が無料の食料品のお店はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "札幌グランドホテル",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 23:50:01"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。条件に合う店舗は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "食料品",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669506619117
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "食料品",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 23:50:28",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では駐車場は無くても良いです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "札幌グランドホテル",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 23:50:52"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、ビッセスイーツはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "食料品",
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669506658691,
+          "selectedResults": [
+            "北海道どさんこプラザ",
+            "ビッセスイーツ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "食料品",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 23:51:09",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ビッセスイーツにしようと思います。飲食店も探していまして、中央区のWi-Fi無料、予算は普通のお店が良いのですが。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "札幌グランドホテル",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ビッセスイーツ",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 23:52:22"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、パーラーエノキはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "パーラーエノキ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669506771755,
+          "selectedResults": [
+            "北海道ろばた居心地",
+            "J.S. PANCAKE CAFE 札幌ステラプレイス店",
+            "Ristorante Mero.",
+            "一軒家ダイニング ~すしBAR~",
+            "パーラーエノキ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "食料品",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 23:53:09",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。パーラーエノキの近辺の駅からの所要時間，料金は分かりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "札幌グランドホテル",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ビッセスイーツ",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 23:53:54"
+    },
+    {
+      "role": 0,
+      "content": "はい。バスセンター前駅から徒歩で3分です。また、料金情報は、値段帯が普通という以外不明になっております。申し訳ございません。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "パーラーエノキ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "食料品",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 23:54:26",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。予約をお願い出来ますか？8/8、午後13：20から4人でお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "札幌グランドホテル",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ビッセスイーツ",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "accesstime",
+          "バスセンター前駅から徒歩で3分",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "priceinfo",
+          "普通",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 23:55:36"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では予約できませんでした。どうされますか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "パーラーエノキ",
+              "value": {
+                "people": "4",
+                "day": [
+                  8,
+                  8
+                ],
+                "time": "13:20"
+              },
+              "timestamp": 1669506952189,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "食料品",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 23:55:57",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": "4",
+            "day": [
+              8,
+              8
+            ],
+            "time": "13:20"
+          },
+          "timestamp": 1669506952189,
+          "success": false,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では3人の予約ではどうですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "札幌グランドホテル",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ビッセスイーツ",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "accesstime",
+          "バスセンター前駅から徒歩で3分",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "priceinfo",
+          "普通",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 23:56:17"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、96384\nです。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "パーラーエノキ",
+              "value": {
+                "people": "3",
+                "day": [
+                  8,
+                  8
+                ],
+                "time": "13:20"
+              },
+              "timestamp": 1669506985286,
+              "success": true,
+              "ref": "96384"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "食料品",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 23:56:32",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              8
+            ],
+            "time": "13:20"
+          },
+          "timestamp": 1669506985286,
+          "success": true,
+          "ref": "96384"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "札幌グランドホテル",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ビッセスイーツ",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "accesstime",
+          "バスセンター前駅から徒歩で3分",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "priceinfo",
+          "普通",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "96384",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 23:56:49"
+    },
+    {
+      "role": 0,
+      "content": "ご用件はお済ですか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "パーラーエノキ",
+              "value": {
+                "people": "3",
+                "day": [
+                  8,
+                  8
+                ],
+                "time": "13:20"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "食料品",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 23:57:08",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              8
+            ],
+            "time": "13:20"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、大丈夫です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "札幌グランドホテル",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ビッセスイーツ",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "accesstime",
+          "バスセンター前駅から徒歩で3分",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "priceinfo",
+          "普通",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "96384",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 23:57:29"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "パーラーエノキ",
+              "value": {
+                "people": "3",
+                "day": [
+                  8,
+                  8
+                ],
+                "time": "13:20"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "食料品",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 23:57:33",
+      "book": {
+        "hotel": {
+          "name": "札幌グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              8
+            ],
+            "time": "13:20"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-26 23:57:43"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-26 23:57:46"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:53",
+  "final_state": {
+    "restaurant": {
+      "city": "札幌",
+      "name": null,
+      "genre": null,
+      "area": "中央区",
+      "pricerange": "普通",
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null
+    },
+    "hotel": {
+      "city": "札幌",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "札幌",
+      "name": null,
+      "genre": "食料品",
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "札幌グランドホテル",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "パーラーエノキ",
+      "value": {
+        "people": "3",
+        "day": [
+          8,
+          8
+        ],
+        "time": "13:20"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

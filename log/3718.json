@@ -1,0 +1,2321 @@
+{
+  "id": 3718,
+  "dialogue_code": "dialogue_3718EzGU",
+  "status_code": 2,
+  "user": [
+    20,
+    270
+  ],
+  "username": [
+    "operator_0020cvID",
+    "customer_0270xRuW"
+  ],
+  "task": 3988,
+  "task_name": "main2_968",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "京都",
+          "parking": "有り(無料)",
+          "genre": "イタリアン・フレンチ"
+        },
+        "reqt": [
+          "station",
+          "phone",
+          "opentime",
+          "reference"
+        ],
+        "book": {
+          "people": 4,
+          "day": "8/12",
+          "time": "14:40"
+        }
+      },
+      "hotel": {
+        "info": {
+          "city": "京都",
+          "pricerange": "普通",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "checkintime",
+          "withrestaurant",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 2,
+          "day": "8/12",
+          "stay": 2
+        },
+        "book": {
+          "people": 2,
+          "day": "8/12",
+          "stay": 1
+        }
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．ジャンルは<b style='color:blue;'>イタリアン・フレンチ</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>最寄り駅，電話番号，営業時間</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>8/12</b>です．時間は<b style='color:blue;'>14:40</b>です．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．予算は<b style='color:blue;'>普通</b>が希望です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>チェックイン開始時刻，レストランの有無</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>8/12</b>です．宿泊日数は<b style='color:blue;'>2</b>泊です．",
+        "希望の条件が合わない場合は，宿泊日数を<b style='color:blue;'>1</b>泊に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "station",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "phone",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "opentime",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "checkintime",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "withrestaurant",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "hotel"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都へ旅行をしたいのですが。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 16:28:30"
+    },
+    {
+      "role": 0,
+      "content": "はい。何かお探しですか？",
+      "payload": [
+        {}
+      ],
+      "state": {},
+      "created_at": "2022-11-26 16:28:38",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "飲食店を探しています。イタリアンかフレンチで、無料の駐車場があるところはありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 16:29:33"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、フランス料理 ボルドーはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "イタリアン・フレンチ",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "フランス料理 ボルドー",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669480190310,
+          "selectedResults": [
+            "フランス料理 ボルドー"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "イタリアン・フレンチ",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 16:30:02",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "フランス料理 ボルドー",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの最寄り駅と電話番号と営業時間を教えてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 16:30:52"
+    },
+    {
+      "role": 0,
+      "content": "はい。最寄り駅は北大路駅です。電話番号は0754926901になります。また、営業時間は12:00～15:00と17:30～22:00です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "イタリアン・フレンチ",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "フランス料理 ボルドー",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "イタリアン・フレンチ",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 16:31:27",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "フランス料理 ボルドー",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。では、そちらで予約をお願いします。8/12の14:40に4名でお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "station",
+          "北大路駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0754926901",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "12:00～15:00と17:30～22:00",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 16:33:02"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、37806です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "イタリアン・フレンチ",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "フランス料理 ボルドー",
+              "value": {
+                "people": "4",
+                "day": [
+                  8,
+                  12
+                ],
+                "time": "14:40"
+              },
+              "timestamp": 1669480395804,
+              "success": true,
+              "ref": "37806"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "イタリアン・フレンチ",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 16:33:32",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "フランス料理 ボルドー",
+          "value": {
+            "people": "4",
+            "day": [
+              8,
+              12
+            ],
+            "time": "14:40"
+          },
+          "timestamp": 1669480395804,
+          "success": true,
+          "ref": "37806"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ついでに宿泊施設も探していただけますか？無料駐車場があるところで価格は普通が希望です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "station",
+          "北大路駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0754926901",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "12:00～15:00と17:30～22:00",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "37806",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 16:35:21"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、なごみ宿 都和はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "なごみ宿 都和",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669480538022,
+          "selectedResults": [
+            "なごみ宿 都和"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "イタリアン・フレンチ",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 16:35:47",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "フランス料理 ボルドー",
+          "value": {
+            "people": "4",
+            "day": [
+              8,
+              12
+            ],
+            "time": "14:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの宿のチェックイン時刻は何時ですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "station",
+          "北大路駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0754926901",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "12:00～15:00と17:30～22:00",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "37806",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 16:36:58"
+    },
+    {
+      "role": 0,
+      "content": "はい。15:00 です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "なごみ宿 都和",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "イタリアン・フレンチ",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 16:37:14",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "フランス料理 ボルドー",
+          "value": {
+            "people": "4",
+            "day": [
+              8,
+              12
+            ],
+            "time": "14:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "レストランはありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "station",
+          "北大路駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0754926901",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "12:00～15:00と17:30～22:00",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "37806",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 16:37:37"
+    },
+    {
+      "role": 0,
+      "content": "ございますよ。予約されますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "なごみ宿 都和",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "イタリアン・フレンチ",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 16:37:49",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "フランス料理 ボルドー",
+          "value": {
+            "people": "4",
+            "day": [
+              8,
+              12
+            ],
+            "time": "14:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "宿泊施設の予約だけお願いします。8/12に2名で、2泊お願いしたいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "station",
+          "北大路駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0754926901",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "12:00～15:00と17:30～22:00",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "37806",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "有",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 16:39:09"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では予約できませんでした。どうされますか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "なごみ宿 都和",
+              "value": {
+                "people": "2",
+                "day": [
+                  8,
+                  12
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1669480760458,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "イタリアン・フレンチ",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 16:39:25",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              12
+            ],
+            "stay": "2"
+          },
+          "timestamp": 1669480760458,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "フランス料理 ボルドー",
+          "value": {
+            "people": "4",
+            "day": [
+              8,
+              12
+            ],
+            "time": "14:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、1泊でお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "station",
+          "北大路駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0754926901",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "12:00～15:00と17:30～22:00",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "37806",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "有",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 16:39:57"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、26106です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "なごみ宿 都和",
+              "value": {
+                "people": "2",
+                "day": [
+                  8,
+                  12
+                ],
+                "stay": "1"
+              },
+              "timestamp": 1669480801414,
+              "success": true,
+              "ref": "26106"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "イタリアン・フレンチ",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 16:40:12",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              12
+            ],
+            "stay": "1"
+          },
+          "timestamp": 1669480801414,
+          "success": true,
+          "ref": "26106"
+        },
+        "restaurant": {
+          "name": "フランス料理 ボルドー",
+          "value": {
+            "people": "4",
+            "day": [
+              8,
+              12
+            ],
+            "time": "14:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "station",
+          "北大路駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0754926901",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "12:00～15:00と17:30～22:00",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "37806",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "有",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "26106",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 16:40:26"
+    },
+    {
+      "role": 0,
+      "content": "はい。他にご用件はございませんか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "なごみ宿 都和",
+              "value": {
+                "people": "2",
+                "day": [
+                  8,
+                  12
+                ],
+                "stay": "1"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "イタリアン・フレンチ",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 16:40:35",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              12
+            ],
+            "stay": "1"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "フランス料理 ボルドー",
+          "value": {
+            "people": "4",
+            "day": [
+              8,
+              12
+            ],
+            "time": "14:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特にありません。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "station",
+          "北大路駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0754926901",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "12:00～15:00と17:30～22:00",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "37806",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "有",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "26106",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 16:40:46"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "なごみ宿 都和",
+              "value": {
+                "people": "2",
+                "day": [
+                  8,
+                  12
+                ],
+                "stay": "1"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "イタリアン・フレンチ",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 16:40:54",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              12
+            ],
+            "stay": "1"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "フランス料理 ボルドー",
+          "value": {
+            "people": "4",
+            "day": [
+              8,
+              12
+            ],
+            "time": "14:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-26 16:41:03"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-26 16:41:11"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:57",
+  "final_state": {
+    "restaurant": {
+      "city": "京都",
+      "name": null,
+      "genre": "イタリアン・フレンチ",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "なごみ宿 都和",
+      "value": {
+        "people": "2",
+        "day": [
+          8,
+          12
+        ],
+        "stay": "1"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "フランス料理 ボルドー",
+      "value": {
+        "people": "4",
+        "day": [
+          8,
+          12
+        ],
+        "time": "14:40"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

@@ -1,0 +1,2611 @@
+{
+  "id": 340,
+  "dialogue_code": "dialogue_0340UIRI",
+  "status_code": 2,
+  "user": [
+    2,
+    207
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0207aJor"
+  ],
+  "task": 510,
+  "task_name": "main_190",
+  "task_content": {
+    "goals": {
+      "attraction": {
+        "fail_info": {
+          "city": "横浜",
+          "genre": "旧跡",
+          "area": "旭区"
+        },
+        "info": {
+          "city": "横浜",
+          "genre": "dontcare",
+          "area": "旭区"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "hotel": {
+        "fail_info": {
+          "city": "横浜",
+          "withrestaurant": "有り",
+          "parking": "有り(無料)",
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）"
+        },
+        "info": {
+          "city": "横浜",
+          "withrestaurant": "有り",
+          "parking": "有り(無料)",
+          "genre": "dontcare"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "横浜",
+          "name": "アサヒタクシー株式会社"
+        },
+        "reqt": [
+          "cashless",
+          "phone",
+          "jumbo",
+          "reference"
+        ],
+        "book": {
+          "day": "11/18",
+          "time": "14:20",
+          "departurepoint": "attraction",
+          "arrivalpoint": "hotel"
+        }
+      }
+    },
+    "descriptions": {
+      "attraction": [
+        "あなたは<b style='color:blue;'>横浜</b>への旅行を計画しています．",
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．ジャンルは<b style='color:blue;'>旧跡</b>です．地区は<b style='color:blue;'>旭区</b>です．",
+        "希望に合うところがない場合は，ジャンルは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．宿のタイプは<b style='color:blue;'>簡易宿所（ベッドハウス・山小屋・カプセルホテル等）</b>です．",
+        "希望に合うところがない場合は，宿のタイプは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．タクシー会社の名前は<b style='color:blue;'>アサヒタクシー株式会社</b>です．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>キャッシュレス対応，電話番号，ジャンボタクシー対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>11/18</b>です．時間は<b style='color:blue;'>14:20</b>です．出発地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．目的地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "jumbo",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "attraction",
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは。横浜での観光名所を探しているのですが。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:43:19"
+    },
+    {
+      "role": 0,
+      "content": "ご利用ありがとうございます。横浜の観光名所ですね。なにかご希望の条件など、ございますでしょうか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666860200738
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:43:39",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "旭区にある、旧跡がいいです。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:43:57"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件では、該当するものがありませんでした。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "旧跡",
+            "area": "旭区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666860245907
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": "旧跡",
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:44:15",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、旧跡じゃなくても構いません。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:44:33"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、こども自然公園は如何でしょうか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": "旭区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666860275524,
+          "selectedResults": [
+            "こども自然公園"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:44:49",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこに行ってみようと思います。あと、当日の宿泊施設も探しています。レストランが併設されてるところがいいのですが。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "こども自然公園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:46:00"
+    },
+    {
+      "role": 0,
+      "content": "そうしますと、候補が48件ほどございます。ほかに、エリアなど、ご希望の条件はございませんでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1666860375116
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:46:53",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "駐車場が無料で利用できるところがいいです。もしできれば、宿タイプは簡易宿所がいいのですが。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "こども自然公園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:47:52"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では候補が見つかりませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1666860479900
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:48:16",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、宿タイプは特にこだわりません。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "こども自然公園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:48:40"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、旅館 松島という南区の旅館はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "旅館 松島",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666860522659,
+          "selectedResults": [
+            "旅館 松島"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:49:02",
+      "book": {
+        "hotel": {
+          "name": "旅館 松島",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにしてみようと思います。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "こども自然公園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "旅館 松島",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:49:53"
+    },
+    {
+      "role": 0,
+      "content": "ほかにお調べすることはございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "旅館 松島",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:50:03",
+      "book": {
+        "hotel": {
+          "name": "旅館 松島",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "当日タクシーを利用したいのですが、アサヒタクシー株式会社という名前のところはありますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "こども自然公園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "旅館 松島",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:50:52"
+    },
+    {
+      "role": 0,
+      "content": "はい、1件該当がございます。ご予約でしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": "アサヒタクシー株式会社",
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "アサヒタクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666860660242,
+          "selectedResults": [
+            "アサヒタクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": "アサヒタクシー株式会社",
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:51:23",
+      "book": {
+        "hotel": {
+          "name": "旅館 松島",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "アサヒタクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、ありがとうございます。そちらはキャッシュレス、ジャンボタクシーを対応していますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "こども自然公園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "旅館 松島",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:52:10"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。アサヒタクシー株式会社は、キャッシュレス、ジャンボタクシーともに非対応となっております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": "アサヒタクシー株式会社",
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "アサヒタクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": "アサヒタクシー株式会社",
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:52:37",
+      "book": {
+        "hotel": {
+          "name": "旅館 松島",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "アサヒタクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。電話番号を教えてください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "こども自然公園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "旅館 松島",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:52:58"
+    },
+    {
+      "role": 0,
+      "content": "はい。電話番号は、0120411190でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": "アサヒタクシー株式会社",
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "アサヒタクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": "アサヒタクシー株式会社",
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:53:08",
+      "book": {
+        "hotel": {
+          "name": "旅館 松島",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "アサヒタクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。予約をお願いしたいのですが、１１月１８日で１４時２０分にこども自然公園から旅館 松島までお願いできますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "こども自然公園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "旅館 松島",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0120411190",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:54:35"
+    },
+    {
+      "role": 0,
+      "content": "はい、ご予約ありがとうございます。予約番号96258にて、ご予約承りました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": "アサヒタクシー株式会社",
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "アサヒタクシー株式会社",
+              "value": {
+                "day": [
+                  11,
+                  18
+                ],
+                "time": "14:20",
+                "departurepoint": "こども自然公園",
+                "arrivalpoint": "旅館 松島"
+              },
+              "timestamp": 1666860893188,
+              "success": true,
+              "ref": "96258"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": "アサヒタクシー株式会社",
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:55:14",
+      "book": {
+        "hotel": {
+          "name": "旅館 松島",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "アサヒタクシー株式会社",
+          "value": {
+            "day": [
+              11,
+              18
+            ],
+            "time": "14:20",
+            "departurepoint": "こども自然公園",
+            "arrivalpoint": "旅館 松島"
+          },
+          "timestamp": 1666860893188,
+          "success": true,
+          "ref": "96258"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。お世話になりました。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "こども自然公園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "旅館 松島",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "非対応",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0120411190",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "非対応",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "96258",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:55:44"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はございませんか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": "アサヒタクシー株式会社",
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "アサヒタクシー株式会社",
+              "value": {
+                "day": [
+                  11,
+                  18
+                ],
+                "time": "14:20",
+                "departurepoint": "こども自然公園",
+                "arrivalpoint": "旅館 松島"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": "アサヒタクシー株式会社",
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:55:53",
+      "book": {
+        "hotel": {
+          "name": "旅館 松島",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "アサヒタクシー株式会社",
+          "value": {
+            "day": [
+              11,
+              18
+            ],
+            "time": "14:20",
+            "departurepoint": "こども自然公園",
+            "arrivalpoint": "旅館 松島"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、大丈夫です。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "こども自然公園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "旅館 松島",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "非対応",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0120411190",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "非対応",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "96258",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:56:03"
+    },
+    {
+      "role": 0,
+      "content": "承知いたしました。本日はご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": "アサヒタクシー株式会社",
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "アサヒタクシー株式会社",
+              "value": {
+                "day": [
+                  11,
+                  18
+                ],
+                "time": "14:20",
+                "departurepoint": "こども自然公園",
+                "arrivalpoint": "旅館 松島"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": "アサヒタクシー株式会社",
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:56:08",
+      "book": {
+        "hotel": {
+          "name": "旅館 松島",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "アサヒタクシー株式会社",
+          "value": {
+            "day": [
+              11,
+              18
+            ],
+            "time": "14:20",
+            "departurepoint": "こども自然公園",
+            "arrivalpoint": "旅館 松島"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-27 08:56:17"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-27 08:56:19"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:56",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "横浜",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": "横浜",
+      "name": null,
+      "genre": null,
+      "area": "旭区",
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "横浜",
+      "name": "アサヒタクシー株式会社",
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "旅館 松島",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "アサヒタクシー株式会社",
+      "value": {
+        "day": [
+          11,
+          18
+        ],
+        "time": "14:20",
+        "departurepoint": "こども自然公園",
+        "arrivalpoint": "旅館 松島"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

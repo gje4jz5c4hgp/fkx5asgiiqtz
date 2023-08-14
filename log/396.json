@@ -1,0 +1,2275 @@
+{
+  "id": 396,
+  "dialogue_code": "dialogue_0396laDz",
+  "status_code": 2,
+  "user": [
+    8,
+    209
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0209LJle"
+  ],
+  "task": 566,
+  "task_name": "main_246",
+  "task_content": {
+    "goals": {
+      "attraction": {
+        "info": {
+          "city": "横浜",
+          "wifi": "有り(無料)",
+          "genre": "工場見学"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "hotel": {
+        "fail_info": {
+          "city": "横浜",
+          "genre": "ビジネスホテル",
+          "pricerange": "高め",
+          "withrestaurant": "有り"
+        },
+        "info": {
+          "city": "横浜",
+          "genre": "ビジネスホテル",
+          "pricerange": "dontcare",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "name",
+          "station",
+          "parking"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "横浜",
+          "jumbo": "対応"
+        },
+        "info": {
+          "city": "横浜",
+          "jumbo": "dontcare"
+        },
+        "reqt": [
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "9/21",
+          "time": "12:30",
+          "departurepoint": "attraction",
+          "arrivalpoint": "hotel"
+        }
+      }
+    },
+    "descriptions": {
+      "attraction": [
+        "あなたは<b style='color:blue;'>横浜</b>への旅行を計画しています．",
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．ジャンルは<b style='color:blue;'>工場見学</b>です．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．宿のタイプは<b style='color:blue;'>ビジネスホテル</b>です．予算は<b style='color:blue;'>高め</b>が希望です．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，予算は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，最寄り駅，駐車場の有無</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，ジャンボタクシーの利用可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>9/21</b>です．時間は<b style='color:blue;'>12:30</b>です．出発地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．目的地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "station",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "parking",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "attraction",
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "横浜旅行で行く観光名所を探して頂けないでしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:12:35"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご希望の条件はございますか。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666840361916
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 03:12:51",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "Wi-Fiが無料で、ジャンルは工場見学を希望します。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:13:07"
+    },
+    {
+      "role": 0,
+      "content": "ではカップヌードルミュージアム 横浜はいかがですか。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "工場見学",
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666840401186,
+          "selectedResults": [
+            "カップヌードルミュージアム 横浜"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": "工場見学",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 03:13:29",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "楽しそうですね。そちらに伺いたいと思います。あと、宿泊施設も探して頂けないでしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:13:58"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご希望の条件をお聞かせ願います。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666840445846
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": "工場見学",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 03:14:16",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ビジネスホテルで予算は高めのところがいいです。レストランが併設されていると便利でありがたいです。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:14:36"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件に当てはまるところがございませんでした。いかがなさいますか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "ビジネスホテル",
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1666840487756
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": "工場見学",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 03:15:04",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予算は考慮しなくて大丈夫です。何かありそうでしょうか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:15:23"
+    },
+    {
+      "role": 0,
+      "content": "ではホテル・アルファーワン横浜関内はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "ビジネスホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテル・アルファーワン横浜関内",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666840529203,
+          "selectedResults": [
+            "ホテル・アルファーワン横浜関内"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": "工場見学",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 03:15:38",
+      "book": {
+        "hotel": {
+          "name": "ホテル・アルファーワン横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらにしたいと思います。最寄り駅を教えてください。あと、駐車場ってありますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:16:08"
+    },
+    {
+      "role": 0,
+      "content": "最寄り駅は関内駅でございます。駐車場は有料で利用いただけます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "ビジネスホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテル・アルファーワン横浜関内",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": "工場見学",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 03:16:30",
+      "book": {
+        "hotel": {
+          "name": "ホテル・アルファーワン横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "情報ありがとうございます。あと、タクシー予約もお願いできますでしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ホテル・アルファーワン横浜関内",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "関内駅",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "あり",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:17:07"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご希望のタクシー会社はございますか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [],
+          "timestamp": 1666840635418
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": "工場見学",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 03:17:26",
+      "book": {
+        "hotel": {
+          "name": "ホテル・アルファーワン横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ジャンボタクシーを利用できる会社がいいです。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ホテル・アルファーワン横浜関内",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "関内駅",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "あり",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:17:40"
+    },
+    {
+      "role": 0,
+      "content": "もうしわけございません。ジャンボタクシー利用可能なタクシー会社がありませんでした。いかがなさいますか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1666840666024
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": "工場見学",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 03:18:15",
+      "book": {
+        "hotel": {
+          "name": "ホテル・アルファーワン横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "でしたら、ジャンボタクシー利用はできなくてもかまいません。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ホテル・アルファーワン横浜関内",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "関内駅",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "あり",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:18:30"
+    },
+    {
+      "role": 0,
+      "content": "ではアサヒタクシー株式会社がございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "アサヒタクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666840715713,
+          "selectedResults": [
+            "アサヒタクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": "工場見学",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 03:18:43",
+      "book": {
+        "hotel": {
+          "name": "ホテル・アルファーワン横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "アサヒタクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらでお願いしたいのですが、電話番号ってわかりますでしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ホテル・アルファーワン横浜関内",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "関内駅",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "あり",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:19:00"
+    },
+    {
+      "role": 0,
+      "content": "0120411190でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "アサヒタクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": "工場見学",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 03:19:12",
+      "book": {
+        "hotel": {
+          "name": "ホテル・アルファーワン横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "アサヒタクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予約もお願いできますか？9/21の12:30で、カップヌードルミュージアム 横浜を出発し、ホテル・アルファーワン横浜関内を目的地とするルートでお願いしたいのですが。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ホテル・アルファーワン横浜関内",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "関内駅",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "あり",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0120411190",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:20:28"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。予約番号は99635でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "アサヒタクシー株式会社",
+              "value": {
+                "day": [
+                  9,
+                  21
+                ],
+                "time": "12:30",
+                "departurepoint": "カップヌードルミュージアム 横浜",
+                "arrivalpoint": "ホテル・アルファーワン横浜関内"
+              },
+              "timestamp": 1666840844418,
+              "success": true,
+              "ref": "99635"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": "工場見学",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 03:21:02",
+      "book": {
+        "hotel": {
+          "name": "ホテル・アルファーワン横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "アサヒタクシー株式会社",
+          "value": {
+            "day": [
+              9,
+              21
+            ],
+            "time": "12:30",
+            "departurepoint": "カップヌードルミュージアム 横浜",
+            "arrivalpoint": "ホテル・アルファーワン横浜関内"
+          },
+          "timestamp": 1666840844418,
+          "success": true,
+          "ref": "99635"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ホテル・アルファーワン横浜関内",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "関内駅",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "parking",
+          "あり",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0120411190",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "99635",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 03:21:13"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-27 03:21:20"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-27 03:21:30"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:56",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "横浜",
+      "name": null,
+      "genre": "ビジネスホテル",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": "横浜",
+      "name": null,
+      "genre": "工場見学",
+      "area": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "横浜",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ホテル・アルファーワン横浜関内",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "アサヒタクシー株式会社",
+      "value": {
+        "day": [
+          9,
+          21
+        ],
+        "time": "12:30",
+        "departurepoint": "カップヌードルミュージアム 横浜",
+        "arrivalpoint": "ホテル・アルファーワン横浜関内"
+      },
+      "timestamp": 1666840844418,
+      "success": true,
+      "ref": "99635"
+    }
+  }
+}

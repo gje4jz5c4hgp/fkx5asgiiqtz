@@ -1,0 +1,1622 @@
+{
+  "id": 1941,
+  "dialogue_code": "dialogue_1941kLIG",
+  "status_code": 2,
+  "user": [
+    22,
+    286
+  ],
+  "username": [
+    "operator_0022UfuU",
+    "customer_0286JQlF"
+  ],
+  "task": 2111,
+  "task_name": "main_1791",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "札幌",
+          "withrestaurant": "有り",
+          "pricerange": "安め",
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "restaurant": {
+        "fail_info": {
+          "city": "札幌",
+          "parking": "有り(無料)",
+          "wifi": "有り(無料)",
+          "area": "東区"
+        },
+        "info": {
+          "city": "札幌",
+          "parking": "有り(無料)",
+          "wifi": "有り(無料)",
+          "area": "dontcare"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "札幌",
+          "cashless": "対応"
+        },
+        "info": {
+          "city": "札幌",
+          "cashless": "dontcare"
+        },
+        "reqt": [
+          "jumbo",
+          "reference"
+        ],
+        "book": {
+          "day": "5/19",
+          "time": "14:50",
+          "departurepoint": "hotel",
+          "arrivalpoint": "restaurant"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>札幌</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．予算は<b style='color:blue;'>安め</b>が希望です．宿のタイプは<b style='color:blue;'>簡易宿所（ベッドハウス・山小屋・カプセルホテル等）</b>です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>東区</b>です．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "希望に合うところが見つからない場合は，キャッシュレス払いの可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>ジャンボタクシー対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>5/19</b>です．時間は<b style='color:blue;'>14:50</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "jumbo",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "札幌への旅行を計画中なのですが、レストラン併設有りの簡易宿泊所はありますか？予算は安めでお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 06:28:32"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。その条件でしたらSappolodgeはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1667284133572,
+          "selectedResults": [
+            "Sappolodge"
+          ]
+        },
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "Sappolodge",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667284146912,
+          "selectedResults": [
+            "Sappolodge"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 06:29:22",
+      "book": {
+        "hotel": {
+          "name": "Sappolodge",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました、それと東区でWiFiと駐車場が無料の飲食店があれば教えて下さい。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "Sappolodge",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 06:30:11"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。該当の飲食店をお探しすることが出来ませんでした。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667284226560
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 06:30:35",
+      "book": {
+        "hotel": {
+          "name": "Sappolodge",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか、東区以外ではどうでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "Sappolodge",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 06:30:57"
+    },
+    {
+      "role": 0,
+      "content": "では、東区以外でしたら、パーラーエノキはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "パーラーエノキ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667284262827,
+          "selectedResults": [
+            "J.S. PANCAKE CAFE 札幌ステラプレイス店",
+            "パーラーエノキ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 06:31:25",
+      "book": {
+        "hotel": {
+          "name": "Sappolodge",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます利用させてもらいます。当日はタクシーを利用したいのですが、キャッシュレス対応可能な会社を教えて下さい。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "Sappolodge",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "パーラーエノキ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 06:32:27"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。キャッシュレス対応のタクシー会社を見つけることが出来ませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [],
+          "timestamp": 1667284363277
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "札幌",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 06:32:59",
+      "book": {
+        "hotel": {
+          "name": "Sappolodge",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "キャッシュレスは諦めます",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "Sappolodge",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "パーラーエノキ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 06:33:39"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それでは、つばめ自動車(株)さんはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "つばめ自動車(株)",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667284424980,
+          "selectedResults": [
+            "つばめ自動車(株)"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "札幌",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 06:34:01",
+      "book": {
+        "hotel": {
+          "name": "Sappolodge",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "つばめ自動車(株)",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "つばめ自動車(株)はジャンボタクシーは利用できますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "Sappolodge",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "パーラーエノキ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 06:34:54"
+    },
+    {
+      "role": 0,
+      "content": "はい、ご利用いただけます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "つばめ自動車(株)",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "札幌",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 06:35:05",
+      "book": {
+        "hotel": {
+          "name": "Sappolodge",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "つばめ自動車(株)",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "「つばめ自動車(株)」で通常のタクシー予約をお願いします。5/19の14:50に「Sappolodge」から「パーラーエノキ」までお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "Sappolodge",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "パーラーエノキ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 06:35:47"
+    },
+    {
+      "role": 0,
+      "content": "お待たせ致しました。予約番号23588でご予約致しました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "つばめ自動車(株)",
+              "value": {
+                "day": [
+                  5,
+                  19
+                ],
+                "time": "14:50",
+                "departurepoint": "Sappolodg",
+                "arrivalpoint": "パーラーエノキ"
+              },
+              "timestamp": 1667284576564,
+              "success": true,
+              "ref": "23588"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "札幌",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 06:36:26",
+      "book": {
+        "hotel": {
+          "name": "Sappolodge",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "つばめ自動車(株)",
+          "value": {
+            "day": [
+              5,
+              19
+            ],
+            "time": "14:50",
+            "departurepoint": "Sappolodg",
+            "arrivalpoint": "パーラーエノキ"
+          },
+          "timestamp": 1667284576564,
+          "success": true,
+          "ref": "23588"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ほかは大丈夫です、ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "Sappolodge",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "パーラーエノキ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "jumbo",
+          "対応可",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "23588",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 06:36:58"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "つばめ自動車(株)",
+              "value": {
+                "day": [
+                  5,
+                  19
+                ],
+                "time": "14:50",
+                "departurepoint": "Sappolodg",
+                "arrivalpoint": "パーラーエノキ"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "札幌",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 06:37:05",
+      "book": {
+        "hotel": {
+          "name": "Sappolodge",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "パーラーエノキ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "つばめ自動車(株)",
+          "value": {
+            "day": [
+              5,
+              19
+            ],
+            "time": "14:50",
+            "departurepoint": "Sappolodg",
+            "arrivalpoint": "パーラーエノキ"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 06:37:13"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 06:37:13"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:08",
+  "final_state": {
+    "restaurant": {
+      "city": "札幌",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "札幌",
+      "name": null,
+      "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+      "area": null,
+      "pricerange": "安め",
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "札幌",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "Sappolodge",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "パーラーエノキ",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "つばめ自動車(株)",
+      "value": {
+        "day": [
+          5,
+          19
+        ],
+        "time": "14:50",
+        "departurepoint": "Sappolodg",
+        "arrivalpoint": "パーラーエノキ"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

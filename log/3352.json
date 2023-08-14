@@ -1,0 +1,2348 @@
+{
+  "id": 3352,
+  "dialogue_code": "dialogue_3352lLts",
+  "status_code": 2,
+  "user": [
+    7,
+    235
+  ],
+  "username": [
+    "operator_0007wTiH",
+    "customer_0235IpFM"
+  ],
+  "task": 3622,
+  "task_name": "main2_602",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "fail_info": {
+          "city": "横浜",
+          "genre": "文房具・雑貨"
+        },
+        "info": {
+          "city": "横浜",
+          "genre": "ショッピングモール"
+        },
+        "reqt": [
+          "name",
+          "accesstime",
+          "address"
+        ]
+      },
+      "restaurant": {
+        "fail_info": {
+          "city": "横浜",
+          "genre": "カレー",
+          "pricerange": "普通"
+        },
+        "info": {
+          "city": "横浜",
+          "genre": "dontcare",
+          "pricerange": "普通"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "横浜",
+          "jumbo": "対応"
+        },
+        "info": {
+          "city": "横浜",
+          "jumbo": "dontcare"
+        },
+        "reqt": [
+          "phone",
+          "cashless",
+          "reference"
+        ],
+        "book": {
+          "day": "6/17",
+          "time": "16:00",
+          "departurepoint": "shopping",
+          "arrivalpoint": "restaurant"
+        }
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>横浜</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．ジャンルは<b style='color:blue;'>文房具・雑貨</b>です．",
+        "希望に合うところがない場合は，ジャンルを<b style='color:blue;'>ショッピングモール</b>に変更します．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，近辺の駅からの所要時間，住所</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．ジャンルは<b style='color:blue;'>カレー</b>です．予算は<b style='color:blue;'>普通</b>が希望です．",
+        "希望に合うところがない場合は，ジャンルは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，ジャンボタクシーの利用可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，キャッシュレス対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>6/17</b>です．時間は<b style='color:blue;'>16:00</b>です．出発地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．目的地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "accesstime",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "address",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "restaurant",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "横浜への旅行を計画中で、文房具・雑貨の買い物ができる施設を探しています。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:39:37"
+    },
+    {
+      "role": 0,
+      "content": "横浜の文房具店はヒットしませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "文房具・雑貨",
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669466538484
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:40:23",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。それでは、横浜にあるショッピングモールを教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:40:55"
+    },
+    {
+      "role": 0,
+      "content": "横浜ワールドポーターズ\nモザイクモール港北\nMARK IS みなとみらい　など14件ございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "ショッピングモール",
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669466613996
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:41:31",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "横浜ワールドポーターズにしようと思います。最寄駅からの所要時間と、住所を教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜ワールドポーターズ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:42:00"
+    },
+    {
+      "role": 0,
+      "content": "みなとみらい駅が最寄り駅で、徒歩で5分です。住所は神奈川県横浜市中区新港2丁目2-1です。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "ショッピングモール",
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0,
+          "selectedResults": [
+            "横浜ワールドポーターズ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:42:40",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日予算が普通で、カレーを食べられるお店があれば、教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜ワールドポーターズ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "みなとみらい駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市中区新港2丁目2-1",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:43:35"
+    },
+    {
+      "role": 0,
+      "content": "横浜でカレー、予算ふつうはヒットしませんでした。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "カレー",
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669466801312
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": "カレー",
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:44:48",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。では、ジャンルは何でも構いません。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜ワールドポーターズ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "みなとみらい駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市中区新港2丁目2-1",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:45:04"
+    },
+    {
+      "role": 0,
+      "content": "58件ございますが、横浜すきずきや\nゑびす鯛 横浜店　などはいかがでしょうか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669466853779
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:45:42",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ゑびす鯛 横浜店にしようと思います。どうもありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜ワールドポーターズ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "みなとみらい駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市中区新港2丁目2-1",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ゑびす鯛 横浜店",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:46:02"
+    },
+    {
+      "role": 0,
+      "content": "とんでもないです。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:46:22",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "当日ジャンボタクシーを利用したいのですが、可能でしょうか。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜ワールドポーターズ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "みなとみらい駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市中区新港2丁目2-1",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ゑびす鯛 横浜店",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:46:46"
+    },
+    {
+      "role": 0,
+      "content": "横浜ではジャンボタクシー対応のタクシー会社は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1669466985328
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:47:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。ではジャンボタクシーでなくても結構です。横浜ワールドポーターズからゑびす鯛 横浜店まで移動できるタクシー会社を探しています。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜ワールドポーターズ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "みなとみらい駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市中区新港2丁目2-1",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ゑびす鯛 横浜店",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:48:49"
+    },
+    {
+      "role": 0,
+      "content": "金港交通株式会社 港南台営業所はいかがですか？予約いたしましょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "金港交通株式会社 港南台営業所",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669467122156,
+          "selectedResults": [
+            "金港交通株式会社 港南台営業所",
+            "横浜北交通株式会社",
+            "京浜交通株式会社 弁天橋営業所",
+            "日本交通横浜株式会社",
+            "東都東タクシー株式会社",
+            "金港交通株式会社 港南台営業所"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:50:16",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "金港交通株式会社 港南台営業所",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、6/17の16:00で予約をお願いします。予約した会社の電話番号と、キャッシュレス対応の有無も教えていただきたいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜ワールドポーターズ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "みなとみらい駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市中区新港2丁目2-1",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ゑびす鯛 横浜店",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:50:58"
+    },
+    {
+      "role": 0,
+      "content": "キャッシュレス対応については不明です。予約完了しました。予約番号は35093です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "金港交通株式会社 港南台営業所",
+              "value": {
+                "day": [
+                  6,
+                  17
+                ],
+                "time": "16:00",
+                "departurepoint": "横浜ワールドポーターズ",
+                "arrivalpoint": "ゑびす鯛 横浜店"
+              },
+              "timestamp": 1669467252820,
+              "success": true,
+              "ref": "35093"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:52:43",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "金港交通株式会社 港南台営業所",
+          "value": {
+            "day": [
+              6,
+              17
+            ],
+            "time": "16:00",
+            "departurepoint": "横浜ワールドポーターズ",
+            "arrivalpoint": "ゑびす鯛 横浜店"
+          },
+          "timestamp": 1669467252820,
+          "success": true,
+          "ref": "35093"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。タクシー会社の電話番号はわかりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜ワールドポーターズ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "みなとみらい駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市中区新港2丁目2-1",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ゑびす鯛 横浜店",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "35093",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:53:16"
+    },
+    {
+      "role": 0,
+      "content": "0457526500です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "金港交通株式会社 港南台営業所",
+              "value": {
+                "day": [
+                  6,
+                  17
+                ],
+                "time": "16:00",
+                "departurepoint": "横浜ワールドポーターズ",
+                "arrivalpoint": "ゑびす鯛 横浜店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:53:37",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "金港交通株式会社 港南台営業所",
+          "value": {
+            "day": [
+              6,
+              17
+            ],
+            "time": "16:00",
+            "departurepoint": "横浜ワールドポーターズ",
+            "arrivalpoint": "ゑびす鯛 横浜店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "非常に助かります。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜ワールドポーターズ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "みなとみらい駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市中区新港2丁目2-1",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ゑびす鯛 横浜店",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0457526500",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "35093",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:53:51"
+    },
+    {
+      "role": 0,
+      "content": "今後ともよろしくお願いいたします。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "金港交通株式会社 港南台営業所",
+              "value": {
+                "day": [
+                  6,
+                  17
+                ],
+                "time": "16:00",
+                "departurepoint": "横浜ワールドポーターズ",
+                "arrivalpoint": "ゑびす鯛 横浜店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:54:14",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "金港交通株式会社 港南台営業所",
+          "value": {
+            "day": [
+              6,
+              17
+            ],
+            "time": "16:00",
+            "departurepoint": "横浜ワールドポーターズ",
+            "arrivalpoint": "ゑびす鯛 横浜店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "それでは、失礼します。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜ワールドポーターズ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "みなとみらい駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市中区新港2丁目2-1",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "ゑびす鯛 横浜店",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0457526500",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "35093",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:54:23"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-26 12:54:31"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-26 12:54:41"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:55",
+  "final_state": {
+    "restaurant": {
+      "city": "横浜",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "横浜",
+      "name": null,
+      "genre": "ショッピングモール",
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "横浜",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "金港交通株式会社 港南台営業所",
+      "value": {
+        "day": [
+          6,
+          17
+        ],
+        "time": "16:00",
+        "departurepoint": "横浜ワールドポーターズ",
+        "arrivalpoint": "ゑびす鯛 横浜店"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

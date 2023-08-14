@@ -1,0 +1,1014 @@
+{
+  "id": 2048,
+  "dialogue_code": "dialogue_2048PgRR",
+  "status_code": 2,
+  "user": [
+    20,
+    247
+  ],
+  "username": [
+    "operator_0020cvID",
+    "customer_0247aACL"
+  ],
+  "task": 2218,
+  "task_name": "main_1898",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "fail_info": {
+          "city": "大阪",
+          "pricerange": "普通",
+          "genre": "中華料理"
+        },
+        "info": {
+          "city": "大阪",
+          "pricerange": "普通",
+          "genre": "dontcare"
+        },
+        "reqt": [
+          "priceinfo",
+          "reference"
+        ],
+        "book": {
+          "people": 4,
+          "day": "12/22",
+          "time": "09:50"
+        }
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．予算は<b style='color:blue;'>普通</b>が希望です．ジャンルは<b style='color:blue;'>中華料理</b>です．",
+        "希望に合うところがない場合は，ジャンルは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>料金情報</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>12/22</b>です．時間は<b style='color:blue;'>09:50</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "priceinfo",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは。大阪に行こうと思ってるのですが、予算が普通のところで、中華料理を探しています。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:15:33"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。条件に合う飲食店の施設は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "中華料理",
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667319352424
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": "中華料理",
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 16:16:00",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。それでは中華料理以外の飲食店だとどうでしょうか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:16:45"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、焼肉マル 北新地店はいかがでしょうか？ジャンルは焼肉・ホルモンになります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "焼肉マル 北新地店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667319410889,
+          "selectedResults": [
+            "焼肉マル 北新地店",
+            "トリッペリア モツーダ 大阪マルビル店",
+            "焼肉マル 北新地店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 16:17:13",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉マル 北新地店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにしようと思います。料金情報をお聞きしたいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:17:37"
+    },
+    {
+      "role": 0,
+      "content": "はい。料金情報に、例として、特別な日のお食事に和牛を味わう焼肉宴会プラン:5000円という情報がありました。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "焼肉マル 北新地店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 16:18:12",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉マル 北新地店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。それでは、4名で12/22の09:50に予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "特別な日のお食事に和牛を味わう焼肉宴会プラン:5000円",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:19:13"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、51820です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "焼肉マル 北新地店",
+              "value": {
+                "people": "4",
+                "day": [
+                  12,
+                  22
+                ],
+                "time": "09:50"
+              },
+              "timestamp": 1667319569710,
+              "success": true,
+              "ref": "51820"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 16:19:37",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉マル 北新地店",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              22
+            ],
+            "time": "09:50"
+          },
+          "timestamp": 1667319569710,
+          "success": true,
+          "ref": "51820"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "特別な日のお食事に和牛を味わう焼肉宴会プラン:5000円",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "51820",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:19:57"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はありますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "焼肉マル 北新地店",
+              "value": {
+                "people": "4",
+                "day": [
+                  12,
+                  22
+                ],
+                "time": "09:50"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 16:20:11",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉マル 北新地店",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              22
+            ],
+            "time": "09:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいえ。案内していただきありがとうございました。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "特別な日のお食事に和牛を味わう焼肉宴会プラン:5000円",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "51820",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:20:27"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 16:20:35"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 16:20:39"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:08",
+  "final_state": {
+    "restaurant": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "焼肉マル 北新地店",
+      "value": {
+        "people": "4",
+        "day": [
+          12,
+          22
+        ],
+        "time": "09:50"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

@@ -1,0 +1,2744 @@
+{
+  "id": 1966,
+  "dialogue_code": "dialogue_1966YaAS",
+  "status_code": 2,
+  "user": [
+    22,
+    203
+  ],
+  "username": [
+    "operator_0022UfuU",
+    "customer_0203Sqra"
+  ],
+  "task": 2136,
+  "task_name": "main_1816",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "fail_info": {
+          "city": "仙台",
+          "area": "泉区",
+          "genre": "アウトレットモール"
+        },
+        "info": {
+          "city": "仙台",
+          "area": "dontcare",
+          "genre": "アウトレットモール"
+        },
+        "reqt": [
+          "phone"
+        ]
+      },
+      "restaurant": {
+        "info": {
+          "city": "仙台",
+          "area": "太白区",
+          "parking": "有り(無料)",
+          "pricerange": "安め"
+        },
+        "reqt": [
+          "priceinfo",
+          "genre",
+          "accesstime",
+          "reference"
+        ],
+        "book": {
+          "people": 4,
+          "day": "7/23",
+          "time": "15:00"
+        }
+      },
+      "hotel": {
+        "info": {
+          "city": "仙台",
+          "area": "青葉区",
+          "parking": "有り(無料)",
+          "genre": "旅館"
+        },
+        "reqt": [
+          "withrestaurant",
+          "wifi"
+        ]
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>仙台</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．地区は<b style='color:blue;'>泉区</b>です．ジャンルは<b style='color:blue;'>アウトレットモール</b>です．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．地区は<b style='color:blue;'>太白区</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．予算は<b style='color:blue;'>安め</b>が希望です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>料金情報，ジャンル，近辺の駅からの所要時間</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>7/23</b>です．時間は<b style='color:blue;'>15:00</b>です．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．地区は<b style='color:blue;'>青葉区</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．宿のタイプは<b style='color:blue;'>旅館</b>です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>レストランの有無，Wi-Fiの有無</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "priceinfo",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "hotel",
+        "withrestaurant",
+        ""
+      ],
+      [
+        3,
+        "hotel",
+        "wifi",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "restaurant",
+      "hotel"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは！今度、仙台に行く予定なんですけど、泉区にあるアウトレットモールをご案内いただけますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 00:50:40"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。そちらの条件ですと該当する店舗をお探しすることが出来ませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "アウトレットモール",
+            "area": "泉区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667263861443
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": "泉区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 00:51:23",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。じゃぁ、地区は泉区でなくても大丈夫です！",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 00:51:48"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。それでは三井アウトレットパーク 仙台港がございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "アウトレットモール",
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667263914261,
+          "selectedResults": [
+            "三井アウトレットパーク 仙台港"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 00:52:06",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！そちらの電話番号はわかりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 00:52:26"
+    },
+    {
+      "role": 0,
+      "content": "はい！0223558800でございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "アウトレットモール",
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 00:52:36",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！あと、太白区にある、飲食店も探していまして、駐車場が無料で使える、安めの予算で食べられるところって、どこか良い所ありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "0223558800",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 00:53:46"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それではポッケの森はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "太白区",
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667264044692
+        },
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "太白区",
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ポッケの森",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667264048988,
+          "selectedResults": [
+            "ポッケの森",
+            "丸源ラーメン 仙台長町南店",
+            "ポッケの森"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 00:54:41",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ポッケの森",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！そちらは、どんなジャンルのお店なんですか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "0223558800",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 00:54:58"
+    },
+    {
+      "role": 0,
+      "content": "はい、ジャンルは洋食・西洋料理と和食、更にカフェ・スイーツとなっております。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "太白区",
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ポッケの森",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 00:55:34",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ポッケの森",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "色々楽しめそうですね！料金情報は、何かわかりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "0223558800",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理と和食、カフェ・スイーツ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 00:56:21"
+    },
+    {
+      "role": 0,
+      "content": "はい！日替わりランチが780円、カラフル彩りカツカレーが840円となっております。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "太白区",
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ポッケの森",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 00:56:43",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ポッケの森",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！あと、近辺の駅からの所要時間についても、教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "0223558800",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "日替わりランチが780円、カラフル彩りカツカレーが840円",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理と和食、カフェ・スイーツ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 00:57:06"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。近辺の駅からですと、八木山動物公園駅からタクシーで12分でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "太白区",
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ポッケの森",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 00:57:31",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ポッケの森",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "なるほど、わかりました！では、そちらを予約させてください。７月23日の15時に、人数は４人でお願いします！",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "0223558800",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "日替わりランチが780円、カラフル彩りカツカレーが840円",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理と和食、カフェ・スイーツ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "八木山動物公園駅からタクシーで12分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 00:58:11"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。予約番号8490でご予約致しました。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "太白区",
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ポッケの森",
+              "value": {},
+              "timestamp": 1667264302950,
+              "success": true,
+              "ref": "8490"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 00:58:34",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ポッケの森",
+          "value": {
+            "people": "4",
+            "day": [
+              7,
+              23
+            ],
+            "time": "15:00"
+          },
+          "timestamp": 1667264302950,
+          "success": true,
+          "ref": "8490"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "手配、ありがとうございます！あと、宿泊施設も探しているんですが、お願いできますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "0223558800",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "日替わりランチが780円、カラフル彩りカツカレーが840円",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理と和食、カフェ・スイーツ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "八木山動物公園駅からタクシーで12分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "8490",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 00:59:16"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。何か御条件はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 00:59:32",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ポッケの森",
+          "value": {
+            "people": "4",
+            "day": [
+              7,
+              23
+            ],
+            "time": "15:00"
+          },
+          "timestamp": 1667264302950,
+          "success": true,
+          "ref": "8490"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "えっと、青葉区にあるところで、タイプ的には旅館を希望します。あと、駐車場を無料で利用できるところでお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "0223558800",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "日替わりランチが780円、カラフル彩りカツカレーが840円",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理と和食、カフェ・スイーツ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "八木山動物公園駅からタクシーで12分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "8490",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 01:00:06"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それでは旅館つかさはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "旅館",
+            "area": "青葉区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "旅館つかさ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667264427378,
+          "selectedResults": [
+            "旅館つかさ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": "青葉区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 01:00:46",
+      "book": {
+        "hotel": {
+          "name": "旅館つかさ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ポッケの森",
+          "value": {
+            "people": "4",
+            "day": [
+              7,
+              23
+            ],
+            "time": "15:00"
+          },
+          "timestamp": 1667264302950,
+          "success": true,
+          "ref": "8490"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！では、そちらの情報について少し詳しく教えてください。レストランと、WiFiがあるかどうかって、わかりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "0223558800",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "日替わりランチが780円、カラフル彩りカツカレーが840円",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理と和食、カフェ・スイーツ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "八木山動物公園駅からタクシーで12分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "8490",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 01:01:30"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。レストランは併設されていないようです。Wi-Fiは無料でご利用いただけます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "旅館",
+            "area": "青葉区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "旅館つかさ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": "青葉区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 01:02:14",
+      "book": {
+        "hotel": {
+          "name": "旅館つかさ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ポッケの森",
+          "value": {
+            "people": "4",
+            "day": [
+              7,
+              23
+            ],
+            "time": "15:00"
+          },
+          "timestamp": 1667264302950,
+          "success": true,
+          "ref": "8490"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！メモしました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "0223558800",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "日替わりランチが780円、カラフル彩りカツカレーが840円",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理と和食、カフェ・スイーツ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "八木山動物公園駅からタクシーで12分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "8490",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "無し",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "あり",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 01:02:38"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。他に何かご用件はございますでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "旅館",
+            "area": "青葉区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "旅館つかさ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": "青葉区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 01:02:51",
+      "book": {
+        "hotel": {
+          "name": "旅館つかさ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ポッケの森",
+          "value": {
+            "people": "4",
+            "day": [
+              7,
+              23
+            ],
+            "time": "15:00"
+          },
+          "timestamp": 1667264302950,
+          "success": true,
+          "ref": "8490"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いえ、もうあとは大丈夫です！色々とお調べいただき、ありがとうございました！",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "phone",
+          "0223558800",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "日替わりランチが780円、カラフル彩りカツカレーが840円",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理と和食、カフェ・スイーツ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "八木山動物公園駅からタクシーで12分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "8490",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "withrestaurant",
+          "無し",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "wifi",
+          "あり",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 01:03:21"
+    },
+    {
+      "role": 0,
+      "content": "はい、ありがとうございました。またお待ちしております。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "旅館",
+            "area": "青葉区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "旅館つかさ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": "青葉区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アウトレットモール",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 01:03:33",
+      "book": {
+        "hotel": {
+          "name": "旅館つかさ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ポッケの森",
+          "value": {
+            "people": "4",
+            "day": [
+              7,
+              23
+            ],
+            "time": "15:00"
+          },
+          "timestamp": 1667264302950,
+          "success": true,
+          "ref": "8490"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 01:03:43"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 01:03:43"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:08",
+  "final_state": {
+    "restaurant": {
+      "city": "仙台",
+      "name": null,
+      "genre": null,
+      "area": "太白区",
+      "pricerange": "安め",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "仙台",
+      "name": null,
+      "genre": "旅館",
+      "area": "青葉区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "仙台",
+      "name": null,
+      "genre": "アウトレットモール",
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "旅館つかさ",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "ポッケの森",
+      "value": {
+        "people": "4",
+        "day": [
+          7,
+          23
+        ],
+        "time": "15:00"
+      },
+      "timestamp": 1667264302950,
+      "success": true,
+      "ref": "8490"
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

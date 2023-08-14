@@ -1,0 +1,1726 @@
+{
+  "id": 4075,
+  "dialogue_code": "dialogue_4075MmoH",
+  "status_code": 2,
+  "user": [
+    17,
+    226
+  ],
+  "username": [
+    "operator_0017TYdb",
+    "customer_0226DgWu"
+  ],
+  "task": 4345,
+  "task_name": "main2_1325",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "名古屋",
+          "wifi": "有り(無料)",
+          "station": "上前津駅",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "名古屋",
+          "wifi": "有り(無料)",
+          "station": "上前津駅",
+          "parking": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "withrestaurant",
+          "checkouttime",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "10/22",
+          "stay": 2
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "名古屋",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "cashless",
+          "name",
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "10/22",
+          "time": "10:00",
+          "departurepoint": "ローソンストア100 名古屋丸の内",
+          "arrivalpoint": "hotel"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>名古屋</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>上前津駅</b>のところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，駐車場の有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，レストランの有無，チェックアウト終了時刻</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>10/22</b>です．宿泊日数は<b style='color:blue;'>2</b>泊です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>キャッシュレス対応，タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>10/22</b>です．時間は<b style='color:blue;'>10:00</b>です．出発地は<b style='color:blue;'>ローソンストア100 名古屋丸の内</b>というところです．目的地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "withrestaurant",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkouttime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "名古屋への旅行を計画しています．\n当日泊まる宿泊施設を探してください．Wi-Fiが無料で利用できるところにしてください．最寄り駅が上前津駅のところにしてください．駐車場を無料で利用できるところがいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 06:54:39"
+    },
+    {
+      "role": 0,
+      "content": "すみません、そちらの条件に合うお店がございません。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "上前津駅",
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1669532101765
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "上前津駅",
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 06:55:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "でしたら駐車場の有無はどちらでも。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 06:55:10"
+    },
+    {
+      "role": 0,
+      "content": "トリップ&スリープホステルはいかがでしょうか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "上前津駅",
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "トリップ&スリープホステル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669532114531,
+          "selectedResults": [
+            "トリップ&スリープホステル"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "上前津駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 06:55:19",
+      "book": {
+        "hotel": {
+          "name": "トリップ&スリープホステル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらのレストランの有無，チェックアウト終了時刻を教えていただけますか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 06:55:27"
+    },
+    {
+      "role": 0,
+      "content": "レストランの有無は無しでチェックアウト終了時刻は10:00です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "上前津駅",
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "トリップ&スリープホステル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "上前津駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 06:55:42",
+      "book": {
+        "hotel": {
+          "name": "トリップ&スリープホステル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらで人数は3人．日付は10/22．宿泊日数は2泊で予約してほしいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "トリップ&スリープホステル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "無し",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 06:56:15"
+    },
+    {
+      "role": 0,
+      "content": "予約完了いたしました。予約番号は94725になります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "上前津駅",
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "トリップ&スリープホステル",
+              "value": {
+                "people": "3",
+                "day": [
+                  10,
+                  22
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1669532186217,
+              "success": true,
+              "ref": "94725"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "上前津駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 06:56:31",
+      "book": {
+        "hotel": {
+          "name": "トリップ&スリープホステル",
+          "value": {
+            "people": "3",
+            "day": [
+              10,
+              22
+            ],
+            "stay": "2"
+          },
+          "timestamp": 1669532186217,
+          "success": true,
+          "ref": "94725"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと当日利用できるタクシー会社を探してください．ジャンボタクシーを利用できるところがいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "トリップ&スリープホステル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "無し",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "94725",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 06:56:46"
+    },
+    {
+      "role": 0,
+      "content": "丸八交通はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "丸八交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669532217089,
+          "selectedResults": [
+            "丸八交通"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "上前津駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 06:57:02",
+      "book": {
+        "hotel": {
+          "name": "トリップ&スリープホステル",
+          "value": {
+            "people": "3",
+            "day": [
+              10,
+              22
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "丸八交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらのキャッシュレス対応，，電話番号を教えていただけますか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "トリップ&スリープホステル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "無し",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "94725",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 06:57:15"
+    },
+    {
+      "role": 0,
+      "content": "キャッシュレス対応は不明で電話番号は0528026711です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "丸八交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "上前津駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 06:57:33",
+      "book": {
+        "hotel": {
+          "name": "トリップ&スリープホステル",
+          "value": {
+            "people": "3",
+            "day": [
+              10,
+              22
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "丸八交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらで日付は10/22．時間は10:00．出発地はローソンストア100 名古屋丸の内というところで．目的地は先ほど見つけた宿泊所で予約して欲しいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "トリップ&スリープホステル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "無し",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "94725",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "丸八交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0528026711",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 06:58:00"
+    },
+    {
+      "role": 0,
+      "content": "予約完了いたしました。予約番号は18864になります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "丸八交通",
+              "value": {
+                "day": [
+                  10,
+                  22
+                ],
+                "time": "10:00",
+                "departurepoint": "ローソンストア100 名古屋丸の内",
+                "arrivalpoint": "トリップ&スリープホステル"
+              },
+              "timestamp": 1669532300953,
+              "success": true,
+              "ref": "18864"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "上前津駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 06:58:26",
+      "book": {
+        "hotel": {
+          "name": "トリップ&スリープホステル",
+          "value": {
+            "people": "3",
+            "day": [
+              10,
+              22
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "丸八交通",
+          "value": {
+            "day": [
+              10,
+              22
+            ],
+            "time": "10:00",
+            "departurepoint": "ローソンストア100 名古屋丸の内",
+            "arrivalpoint": "トリップ&スリープホステル"
+          },
+          "timestamp": 1669532300953,
+          "success": true,
+          "ref": "18864"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "トリップ&スリープホステル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "無し",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "94725",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "丸八交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0528026711",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "18864",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 06:58:32"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-27 06:58:35"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-27 06:58:39"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:59",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "名古屋",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "上前津駅",
+      "wifi": "有り(無料)",
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "名古屋",
+      "name": null,
+      "cashless": null,
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "トリップ&スリープホステル",
+      "value": {
+        "people": "3",
+        "day": [
+          10,
+          22
+        ],
+        "stay": "2"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "丸八交通",
+      "value": {
+        "day": [
+          10,
+          22
+        ],
+        "time": "10:00",
+        "departurepoint": "ローソンストア100 名古屋丸の内",
+        "arrivalpoint": "トリップ&スリープホステル"
+      },
+      "timestamp": 1669532300953,
+      "success": true,
+      "ref": "18864"
+    }
+  }
+}

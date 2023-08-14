@@ -1,0 +1,1412 @@
+{
+  "id": 1858,
+  "dialogue_code": "dialogue_1858cskc",
+  "status_code": 2,
+  "user": [
+    20,
+    263
+  ],
+  "username": [
+    "operator_0020cvID",
+    "customer_0263EBYi"
+  ],
+  "task": 2028,
+  "task_name": "main_1708",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "京都",
+          "station": "梅小路京都西駅",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "京都",
+          "station": "梅小路京都西駅",
+          "parking": "dontcare"
+        },
+        "reqt": [
+          "withrestaurant",
+          "name",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 3,
+          "day": "3/23",
+          "stay": 4
+        },
+        "book": {
+          "people": 3,
+          "day": "3/23",
+          "stay": 3
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "京都",
+          "day": "3/23",
+          "area": "南区"
+        },
+        "reqt": [
+          "mintemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．最寄り駅が<b style='color:blue;'>梅小路京都西駅</b>のところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，駐車場の有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>レストランの有無，施設名</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>3/23</b>です．宿泊日数は<b style='color:blue;'>4</b>泊です．",
+        "希望の条件が合わない場合は，宿泊日数を<b style='color:blue;'>3</b>泊に変更します．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>3/23</b>です．地区は<b style='color:blue;'>南区</b>です．",
+        "<b style='color:green;'>最低気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "withrestaurant",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "mintemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都へ旅行する予定ですが、梅小路京都西駅周辺に、駐車場無料の宿泊施設はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 09:53:34"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。条件に合う宿泊施設は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "梅小路京都西駅",
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1667296434853
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "梅小路京都西駅",
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 09:54:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、駐車場はなくてもかまわないです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 09:54:14"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、ザ ロイヤルパークホテル 京都梅小路はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "梅小路京都西駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ザ ロイヤルパークホテル 京都梅小路",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667296462910,
+          "selectedResults": [
+            "ザ ロイヤルパークホテル 京都梅小路"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "梅小路京都西駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 09:54:33",
+      "book": {
+        "hotel": {
+          "name": "ザ ロイヤルパークホテル 京都梅小路",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そのホテルに、レストランは併設されていますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 09:54:45"
+    },
+    {
+      "role": 0,
+      "content": "はい。ございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "梅小路京都西駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ザ ロイヤルパークホテル 京都梅小路",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "梅小路京都西駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 09:54:55",
+      "book": {
+        "hotel": {
+          "name": "ザ ロイヤルパークホテル 京都梅小路",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では予約をお願いします。人数は３名、3/23から４泊したいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 09:55:14"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では予約できませんでした。どうされますか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "梅小路京都西駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ザ ロイヤルパークホテル 京都梅小路",
+              "value": {
+                "people": "3",
+                "day": [
+                  3,
+                  23
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1667296527404,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "梅小路京都西駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 09:55:33",
+      "book": {
+        "hotel": {
+          "name": "ザ ロイヤルパークホテル 京都梅小路",
+          "value": {
+            "people": "3",
+            "day": [
+              3,
+              23
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1667296527404,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、３泊でもかまいません。いかがでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 09:55:50"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、11114です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "梅小路京都西駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ザ ロイヤルパークホテル 京都梅小路",
+              "value": {
+                "people": "3",
+                "day": [
+                  3,
+                  23
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1667296553755,
+              "success": true,
+              "ref": "11114"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "梅小路京都西駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 09:56:01",
+      "book": {
+        "hotel": {
+          "name": "ザ ロイヤルパークホテル 京都梅小路",
+          "value": {
+            "people": "3",
+            "day": [
+              3,
+              23
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1667296553755,
+          "success": true,
+          "ref": "11114"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと3/23 南区の最低気温はわかりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ ロイヤルパークホテル 京都梅小路",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "11114",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 09:56:46"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。3/23の南区の最低気温は　9.9度になる予報です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "南区",
+            "day": [
+              3,
+              23
+            ]
+          },
+          "book": [],
+          "timestamp": 1667296625286,
+          "selectedResults": [
+            "3/23 京都 南区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "梅小路京都西駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "南区",
+          "day": [
+            3,
+            23
+          ]
+        }
+      },
+      "created_at": "2022-11-01 09:57:38",
+      "book": {
+        "hotel": {
+          "name": "ザ ロイヤルパークホテル 京都梅小路",
+          "value": {
+            "people": "3",
+            "day": [
+              3,
+              23
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。今日のお願いは以上です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ ロイヤルパークホテル 京都梅小路",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "11114",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "9.9度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 09:57:54"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "南区",
+            "day": [
+              3,
+              23
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "梅小路京都西駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "南区",
+          "day": [
+            3,
+            23
+          ]
+        }
+      },
+      "created_at": "2022-11-01 09:57:59",
+      "book": {
+        "hotel": {
+          "name": "ザ ロイヤルパークホテル 京都梅小路",
+          "value": {
+            "people": "3",
+            "day": [
+              3,
+              23
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 09:58:08"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 09:58:09"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:07",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "梅小路京都西駅",
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "京都",
+      "area": "南区",
+      "day": [
+        3,
+        23
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ザ ロイヤルパークホテル 京都梅小路",
+      "value": {
+        "people": "3",
+        "day": [
+          3,
+          23
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

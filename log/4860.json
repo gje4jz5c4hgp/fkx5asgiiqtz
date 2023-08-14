@@ -1,0 +1,1977 @@
+{
+  "id": 4860,
+  "dialogue_code": "dialogue_4860PFvk",
+  "status_code": 2,
+  "user": [
+    4,
+    227
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0227Cbai"
+  ],
+  "task": 5130,
+  "task_name": "main2_2110",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "大阪",
+          "pricerange": "安め",
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "name",
+          "checkintime",
+          "genre"
+        ]
+      },
+      "attraction": {
+        "fail_info": {
+          "city": "大阪",
+          "area": "天王寺区",
+          "genre": "銭湯・スパ"
+        },
+        "info": {
+          "city": "大阪",
+          "area": "天王寺区",
+          "genre": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "priceinfo"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "大阪",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "phone",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "6/30",
+          "time": "12:20",
+          "departurepoint": "hotel",
+          "arrivalpoint": "attraction"
+        },
+        "book": {
+          "day": "6/30",
+          "time": "13:00",
+          "departurepoint": "hotel",
+          "arrivalpoint": "attraction"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．予算は<b style='color:blue;'>安め</b>が希望です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，チェックイン開始時刻，タイプ</b>を聞いてください．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．地区は<b style='color:blue;'>天王寺区</b>です．ジャンルは<b style='color:blue;'>銭湯・スパ</b>です．",
+        "希望に合うところがない場合は，ジャンルは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称，料金情報</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>6/30</b>です．時間は<b style='color:blue;'>12:20</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>13:00</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkintime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "priceinfo",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "attraction",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪に旅行に行く予定なのですが、予算が安めの宿泊施設に泊まりたいと思っています。駐車場が無料で利用できるのとレストランが併設されているのが希望です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-12-01 09:59:54"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。では、エリアでいうと港区にある、ビジネス旅館 励明園はいかがでしょう？タイプは、旅館となります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ビジネス旅館 励明園",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669888826148,
+          "selectedResults": [
+            "ビジネス旅館 励明園"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-12-01 10:00:54",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。その旅館のチェックイン開始時間はいつになりますか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "旅館",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-12-01 10:01:48"
+    },
+    {
+      "role": 0,
+      "content": "はい、チェックイン開始時刻は14時となります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ビジネス旅館 励明園",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-12-01 10:02:04",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。ありがとうございます。あと、天王寺区の銭湯やスパが利用できる観光名所に行きたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "14時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "旅館",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-12-01 10:02:42"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、この条件ではご案内ができません。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "銭湯・スパ",
+            "area": "天王寺区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669888990578
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": "銭湯・スパ",
+          "area": "天王寺区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-12-01 10:03:13",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "でしたら銭湯やスパでない観光名所でかまいません。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "14時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "旅館",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-12-01 10:03:31"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、三光神社はいかがでしょう？ジャンルは、神社、寺院、教会、モニュメントなど、歴史的建造物、となります。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "天王寺区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669889018645,
+          "selectedResults": [
+            "四天王寺",
+            "天王寺動物園",
+            "三光神社",
+            "大阪市立美術館",
+            "三光神社",
+            "天王寺動物園",
+            "三光神社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-12-01 10:04:30",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そこの料金情報について教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "14時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "旅館",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "三光神社",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-12-01 10:05:08"
+    },
+    {
+      "role": 0,
+      "content": "はい、料金情報は、無料、となります。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "天王寺区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-12-01 10:05:28",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、キャッシュレス払いのできるタクシーを利用したいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "14時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "旅館",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "三光神社",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "無料",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-12-01 10:05:55"
+    },
+    {
+      "role": 0,
+      "content": "では、株式会社未来都はいかがでしょう？ジャンボタクシーにも対応しております。電話番号は、0669060088となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "株式会社未来都",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669889167297,
+          "selectedResults": [
+            "株式会社未来都"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-12-01 10:06:33",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "株式会社未来都",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そこに6/30のお昼の12:20にビジネス旅館 励明園から三光神社で予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "14時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "旅館",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "三光神社",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "無料",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0669060088",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-12-01 10:07:22"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、この条件では予約ができませんでした。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "株式会社未来都",
+              "value": {
+                "day": [
+                  6,
+                  30
+                ],
+                "time": "12:20",
+                "departurepoint": "ビジネス旅館 励明園",
+                "arrivalpoint": "三光神社"
+              },
+              "timestamp": 1669889265927,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-12-01 10:07:52",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "株式会社未来都",
+          "value": {
+            "day": [
+              6,
+              30
+            ],
+            "time": "12:20",
+            "departurepoint": "ビジネス旅館 励明園",
+            "arrivalpoint": "三光神社"
+          },
+          "timestamp": 1669889265927,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "すみません、では時間を午後の1時に変更します。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "14時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "旅館",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "三光神社",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "無料",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0669060088",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-12-01 10:08:09"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。予約が可能になりまして、ご予約番号は、75458となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "株式会社未来都",
+              "value": {
+                "day": [
+                  6,
+                  30
+                ],
+                "time": "13:00",
+                "departurepoint": "ビジネス旅館 励明園",
+                "arrivalpoint": "三光神社"
+              },
+              "timestamp": 1669889299062,
+              "success": true,
+              "ref": "75458"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-12-01 10:08:34",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "株式会社未来都",
+          "value": {
+            "day": [
+              6,
+              30
+            ],
+            "time": "13:00",
+            "departurepoint": "ビジネス旅館 励明園",
+            "arrivalpoint": "三光神社"
+          },
+          "timestamp": 1669889299062,
+          "success": true,
+          "ref": "75458"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。これで大丈夫です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "14時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "旅館",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "三光神社",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "priceinfo",
+          "無料",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0669060088",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "75458",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-12-01 10:08:45"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "株式会社未来都",
+              "value": {
+                "day": [
+                  6,
+                  30
+                ],
+                "time": "13:00",
+                "departurepoint": "ビジネス旅館 励明園",
+                "arrivalpoint": "三光神社"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-12-01 10:08:50",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "株式会社未来都",
+          "value": {
+            "day": [
+              6,
+              30
+            ],
+            "time": "13:00",
+            "departurepoint": "ビジネス旅館 励明園",
+            "arrivalpoint": "三光神社"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-12-01 10:08:57"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-12-01 10:08:58"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:04",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "安め",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": "天王寺区",
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "大阪",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ビジネス旅館 励明園",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "株式会社未来都",
+      "value": {
+        "day": [
+          6,
+          30
+        ],
+        "time": "13:00",
+        "departurepoint": "ビジネス旅館 励明園",
+        "arrivalpoint": "三光神社"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

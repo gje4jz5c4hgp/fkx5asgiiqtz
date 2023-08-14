@@ -1,0 +1,2081 @@
+{
+  "id": 2081,
+  "dialogue_code": "dialogue_2081Xwpn",
+  "status_code": 2,
+  "user": [
+    20,
+    251
+  ],
+  "username": [
+    "operator_0020cvID",
+    "customer_0251Yuvr"
+  ],
+  "task": 2251,
+  "task_name": "main_1931",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "名古屋",
+          "parking": "有り(無料)",
+          "area": "瑞穂区",
+          "genre": "旅館"
+        },
+        "reqt": [
+          "station",
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "people": 2,
+          "day": "8/22",
+          "stay": 3
+        }
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "名古屋",
+          "parking": "有り(無料)",
+          "station": "浄心駅",
+          "genre": "スーパーマーケット"
+        },
+        "info": {
+          "city": "名古屋",
+          "parking": "有り(無料)",
+          "station": "dontcare",
+          "genre": "スーパーマーケット"
+        },
+        "reqt": [
+          "opentime"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>名古屋</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>瑞穂区</b>です．宿のタイプは<b style='color:blue;'>旅館</b>です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>最寄り駅，電話番号</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>8/22</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>浄心駅</b>のところにしてください．ジャンルは<b style='color:blue;'>スーパーマーケット</b>です．",
+        "希望に合うところが見つからない場合は，最寄り駅は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>営業時間</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "station",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "phone",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "opentime",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "shopping"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "名古屋への旅行を計画しておりまして、宿泊施設を探しているのですが。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 18:40:24"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。何か他の希望の要件はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": null,
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 18:40:33",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。瑞穂区の旅館で、無料で使用出来る駐車場があると嬉しいのですが。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 18:41:13"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、魚鍵旅館はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1667328079643
+        },
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "瑞穂区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "魚鍵旅館",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667328096570,
+          "selectedResults": [
+            "魚鍵旅館"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "瑞穂区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 18:41:44",
+      "book": {
+        "hotel": {
+          "name": "魚鍵旅館",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらへの最寄り駅をお伺いしてもよろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 18:42:04"
+    },
+    {
+      "role": 0,
+      "content": "はい。最寄り駅は金山駅です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "瑞穂区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "魚鍵旅館",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "瑞穂区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 18:42:18",
+      "book": {
+        "hotel": {
+          "name": "魚鍵旅館",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "すみません。それと、電話番号もお伺いしたいのですが。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "station",
+          "金山駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 18:42:43"
+    },
+    {
+      "role": 0,
+      "content": "はい。電話番号は0528811175でございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "瑞穂区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "魚鍵旅館",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "瑞穂区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 18:42:54",
+      "book": {
+        "hotel": {
+          "name": "魚鍵旅館",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。出来ればこのまま、ここへの予約もしたいのですが、可能でしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "station",
+          "金山駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0528811175",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 18:43:27"
+    },
+    {
+      "role": 0,
+      "content": "はい。詳細な情報をお伺いしていいですか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "瑞穂区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "魚鍵旅館",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "瑞穂区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 18:43:42",
+      "book": {
+        "hotel": {
+          "name": "魚鍵旅館",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。8月22日から3泊で、人数は2人になります。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "station",
+          "金山駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0528811175",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 18:44:23"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、98071\nです。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "瑞穂区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "魚鍵旅館",
+              "value": {
+                "people": "2",
+                "day": [
+                  8,
+                  22
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1667328274257,
+              "success": true,
+              "ref": "98071"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "瑞穂区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 18:44:40",
+      "book": {
+        "hotel": {
+          "name": "魚鍵旅館",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1667328274257,
+          "success": true,
+          "ref": "98071"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ついでに、当日買い物もしたいのですが、こちらについてもお伺いしてよろしいですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "station",
+          "金山駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0528811175",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "98071",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 18:45:19"
+    },
+    {
+      "role": 0,
+      "content": "はい。ご案内させていただきます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "瑞穂区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "魚鍵旅館",
+              "value": {
+                "people": "2",
+                "day": [
+                  8,
+                  22
+                ],
+                "stay": "3"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "瑞穂区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 18:45:35",
+      "book": {
+        "hotel": {
+          "name": "魚鍵旅館",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "助かります。浄心駅が最寄り駅のスーパーマーケットってありますかね？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "station",
+          "金山駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0528811175",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "98071",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 18:46:22"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。条件に合うお買い物の店舗は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "スーパーマーケット",
+            "area": null,
+            "station": "浄心駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667328423633
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "瑞穂区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "浄心駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "スーパーマーケット",
+          "area": null,
+          "station": "浄心駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 18:47:12",
+      "book": {
+        "hotel": {
+          "name": "魚鍵旅館",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか、では最寄り駅が浄心駅でなくても良いので、駐車場が無料のスーパーマーケットってありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "station",
+          "金山駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0528811175",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "98071",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 18:47:55"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、サンエース 原駅前店はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "スーパーマーケット",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667328487237,
+          "selectedResults": [
+            "サンエース 原駅前店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "瑞穂区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "浄心駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "スーパーマーケット",
+          "area": null,
+          "station": "",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 18:48:16",
+      "book": {
+        "hotel": {
+          "name": "魚鍵旅館",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "無理を言ってすみません。そこで大丈夫そうです。そちらの営業時間を教えて頂けますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "station",
+          "金山駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0528811175",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "98071",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 18:48:48"
+    },
+    {
+      "role": 0,
+      "content": "はい。営業時間は09:30～22:00になります。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "スーパーマーケット",
+            "area": null,
+            "station": "",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "瑞穂区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "浄心駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "スーパーマーケット",
+          "area": null,
+          "station": "",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 18:49:02",
+      "book": {
+        "hotel": {
+          "name": "魚鍵旅館",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！これで当日は大丈夫そうです。ご案内、ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "station",
+          "金山駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0528811175",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "98071",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "09:30～22:00",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 18:49:35"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "スーパーマーケット",
+            "area": null,
+            "station": "",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "瑞穂区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "浄心駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "スーパーマーケット",
+          "area": null,
+          "station": "",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 18:49:46",
+      "book": {
+        "hotel": {
+          "name": "魚鍵旅館",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 18:49:53"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 18:49:56"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:08",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "名古屋",
+      "name": null,
+      "genre": "旅館",
+      "area": "瑞穂区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "名古屋",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": "浄心駅",
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "名古屋",
+      "name": null,
+      "genre": "スーパーマーケット",
+      "area": null,
+      "station": "",
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "魚鍵旅館",
+      "value": {
+        "people": "2",
+        "day": [
+          8,
+          22
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

@@ -1,0 +1,2444 @@
+{
+  "id": 1155,
+  "dialogue_code": "dialogue_1155vxTv",
+  "status_code": 2,
+  "user": [
+    8,
+    203
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0203Sqra"
+  ],
+  "task": 1325,
+  "task_name": "main_1005",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "那覇",
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "pricerange",
+          "checkouttime",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 2,
+          "day": "1/17",
+          "stay": 3
+        },
+        "book": {
+          "people": 1,
+          "day": "1/17",
+          "stay": 3
+        }
+      },
+      "restaurant": {
+        "fail_info": {
+          "city": "那覇",
+          "pricerange": "安め",
+          "area": "首里"
+        },
+        "info": {
+          "city": "那覇",
+          "pricerange": "dontcare",
+          "area": "首里"
+        },
+        "reqt": [
+          "wifi",
+          "address"
+        ]
+      },
+      "weather": {
+        "info": {
+          "city": "那覇",
+          "area": "首里",
+          "day": "1/17"
+        },
+        "reqt": [
+          "weather"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>那覇</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>値段帯，チェックアウト終了時刻</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>1/17</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>1</b>に変更します．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．予算は<b style='color:blue;'>安め</b>が希望です．地区は<b style='color:blue;'>首里</b>です．",
+        "希望に合うところが見つからない場合は，予算は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>Wi-Fiの有無，住所</b>を聞いてください．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>首里</b>です．日付は<b style='color:blue;'>1/17</b>です．",
+        "<b style='color:green;'>天気</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "pricerange",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkouttime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "wifi",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "address",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "weather",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんばんは！今度、那覇に旅行するので、案内をお願いします！",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:35:20"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。お知りになりたい情報はございますか。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": null,
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:36:04",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "泊れるところを探してるんですけど、駐車場が無料で使えて、レストランが併設されてるところが良いです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:36:47"
+    },
+    {
+      "role": 0,
+      "content": "ではパシフィックホテル沖縄はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "パシフィックホテル沖縄",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667137045981,
+          "selectedResults": [
+            "パシフィックホテル沖縄"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:37:36",
+      "book": {
+        "hotel": {
+          "name": "パシフィックホテル沖縄",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこのホテルの、値段帯と、チェックアウト終了時刻って教えてもらますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:38:08"
+    },
+    {
+      "role": 0,
+      "content": "値段帯は安め、チェックアウト終了時刻は10:00でございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "パシフィックホテル沖縄",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:38:44",
+      "book": {
+        "hotel": {
+          "name": "パシフィックホテル沖縄",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね！じゃぁ、そこを予約しようかな。１月１７日から３泊で、２人で泊りたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:39:26"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件ですと予約ができませんでした。いかがなさいますか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "パシフィックホテル沖縄",
+              "value": {
+                "people": "2",
+                "day": [
+                  1,
+                  17
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1667137179344,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:40:10",
+      "book": {
+        "hotel": {
+          "name": "パシフィックホテル沖縄",
+          "value": {
+            "people": "2",
+            "day": [
+              1,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1667137179344,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんだぁ。じゃぁ、人数を1人にしてもらえます？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:40:26"
+    },
+    {
+      "role": 0,
+      "content": "予約が完了いたしました。予約番号は3556でございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "パシフィックホテル沖縄",
+              "value": {},
+              "timestamp": 1667137232113,
+              "success": true,
+              "ref": "10308"
+            },
+            {
+              "name": "パシフィックホテル沖縄",
+              "value": {
+                "people": "1",
+                "day": [
+                  1,
+                  17
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1667137234447,
+              "success": true,
+              "ref": "3556"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:40:57",
+      "book": {
+        "hotel": {
+          "name": "パシフィックホテル沖縄",
+          "value": {
+            "people": "1",
+            "day": [
+              1,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1667137234447,
+          "success": true,
+          "ref": "3556"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！あとは、飲食店も探してて、予算が安めのところで、地区は首里でお願いできますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "3556",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:41:55"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では案内できるところがございませんでした。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": "首里",
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667137332201
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "首里",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:42:28",
+      "book": {
+        "hotel": {
+          "name": "パシフィックホテル沖縄",
+          "value": {
+            "people": "1",
+            "day": [
+              1,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんだぁ。じゃぁ、予算は安めじゃなくて大丈夫です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "3556",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:42:46"
+    },
+    {
+      "role": 0,
+      "content": "ではりゅうそう茶屋はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": "首里",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "りゅうそう茶屋",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667137386350,
+          "selectedResults": [
+            "りゅうそう茶屋"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "首里",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:43:21",
+      "book": {
+        "hotel": {
+          "name": "パシフィックホテル沖縄",
+          "value": {
+            "people": "1",
+            "day": [
+              1,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "りゅうそう茶屋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そのお店って、住所はどこになるんですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "3556",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:43:46"
+    },
+    {
+      "role": 0,
+      "content": "住所は沖縄県那覇市首里当蔵町2丁目13でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": "首里",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "りゅうそう茶屋",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "首里",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:44:02",
+      "book": {
+        "hotel": {
+          "name": "パシフィックホテル沖縄",
+          "value": {
+            "people": "1",
+            "day": [
+              1,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "りゅうそう茶屋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あ、あと、WiFiって、使える所ですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "3556",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "沖縄県那覇市首里当蔵町2丁目13",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:44:23"
+    },
+    {
+      "role": 0,
+      "content": "Wi-Fiの有無は不明となっております。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": "首里",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "りゅうそう茶屋",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "首里",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:44:43",
+      "book": {
+        "hotel": {
+          "name": "パシフィックホテル沖縄",
+          "value": {
+            "people": "1",
+            "day": [
+              1,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "りゅうそう茶屋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。えっと、あとは、1月17日の首里地区の天候についても聞いて良いですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "3556",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "沖縄県那覇市首里当蔵町2丁目13",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:45:32"
+    },
+    {
+      "role": 0,
+      "content": "天気は晴のち曇、最低気温は17.6度、最高気温は20.6度でございます。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "那覇",
+            "area": "首里",
+            "day": [
+              1,
+              17
+            ]
+          },
+          "book": [],
+          "timestamp": 1667137550847,
+          "selectedResults": [
+            "1/17 那覇 首里 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "首里",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "那覇",
+          "area": "首里",
+          "day": [
+            1,
+            17
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:46:27",
+      "book": {
+        "hotel": {
+          "name": "パシフィックホテル沖縄",
+          "value": {
+            "people": "1",
+            "day": [
+              1,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "りゅうそう茶屋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！わかりました！",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "3556",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "沖縄県那覇市首里当蔵町2丁目13",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "晴のち曇",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:46:46"
+    },
+    {
+      "role": 0,
+      "content": "ほかにご用件はございますか。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "那覇",
+            "area": "首里",
+            "day": [
+              1,
+              17
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "首里",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "那覇",
+          "area": "首里",
+          "day": [
+            1,
+            17
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:46:52",
+      "book": {
+        "hotel": {
+          "name": "パシフィックホテル沖縄",
+          "value": {
+            "people": "1",
+            "day": [
+              1,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "りゅうそう茶屋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あとはもう大丈夫です。色々とありがとうございました！",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "3556",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "沖縄県那覇市首里当蔵町2丁目13",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "晴のち曇",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 13:47:07"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "那覇",
+            "area": "首里",
+            "day": [
+              1,
+              17
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "首里",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "那覇",
+          "area": "首里",
+          "day": [
+            1,
+            17
+          ]
+        }
+      },
+      "created_at": "2022-10-30 13:47:12",
+      "book": {
+        "hotel": {
+          "name": "パシフィックホテル沖縄",
+          "value": {
+            "people": "1",
+            "day": [
+              1,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "りゅうそう茶屋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-30 13:47:23"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-30 13:47:24"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:02",
+  "final_state": {
+    "restaurant": {
+      "city": "那覇",
+      "name": null,
+      "genre": null,
+      "area": "首里",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "那覇",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "那覇",
+      "area": "首里",
+      "day": [
+        1,
+        17
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "パシフィックホテル沖縄",
+      "value": {
+        "people": "1",
+        "day": [
+          1,
+          17
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "りゅうそう茶屋",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

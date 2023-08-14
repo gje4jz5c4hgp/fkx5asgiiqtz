@@ -1,0 +1,1046 @@
+{
+  "id": 4031,
+  "dialogue_code": "dialogue_4031tFeB",
+  "status_code": 2,
+  "user": [
+    4,
+    289
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0289KGmJ"
+  ],
+  "task": 4301,
+  "task_name": "main2_1281",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "名古屋",
+          "parking": "有り(無料)",
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "weather": {
+        "info": {
+          "city": "名古屋",
+          "day": "3/25",
+          "area": "昭和区"
+        },
+        "reqt": [
+          "weather",
+          "maxtemperature"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "名古屋",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "3/25",
+          "time": "09:50",
+          "departurepoint": "大須観音(真福寺宝生院)",
+          "arrivalpoint": "hotel"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>名古屋</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．宿のタイプは<b style='color:blue;'>簡易宿所（ベッドハウス・山小屋・カプセルホテル等）</b>です．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>3/25</b>です．地区は<b style='color:blue;'>昭和区</b>です．",
+        "<b style='color:green;'>天気，最高気温</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>3/25</b>です．時間は<b style='color:blue;'>09:50</b>です．出発地は<b style='color:blue;'>大須観音(真福寺宝生院)</b>というところです．目的地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "weather",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "maxtemperature",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "weather",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "名古屋に行くのですが、駐車場無料の簡易宿所を探していただけますか。できたらレストランが併設されているところがいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:01:32"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。エリアでいうと中区にある、Nagoya Hostel The Three Smilesはいかがでしょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "Nagoya Hostel The Three Smiles",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669788121644,
+          "selectedResults": [
+            "Nagoya Hostel The Three Smiles"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:02:15",
+      "book": {
+        "hotel": {
+          "name": "Nagoya Hostel The Three Smiles",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。3/25に行く予定ですが、昭和区の天気を教えていただけますか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "Nagoya Hostel The Three Smiles",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:03:21"
+    },
+    {
+      "role": 0,
+      "content": "はい、天気は晴のち曇、最低気温4.2度、最高気温11.8度となります。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "名古屋",
+            "area": "昭和区",
+            "day": [
+              3,
+              25
+            ]
+          },
+          "book": [],
+          "timestamp": 1669788225542,
+          "selectedResults": [
+            "3/25 名古屋 昭和区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "名古屋",
+          "area": "昭和区",
+          "day": [
+            3,
+            25
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:03:57",
+      "book": {
+        "hotel": {
+          "name": "Nagoya Hostel The Three Smiles",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日タクシーを使いたいのですが、キャッシュレス対応のタクシー会社はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "Nagoya Hostel The Three Smiles",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "晴のち曇",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "11.8度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:04:56"
+    },
+    {
+      "role": 0,
+      "content": "はい、では、帝産キャブ名古屋はいかがでしょう？ジャンボタクシーにも対応しております。電話番号は、0529141115となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "帝産キャブ名古屋",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669788314463,
+          "selectedResults": [
+            "中日本タクシー",
+            "名鉄交通第一",
+            "帝産キャブ名古屋"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "名古屋",
+          "area": "昭和区",
+          "day": [
+            3,
+            25
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:05:51",
+      "book": {
+        "hotel": {
+          "name": "Nagoya Hostel The Three Smiles",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "帝産キャブ名古屋",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。予約をしたいのですが、3/25の9:50に、出発地が大須観音(真福寺宝生院)で目的地がNagoya Hostel The Three Smilesです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "Nagoya Hostel The Three Smiles",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "晴のち曇",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "11.8度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:07:15"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。予約が完了し、ご予約番号は、57692となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "帝産キャブ名古屋",
+              "value": {
+                "day": [
+                  3,
+                  25
+                ],
+                "time": "09:50",
+                "departurepoint": "大須観音(真福寺宝生院)",
+                "arrivalpoint": "Nagoya Hostel The Three Smiles"
+              },
+              "timestamp": 1669788475325,
+              "success": true,
+              "ref": "57692"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "名古屋",
+          "area": "昭和区",
+          "day": [
+            3,
+            25
+          ]
+        }
+      },
+      "created_at": "2022-11-30 06:08:01",
+      "book": {
+        "hotel": {
+          "name": "Nagoya Hostel The Three Smiles",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "帝産キャブ名古屋",
+          "value": {
+            "day": [
+              3,
+              25
+            ],
+            "time": "09:50",
+            "departurepoint": "大須観音(真福寺宝生院)",
+            "arrivalpoint": "Nagoya Hostel The Three Smiles"
+          },
+          "timestamp": 1669788475325,
+          "success": true,
+          "ref": "57692"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "Nagoya Hostel The Three Smiles",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "晴のち曇",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "11.8度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "帝産キャブ名古屋",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0529141115",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "57692",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 06:08:35"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 06:08:42"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 06:08:50"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:59",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "名古屋",
+      "name": null,
+      "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "名古屋",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": "名古屋",
+      "area": "昭和区",
+      "day": [
+        3,
+        25
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "Nagoya Hostel The Three Smiles",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "帝産キャブ名古屋",
+      "value": {
+        "day": [
+          3,
+          25
+        ],
+        "time": "09:50",
+        "departurepoint": "大須観音(真福寺宝生院)",
+        "arrivalpoint": "Nagoya Hostel The Three Smiles"
+      },
+      "timestamp": 1669788475325,
+      "success": true,
+      "ref": "57692"
+    }
+  }
+}

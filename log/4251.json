@@ -1,0 +1,2339 @@
+{
+  "id": 4251,
+  "dialogue_code": "dialogue_4251apoV",
+  "status_code": 2,
+  "user": [
+    2,
+    225
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0225dUtd"
+  ],
+  "task": 4521,
+  "task_name": "main2_1501",
+  "task_content": {
+    "goals": {
+      "attraction": {
+        "info": {
+          "city": "京都",
+          "parking": "有り(無料)",
+          "genre": "神社・寺院・教会・モニュメントなど"
+        },
+        "reqt": [
+          "name",
+          "opentime"
+        ]
+      },
+      "hotel": {
+        "fail_info": {
+          "city": "京都",
+          "genre": "ビジネスホテル",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "京都",
+          "genre": "dontcare",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "京都",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "cashless",
+          "name",
+          "phone",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "9/8",
+          "time": "14:30",
+          "departurepoint": "attraction",
+          "arrivalpoint": "hotel"
+        },
+        "book": {
+          "day": "9/8",
+          "time": "15:30",
+          "departurepoint": "attraction",
+          "arrivalpoint": "hotel"
+        }
+      }
+    },
+    "descriptions": {
+      "attraction": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．ジャンルは<b style='color:blue;'>神社・寺院・教会・モニュメントなど</b>です．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称，営業時間</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．宿のタイプは<b style='color:blue;'>ビジネスホテル</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところがない場合は，宿のタイプは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>キャッシュレス対応，タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>9/8</b>です．時間は<b style='color:blue;'>14:30</b>です．出発地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．目的地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>15:30</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "opentime",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "attraction",
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都へ旅行しようと思っているのですが、無料駐車場のある観光名所を探しています。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 14:13:53"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。6件ご案内可能ですが、他になにかご希望の条件はございませんか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669558441243,
+          "selectedResults": [
+            "下鴨神社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 14:14:21",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "神社・寺院・教会・モニュメントなどがいいと考えております。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 14:14:38"
+    },
+    {
+      "role": 0,
+      "content": "そうしますと、北野天満宮はいかがでしょうか？上京区にあって、北野白梅町駅から徒歩で5分でアクセスできます。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "神社・寺院・教会・モニュメントなど",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669558482356,
+          "selectedResults": [
+            "北野天満宮"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "神社・寺院・教会・モニュメントなど",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 14:15:10",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そこに行きたいと思います。営業時間をお聞きしてもいいですか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 14:15:31"
+    },
+    {
+      "role": 0,
+      "content": "はい、営業時間は、朝5:00から夕方18:00までとなっております。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "神社・寺院・教会・モニュメントなど",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "神社・寺院・教会・モニュメントなど",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 14:15:51",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと宿泊施設を探しているのですが、無料駐車場があるビジネスホテルはどこかあるでしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "北野天満宮",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "朝5:00から夕方18:00まで",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 14:16:48"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件ですと、ご案内できるところがありませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "ビジネスホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1669558623489
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "神社・寺院・教会・モニュメントなど",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 14:17:12",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。ではビジネスホテルではなくてもかまいません。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "北野天満宮",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "朝5:00から夕方18:00まで",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 14:17:35"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。そうしますと6件ご案内可能です。たとえば、京都 高瀬川別邸は、いかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "京都 高瀬川別邸",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669558656081,
+          "selectedResults": [
+            "京都 高瀬川別邸"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "神社・寺院・教会・モニュメントなど",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 14:17:57",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "素敵そうな場所ですね。そこを利用したいと思います。最後にタクシー会社を探していただきたいのですが、ジャンボタクシーを利用できる会社はありますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "北野天満宮",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "朝5:00から夕方18:00まで",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 14:19:00"
+    },
+    {
+      "role": 0,
+      "content": "はい、ございます。高速タクシー株式会社はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669558749213,
+          "selectedResults": [
+            "彌榮自動車株式会社",
+            "高速タクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "神社・寺院・教会・モニュメントなど",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 14:19:22",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そこを利用したいと思います。電話番号を教えていただいてもよろしいですか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "北野天満宮",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "朝5:00から夕方18:00まで",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 14:19:56"
+    },
+    {
+      "role": 0,
+      "content": "はい、電話番号は、0756015588でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "神社・寺院・教会・モニュメントなど",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 14:20:05",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ちなみにですが、キャッシュレス対応はしていますでしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "北野天満宮",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "朝5:00から夕方18:00まで",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "高速タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0756015588",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 14:20:32"
+    },
+    {
+      "role": 0,
+      "content": "はい、対応しております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "神社・寺院・教会・モニュメントなど",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 14:20:38",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。ありがとうございます。では当日の予約をお願いしたいのですが、9月8日の14:30に北野天満宮から京都 高瀬川別邸までで予約は可能でしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "北野天満宮",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "朝5:00から夕方18:00まで",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "あり",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "高速タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0756015588",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 14:21:42"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。ご希望の条件では予約できませんでした。お時間など、ご調整いただくことは可能でしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  9,
+                  8
+                ],
+                "time": "14:30",
+                "departurepoint": "北野天満宮",
+                "arrivalpoint": "京都 高瀬川別邸"
+              },
+              "timestamp": 1669558916614,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "神社・寺院・教会・モニュメントなど",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 14:22:06",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              9,
+              8
+            ],
+            "time": "14:30",
+            "departurepoint": "北野天満宮",
+            "arrivalpoint": "京都 高瀬川別邸"
+          },
+          "timestamp": 1669558916614,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。では時間を15:30に変更でお願いできますでしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "北野天満宮",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "朝5:00から夕方18:00まで",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "あり",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "高速タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0756015588",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 14:22:48"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。15:30発にて、ご予約完了いたしました。予約番号は、10324です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  9,
+                  8
+                ],
+                "time": "15:30",
+                "departurepoint": "北野天満宮",
+                "arrivalpoint": "京都 高瀬川別邸"
+              },
+              "timestamp": 1669558972892,
+              "success": true,
+              "ref": "10324"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "神社・寺院・教会・モニュメントなど",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 14:23:04",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              9,
+              8
+            ],
+            "time": "15:30",
+            "departurepoint": "北野天満宮",
+            "arrivalpoint": "京都 高瀬川別邸"
+          },
+          "timestamp": 1669558972892,
+          "success": true,
+          "ref": "10324"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。お願いしたいことは以上になります。何から何までサポートしていただき本当にありがとうございました。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "北野天満宮",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "opentime",
+          "朝5:00から夕方18:00まで",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "あり",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "高速タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0756015588",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "10324",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-27 14:23:43"
+    },
+    {
+      "role": 0,
+      "content": "こちらこそ、ご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  9,
+                  8
+                ],
+                "time": "15:30",
+                "departurepoint": "北野天満宮",
+                "arrivalpoint": "京都 高瀬川別邸"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "神社・寺院・教会・モニュメントなど",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-27 14:23:50",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              9,
+              8
+            ],
+            "time": "15:30",
+            "departurepoint": "北野天満宮",
+            "arrivalpoint": "京都 高瀬川別邸"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-27 14:23:57"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-27 14:24:04"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:00",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "京都",
+      "name": null,
+      "genre": "神社・寺院・教会・モニュメントなど",
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "京都",
+      "name": null,
+      "cashless": null,
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "京都 高瀬川別邸",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "高速タクシー株式会社",
+      "value": {
+        "day": [
+          9,
+          8
+        ],
+        "time": "15:30",
+        "departurepoint": "北野天満宮",
+        "arrivalpoint": "京都 高瀬川別邸"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

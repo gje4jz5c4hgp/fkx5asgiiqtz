@@ -1,0 +1,2228 @@
+{
+  "id": 1731,
+  "dialogue_code": "dialogue_1731UsFp",
+  "status_code": 2,
+  "user": [
+    9,
+    239
+  ],
+  "username": [
+    "operator_0009Tmbt",
+    "customer_0239vzdO"
+  ],
+  "task": 1901,
+  "task_name": "main_1581",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "福岡",
+          "pricerange": "高め",
+          "parking": "有り(無料)",
+          "area": "東区"
+        },
+        "reqt": [
+          "name",
+          "genre"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "福岡",
+          "jumbo": "対応",
+          "cashless": "対応"
+        },
+        "info": {
+          "city": "福岡",
+          "jumbo": "対応",
+          "cashless": "dontcare"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "day": "4/9",
+          "time": "10:40",
+          "departurepoint": "restaurant",
+          "arrivalpoint": "THE LIVELY 博多福岡"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "福岡",
+          "area": "博多区",
+          "day": "4/9"
+        },
+        "reqt": [
+          "weather"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>福岡</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．予算は<b style='color:blue;'>高め</b>が希望です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>東区</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，ジャンル</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "希望に合うところが見つからない場合は，キャッシュレス払いの可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>4/9</b>です．時間は<b style='color:blue;'>10:40</b>です．出発地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．目的地は<b style='color:blue;'>THE LIVELY 博多福岡</b>というところです．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>博多区</b>です．日付は<b style='color:blue;'>4/9</b>です．",
+        "<b style='color:green;'>天気</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "weather",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "taxi",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "福岡へ旅行に行くんですが、飲食店を探して欲しいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 09:57:36"
+    },
+    {
+      "role": 0,
+      "content": "予算など、他にご希望はありますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 09:58:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "東区にあるところで、予算は高めがいいです！駐車場無料のところでお願いします！",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 09:58:26"
+    },
+    {
+      "role": 0,
+      "content": "では、照鮨はいかがですか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "照鮨",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667210330531,
+          "selectedResults": [
+            "照鮨"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 09:59:01",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "照鮨",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ジャンルは何になりますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 09:59:13"
+    },
+    {
+      "role": 0,
+      "content": "ジャンルは、寿司・魚料理です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "照鮨",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 09:59:36",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "照鮨",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね！ジャンボタクシーを利用できるタクシー会社も探していただけますか？キャッシュレス払いができるところでお願いします！",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "照鮨",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "genre",
+          "寿司・魚料理",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:00:04"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。　その条件では、見つかりませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1667210427886
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:00:33",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "照鮨",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、キャッシュレス払いじゃなくても大丈夫です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "照鮨",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "genre",
+          "寿司・魚料理",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:00:39"
+    },
+    {
+      "role": 0,
+      "content": "清流タクシー（有）は、いかがですか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "清流タクシー（有）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667210451660,
+          "selectedResults": [
+            "清流タクシー（有）"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:00:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "照鮨",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "清流タクシー（有）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "電話番号は分かりますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "照鮨",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "genre",
+          "寿司・魚料理",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:01:06"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は、0928041000です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "清流タクシー（有）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:01:22",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "照鮨",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "清流タクシー（有）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では予約をお願いします！照鮨を出発して、THE LIVELY 博多福岡まで乗りたいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "照鮨",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "genre",
+          "寿司・魚料理",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0928041000",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "清流タクシー（有）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:01:54"
+    },
+    {
+      "role": 0,
+      "content": "日時のご希望はいつがよろしいですか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "清流タクシー（有）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:02:29",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "照鮨",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "清流タクシー（有）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "4/9の10:40でお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "照鮨",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "genre",
+          "寿司・魚料理",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0928041000",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "清流タクシー（有）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:02:38"
+    },
+    {
+      "role": 0,
+      "content": "予約出来ました。予約番号は、47107です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "清流タクシー（有）",
+              "value": {
+                "day": [
+                  4,
+                  9
+                ],
+                "time": "10:40",
+                "departurepoint": "照鮨",
+                "arrivalpoint": "THE LIVELY 博多福岡"
+              },
+              "timestamp": 1667210591895,
+              "success": true,
+              "ref": "47107"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:03:19",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "照鮨",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "清流タクシー（有）",
+          "value": {
+            "day": [
+              4,
+              9
+            ],
+            "time": "10:40",
+            "departurepoint": "照鮨",
+            "arrivalpoint": "THE LIVELY 博多福岡"
+          },
+          "timestamp": 1667210591895,
+          "success": true,
+          "ref": "47107"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。4/9の博多区の天気も調べてほしいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "照鮨",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "genre",
+          "寿司・魚料理",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0928041000",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "清流タクシー（有）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "47107",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:03:38"
+    },
+    {
+      "role": 0,
+      "content": "天気は、晴時々曇です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "福岡",
+            "area": "博多区",
+            "day": [
+              4,
+              9
+            ]
+          },
+          "book": [],
+          "timestamp": 1667210641053,
+          "selectedResults": [
+            "4/9 福岡 博多区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "博多区",
+          "day": [
+            4,
+            9
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:04:10",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "照鮨",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "清流タクシー（有）",
+          "value": {
+            "day": [
+              4,
+              9
+            ],
+            "time": "10:40",
+            "departurepoint": "照鮨",
+            "arrivalpoint": "THE LIVELY 博多福岡"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。大変助かりました！",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "照鮨",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "genre",
+          "寿司・魚料理",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0928041000",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "清流タクシー（有）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "47107",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "晴時々曇",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:04:22"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はありますか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "福岡",
+            "area": "博多区",
+            "day": [
+              4,
+              9
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "博多区",
+          "day": [
+            4,
+            9
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:04:27",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "照鮨",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "清流タクシー（有）",
+          "value": {
+            "day": [
+              4,
+              9
+            ],
+            "time": "10:40",
+            "departurepoint": "照鮨",
+            "arrivalpoint": "THE LIVELY 博多福岡"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "これで大丈夫です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "照鮨",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "genre",
+          "寿司・魚料理",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0928041000",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "清流タクシー（有）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "47107",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "晴時々曇",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 10:04:30"
+    },
+    {
+      "role": 0,
+      "content": "承知致しました。　ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "福岡",
+            "area": "博多区",
+            "day": [
+              4,
+              9
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "博多区",
+          "day": [
+            4,
+            9
+          ]
+        }
+      },
+      "created_at": "2022-10-31 10:04:34",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "照鮨",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "清流タクシー（有）",
+          "value": {
+            "day": [
+              4,
+              9
+            ],
+            "time": "10:40",
+            "departurepoint": "照鮨",
+            "arrivalpoint": "THE LIVELY 博多福岡"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 10:04:40"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 10:04:44"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:06",
+  "final_state": {
+    "restaurant": {
+      "city": "福岡",
+      "name": null,
+      "genre": null,
+      "area": "東区",
+      "pricerange": "高め",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "福岡",
+      "name": null,
+      "cashless": null,
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": "福岡",
+      "area": "博多区",
+      "day": [
+        4,
+        9
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "照鮨",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "清流タクシー（有）",
+      "value": {
+        "day": [
+          4,
+          9
+        ],
+        "time": "10:40",
+        "departurepoint": "照鮨",
+        "arrivalpoint": "THE LIVELY 博多福岡"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

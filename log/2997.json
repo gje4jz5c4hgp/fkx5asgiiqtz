@@ -1,0 +1,1577 @@
+{
+  "id": 2997,
+  "dialogue_code": "dialogue_2997vZMK",
+  "status_code": 2,
+  "user": [
+    25,
+    278
+  ],
+  "username": [
+    "operator_0025tpXO",
+    "customer_0278uKJi"
+  ],
+  "task": 3267,
+  "task_name": "main2_247",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "札幌",
+          "parking": "有り(無料)",
+          "genre": "ビジネスホテル",
+          "pricerange": "安め"
+        },
+        "reqt": [
+          "name",
+          "accesstime"
+        ]
+      },
+      "attraction": {
+        "info": {
+          "city": "札幌",
+          "area": "北区",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "station"
+        ]
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "札幌",
+          "area": "南区",
+          "parking": "有り(無料)",
+          "station": "札幌駅"
+        },
+        "info": {
+          "city": "札幌",
+          "area": "南区",
+          "parking": "dontcare",
+          "station": "札幌駅"
+        },
+        "reqt": [
+          "accesstime"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>札幌</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．宿のタイプは<b style='color:blue;'>ビジネスホテル</b>です．予算は<b style='color:blue;'>安め</b>が希望です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，近辺の駅からの所要時間</b>を聞いてください．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．地区は<b style='color:blue;'>北区</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>最寄り駅</b>を聞いてください．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．地区は<b style='color:blue;'>南区</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>札幌駅</b>のところにしてください．",
+        "希望に合うところが見つからない場合は，駐車場の有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>近辺の駅からの所要時間</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "station",
+        ""
+      ],
+      [
+        3,
+        "shopping",
+        "accesstime",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "attraction",
+      "shopping"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "札幌への旅行を計画しています。\n宿泊施設を探してほしいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:12:41"
+    },
+    {
+      "role": 0,
+      "content": "ご希望の条件をおきかせください。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": null,
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:12:51",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "駐車場を無料で利用できるところで、宿のタイプはビジネスホテル、予算は安めが希望です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:13:10"
+    },
+    {
+      "role": 0,
+      "content": "札幌で予算安めの駐車場無料なビジネスホテルは、ホテルルートイン札幌白石、こちら一択です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "ビジネスホテル",
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ホテルルートイン札幌白石",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669648404416,
+          "selectedResults": [
+            "ホテルルートイン札幌白石"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:13:50",
+      "book": {
+        "hotel": {
+          "name": "ホテルルートイン札幌白石",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そのホテルの近辺の駅からの所要時間を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテルルートイン札幌白石",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:14:09"
+    },
+    {
+      "role": 0,
+      "content": "白石駅から徒歩で20分です。いい運動ですね。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "ビジネスホテル",
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ホテルルートイン札幌白石",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:14:22",
+      "book": {
+        "hotel": {
+          "name": "ホテルルートイン札幌白石",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "続いて観光名所を探してください。地区は北区、駐車場を無料で利用できるところが希望です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテルルートイン札幌白石",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "白石駅から徒歩で20分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:14:48"
+    },
+    {
+      "role": 0,
+      "content": "北区で駐車場無料の観光名所といえば、シャトレーゼ ガトーキングダムサッポロ ホテル&スパリゾート、こちら一択です。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "北区",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669648503789,
+          "selectedResults": [
+            "シャトレーゼ ガトーキングダムサッポロ ホテル&スパリゾート"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "北区",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:15:22",
+      "book": {
+        "hotel": {
+          "name": "ホテルルートイン札幌白石",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "最寄り駅はどこになるでしょうか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテルルートイン札幌白石",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "白石駅から徒歩で20分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:15:37"
+    },
+    {
+      "role": 0,
+      "content": "麻生駅ですね。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "北区",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "北区",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:15:50",
+      "book": {
+        "hotel": {
+          "name": "ホテルルートイン札幌白石",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "さらに買い物ができるところを探して欲しいです。地区は南区、駐車場を無料で利用できるところで、最寄り駅が札幌駅のところが希望です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテルルートイン札幌白石",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "白石駅から徒歩で20分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "station",
+          "麻生駅",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:16:24"
+    },
+    {
+      "role": 0,
+      "content": "全ての条件を満たす施設はなさそうです。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "南区",
+            "station": "札幌駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669648604689
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "北区",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "南区",
+          "station": "札幌駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:16:56",
+      "book": {
+        "hotel": {
+          "name": "ホテルルートイン札幌白石",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。では、駐車場の有無は考えないようにします。それだとどうでしょうか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテルルートイン札幌白石",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "白石駅から徒歩で20分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "station",
+          "麻生駅",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:17:13"
+    },
+    {
+      "role": 0,
+      "content": "南区で札幌駅周辺の観光名所といえば、定山渓物産館、こちら一択です。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "南区",
+            "station": "札幌駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669648639246,
+          "selectedResults": [
+            "定山渓物産館"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "北区",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "南区",
+          "station": "札幌駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:17:48",
+      "book": {
+        "hotel": {
+          "name": "ホテルルートイン札幌白石",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そのお店について、近辺の駅からの所要時間が知りたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテルルートイン札幌白石",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "白石駅から徒歩で20分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "station",
+          "麻生駅",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:18:07"
+    },
+    {
+      "role": 0,
+      "content": "札幌駅からバスで57分ですね。もはや最寄りというのかって感じですが。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "南区",
+            "station": "札幌駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "北区",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "南区",
+          "station": "札幌駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:18:28",
+      "book": {
+        "hotel": {
+          "name": "ホテルルートイン札幌白石",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "解決しました。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテルルートイン札幌白石",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "白石駅から徒歩で20分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "station",
+          "麻生駅",
+          false
+        ],
+        [
+          3,
+          "shopping",
+          "accesstime",
+          "札幌駅からバスで57分",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:18:47"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 15:18:52"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 15:18:57"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:52",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "札幌",
+      "name": null,
+      "genre": "ビジネスホテル",
+      "area": null,
+      "pricerange": "安め",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "札幌",
+      "name": null,
+      "genre": null,
+      "area": "北区",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "shopping": {
+      "city": "札幌",
+      "name": null,
+      "genre": null,
+      "area": "南区",
+      "station": "札幌駅",
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ホテルルートイン札幌白石",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

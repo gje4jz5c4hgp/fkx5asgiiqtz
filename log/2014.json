@@ -1,0 +1,2842 @@
+{
+  "id": 2014,
+  "dialogue_code": "dialogue_2014ZBps",
+  "status_code": 2,
+  "user": [
+    20,
+    269
+  ],
+  "username": [
+    "operator_0020cvID",
+    "customer_0269bUGK"
+  ],
+  "task": 2184,
+  "task_name": "main_1864",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "那覇",
+          "wifi": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "info": {
+          "city": "那覇",
+          "wifi": "有り(無料)",
+          "withrestaurant": "dontcare"
+        },
+        "reqt": [
+          "address",
+          "pricerange",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "people": 4,
+          "day": "10/5",
+          "stay": 3
+        }
+      },
+      "restaurant": {
+        "info": {
+          "city": "那覇",
+          "parking": "有り(無料)",
+          "genre": "焼肉・ホルモン"
+        },
+        "reqt": [
+          "closed",
+          "accesstime",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 3,
+          "day": "10/5",
+          "time": "15:10"
+        },
+        "book": {
+          "people": 2,
+          "day": "10/5",
+          "time": "15:10"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "那覇",
+          "area": "小禄",
+          "day": "10/5"
+        },
+        "reqt": [
+          "maxtemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>那覇</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，レストランの有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>住所，値段帯，施設名</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>10/5</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．ジャンルは<b style='color:blue;'>焼肉・ホルモン</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>定休日，近辺の駅からの所要時間</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>10/5</b>です．時間は<b style='color:blue;'>15:10</b>です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>2</b>に変更します．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>小禄</b>です．日付は<b style='color:blue;'>10/5</b>です．",
+        "<b style='color:green;'>最高気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "address",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "pricerange",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "closed",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "maxtemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "那覇で、無料Wi-Fiが利用できて、レストランのある泊まれるところを探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:26:08"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。条件に合う宿泊施設は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1667377581646
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:26:28",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "だったら、レストランはなくてもいいです。どこかありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:26:51"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、旅の宿 らくちんはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "旅の宿 らくちん",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667377613926,
+          "selectedResults": [
+            "旅の宿 らくちん"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:27:04",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらの住所を教えてもらえますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "旅の宿 らくちん",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:27:25"
+    },
+    {
+      "role": 0,
+      "content": "はい。住所は沖縄県那覇市辻1丁目13-8です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "旅の宿 らくちん",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:28:01",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "値段帯も教えて下さい。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "沖縄県那覇市辻1丁目13-8",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "旅の宿 らくちん",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:28:23"
+    },
+    {
+      "role": 0,
+      "content": "はい。値段帯は安めとなっております。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "旅の宿 らくちん",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:28:37",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。１０月５日から３泊で、人数４人でそちらを予約できますでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "沖縄県那覇市辻1丁目13-8",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "旅の宿 らくちん",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:29:16"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、8121です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "旅の宿 らくちん",
+              "value": {
+                "people": "4",
+                "day": [
+                  10,
+                  5
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1667377771372,
+              "success": true,
+              "ref": "8121"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:29:39",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1667377771372,
+          "success": true,
+          "ref": "8121"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日、焼肉かホルモンを食べたいのですが、駐車場が無料のお店探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "沖縄県那覇市辻1丁目13-8",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "旅の宿 らくちん",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "8121",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:30:30"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、焼肉工房 團はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "焼肉・ホルモン",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "焼肉工房 團",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667377853399,
+          "selectedResults": [
+            "焼肉工房 團"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:31:04",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉工房 團",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの定休日と近くの駅からどのくらいかかるか教えて下さい。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "沖縄県那覇市辻1丁目13-8",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "旅の宿 らくちん",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "8121",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:31:31"
+    },
+    {
+      "role": 0,
+      "content": "はい。定休日は火曜日です。近辺の駅からの所要時間は、奥武山公園駅から徒歩で13分になります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "焼肉・ホルモン",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "焼肉工房 團",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:32:02",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉工房 團",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらに行きたいので予約お願いできますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "沖縄県那覇市辻1丁目13-8",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "旅の宿 らくちん",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "8121",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "火曜日",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "奥武山公園駅から徒歩で13分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:32:25"
+    },
+    {
+      "role": 0,
+      "content": "はい。詳細な情報をお伺いしていいですか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "焼肉・ホルモン",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "焼肉工房 團",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:32:35",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉工房 團",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "１０月５日の15:10に３人でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "沖縄県那覇市辻1丁目13-8",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "旅の宿 らくちん",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "8121",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "火曜日",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "奥武山公園駅から徒歩で13分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:32:58"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では予約できませんでした。どうされますか",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "焼肉・ホルモン",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "焼肉工房 團",
+              "value": {
+                "people": "3",
+                "day": [
+                  10,
+                  5
+                ],
+                "time": "15:10"
+              },
+              "timestamp": 1667377989219,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:33:15",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉工房 團",
+          "value": {
+            "people": "3",
+            "day": [
+              10,
+              5
+            ],
+            "time": "15:10"
+          },
+          "timestamp": 1667377989219,
+          "success": false,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "人数を２人にしたらどうでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "沖縄県那覇市辻1丁目13-8",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "旅の宿 らくちん",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "8121",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "火曜日",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "奥武山公園駅から徒歩で13分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:33:30"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、52364です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "焼肉・ホルモン",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "焼肉工房 團",
+              "value": {
+                "people": "2",
+                "day": [
+                  10,
+                  5
+                ],
+                "time": "15:10"
+              },
+              "timestamp": 1667378012879,
+              "success": true,
+              "ref": "52364"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:33:40",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉工房 團",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              5
+            ],
+            "time": "15:10"
+          },
+          "timestamp": 1667378012879,
+          "success": true,
+          "ref": "52364"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。１０月５日の小禄地区の最高気温も教えてもらえないでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "沖縄県那覇市辻1丁目13-8",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "旅の宿 らくちん",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "8121",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "火曜日",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "奥武山公園駅から徒歩で13分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "52364",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:34:14"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。10/5の小禄の天気予報は晴のち曇となっております。最高気温は30.8度になる予報です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "那覇",
+            "area": "小禄",
+            "day": [
+              10,
+              5
+            ]
+          },
+          "book": [],
+          "timestamp": 1667378069075,
+          "selectedResults": [
+            "10/5 那覇 小禄 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "那覇",
+          "area": "小禄",
+          "day": [
+            10,
+            5
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:34:59",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉工房 團",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              5
+            ],
+            "time": "15:10"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "沖縄県那覇市辻1丁目13-8",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "旅の宿 らくちん",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "8121",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "火曜日",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "奥武山公園駅から徒歩で13分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "52364",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "30.8度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:35:08"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はありますか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "那覇",
+            "area": "小禄",
+            "day": [
+              10,
+              5
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "那覇",
+          "area": "小禄",
+          "day": [
+            10,
+            5
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:35:13",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉工房 團",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              5
+            ],
+            "time": "15:10"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "大丈夫です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "沖縄県那覇市辻1丁目13-8",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "name",
+          "旅の宿 らくちん",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "8121",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "closed",
+          "火曜日",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "奥武山公園駅から徒歩で13分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "52364",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "30.8度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:35:18"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "那覇",
+            "area": "小禄",
+            "day": [
+              10,
+              5
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "那覇",
+          "area": "小禄",
+          "day": [
+            10,
+            5
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:35:24",
+      "book": {
+        "hotel": {
+          "name": "旅の宿 らくちん",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "焼肉工房 團",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              5
+            ],
+            "time": "15:10"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-02 08:35:31"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-02 08:35:31"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:08",
+  "final_state": {
+    "restaurant": {
+      "city": "那覇",
+      "name": null,
+      "genre": "焼肉・ホルモン",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "那覇",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "那覇",
+      "area": "小禄",
+      "day": [
+        10,
+        5
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "旅の宿 らくちん",
+      "value": {
+        "people": "4",
+        "day": [
+          10,
+          5
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "焼肉工房 團",
+      "value": {
+        "people": "2",
+        "day": [
+          10,
+          5
+        ],
+        "time": "15:10"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

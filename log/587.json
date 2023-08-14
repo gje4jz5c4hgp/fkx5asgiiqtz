@@ -1,0 +1,1642 @@
+{
+  "id": 587,
+  "dialogue_code": "dialogue_0587kQTk",
+  "status_code": 2,
+  "user": [
+    2,
+    239
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0239vzdO"
+  ],
+  "task": 2840,
+  "task_name": "fixed_20",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "横浜",
+          "withrestaurant": "有り",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "weather": {
+        "info": {
+          "city": "横浜",
+          "day": "7/28",
+          "area": "都筑区"
+        },
+        "reqt": [
+          "mintemperature",
+          "weather"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "横浜",
+          "jumbo": "対応",
+          "cashless": "対応"
+        },
+        "info": {
+          "city": "横浜",
+          "jumbo": "対応",
+          "cashless": "dontcare"
+        },
+        "reqt": [
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "7/28",
+          "time": "14:40",
+          "departurepoint": "hotel",
+          "arrivalpoint": "Cosme Kitchen ルミネ横浜"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>横浜</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>7/28</b>です．地区は<b style='color:blue;'>都筑区</b>です．",
+        "<b style='color:green;'>最低気温，天気</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "希望に合うところが見つからない場合は，キャッシュレス払いの可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>7/28</b>です．時間は<b style='color:blue;'>14:40</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は<b style='color:blue;'>Cosme Kitchen ルミネ横浜</b>というところです．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "mintemperature",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "weather",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "weather",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは！横浜へ旅行に行きたいんですが、宿泊施設を調べてもらえますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:57:37"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。エリアなど、何かご希望はございませんか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666929463113
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:57:51",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "レストランが併設されていて、駐車場が無料のところがいいです！",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:58:03"
+    },
+    {
+      "role": 0,
+      "content": "そうしますと、2件ほどご案内可能です。たとえば、ホテル パセラの森 横浜関内はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテル パセラの森 横浜関内",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666929484464,
+          "selectedResults": [
+            "ホテル パセラの森 横浜関内"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:58:22",
+      "book": {
+        "hotel": {
+          "name": "ホテル パセラの森 横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね！7/28の天候を調べてもらえますか？都筑区というところです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテル パセラの森 横浜関内",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:59:09"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。7/28の都筑区の天気は雨の予報となっております。最低気温は20.6度、最高気温は27.7度となる予想です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "横浜",
+            "area": "都筑区",
+            "day": [
+              7,
+              28
+            ]
+          },
+          "book": [],
+          "timestamp": 1666929562111,
+          "selectedResults": [
+            "7/28 横浜 都筑区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "都筑区",
+          "day": [
+            7,
+            28
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:59:59",
+      "book": {
+        "hotel": {
+          "name": "ホテル パセラの森 横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ジャンボタクシーを利用したいんですが、キャッシュレス払いができるタクシー会社はありますかね？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテル パセラの森 横浜関内",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "20.6度",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "雨",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 04:00:44"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。ご希望の条件では候補が見つかりませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1666929652355
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "都筑区",
+          "day": [
+            7,
+            28
+          ]
+        }
+      },
+      "created_at": "2022-10-28 04:01:00",
+      "book": {
+        "hotel": {
+          "name": "ホテル パセラの森 横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではキャッシュレス払いはなくても大丈夫です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテル パセラの森 横浜関内",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "20.6度",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "雨",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 04:01:12"
+    },
+    {
+      "role": 0,
+      "content": "では、瀬谷交通有限会社はいかがでしょうか？電話番号は、0453601144です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "瀬谷交通有限会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666929672426,
+          "selectedResults": [
+            "瀬谷交通有限会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "都筑区",
+          "day": [
+            7,
+            28
+          ]
+        }
+      },
+      "created_at": "2022-10-28 04:01:31",
+      "book": {
+        "hotel": {
+          "name": "ホテル パセラの森 横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "瀬谷交通有限会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこで予約をお願いします。7/28の14:40にホテル パセラの森 横浜を出発して、Cosme Kitchen ルミネ横浜まで向かいたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテル パセラの森 横浜関内",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "20.6度",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "雨",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0453601144",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 04:02:22"
+    },
+    {
+      "role": 0,
+      "content": "ご予約ありがとうございます。予約完了いたしました。予約番号は、95585でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "瀬谷交通有限会社",
+              "value": {
+                "day": [
+                  7,
+                  28
+                ],
+                "time": "14:40",
+                "departurepoint": "ホテル パセラの森 横浜",
+                "arrivalpoint": "Cosme Kitchen ルミネ横浜"
+              },
+              "timestamp": 1666929757685,
+              "success": true,
+              "ref": "95585"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "都筑区",
+          "day": [
+            7,
+            28
+          ]
+        }
+      },
+      "created_at": "2022-10-28 04:02:55",
+      "book": {
+        "hotel": {
+          "name": "ホテル パセラの森 横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "瀬谷交通有限会社",
+          "value": {
+            "day": [
+              7,
+              28
+            ],
+            "time": "14:40",
+            "departurepoint": "ホテル パセラの森 横浜",
+            "arrivalpoint": "Cosme Kitchen ルミネ横浜"
+          },
+          "timestamp": 1666929757685,
+          "success": true,
+          "ref": "95585"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "お手数おかけしました。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテル パセラの森 横浜関内",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "20.6度",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "雨",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0453601144",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "95585",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 04:03:15"
+    },
+    {
+      "role": 0,
+      "content": "ほかにお調べすることはございますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "瀬谷交通有限会社",
+              "value": {
+                "day": [
+                  7,
+                  28
+                ],
+                "time": "14:40",
+                "departurepoint": "ホテル パセラの森 横浜",
+                "arrivalpoint": "Cosme Kitchen ルミネ横浜"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "都筑区",
+          "day": [
+            7,
+            28
+          ]
+        }
+      },
+      "created_at": "2022-10-28 04:03:20",
+      "book": {
+        "hotel": {
+          "name": "ホテル パセラの森 横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "瀬谷交通有限会社",
+          "value": {
+            "day": [
+              7,
+              28
+            ],
+            "time": "14:40",
+            "departurepoint": "ホテル パセラの森 横浜",
+            "arrivalpoint": "Cosme Kitchen ルミネ横浜"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "大丈夫です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ホテル パセラの森 横浜関内",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "20.6度",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "雨",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0453601144",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "95585",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 04:03:26"
+    },
+    {
+      "role": 0,
+      "content": "承知いたしました。本日はご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "瀬谷交通有限会社",
+              "value": {
+                "day": [
+                  7,
+                  28
+                ],
+                "time": "14:40",
+                "departurepoint": "ホテル パセラの森 横浜",
+                "arrivalpoint": "Cosme Kitchen ルミネ横浜"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "都筑区",
+          "day": [
+            7,
+            28
+          ]
+        }
+      },
+      "created_at": "2022-10-28 04:03:30",
+      "book": {
+        "hotel": {
+          "name": "ホテル パセラの森 横浜関内",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "瀬谷交通有限会社",
+          "value": {
+            "day": [
+              7,
+              28
+            ],
+            "time": "14:40",
+            "departurepoint": "ホテル パセラの森 横浜",
+            "arrivalpoint": "Cosme Kitchen ルミネ横浜"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-28 04:03:36"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-28 04:03:38"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:58",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "横浜",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "横浜",
+      "name": null,
+      "cashless": null,
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": "横浜",
+      "area": "都筑区",
+      "day": [
+        7,
+        28
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ホテル パセラの森 横浜関内",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "瀬谷交通有限会社",
+      "value": {
+        "day": [
+          7,
+          28
+        ],
+        "time": "14:40",
+        "departurepoint": "ホテル パセラの森 横浜",
+        "arrivalpoint": "Cosme Kitchen ルミネ横浜"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

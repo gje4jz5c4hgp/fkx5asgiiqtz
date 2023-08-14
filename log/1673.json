@@ -1,0 +1,3119 @@
+{
+  "id": 1673,
+  "dialogue_code": "dialogue_1673NAwR",
+  "status_code": 2,
+  "user": [
+    8,
+    213
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0213GZGn"
+  ],
+  "task": 1843,
+  "task_name": "main_1523",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "大阪",
+          "wifi": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "info": {
+          "city": "大阪",
+          "wifi": "dontcare",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "name",
+          "priceinfo",
+          "area"
+        ]
+      },
+      "restaurant": {
+        "fail_info": {
+          "city": "大阪",
+          "genre": "和食",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "大阪",
+          "genre": "和食",
+          "parking": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "pricerange",
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "7/2",
+          "time": "17:30"
+        }
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "大阪",
+          "jumbo": "対応"
+        },
+        "info": {
+          "city": "大阪",
+          "jumbo": "dontcare"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "7/2",
+          "time": "16:00",
+          "departurepoint": "hotel",
+          "arrivalpoint": "restaurant"
+        },
+        "book": {
+          "day": "7/2",
+          "time": "16:50",
+          "departurepoint": "hotel",
+          "arrivalpoint": "restaurant"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，Wi-Fiの有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，料金情報，エリア</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．ジャンルは<b style='color:blue;'>和食</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，駐車場の有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，値段帯，電話番号</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>7/2</b>です．時間は<b style='color:blue;'>17:30</b>です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，ジャンボタクシーの利用可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>7/2</b>です．時間は<b style='color:blue;'>16:00</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>16:50</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "priceinfo",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "area",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "pricerange",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪へ旅行予定なのですが、Wi-Fiが無料で利用できる宿泊施設はありますか？レストランが併設されているところがいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:24:43"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では案内できるところがございませんでした。いかがなさいますか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1667258699341
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:25:15",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ならWi-Fiはなくてもいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:25:38"
+    },
+    {
+      "role": 0,
+      "content": "ではネストホテル大阪心斎橋はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ネストホテル大阪心斎橋",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667258743721,
+          "selectedResults": [
+            "ネストホテル大阪心斎橋"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:25:58",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "よさそうですね。料金情報とエリアを教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ネストホテル大阪心斎橋",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:26:17"
+    },
+    {
+      "role": 0,
+      "content": "エリアは中央区でございます。値段帯は安めとなっておりますが詳しい料金情報はわかりかねます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ネストホテル大阪心斎橋",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:27:07",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。和食を食べれる飲食店も探しているのですが、駐車場を無料で利用できるところを調べてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ネストホテル大阪心斎橋",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:27:47"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では案内できるところがございませんでした。いかがなさいますか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667258881682
+        },
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "和食",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667258890367
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:28:21",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。なら駐車場はなくてもいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ネストホテル大阪心斎橋",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:28:36"
+    },
+    {
+      "role": 0,
+      "content": "では、にし家 グランフロント大阪店はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "和食",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "にし家 グランフロント大阪店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667258920016,
+          "selectedResults": [
+            "鉄板串酒場 しん家",
+            "にし家 グランフロント大阪店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:29:08",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "にし家 グランフロント大阪店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。値段帯と電話番号を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ネストホテル大阪心斎橋",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "にし家 グランフロント大阪店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:29:26"
+    },
+    {
+      "role": 0,
+      "content": "値段帯は普通で、電話番号は05052697742でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "和食",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "にし家 グランフロント大阪店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:30:06",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "にし家 グランフロント大阪店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。3人で7/2の17:30の予約はとれますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ネストホテル大阪心斎橋",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "にし家 グランフロント大阪店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "05052697742",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:30:36"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。予約番号は20843でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "和食",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "にし家 グランフロント大阪店",
+              "value": {
+                "people": "3",
+                "day": [
+                  7,
+                  2
+                ],
+                "time": "17:30"
+              },
+              "timestamp": 1667259048397,
+              "success": true,
+              "ref": "20843"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:31:10",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "にし家 グランフロント大阪店",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              2
+            ],
+            "time": "17:30"
+          },
+          "timestamp": 1667259048397,
+          "success": true,
+          "ref": "20843"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日ジャンボタクシーも利用予定なのですが、いいとこはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ネストホテル大阪心斎橋",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "にし家 グランフロント大阪店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "05052697742",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "20843",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:31:45"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。ジャンボタクシー対応のタクシー会社はございませんでした。いかがなさいますか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1667259115143,
+          "selectedResults": [
+            "京都第一交通株式会社",
+            "エムケイ株式会社"
+          ]
+        },
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1667259128022
+        },
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [],
+          "timestamp": 1667259135281
+        },
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "エムケイ株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667259142662
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:33:29",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "にし家 グランフロント大阪店",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              2
+            ],
+            "time": "17:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "エムケイ株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。であればジャンボタクシーは利用できなくても大丈夫です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ネストホテル大阪心斎橋",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "にし家 グランフロント大阪店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "05052697742",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "20843",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:33:49"
+    },
+    {
+      "role": 0,
+      "content": "では駒姫タクシーグループはいかがでしょうか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "駒姫タクシーグループ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667259233922,
+          "selectedResults": [
+            "駒姫タクシーグループ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:34:12",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "にし家 グランフロント大阪店",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              2
+            ],
+            "time": "17:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "駒姫タクシーグループ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。電話番号を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ネストホテル大阪心斎橋",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "にし家 グランフロント大阪店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "05052697742",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "20843",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:34:27"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は0666858451でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "駒姫タクシーグループ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:34:44",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "にし家 グランフロント大阪店",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              2
+            ],
+            "time": "17:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "駒姫タクシーグループ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ではそこで7/2の16:00で、ネストホテル大阪心斎橋からにし家 グランフロント大阪店までのタクシーの予約をとれますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ネストホテル大阪心斎橋",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "にし家 グランフロント大阪店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "05052697742",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "20843",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0666858451",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "駒姫タクシーグループ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:35:44"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では予約ができませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "駒姫タクシーグループ",
+              "value": {
+                "day": [
+                  7,
+                  2
+                ],
+                "time": "16:00",
+                "departurepoint": "ネストホテル大阪心斎橋",
+                "arrivalpoint": "にし家 グランフロント大阪店"
+              },
+              "timestamp": 1667259368323,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:36:23",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "にし家 グランフロント大阪店",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              2
+            ],
+            "time": "17:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "駒姫タクシーグループ",
+          "value": {
+            "day": [
+              7,
+              2
+            ],
+            "time": "16:00",
+            "departurepoint": "ネストホテル大阪心斎橋",
+            "arrivalpoint": "にし家 グランフロント大阪店"
+          },
+          "timestamp": 1667259368323,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。時間を16:50にしてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ネストホテル大阪心斎橋",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "にし家 グランフロント大阪店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "05052697742",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "20843",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0666858451",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "駒姫タクシーグループ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:36:42"
+    },
+    {
+      "role": 0,
+      "content": "予約が完了いたしました。予約番号は45299でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "駒姫タクシーグループ",
+              "value": {
+                "day": [
+                  7,
+                  2
+                ],
+                "time": "16:50",
+                "departurepoint": "ネストホテル大阪心斎橋",
+                "arrivalpoint": "にし家 グランフロント大阪店"
+              },
+              "timestamp": 1667259411172,
+              "success": true,
+              "ref": "45299"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:37:13",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "にし家 グランフロント大阪店",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              2
+            ],
+            "time": "17:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "駒姫タクシーグループ",
+          "value": {
+            "day": [
+              7,
+              2
+            ],
+            "time": "16:50",
+            "departurepoint": "ネストホテル大阪心斎橋",
+            "arrivalpoint": "にし家 グランフロント大阪店"
+          },
+          "timestamp": 1667259411172,
+          "success": true,
+          "ref": "45299"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。もう大丈夫です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ネストホテル大阪心斎橋",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "にし家 グランフロント大阪店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "phone",
+          "05052697742",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "20843",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0666858451",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "駒姫タクシーグループ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "45299",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 23:37:27"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "駒姫タクシーグループ",
+              "value": {
+                "day": [
+                  7,
+                  2
+                ],
+                "time": "16:50",
+                "departurepoint": "ネストホテル大阪心斎橋",
+                "arrivalpoint": "にし家 グランフロント大阪店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 23:37:34",
+      "book": {
+        "hotel": {
+          "name": "ネストホテル大阪心斎橋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "にし家 グランフロント大阪店",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              2
+            ],
+            "time": "17:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "駒姫タクシーグループ",
+          "value": {
+            "day": [
+              7,
+              2
+            ],
+            "time": "16:50",
+            "departurepoint": "ネストホテル大阪心斎橋",
+            "arrivalpoint": "にし家 グランフロント大阪店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 23:37:41"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 23:37:47"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:06",
+  "final_state": {
+    "restaurant": {
+      "city": "大阪",
+      "name": null,
+      "genre": "和食",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "大阪",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ネストホテル大阪心斎橋",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "にし家 グランフロント大阪店",
+      "value": {
+        "people": "3",
+        "day": [
+          7,
+          2
+        ],
+        "time": "17:30"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "駒姫タクシーグループ",
+      "value": {
+        "day": [
+          7,
+          2
+        ],
+        "time": "16:50",
+        "departurepoint": "ネストホテル大阪心斎橋",
+        "arrivalpoint": "にし家 グランフロント大阪店"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

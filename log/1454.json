@@ -1,0 +1,1834 @@
+{
+  "id": 1454,
+  "dialogue_code": "dialogue_1454Efxd",
+  "status_code": 2,
+  "user": [
+    8,
+    239
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0239vzdO"
+  ],
+  "task": 1624,
+  "task_name": "main_1304",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "fail_info": {
+          "city": "京都",
+          "area": "下京区",
+          "parking": "有り(無料)",
+          "station": "竹田駅"
+        },
+        "info": {
+          "city": "京都",
+          "area": "下京区",
+          "parking": "有り(無料)",
+          "station": "dontcare"
+        },
+        "reqt": [
+          "opentime",
+          "name",
+          "genre"
+        ]
+      },
+      "hotel": {
+        "info": {
+          "city": "京都",
+          "withrestaurant": "有り",
+          "area": "下京区",
+          "wifi": "有り(無料)"
+        },
+        "reqt": [
+          "pricerange"
+        ]
+      },
+      "weather": {
+        "info": {
+          "city": "京都",
+          "day": "9/13",
+          "area": "伏見区"
+        },
+        "reqt": [
+          "maxtemperature",
+          "mintemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．地区は<b style='color:blue;'>下京区</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>竹田駅</b>のところにしてください．",
+        "希望に合うところが見つからない場合は，最寄り駅は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>営業時間，店舗名，ジャンル</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．地区は<b style='color:blue;'>下京区</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>値段帯</b>を聞いてください．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>9/13</b>です．地区は<b style='color:blue;'>伏見区</b>です．",
+        "<b style='color:green;'>最高気温，最低気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "opentime",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "pricerange",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "maxtemperature",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "mintemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "hotel",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都へ旅行に行くんですが、買い物ができるところを探してください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 03:29:43"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご希望の条件はございますか。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667186991710
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 03:29:55",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "地区は下京区で、駐車場が無料のところがいいです！最寄り駅が竹田駅だと嬉しいんですが、ありますかね？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 03:30:26"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件で案内できるところがございませんでした。いかがなさいますか。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "下京区",
+            "station": "竹田駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667187039902
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "竹田駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 03:30:46",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では最寄り駅はどこでも大丈夫です。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 03:30:54"
+    },
+    {
+      "role": 0,
+      "content": "では京扇堂がございます。最寄り駅は京都駅でございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "下京区",
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667187060070,
+          "selectedResults": [
+            "京扇堂"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 03:31:15",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらのお店のジャンルと営業時間を教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 03:31:30"
+    },
+    {
+      "role": 0,
+      "content": "ジャンルは文房具・雑貨, お土産でございます。営業時間は09:00～17:00でございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "下京区",
+            "station": "",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 03:31:50",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。下京区で宿泊施設も探していただけますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "opentime",
+          "9:00～17:00",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "京扇堂",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "文房具・雑貨、お土産",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 03:32:31"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご希望の条件はございますか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "下京区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1667187163065
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 03:32:46",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "Wi-Fiが無料で、レストランが併設されているところがいいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "opentime",
+          "9:00～17:00",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "京扇堂",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "文房具・雑貨、お土産",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 03:32:59"
+    },
+    {
+      "role": 0,
+      "content": "では湯の宿 松栄はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "下京区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "湯の宿 松栄",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667187186054,
+          "selectedResults": [
+            "湯の宿 松栄"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 03:33:13",
+      "book": {
+        "hotel": {
+          "name": "湯の宿 松栄",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "値段帯はどんな感じでしょう？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "opentime",
+          "9:00～17:00",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "京扇堂",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "文房具・雑貨、お土産",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 03:33:22"
+    },
+    {
+      "role": 0,
+      "content": "値段帯は安めでございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "下京区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "湯の宿 松栄",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 03:33:30",
+      "book": {
+        "hotel": {
+          "name": "湯の宿 松栄",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。最後に、9/13の伏見区の気温を教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "opentime",
+          "9:00～17:00",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "京扇堂",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "文房具・雑貨、お土産",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 03:33:59"
+    },
+    {
+      "role": 0,
+      "content": "最低気温は21.3度で、最高気温が29.9度でございます。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "伏見区",
+            "day": [
+              9,
+              13
+            ]
+          },
+          "book": [],
+          "timestamp": 1667187251390,
+          "selectedResults": [
+            "9/13 京都 伏見区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "伏見区",
+          "day": [
+            9,
+            13
+          ]
+        }
+      },
+      "created_at": "2022-10-31 03:34:28",
+      "book": {
+        "hotel": {
+          "name": "湯の宿 松栄",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。助かりました！",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "opentime",
+          "9:00～17:00",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "京扇堂",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "文房具・雑貨、お土産",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "29.9度",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "21.3度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 03:34:42"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "伏見区",
+            "day": [
+              9,
+              13
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "伏見区",
+          "day": [
+            9,
+            13
+          ]
+        }
+      },
+      "created_at": "2022-10-31 03:34:47",
+      "book": {
+        "hotel": {
+          "name": "湯の宿 松栄",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 03:34:53"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 03:34:55"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:04",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": "下京区",
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": "下京区",
+      "station": "",
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "京都",
+      "area": "伏見区",
+      "day": [
+        9,
+        13
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "湯の宿 松栄",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

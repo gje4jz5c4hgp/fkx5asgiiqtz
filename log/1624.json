@@ -1,0 +1,1851 @@
+{
+  "id": 1624,
+  "dialogue_code": "dialogue_1624axvX",
+  "status_code": 2,
+  "user": [
+    2,
+    279
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0279KFHy"
+  ],
+  "task": 1794,
+  "task_name": "main_1474",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "京都",
+          "pricerange": "安め",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "area",
+          "wifi",
+          "closed",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 4,
+          "day": "10/9",
+          "time": "10:50"
+        },
+        "book": {
+          "people": 3,
+          "day": "10/9",
+          "time": "10:50"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "京都",
+          "day": "10/9",
+          "area": "東山区"
+        },
+        "reqt": [
+          "mintemperature",
+          "weather"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．予算は<b style='color:blue;'>安め</b>が希望です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>エリア，Wi-Fiの有無，定休日</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>10/9</b>です．時間は<b style='color:blue;'>10:50</b>です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>3</b>に変更します．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>10/9</b>です．地区は<b style='color:blue;'>東山区</b>です．",
+        "<b style='color:green;'>最低気温，天気</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "area",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "wifi",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "closed",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "mintemperature",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "weather",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは。京都へ旅行するのですが、食事できるところを探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 15:27:30"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご希望の条件は何かございますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667316454746
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 15:27:43",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "価格は安めで、駐車場が無料の場所をお願いします",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 15:28:03"
+    },
+    {
+      "role": 0,
+      "content": "では、海雲亭 洛西店というお店はいかがでしょうか？ジャンルは、焼肉・ホルモンとなっております。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "海雲亭 洛西店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667316487777,
+          "selectedResults": [
+            "海雲亭 洛西店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 15:28:27",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "海雲亭 洛西店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。エリアと定休日、無料Wi-Fiがあるかを教えてもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 15:29:08"
+    },
+    {
+      "role": 0,
+      "content": "エリアは西京区にございます。こちらのお店は定休日はございません。WiFiの有無につきましては不明となっております、申し訳ありません。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "海雲亭 洛西店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 15:29:54",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "海雲亭 洛西店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いえいえ。では、予約もお願いします。10月9日の10時50分で、4人で予約できますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 15:31:11"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件では予約できませんでした。いかがいたしましょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "海雲亭 洛西店",
+              "value": {
+                "people": "4",
+                "day": [
+                  10,
+                  9
+                ],
+                "time": "10:50"
+              },
+              "timestamp": 1667316685779,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 15:31:33",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "海雲亭 洛西店",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              9
+            ],
+            "time": "10:50"
+          },
+          "timestamp": 1667316685779,
+          "success": false,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "3人だったらできますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 15:31:55"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。3名様にてご予約完了いたしました。予約番号は、33466です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "海雲亭 洛西店",
+              "value": {
+                "people": "3",
+                "day": [
+                  10,
+                  9
+                ],
+                "time": "10:50"
+              },
+              "timestamp": 1667316715621,
+              "success": true,
+              "ref": "33466"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 15:32:18",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "海雲亭 洛西店",
+          "value": {
+            "people": "3",
+            "day": [
+              10,
+              9
+            ],
+            "time": "10:50"
+          },
+          "timestamp": 1667316715621,
+          "success": true,
+          "ref": "33466"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日の東山区の天気もわかりますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "33466",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 15:32:55"
+    },
+    {
+      "role": 0,
+      "content": "恐れ入ります。天気をお調べするお日にちを、伺ってもよろしいでしょうか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "東山区",
+            "day": [
+              null,
+              null
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "東山区",
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 15:33:29",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "海雲亭 洛西店",
+          "value": {
+            "people": "3",
+            "day": [
+              10,
+              9
+            ],
+            "time": "10:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "10月9日です",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "33466",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 15:33:43"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。当日の天気は、晴のち曇の予報です。最低気温は14.9度、最高気温は20.6度の予想となっております。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "東山区",
+            "day": [
+              10,
+              9
+            ]
+          },
+          "book": [],
+          "timestamp": 1667316827915,
+          "selectedResults": [
+            "10/9 京都 東山区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "東山区",
+          "day": [
+            10,
+            9
+          ]
+        }
+      },
+      "created_at": "2022-11-01 15:34:12",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "海雲亭 洛西店",
+          "value": {
+            "people": "3",
+            "day": [
+              10,
+              9
+            ],
+            "time": "10:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "33466",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "14.9度",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "晴のち曇",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 15:34:52"
+    },
+    {
+      "role": 0,
+      "content": "他になにかお調べすることはございませんか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "東山区",
+            "day": [
+              10,
+              9
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "東山区",
+          "day": [
+            10,
+            9
+          ]
+        }
+      },
+      "created_at": "2022-11-01 15:34:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "海雲亭 洛西店",
+          "value": {
+            "people": "3",
+            "day": [
+              10,
+              9
+            ],
+            "time": "10:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いえ、以上です",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "33466",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "14.9度",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "晴のち曇",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 15:35:06"
+    },
+    {
+      "role": 0,
+      "content": "承知いたしました。本日はご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "東山区",
+            "day": [
+              10,
+              9
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "東山区",
+          "day": [
+            10,
+            9
+          ]
+        }
+      },
+      "created_at": "2022-11-01 15:35:11",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "海雲亭 洛西店",
+          "value": {
+            "people": "3",
+            "day": [
+              10,
+              9
+            ],
+            "time": "10:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 2,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "天気について「当日の」と言われたので、もう一度と日付を問い直しました。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 15:35:25"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 15:35:27"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:05",
+  "final_state": {
+    "restaurant": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "安め",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "京都",
+      "area": "東山区",
+      "day": [
+        10,
+        9
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "海雲亭 洛西店",
+      "value": {
+        "people": "3",
+        "day": [
+          10,
+          9
+        ],
+        "time": "10:50"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

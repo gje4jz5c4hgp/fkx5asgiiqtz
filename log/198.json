@@ -1,0 +1,2008 @@
+{
+  "id": 198,
+  "dialogue_code": "dialogue_0198SUaV",
+  "status_code": 2,
+  "user": [
+    8,
+    202
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0202FLfk"
+  ],
+  "task": 368,
+  "task_name": "main_48",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "那覇",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "name",
+          "parking",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "12/15",
+          "stay": 3
+        }
+      },
+      "restaurant": {
+        "info": {
+          "city": "那覇",
+          "pricerange": "高め",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "wifi"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "那覇",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "cashless",
+          "reference"
+        ],
+        "book": {
+          "day": "12/15",
+          "time": "13:50",
+          "departurepoint": "hotel",
+          "arrivalpoint": "restaurant"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>那覇</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，駐車場の有無</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>12/15</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．予算は<b style='color:blue;'>高め</b>が希望です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，Wi-Fiの有無</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名，キャッシュレス対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>12/15</b>です．時間は<b style='color:blue;'>13:50</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "parking",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "wifi",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "那覇に旅行するんですけど、レストランがついている宿を紹介してもらえませんか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-24 04:11:55"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。その条件ですと５９件ほどございますがほかにご希望の条件はございますか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1666584727097
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-24 04:12:35",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特にないので、おすすめを教えてください。駐車場があるかも合わせて聞いときたいんですけど。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-24 04:13:32"
+    },
+    {
+      "role": 0,
+      "content": "ではシーサー・イン那覇はいかがでしょうか。有料ですが駐車場もございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "シーサー・イン那覇",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "シーサー・イン那覇",
+            "ホテルユクエスタ旭橋",
+            "ホテルグランビュー沖縄",
+            "ネストホテル那覇",
+            "ホテル カクテルステイナハ",
+            "シーサー・イン那覇"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-24 04:14:07",
+      "book": {
+        "hotel": {
+          "name": "シーサー・イン那覇",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "名前が那覇っぽくていいですね。そこにします。12月15日から3泊、3人で予約できますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "シーサー・イン那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-24 04:14:46"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。予約番号は98642でございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "シーサー・イン那覇",
+              "value": {
+                "people": "3",
+                "day": [
+                  12,
+                  15
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1666584898540,
+              "success": true,
+              "ref": "98642"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-24 04:15:22",
+      "book": {
+        "hotel": {
+          "name": "シーサー・イン那覇",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              15
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1666584898540,
+          "success": true,
+          "ref": "98642"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "奮発して予算が高めの飲食店も探してもらっていいですか？でも駐車場は無料がいいな。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "シーサー・イン那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "98642",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-24 04:16:25"
+    },
+    {
+      "role": 0,
+      "content": "おもろダイニング 山葵はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "おもろダイニング 山葵",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666585008396,
+          "selectedResults": [
+            "おもろダイニング 山葵"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-24 04:17:04",
+      "book": {
+        "hotel": {
+          "name": "シーサー・イン那覇",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              15
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おもろダイニング 山葵",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "面白そうですね、そこ。Wi-Fiって使えますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "シーサー・イン那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "98642",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "おもろダイニング 山葵",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-24 04:17:40"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。Wi-Fiの有無は不明でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "おもろダイニング 山葵",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-24 04:18:03",
+      "book": {
+        "hotel": {
+          "name": "シーサー・イン那覇",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              15
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おもろダイニング 山葵",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あ、大丈夫です。それより、ジャンボタクシーが使えるタクシー会社って分かりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "シーサー・イン那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "98642",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "おもろダイニング 山葵",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-24 04:18:41"
+    },
+    {
+      "role": 0,
+      "content": "三和交通がございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "三和交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666585134243,
+          "selectedResults": [
+            "三和交通"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-24 04:19:05",
+      "book": {
+        "hotel": {
+          "name": "シーサー・イン那覇",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              15
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おもろダイニング 山葵",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "三和交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "電話番号を教えてください。あ、あと、そこはキャッシュレスって対応してますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "シーサー・イン那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "98642",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "おもろダイニング 山葵",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "三和交通",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-24 04:19:44"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は0120100084でございます。キャッシュレスも対応しております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "三和交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-24 04:20:04",
+      "book": {
+        "hotel": {
+          "name": "シーサー・イン那覇",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              15
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おもろダイニング 山葵",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "三和交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "じゃあそこで12月15日の予約をお願いします。シーサー・イン那覇を13時50分に出て、おもろダイニング 山葵までで確保してほしいんですけど。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "シーサー・イン那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "98642",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "おもろダイニング 山葵",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0120100084",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "三和交通",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "可",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-24 04:21:31"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。予約番号は12499でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "三和交通",
+              "value": {
+                "day": [
+                  12,
+                  15
+                ],
+                "time": "13:50",
+                "departurepoint": "シーサー・イン那覇",
+                "arrivalpoint": "おもろダイニング 山葵"
+              },
+              "timestamp": 1666585314627,
+              "success": true,
+              "ref": "12499"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-24 04:22:11",
+      "book": {
+        "hotel": {
+          "name": "シーサー・イン那覇",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              15
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おもろダイニング 山葵",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "三和交通",
+          "value": {
+            "day": [
+              12,
+              15
+            ],
+            "time": "13:50",
+            "departurepoint": "シーサー・イン那覇",
+            "arrivalpoint": "おもろダイニング 山葵"
+          },
+          "timestamp": 1666585314627,
+          "success": true,
+          "ref": "12499"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "一通り対応してもらえて助かりました。お世話様でした。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "シーサー・イン那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "98642",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "おもろダイニング 山葵",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0120100084",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "三和交通",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "可",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "12499",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-24 04:22:39"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-24 04:22:51"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": "Wi-Fiの有無は不明でした。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-24 04:23:17"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:55",
+  "final_state": {
+    "restaurant": {
+      "city": "那覇",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "高め",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "那覇",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "那覇",
+      "name": null,
+      "cashless": null,
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "シーサー・イン那覇",
+      "value": {
+        "people": "3",
+        "day": [
+          12,
+          15
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "おもろダイニング 山葵",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "三和交通",
+      "value": {
+        "day": [
+          12,
+          15
+        ],
+        "time": "13:50",
+        "departurepoint": "シーサー・イン那覇",
+        "arrivalpoint": "おもろダイニング 山葵"
+      },
+      "timestamp": 1666585314627,
+      "success": true,
+      "ref": "12499"
+    }
+  }
+}

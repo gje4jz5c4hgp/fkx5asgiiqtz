@@ -1,0 +1,1817 @@
+{
+  "id": 4626,
+  "dialogue_code": "dialogue_4626UNtO",
+  "status_code": 2,
+  "user": [
+    8,
+    313
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0313EOoD"
+  ],
+  "task": 4896,
+  "task_name": "main2_1876",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "大阪",
+          "genre": "シティホテル",
+          "pricerange": "安め"
+        },
+        "reqt": [
+          "name",
+          "parking",
+          "priceinfo"
+        ]
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "大阪",
+          "parking": "有り(無料)",
+          "station": "南方駅"
+        },
+        "info": {
+          "city": "大阪",
+          "parking": "有り(無料)",
+          "station": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "area"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "大阪",
+          "jumbo": "対応"
+        },
+        "info": {
+          "city": "大阪",
+          "jumbo": "dontcare"
+        },
+        "reqt": [
+          "cashless",
+          "reference"
+        ],
+        "book": {
+          "day": "6/4",
+          "time": "16:30",
+          "departurepoint": "hotel",
+          "arrivalpoint": "shopping"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．宿のタイプは<b style='color:blue;'>シティホテル</b>です．予算は<b style='color:blue;'>安め</b>が希望です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，駐車場の有無，料金情報</b>を聞いてください．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>南方駅</b>のところにしてください．",
+        "希望に合うところが見つからない場合は，最寄り駅は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，エリア</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，ジャンボタクシーの利用可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>キャッシュレス対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>6/4</b>です．時間は<b style='color:blue;'>16:30</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "parking",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "priceinfo",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "area",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "shopping",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪旅行を計画しているんですが、宿泊施設、できれば安めのシティホテルはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:12:15"
+    },
+    {
+      "role": 0,
+      "content": "では、大阪エクセルホテル東急はいかがですか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "シティホテル",
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "大阪エクセルホテル東急",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669626750330,
+          "selectedResults": [
+            "大阪エクセルホテル東急"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:12:38",
+      "book": {
+        "hotel": {
+          "name": "大阪エクセルホテル東急",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらにしたいんですが、駐車場の有無と、料金情報などはわかりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:12:56"
+    },
+    {
+      "role": 0,
+      "content": "駐車場は有料ですが、ございます。値段帯は安めでございますが、詳しい料金情報についてはわかりかねます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "シティホテル",
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "大阪エクセルホテル東急",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:13:24",
+      "book": {
+        "hotel": {
+          "name": "大阪エクセルホテル東急",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。南方駅が最寄りで買い物できるところも探していますが、駐車場が無料のところでお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪エクセルホテル東急",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有料駐車場あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:14:14"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件で案内できるところがございませんでした。いかがなさいますか。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "南方駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669626874496
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "南方駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:14:45",
+      "book": {
+        "hotel": {
+          "name": "大阪エクセルホテル東急",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、最寄り駅はどこでも良いです。無料駐車場があるところでお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪エクセルホテル東急",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有料駐車場あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:15:05"
+    },
+    {
+      "role": 0,
+      "content": "ではなんばCITYはいかがですか。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669626911271,
+          "selectedResults": [
+            "なんばCITY"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:15:20",
+      "book": {
+        "hotel": {
+          "name": "大阪エクセルホテル東急",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこに行きたいですが、エリアで言うとどのあたりですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪エクセルホテル東急",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有料駐車場あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:15:34"
+    },
+    {
+      "role": 0,
+      "content": "エリアは中央区でございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:15:45",
+      "book": {
+        "hotel": {
+          "name": "大阪エクセルホテル東急",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。それから、ジャンボタクシーを利用できるタクシー会社があるかどうかわかりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪エクセルホテル東急",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有料駐車場あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "なんばCITY",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:16:16"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。ジャンボタクシーに対応している会社がございません。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1669626987180
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:16:39",
+      "book": {
+        "hotel": {
+          "name": "大阪エクセルホテル東急",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "仕方ないですね、ではジャンボタクシーは使えなくても良いのでタクシー会社を探してください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪エクセルホテル東急",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有料駐車場あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "なんばCITY",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:17:03"
+    },
+    {
+      "role": 0,
+      "content": "ではタックン大阪株式会社がございます。こちらキャッシュレスには対応しております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "タックン大阪株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669627029232,
+          "selectedResults": [
+            "大阪山陽タクシー株式会社",
+            "タックン大阪株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:17:31",
+      "book": {
+        "hotel": {
+          "name": "大阪エクセルホテル東急",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "タックン大阪株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか、それは助かります。予約もお願いできますか？6月4日の16時30分に、大阪エクセルホテル東急を出発して目的地はなんばCITYでお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪エクセルホテル東急",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有料駐車場あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "なんばCITY",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:18:33"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。予約番号は77788でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "タックン大阪株式会社",
+              "value": {
+                "day": [
+                  6,
+                  4
+                ],
+                "time": "16:30",
+                "departurepoint": "大阪エクセルホテル東急",
+                "arrivalpoint": "なんばCITY"
+              },
+              "timestamp": 1669627134722,
+              "success": true,
+              "ref": "77788"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:19:03",
+      "book": {
+        "hotel": {
+          "name": "大阪エクセルホテル東急",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "タックン大阪株式会社",
+          "value": {
+            "day": [
+              6,
+              4
+            ],
+            "time": "16:30",
+            "departurepoint": "大阪エクセルホテル東急",
+            "arrivalpoint": "なんばCITY"
+          },
+          "timestamp": 1669627134722,
+          "success": true,
+          "ref": "77788"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "大阪エクセルホテル東急",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有料駐車場あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "なんばCITY",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "area",
+          "中央区",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "対応",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "77788",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:19:19"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 09:19:26"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 09:19:28"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:03",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "大阪",
+      "name": null,
+      "genre": "シティホテル",
+      "area": null,
+      "pricerange": "安め",
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": "大阪",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "大阪エクセルホテル東急",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "タックン大阪株式会社",
+      "value": {
+        "day": [
+          6,
+          4
+        ],
+        "time": "16:30",
+        "departurepoint": "大阪エクセルホテル東急",
+        "arrivalpoint": "なんばCITY"
+      },
+      "timestamp": 1669627134722,
+      "success": true,
+      "ref": "77788"
+    }
+  }
+}

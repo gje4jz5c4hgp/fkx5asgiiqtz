@@ -1,0 +1,2301 @@
+{
+  "id": 4160,
+  "dialogue_code": "dialogue_4160HMkx",
+  "status_code": 2,
+  "user": [
+    2,
+    281
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0281HucT"
+  ],
+  "task": 4430,
+  "task_name": "main2_1410",
+  "task_content": {
+    "goals": {
+      "attraction": {
+        "info": {
+          "city": "横浜",
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "childfee",
+          "priceinfo"
+        ]
+      },
+      "hotel": {
+        "info": {
+          "city": "横浜",
+          "name": "横浜テクノタワーホテル"
+        },
+        "reqt": [
+          "pricerange",
+          "checkintime",
+          "priceinfo"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "横浜",
+          "jumbo": "対応"
+        },
+        "info": {
+          "city": "横浜",
+          "jumbo": "dontcare"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "day": "8/29",
+          "time": "11:10",
+          "departurepoint": "attraction",
+          "arrivalpoint": "hotel"
+        }
+      }
+    },
+    "descriptions": {
+      "attraction": [
+        "あなたは<b style='color:blue;'>横浜</b>への旅行を計画しています．",
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称，子供入場料，料金情報</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日は<b style='color:blue;'>横浜テクノタワーホテル</b>という宿泊施設を利用する予定です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>値段帯，チェックイン開始時刻，料金情報</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，ジャンボタクシーの利用可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>8/29</b>です．時間は<b style='color:blue;'>11:10</b>です．出発地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．目的地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "childfee",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "priceinfo",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "pricerange",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "checkintime",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "priceinfo",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "attraction",
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "横浜に旅行に行こうと思っています。当日訪れる観光名所を探しています。Wi-Fiが無料で駐車場が無料のところを教えてください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:01:23"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。そうしましたら、カップヌードルミュージアム 横浜はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669809694395,
+          "selectedResults": [
+            "カップヌードルミュージアム 横浜"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:01:45",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこが良さそうですね。そこの子供入場料と料金情報を教えてください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:02:25"
+    },
+    {
+      "role": 0,
+      "content": "はい、高校生以下のお子様は無料でご入場いただけます。大学生以上の大人の場合は500円かかります。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:02:54",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "当日は横浜テクノタワーホテルというところで泊まる予定です。そこの値段帯とチェックイン開祖時刻と料金情報を教えてください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "childfee",
+          "無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "大学生以上の大人の場合は500円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:04:17"
+    },
+    {
+      "role": 0,
+      "content": "横浜テクノタワーホテルですね。料金帯はお安めとなっております。チェックインは15時から可能です。料金情報につきましては、お安めということ以外、詳しい情報は不明です。申し訳ありません。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": "横浜テクノタワーホテル",
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "横浜テクノタワーホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669809864391,
+          "selectedResults": [
+            "横浜テクノタワーホテル"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": "横浜テクノタワーホテル",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:05:02",
+      "book": {
+        "hotel": {
+          "name": "横浜テクノタワーホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あと当日利用できるタクシー会社を探しています。ジャンボタクシーが利用できるところが希望です。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "childfee",
+          "無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "大学生以上の大人の場合は500円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "お安め",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:05:58"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。横浜でジャンボタクシー対応の会社は、ご案内できるところがございませんでした。いかがいたしましょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1669809963503
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": "横浜テクノタワーホテル",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:06:26",
+      "book": {
+        "hotel": {
+          "name": "横浜テクノタワーホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "でしたら、ジャンボタクシーはなくても良いです。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "childfee",
+          "無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "大学生以上の大人の場合は500円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "お安め",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:06:47"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、金港交通株式会社 港南台営業所はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "金港交通株式会社 港南台営業所",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669810007991,
+          "selectedResults": [
+            "日本交通横浜株式会社",
+            "金港交通株式会社 港南台営業所"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": "横浜テクノタワーホテル",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:06:58",
+      "book": {
+        "hotel": {
+          "name": "横浜テクノタワーホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "金港交通株式会社 港南台営業所",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこの電話番号を教えてください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "childfee",
+          "無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "大学生以上の大人の場合は500円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "お安め",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:07:21"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は、0457526500でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "金港交通株式会社 港南台営業所",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": "横浜テクノタワーホテル",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:07:27",
+      "book": {
+        "hotel": {
+          "name": "横浜テクノタワーホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "金港交通株式会社 港南台営業所",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あとそこに予約をしたいので日付は8/29で時間は11:10で出発地はカップヌードルミュージアム 横浜で目的地は横浜テクノタワーホテルでお願いします。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "childfee",
+          "無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "大学生以上の大人の場合は500円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "お安め",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0457526500",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "金港交通株式会社 港南台営業所",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:09:00"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。念のため、確認させてください。お時間は午後11時10分ではなく、午前でよろしかったでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "金港交通株式会社 港南台営業所",
+              "value": {
+                "day": [
+                  8,
+                  29
+                ],
+                "time": "11:10",
+                "departurepoint": "カップヌードルミュージアム 横浜",
+                "arrivalpoint": "横浜テクノタワーホテル"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": "横浜テクノタワーホテル",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:09:34",
+      "book": {
+        "hotel": {
+          "name": "横浜テクノタワーホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "金港交通株式会社 港南台営業所",
+          "value": {
+            "day": [
+              8,
+              29
+            ],
+            "time": "11:10",
+            "departurepoint": "カップヌードルミュージアム 横浜",
+            "arrivalpoint": "横浜テクノタワーホテル"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。午前です。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "childfee",
+          "無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "大学生以上の大人の場合は500円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "お安め",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0457526500",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "金港交通株式会社 港南台営業所",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:09:53"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。ご予約完了いたしました。予約番号は、99680です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "金港交通株式会社 港南台営業所",
+              "value": {
+                "day": [
+                  8,
+                  29
+                ],
+                "time": "11:10",
+                "departurepoint": "カップヌードルミュージアム 横浜",
+                "arrivalpoint": "横浜テクノタワーホテル"
+              },
+              "timestamp": 1669810193544,
+              "success": true,
+              "ref": "99680"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": "横浜テクノタワーホテル",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:10:00",
+      "book": {
+        "hotel": {
+          "name": "横浜テクノタワーホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "金港交通株式会社 港南台営業所",
+          "value": {
+            "day": [
+              8,
+              29
+            ],
+            "time": "11:10",
+            "departurepoint": "カップヌードルミュージアム 横浜",
+            "arrivalpoint": "横浜テクノタワーホテル"
+          },
+          "timestamp": 1669810193544,
+          "success": true,
+          "ref": "99680"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "childfee",
+          "無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "大学生以上の大人の場合は500円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "お安め",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0457526500",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "金港交通株式会社 港南台営業所",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "99680",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:10:17"
+    },
+    {
+      "role": 0,
+      "content": "他にお調べすることなど、ございませんか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "金港交通株式会社 港南台営業所",
+              "value": {
+                "day": [
+                  8,
+                  29
+                ],
+                "time": "11:10",
+                "departurepoint": "カップヌードルミュージアム 横浜",
+                "arrivalpoint": "横浜テクノタワーホテル"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": "横浜テクノタワーホテル",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:10:25",
+      "book": {
+        "hotel": {
+          "name": "横浜テクノタワーホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "金港交通株式会社 港南台営業所",
+          "value": {
+            "day": [
+              8,
+              29
+            ],
+            "time": "11:10",
+            "departurepoint": "カップヌードルミュージアム 横浜",
+            "arrivalpoint": "横浜テクノタワーホテル"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、大丈夫です。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "カップヌードルミュージアム 横浜",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "childfee",
+          "無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "大学生以上の大人の場合は500円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "pricerange",
+          "お安め",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0457526500",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "金港交通株式会社 港南台営業所",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "99680",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:10:33"
+    },
+    {
+      "role": 0,
+      "content": "承知いたしました。本日はご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "金港交通株式会社 港南台営業所",
+              "value": {
+                "day": [
+                  8,
+                  29
+                ],
+                "time": "11:10",
+                "departurepoint": "カップヌードルミュージアム 横浜",
+                "arrivalpoint": "横浜テクノタワーホテル"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": "横浜テクノタワーホテル",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:10:36",
+      "book": {
+        "hotel": {
+          "name": "横浜テクノタワーホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "金港交通株式会社 港南台営業所",
+          "value": {
+            "day": [
+              8,
+              29
+            ],
+            "time": "11:10",
+            "departurepoint": "カップヌードルミュージアム 横浜",
+            "arrivalpoint": "横浜テクノタワーホテル"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [
+            1
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "観光名所の子供入場料と料金情報を聞かれて、子供の入場料（入館料）をまぜたような形で返答したのが大丈夫だったか不明です。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 12:10:49"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": "誤字があった。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 12:10:50"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:00",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "横浜",
+      "name": "横浜テクノタワーホテル",
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "横浜",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": "有り(無料)"
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "横浜",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "横浜テクノタワーホテル",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "金港交通株式会社 港南台営業所",
+      "value": {
+        "day": [
+          8,
+          29
+        ],
+        "time": "11:10",
+        "departurepoint": "カップヌードルミュージアム 横浜",
+        "arrivalpoint": "横浜テクノタワーホテル"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

@@ -1,0 +1,2559 @@
+{
+  "id": 240,
+  "dialogue_code": "dialogue_0240RCyT",
+  "status_code": 2,
+  "user": [
+    2,
+    211
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0211EsFt"
+  ],
+  "task": 410,
+  "task_name": "main_90",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "名古屋",
+          "parking": "有り(無料)",
+          "station": "名古屋競馬場前駅"
+        },
+        "reqt": [
+          "wifi",
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "people": 4,
+          "day": "12/3",
+          "time": "10:00"
+        }
+      },
+      "hotel": {
+        "info": {
+          "city": "名古屋",
+          "withrestaurant": "有り",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "genre",
+          "priceinfo",
+          "reference"
+        ],
+        "book": {
+          "people": 4,
+          "day": "12/3",
+          "stay": 3
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "名古屋",
+          "area": "千種区",
+          "day": "12/3"
+        },
+        "reqt": [
+          "mintemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>名古屋</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>名古屋競馬場前駅</b>のところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>Wi-Fiの有無，電話番号</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>12/3</b>です．時間は<b style='color:blue;'>10:00</b>です．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>タイプ，料金情報</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>12/3</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>千種区</b>です．日付は<b style='color:blue;'>12/3</b>です．",
+        "<b style='color:green;'>最低気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "wifi",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "phone",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "priceinfo",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "mintemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "hotel",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "お願いします。名古屋への旅行を計画しています。駐車場が無料で使える飲食店を探していただきたいのですが？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:38:25"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ジャンルなど、ご希望はございますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ガス燈",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666748314747,
+          "selectedResults": [
+            "ガス燈"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:38:54",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ガス燈",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "和洋問いませんが、名古屋競馬場前駅周辺でお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:39:34"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ソーサリートは如何でしょうか？イタリアン・フレンチのお店です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "名古屋競馬場前駅",
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ソーサリート",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666748377507,
+          "selectedResults": [
+            "ソーサリート"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "名古屋競馬場前駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:39:57",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ソーサリート",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらでは、wifiは使えますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:40:14"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。WiFiにつきましては、不明となっております。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "名古屋競馬場前駅",
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ソーサリート",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "名古屋競馬場前駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:40:28",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ソーサリート",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。そちらのお店の電話番号を教えて下さい。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:40:57"
+    },
+    {
+      "role": 0,
+      "content": "はい。電話番号は、0523015141でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "名古屋競馬場前駅",
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ソーサリート",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "名古屋競馬場前駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:41:07",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ソーサリート",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、そちらのお店で予約をお願いします。12/3の10：00で4人でお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0523015141",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:41:55"
+    },
+    {
+      "role": 0,
+      "content": "予約完了いたしました。ご予約番号は、57152です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "名古屋競馬場前駅",
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ソーサリート",
+              "value": {
+                "people": "4",
+                "day": [
+                  12,
+                  3
+                ],
+                "time": "10:00"
+              },
+              "timestamp": 1666748523378,
+              "success": true,
+              "ref": "57152"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "名古屋競馬場前駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:42:20",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ソーサリート",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              3
+            ],
+            "time": "10:00"
+          },
+          "timestamp": 1666748523378,
+          "success": true,
+          "ref": "57152"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、当日泊まれるところも探していただきたいのですが、お願いできますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0523015141",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "57152",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:43:16"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。なにか、ご希望の条件はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666748602294
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "名古屋競馬場前駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:43:34",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ソーサリート",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              3
+            ],
+            "time": "10:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "レストランが付いていて、駐車場が無料で使えるところをお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0523015141",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "57152",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:44:06"
+    },
+    {
+      "role": 0,
+      "content": "では、ホテル いろは、というビジネスホテルはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテル いろは",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666748649132,
+          "selectedResults": [
+            "ホテル いろは"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "名古屋競馬場前駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:44:24",
+      "book": {
+        "hotel": {
+          "name": "ホテル いろは",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ソーサリート",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              3
+            ],
+            "time": "10:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの料金情報はわかりますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0523015141",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "57152",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:44:45"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。お値段の設定がお安め、という情報以外、詳しい料金については手元になく、ご案内できかねます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテル いろは",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "名古屋競馬場前駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:45:21",
+      "book": {
+        "hotel": {
+          "name": "ホテル いろは",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ソーサリート",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              3
+            ],
+            "time": "10:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "了解です。では、そちらのホテルで予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0523015141",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "57152",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "ビジネス",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:46:02"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご利用予定の日付と宿泊日数、ご宿泊される人数はお決まりでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテル いろは",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "名古屋競馬場前駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:46:27",
+      "book": {
+        "hotel": {
+          "name": "ホテル いろは",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ソーサリート",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              3
+            ],
+            "time": "10:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。12/3から3泊で、4人でお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0523015141",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "57152",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "ビジネス",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:46:53"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。予約番号85589にて、ご予約承りました。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテル いろは",
+              "value": {
+                "people": "4",
+                "day": [
+                  12,
+                  3
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1666748818614,
+              "success": true,
+              "ref": "85589"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "名古屋競馬場前駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:47:13",
+      "book": {
+        "hotel": {
+          "name": "ホテル いろは",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              3
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1666748818614,
+          "success": true,
+          "ref": "85589"
+        },
+        "restaurant": {
+          "name": "ソーサリート",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              3
+            ],
+            "time": "10:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ところで、12/3の千種区の最低気温はわかりますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0523015141",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "57152",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "ビジネス",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "85589",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:47:59"
+    },
+    {
+      "role": 0,
+      "content": "12/3千種区の最低気温は1.6度になる予想です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "名古屋",
+            "area": "千種区",
+            "day": [
+              12,
+              3
+            ]
+          },
+          "book": [],
+          "timestamp": 1666748890339,
+          "selectedResults": [
+            "12/3 名古屋 千種区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "名古屋競馬場前駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "名古屋",
+          "area": "千種区",
+          "day": [
+            12,
+            3
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:48:33",
+      "book": {
+        "hotel": {
+          "name": "ホテル いろは",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              3
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ソーサリート",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              3
+            ],
+            "time": "10:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ありがとうございました。失礼いたします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0523015141",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "57152",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "genre",
+          "ビジネス",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "85589",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "1.6度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-26 01:49:03"
+    },
+    {
+      "role": 0,
+      "content": "ご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "名古屋",
+            "area": "千種区",
+            "day": [
+              12,
+              3
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "名古屋競馬場前駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "名古屋",
+          "area": "千種区",
+          "day": [
+            12,
+            3
+          ]
+        }
+      },
+      "created_at": "2022-10-26 01:49:11",
+      "book": {
+        "hotel": {
+          "name": "ホテル いろは",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              3
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ソーサリート",
+          "value": {
+            "people": "4",
+            "day": [
+              12,
+              3
+            ],
+            "time": "10:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-26 01:49:18"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-26 01:49:19"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:55",
+  "final_state": {
+    "restaurant": {
+      "city": "名古屋",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "名古屋競馬場前駅",
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "名古屋",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "名古屋",
+      "area": "千種区",
+      "day": [
+        12,
+        3
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ホテル いろは",
+      "value": {
+        "people": "4",
+        "day": [
+          12,
+          3
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "ソーサリート",
+      "value": {
+        "people": "4",
+        "day": [
+          12,
+          3
+        ],
+        "time": "10:00"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

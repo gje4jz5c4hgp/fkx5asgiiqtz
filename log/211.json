@@ -1,0 +1,4742 @@
+{
+  "id": 211,
+  "dialogue_code": "dialogue_0211zqet",
+  "status_code": 2,
+  "user": [
+    5,
+    205
+  ],
+  "username": [
+    "operator_0005gOee",
+    "customer_0205tFcD"
+  ],
+  "task": 381,
+  "task_name": "main_61",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "fail_info": {
+          "city": "仙台",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "仙台",
+          "parking": "dontcare"
+        },
+        "reqt": [
+          "address",
+          "station",
+          "accesstime",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "8/31",
+          "time": "14:50"
+        }
+      },
+      "hotel": {
+        "fail_info": {
+          "city": "仙台",
+          "parking": "有り(無料)",
+          "genre": "旅館"
+        },
+        "info": {
+          "city": "仙台",
+          "parking": "有り(無料)",
+          "genre": "dontcare"
+        },
+        "reqt": [
+          "station"
+        ]
+      },
+      "attraction": {
+        "info": {
+          "city": "仙台",
+          "genre": "アートギャラリー"
+        },
+        "reqt": [
+          "opentime",
+          "priceinfo",
+          "accesstime"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>仙台</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，駐車場の有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>住所，最寄り駅，近辺の駅からの所要時間</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>8/31</b>です．時間は<b style='color:blue;'>14:50</b>です．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．宿のタイプは<b style='color:blue;'>旅館</b>です．",
+        "希望に合うところがない場合は，宿のタイプは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>最寄り駅</b>を聞いてください．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．ジャンルは<b style='color:blue;'>アートギャラリー</b>です．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>営業時間，料金情報，近辺の駅からの所要時間</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "address",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "station",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "accesstime",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "station",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "opentime",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "priceinfo",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "accesstime",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "hotel",
+      "attraction"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "すみません、仙台に行く予定があるので、食事のできるお店を探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:09:27"
+    },
+    {
+      "role": 0,
+      "content": "承知いたしました。仙台の飲食店は43件候補がありますが、何か他にご希望はございますか",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666508980726
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:10:04",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "できれば、駐車料金のかからないお店だと嬉しいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:10:28"
+    },
+    {
+      "role": 0,
+      "content": "駐車場代無料のお店は候補に出てきませんでした。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1666509035392
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:10:57",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "でしたら、駐車場はあってもなくても、どっちでもいいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:11:15"
+    },
+    {
+      "role": 0,
+      "content": "最寄駅の希望はございますか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666509079827
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:11:35",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特にそこは気にしないです。適当に良さそうなところをオススメしてもらってもいいですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:11:55"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。三宝亭仙台泉店というお店はいかがでしょうか",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "三宝亭仙台泉店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "三宝亭仙台泉店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:12:22",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "その三宝亭仙台泉店は、何駅が一番近いんでしょう？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:12:46"
+    },
+    {
+      "role": 0,
+      "content": "最寄りは八乙女駅で、そこからバスで21分ほどかかります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "三宝亭仙台泉店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:13:01",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "結構遠いですね。ほかに近くの駅からの行き方はないですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:13:37"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。他に行き方はないですね。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "三宝亭仙台泉店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:13:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。念のため、住所も聞いておいていいですかね？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:14:13"
+    },
+    {
+      "role": 0,
+      "content": "住所は宮城県仙台市泉区市名坂柳清水101-13になります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "三宝亭仙台泉店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:14:22",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではそこで予約をお願いします。8月31日、14時50分で3名で予約とれますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:15:03"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。いただいた条件で予約",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "三宝亭仙台泉店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:15:17",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、お願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:15:25"
+    },
+    {
+      "role": 0,
+      "content": "いただいた条件で予約いたしました。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "三宝亭仙台泉店",
+              "value": {
+                "people": "3",
+                "day": [
+                  8,
+                  31
+                ],
+                "time": "14:50"
+              },
+              "timestamp": 1666509344063,
+              "success": true,
+              "ref": "84841"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:15:52",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 1666509344063,
+          "success": true,
+          "ref": "84841"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予約番号とかって分かりますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:16:03"
+    },
+    {
+      "role": 0,
+      "content": "予約番号は84841になります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "三宝亭仙台泉店",
+              "value": {
+                "people": "3",
+                "day": [
+                  8,
+                  31
+                ],
+                "time": "14:50"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:16:13",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あとですね、泊るところも一緒に探しておきたいなと思ってまして。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:16:37"
+    },
+    {
+      "role": 0,
+      "content": "はい、仙台付近でしょうか。エリアの希望はありますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666509408730
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:16:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "場所はどこでもいいんですが、車をタダで置ける旅館が良いです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:17:24"
+    },
+    {
+      "role": 0,
+      "content": "いただい他条件ですと、ホテルニュー水戸屋 アネックスはいかがでしょうか。仙台駅からバスで30分ほどです。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ホテルニュー水戸屋 アネックス",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666509451179,
+          "selectedResults": [
+            "ホテルニュー水戸屋 アネックス",
+            "オレンジ・イン仙台東",
+            "ホテル シーラックパル仙台",
+            "ホテルルートイン仙台東",
+            "作並温泉 ゆづくしSalon一の坊",
+            "オレンジ・イン仙台東",
+            "ホテルルートイン仙台長町インター",
+            "Rakuten STAY x EAGLES",
+            "秋保グランドホテル",
+            "ホテルニュー水戸屋 アネックス"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:18:14",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "名前がホテルってついてますけど、そこも旅館なんですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:18:37"
+    },
+    {
+      "role": 0,
+      "content": "すみません、旅館タイプですと駐車場が無料の宿はございませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "旅館",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ホテルニュー水戸屋 アネックス",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666509529208
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:19:05",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。でしたら、旅館にはこだわりません。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:19:19"
+    },
+    {
+      "role": 0,
+      "content": "でしたら、先ほどお伝えしたホテルニュー水戸屋 アネックスはいかがでしょうか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ホテルニュー水戸屋 アネックス",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666509571525
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:19:50",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですね。最寄り駅をもう一度、確認しておいてもいいですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:20:10"
+    },
+    {
+      "role": 0,
+      "content": "最寄り駅は仙台駅になります。そこからバスで30分です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ホテルニュー水戸屋 アネックス",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:20:22",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あとまだ調べてもらいたいことがあって。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "仙台駅",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:20:45"
+    },
+    {
+      "role": 0,
+      "content": "はい、なんでしょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ホテルニュー水戸屋 アネックス",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:20:56",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "観光で、アートギャラリーに寄りたいんです。良いところはありますかね？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "仙台駅",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:21:29"
+    },
+    {
+      "role": 0,
+      "content": "仙台付近でアートギャラリーですと、3件候補がございます",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "アートギャラリー",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666509704128
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アートギャラリー",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:21:58",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "色々あるんですね。オススメなところはありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "仙台駅",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:22:14"
+    },
+    {
+      "role": 0,
+      "content": "おすすめは仙台市文学館になります",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "アートギャラリー",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0,
+          "selectedResults": [
+            "仙台市文学館"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アートギャラリー",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:22:26",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "面白そうですね。そこには近くの駅からどうやって行けばいいですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "仙台駅",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:22:56"
+    },
+    {
+      "role": 0,
+      "content": "仙台駅からバスで25分になります！",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "アートギャラリー",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アートギャラリー",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:23:04",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "なるほど。営業時間も教えてほしいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "仙台駅",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "仙台駅からバスで25分",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:23:25"
+    },
+    {
+      "role": 0,
+      "content": "営業時間は09:00～17:00になります。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "アートギャラリー",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アートギャラリー",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:23:36",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "すごく行ってみたいので、料金についても詳しく聞いておくことはできますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "仙台駅",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "9:00～17:00",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "仙台駅からバスで25分",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:24:05"
+    },
+    {
+      "role": 0,
+      "content": "大人入場料は460円になります！",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "アートギャラリー",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アートギャラリー",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:24:18",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "それ以外にかかる料金とか、子ども料金が違うとかは、ないですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "仙台駅",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "9:00～17:00",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "大人入場料は460円",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "仙台駅からバスで25分",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:24:40"
+    },
+    {
+      "role": 0,
+      "content": "詳しい料金情報は一般：460円、高校生：230円、小・中学生：110円になります。特別にかかる料金はございません",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "アートギャラリー",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アートギャラリー",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:25:07",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。詳しくありがとうございます。今日はこんな感じで大丈夫そうです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市泉区市名坂柳清水101-13",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "八乙女駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "八乙女駅からバスで21分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "84841",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "仙台駅",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "9:00～17:00",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "大人入場料は460円一般：460円、高校生：230円、小・中学生：110円",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "accesstime",
+          "仙台駅からバスで25分",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 07:25:40"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。他に何かございませんでしたら対応を終了させていただきます。お問合せいただきありがとうございました。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "アートギャラリー",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "アートギャラリー",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 07:26:04",
+      "book": {
+        "hotel": {
+          "name": "ホテルニュー水戸屋 アネックス",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "三宝亭仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              31
+            ],
+            "time": "14:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [
+            3
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-23 07:26:34"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [
+            3,
+            0
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": "仙台付近でしょうか。エリアの希望はありますか？\nが2つの質問が入っていたのですが、仙台には触れずにどこでもいいと返事してしまいました。\nあと、詳しい料金情報について、大人入場料しか最初に戻ってこなかったです。念のため聞いて他にもあることが分かりました。（料金の返答に「：」がついていたのは気になりました）",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-23 07:27:17"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:55",
+  "final_state": {
+    "restaurant": {
+      "city": "仙台",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "仙台",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "仙台",
+      "name": null,
+      "genre": "アートギャラリー",
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ホテルニュー水戸屋 アネックス",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "三宝亭仙台泉店",
+      "value": {
+        "people": "3",
+        "day": [
+          8,
+          31
+        ],
+        "time": "14:50"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

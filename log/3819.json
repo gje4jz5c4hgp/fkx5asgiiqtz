@@ -1,0 +1,1592 @@
+{
+  "id": 3819,
+  "dialogue_code": "dialogue_3819INwn",
+  "status_code": 2,
+  "user": [
+    9,
+    270
+  ],
+  "username": [
+    "operator_0009Tmbt",
+    "customer_0270xRuW"
+  ],
+  "task": 4089,
+  "task_name": "main2_1069",
+  "task_content": {
+    "goals": {
+      "weather": {
+        "info": {
+          "city": "福岡",
+          "day": "4/7",
+          "area": "西区"
+        },
+        "reqt": [
+          "mintemperature"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "福岡",
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "phone",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "4/7",
+          "time": "10:40",
+          "departurepoint": "ねぎ鍋専門店はるいち",
+          "arrivalpoint": "月まる海 大橋店"
+        },
+        "book": {
+          "day": "4/7",
+          "time": "11:10",
+          "departurepoint": "ねぎ鍋専門店はるいち",
+          "arrivalpoint": "月まる海 大橋店"
+        }
+      }
+    },
+    "descriptions": {
+      "weather": [
+        "あなたは<b style='color:blue;'>福岡</b>への旅行を計画しています．",
+        "当日の天候を調べます．日付は<b style='color:blue;'>4/7</b>です．地区は<b style='color:blue;'>西区</b>です．",
+        "<b style='color:green;'>最低気温</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>4/7</b>です．時間は<b style='color:blue;'>10:40</b>です．出発地は<b style='color:blue;'>ねぎ鍋専門店はるいち</b>というところです．目的地は<b style='color:blue;'>月まる海 大橋店</b>というところです．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>11:10</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "weather",
+        "mintemperature",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "weather",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "福岡へ旅行を計画しているのですが。",
+      "payload": [
+        [
+          1,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 13:15:52"
+    },
+    {
+      "role": 0,
+      "content": "どのようなお店や施設をご希望ですか？",
+      "payload": [
+        {}
+      ],
+      "state": {},
+      "created_at": "2022-11-28 13:15:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "当日の天候を調べて頂けますか？4/7の西区の最低気温を教えてください。",
+      "payload": [
+        [
+          1,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 13:16:55"
+    },
+    {
+      "role": 0,
+      "content": "当日の天気は、晴時々曇で最低気温は11.4度の予報となっています。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "福岡",
+            "area": "西区",
+            "day": [
+              4,
+              7
+            ]
+          },
+          "book": [],
+          "timestamp": 1669641444832,
+          "selectedResults": [
+            "4/7 福岡 西区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "西区",
+          "day": [
+            4,
+            7
+          ]
+        }
+      },
+      "created_at": "2022-11-28 13:17:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "weather",
+          "mintemperature",
+          "11.4度",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 13:18:25"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はありますか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "福岡",
+            "area": "西区",
+            "day": [
+              4,
+              7
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "西区",
+          "day": [
+            4,
+            7
+          ]
+        }
+      },
+      "created_at": "2022-11-28 13:18:31",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、当日利用できるタクシー会社も探してください。ジャンボタクシーが利用できてキャッシュレス払いができるところはありますか？",
+      "payload": [
+        [
+          1,
+          "weather",
+          "mintemperature",
+          "11.4度",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 13:19:49"
+    },
+    {
+      "role": 0,
+      "content": "では、日新交通（株）はいかがですか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "日新交通（株）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669641611026,
+          "selectedResults": [
+            "日新交通（株）"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "西区",
+          "day": [
+            4,
+            7
+          ]
+        }
+      },
+      "created_at": "2022-11-28 13:20:30",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "日新交通（株）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの電話番号はわかりますか？",
+      "payload": [
+        [
+          1,
+          "weather",
+          "mintemperature",
+          "11.4度",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 13:20:56"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は、0120152452です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "日新交通（株）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "西区",
+          "day": [
+            4,
+            7
+          ]
+        }
+      },
+      "created_at": "2022-11-28 13:21:18",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "日新交通（株）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ではそちらで予約をお願いします。4/7の10:40に、ねぎ鍋専門店はるいちを出発で、月まる海 大橋店までお願いします。",
+      "payload": [
+        [
+          1,
+          "weather",
+          "mintemperature",
+          "11.4度",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0120152452",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 13:23:03"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。　その条件では、予約出来ませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "日新交通（株）",
+              "value": {
+                "day": [
+                  4,
+                  7
+                ],
+                "time": "10:40",
+                "departurepoint": "ねぎ鍋専門店はるいち",
+                "arrivalpoint": "月まる海 大橋店"
+              },
+              "timestamp": 1669641821675,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "西区",
+          "day": [
+            4,
+            7
+          ]
+        }
+      },
+      "created_at": "2022-11-28 13:23:50",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "日新交通（株）",
+          "value": {
+            "day": [
+              4,
+              7
+            ],
+            "time": "10:40",
+            "departurepoint": "ねぎ鍋専門店はるいち",
+            "arrivalpoint": "月まる海 大橋店"
+          },
+          "timestamp": 1669641821675,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では11:10では予約できますか？",
+      "payload": [
+        [
+          1,
+          "weather",
+          "mintemperature",
+          "11.4度",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0120152452",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 13:24:19"
+    },
+    {
+      "role": 0,
+      "content": "予約出来ました。予約番号は、85277です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "日新交通（株）",
+              "value": {
+                "day": [
+                  4,
+                  7
+                ],
+                "time": "11:10",
+                "departurepoint": "ねぎ鍋専門店はるいち",
+                "arrivalpoint": "月まる海 大橋店"
+              },
+              "timestamp": 1669641875712,
+              "success": true,
+              "ref": "85277"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "西区",
+          "day": [
+            4,
+            7
+          ]
+        }
+      },
+      "created_at": "2022-11-28 13:24:41",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "日新交通（株）",
+          "value": {
+            "day": [
+              4,
+              7
+            ],
+            "time": "11:10",
+            "departurepoint": "ねぎ鍋専門店はるいち",
+            "arrivalpoint": "月まる海 大橋店"
+          },
+          "timestamp": 1669641875712,
+          "success": true,
+          "ref": "85277"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "weather",
+          "mintemperature",
+          "11.4度",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0120152452",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "85277",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 13:25:01"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はありますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "日新交通（株）",
+              "value": {
+                "day": [
+                  4,
+                  7
+                ],
+                "time": "11:10",
+                "departurepoint": "ねぎ鍋専門店はるいち",
+                "arrivalpoint": "月まる海 大橋店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "西区",
+          "day": [
+            4,
+            7
+          ]
+        }
+      },
+      "created_at": "2022-11-28 13:25:06",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "日新交通（株）",
+          "value": {
+            "day": [
+              4,
+              7
+            ],
+            "time": "11:10",
+            "departurepoint": "ねぎ鍋専門店はるいち",
+            "arrivalpoint": "月まる海 大橋店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特にありません。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "weather",
+          "mintemperature",
+          "11.4度",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0120152452",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "85277",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 13:25:15"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "日新交通（株）",
+              "value": {
+                "day": [
+                  4,
+                  7
+                ],
+                "time": "11:10",
+                "departurepoint": "ねぎ鍋専門店はるいち",
+                "arrivalpoint": "月まる海 大橋店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "西区",
+          "day": [
+            4,
+            7
+          ]
+        }
+      },
+      "created_at": "2022-11-28 13:25:20",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "日新交通（株）",
+          "value": {
+            "day": [
+              4,
+              7
+            ],
+            "time": "11:10",
+            "departurepoint": "ねぎ鍋専門店はるいち",
+            "arrivalpoint": "月まる海 大橋店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 13:25:36"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 13:25:36"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:58",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "福岡",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": "福岡",
+      "area": "西区",
+      "day": [
+        4,
+        7
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "日新交通（株）",
+      "value": {
+        "day": [
+          4,
+          7
+        ],
+        "time": "11:10",
+        "departurepoint": "ねぎ鍋専門店はるいち",
+        "arrivalpoint": "月まる海 大橋店"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

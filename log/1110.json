@@ -1,0 +1,386 @@
+{
+  "id": 1110,
+  "dialogue_code": "dialogue_1110jUKq",
+  "status_code": 2,
+  "user": [
+    4,
+    240
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0240HAqG"
+  ],
+  "task": 1280,
+  "task_name": "main_960",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "info": {
+          "city": "札幌",
+          "name": "大丸札幌店"
+        },
+        "reqt": [
+          "opentime",
+          "address",
+          "parking"
+        ]
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>札幌</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．名前が<b style='color:blue;'>大丸札幌店</b>というところです．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>営業時間，住所，駐車場の有無</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "opentime",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "address",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "parking",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "札幌に行く予定です。買い物をしたいのですが、大丸札幌店というお店はありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 04:41:45"
+    },
+    {
+      "role": 0,
+      "content": "はい、中央区にございます。ジャンルは百貨店や総合スーパー、住所は北海道札幌市中央区北5条西4丁目7番地、電話番号は0118281111、最寄りの札幌駅から徒歩で1分となります。営業時間は10時から20時、定休日はございません。駐車場は無料でご利用いただけます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": "大丸札幌店",
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667277730217,
+          "selectedResults": [
+            "大丸札幌店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": "大丸札幌店",
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 04:43:52",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。どうもありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "opentime",
+          "10時から20時",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "北海道札幌市中央区北5条西4丁目7番地",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "parking",
+          "あり",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 04:44:27"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 04:44:36"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 04:44:39"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:02",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "札幌",
+      "name": "大丸札幌店",
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

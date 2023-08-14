@@ -1,0 +1,2019 @@
+{
+  "id": 581,
+  "dialogue_code": "dialogue_0581vQzq",
+  "status_code": 2,
+  "user": [
+    2,
+    239
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0239vzdO"
+  ],
+  "task": 751,
+  "task_name": "main_431",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "福岡",
+          "parking": "有り(無料)",
+          "area": "早良区"
+        },
+        "reqt": [
+          "name",
+          "wifi",
+          "priceinfo",
+          "reference"
+        ],
+        "book": {
+          "people": 4,
+          "day": "1/2",
+          "time": "13:00"
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "福岡",
+          "name": "（有）さくらタクシー"
+        },
+        "reqt": [
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "1/2",
+          "time": "11:40",
+          "departurepoint": "restaurant",
+          "arrivalpoint": "ノボルト"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "福岡",
+          "area": "城南区",
+          "day": "1/2"
+        },
+        "reqt": [
+          "maxtemperature",
+          "mintemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>福岡</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>早良区</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，Wi-Fiの有無，料金情報</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>1/2</b>です．時間は<b style='color:blue;'>13:00</b>です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．タクシー会社の名前は<b style='color:blue;'>（有）さくらタクシー</b>です．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>1/2</b>です．時間は<b style='color:blue;'>11:40</b>です．出発地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．目的地は<b style='color:blue;'>ノボルト</b>というところです．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>城南区</b>です．日付は<b style='color:blue;'>1/2</b>です．",
+        "<b style='color:green;'>最高気温，最低気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "wifi",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "priceinfo",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "maxtemperature",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "mintemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "taxi",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは！福岡へ旅行を計画しています！飲食店を探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:16:07"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。福岡でご案内できる飲食店は108件ほどございます。なにかご希望の条件などはございませんか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666926969730
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:16:34",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "早良区で駐車場が無料のところがいいです！",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:16:49"
+    },
+    {
+      "role": 0,
+      "content": "そういたしましたら、THE BEACHという洋食・西洋料理のお店はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "早良区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "THE BEACH",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666927013434,
+          "selectedResults": [
+            "THE BEACH"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:17:14",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "THE BEACH",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね！Wi-Fiの有無と料金情報についても教えてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:17:38"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。WiFiの有無は不明となっております。料金情報につきましては、お値段帯は普通の設定です。たとえば、タコライス850円、NYチキンオーバーライス950円、 激旨カルボナーラ1100円などございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "早良区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "THE BEACH",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:18:24",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "THE BEACH",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではそちらを予約してください。1/2の13:00に4人で行きたいです！",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:19:16"
+    },
+    {
+      "role": 0,
+      "content": "ご予約ありがとうございます。予約番号72204にて、予約をおとりしました。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "早良区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "THE BEACH",
+              "value": {
+                "people": "4",
+                "day": [
+                  1,
+                  2
+                ],
+                "time": "13:00"
+              },
+              "timestamp": 1666927167033,
+              "success": true,
+              "ref": "72204"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:19:42",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "THE BEACH",
+          "value": {
+            "people": "4",
+            "day": [
+              1,
+              2
+            ],
+            "time": "13:00"
+          },
+          "timestamp": 1666927167033,
+          "success": true,
+          "ref": "72204"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。（有）さくらタクシーというタクシー会社の予約もしてもらいたいです！",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "THE BEACH",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "値段帯は普通、タコライス850円、NYチキンオーバーライス950円、 激旨カルボナーラ1100円など",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "72204",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:21:08"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。1件、該当がございます。お電話番号が、0928712325となっておりますが、お間違い無いでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": "（有）さくらタクシー",
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "（有）さくらタクシー",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666927275841,
+          "selectedResults": [
+            "（有）さくらタクシー"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": "（有）さくらタクシー",
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:21:43",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "THE BEACH",
+          "value": {
+            "people": "4",
+            "day": [
+              1,
+              2
+            ],
+            "time": "13:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（有）さくらタクシー",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あってると思います！1/2の11:40にTHE BEACHを出発して、ノボルトというところまでの予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "THE BEACH",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "値段帯は普通、タコライス850円、NYチキンオーバーライス950円、 激旨カルボナーラ1100円など",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "72204",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0928712325",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:22:51"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約を完了いたしました。ご予約番号は、50123です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": "（有）さくらタクシー",
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "（有）さくらタクシー",
+              "value": {
+                "day": [
+                  1,
+                  2
+                ],
+                "time": "11:40",
+                "departurepoint": "THE BEACH",
+                "arrivalpoint": "ノボルト"
+              },
+              "timestamp": 1666927383111,
+              "success": true,
+              "ref": "50123"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": "（有）さくらタクシー",
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:23:19",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "THE BEACH",
+          "value": {
+            "people": "4",
+            "day": [
+              1,
+              2
+            ],
+            "time": "13:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（有）さくらタクシー",
+          "value": {
+            "day": [
+              1,
+              2
+            ],
+            "time": "11:40",
+            "departurepoint": "THE BEACH",
+            "arrivalpoint": "ノボルト"
+          },
+          "timestamp": 1666927383111,
+          "success": true,
+          "ref": "50123"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。城南区の1/2の天候はどうでしょう？気温は分かりますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "THE BEACH",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "値段帯は普通、タコライス850円、NYチキンオーバーライス950円、 激旨カルボナーラ1100円など",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "72204",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0928712325",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "50123",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:23:58"
+    },
+    {
+      "role": 0,
+      "content": "はい、当日の天気は曇りで、最高気温は8.5度、最低気温は3度の予報となっております。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "福岡",
+            "area": "城南区",
+            "day": [
+              1,
+              2
+            ]
+          },
+          "book": [],
+          "timestamp": 1666927446804,
+          "selectedResults": [
+            "1/2 福岡 城南区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": "（有）さくらタクシー",
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "城南区",
+          "day": [
+            1,
+            2
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:24:33",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "THE BEACH",
+          "value": {
+            "people": "4",
+            "day": [
+              1,
+              2
+            ],
+            "time": "13:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（有）さくらタクシー",
+          "value": {
+            "day": [
+              1,
+              2
+            ],
+            "time": "11:40",
+            "departurepoint": "THE BEACH",
+            "arrivalpoint": "ノボルト"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "THE BEACH",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "値段帯は普通、タコライス850円、NYチキンオーバーライス950円、 激旨カルボナーラ1100円など",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "72204",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0928712325",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "50123",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "8.5度",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "3度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:25:03"
+    },
+    {
+      "role": 0,
+      "content": "ほかにお調べすることはございますか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "福岡",
+            "area": "城南区",
+            "day": [
+              1,
+              2
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": "（有）さくらタクシー",
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "城南区",
+          "day": [
+            1,
+            2
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:25:10",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "THE BEACH",
+          "value": {
+            "people": "4",
+            "day": [
+              1,
+              2
+            ],
+            "time": "13:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（有）さくらタクシー",
+          "value": {
+            "day": [
+              1,
+              2
+            ],
+            "time": "11:40",
+            "departurepoint": "THE BEACH",
+            "arrivalpoint": "ノボルト"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いえ、色々とありがとうございました。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "THE BEACH",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "wifi",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "値段帯は普通、タコライス850円、NYチキンオーバーライス950円、 激旨カルボナーラ1100円など",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "72204",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0928712325",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "50123",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "8.5度",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "3度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 03:25:20"
+    },
+    {
+      "role": 0,
+      "content": "承知いたしました。では、またのご利用をお待ちしております。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "福岡",
+            "area": "城南区",
+            "day": [
+              1,
+              2
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": "（有）さくらタクシー",
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "福岡",
+          "area": "城南区",
+          "day": [
+            1,
+            2
+          ]
+        }
+      },
+      "created_at": "2022-10-28 03:25:26",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "THE BEACH",
+          "value": {
+            "people": "4",
+            "day": [
+              1,
+              2
+            ],
+            "time": "13:00"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（有）さくらタクシー",
+          "value": {
+            "day": [
+              1,
+              2
+            ],
+            "time": "11:40",
+            "departurepoint": "THE BEACH",
+            "arrivalpoint": "ノボルト"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-28 03:25:36"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-28 03:25:37"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:58",
+  "final_state": {
+    "restaurant": {
+      "city": "福岡",
+      "name": null,
+      "genre": null,
+      "area": "早良区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "福岡",
+      "name": "（有）さくらタクシー",
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "福岡",
+      "area": "城南区",
+      "day": [
+        1,
+        2
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "THE BEACH",
+      "value": {
+        "people": "4",
+        "day": [
+          1,
+          2
+        ],
+        "time": "13:00"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "（有）さくらタクシー",
+      "value": {
+        "day": [
+          1,
+          2
+        ],
+        "time": "11:40",
+        "departurepoint": "THE BEACH",
+        "arrivalpoint": "ノボルト"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

@@ -1,0 +1,2121 @@
+{
+  "id": 3002,
+  "dialogue_code": "dialogue_3002TBCJ",
+  "status_code": 2,
+  "user": [
+    25,
+    278
+  ],
+  "username": [
+    "operator_0025tpXO",
+    "customer_0278uKJi"
+  ],
+  "task": 3272,
+  "task_name": "main2_252",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "大阪",
+          "pricerange": "安め",
+          "area": "生野区"
+        },
+        "info": {
+          "city": "大阪",
+          "pricerange": "安め",
+          "area": "dontcare"
+        },
+        "reqt": [
+          "address",
+          "checkouttime"
+        ]
+      },
+      "restaurant": {
+        "fail_info": {
+          "city": "大阪",
+          "pricerange": "普通",
+          "station": "今里駅"
+        },
+        "info": {
+          "city": "大阪",
+          "pricerange": "普通",
+          "station": "dontcare"
+        },
+        "reqt": [
+          "opentime",
+          "accesstime",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "2/17",
+          "time": "10:40"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "大阪",
+          "area": "大正区",
+          "day": "2/17"
+        },
+        "reqt": [
+          "maxtemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．予算は<b style='color:blue;'>安め</b>が希望です．地区は<b style='color:blue;'>生野区</b>です．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>住所，チェックアウト終了時刻</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．予算は<b style='color:blue;'>普通</b>が希望です．最寄り駅が<b style='color:blue;'>今里駅</b>のところにしてください．",
+        "希望に合うところが見つからない場合は，最寄り駅は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>営業時間，近辺の駅からの所要時間</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>2/17</b>です．時間は<b style='color:blue;'>10:40</b>です．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>大正区</b>です．日付は<b style='color:blue;'>2/17</b>です．",
+        "<b style='color:green;'>最高気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "address",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkouttime",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "opentime",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "maxtemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪への旅行を計画しています。\n当日泊まる宿泊施設を探してください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:39:21"
+    },
+    {
+      "role": 0,
+      "content": "ご希望の条件をおきかせください。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:39:33",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予算は安め、地区は生野区希望です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:39:45"
+    },
+    {
+      "role": 0,
+      "content": "生野区に安めの宿泊施設はなさそうです。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "生野区",
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1669649998782
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "生野区",
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:40:13",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "それなら地区は考慮しないものとします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:40:22"
+    },
+    {
+      "role": 0,
+      "content": "大阪で安めの宿泊施設は９７件あります。追加の希望条件はありますか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1669650027490
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:40:47",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特にありません。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:40:57"
+    },
+    {
+      "role": 0,
+      "content": "それでは、ホテルフクラシア大阪ベイをお勧めします。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ホテルフクラシア大阪ベイ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "ホテルフクラシア大阪ベイ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:41:10",
+      "book": {
+        "hotel": {
+          "name": "ホテルフクラシア大阪ベイ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの住所，チェックアウト終了時刻を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:41:24"
+    },
+    {
+      "role": 0,
+      "content": "大阪府大阪市住之江区南港北1丁目7-50、チェックアウトは１０時です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ホテルフクラシア大阪ベイ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:41:37",
+      "book": {
+        "hotel": {
+          "name": "ホテルフクラシア大阪ベイ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では続いて飲食店を探してください。予算は普通が希望、最寄り駅が今里駅のところにしてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "大阪府大阪市住之江区南港北1丁目7-50",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１０時",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:42:09"
+    },
+    {
+      "role": 0,
+      "content": "大阪今里で予算普通の飲食店はなさそうです。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": "今里駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669650150818
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": "今里駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:42:49",
+      "book": {
+        "hotel": {
+          "name": "ホテルフクラシア大阪ベイ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "それなら最寄り駅は考えないことにします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "大阪府大阪市住之江区南港北1丁目7-50",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１０時",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:43:00"
+    },
+    {
+      "role": 0,
+      "content": "大阪で予算普通の飲食店は５０件ありますが、その中ならば、神戸牛焼肉 和ノ宮 なんば御堂筋店をお勧めします。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "神戸牛焼肉 和ノ宮 なんば御堂筋店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669650183837,
+          "selectedResults": [
+            "神戸牛焼肉 和ノ宮 なんば御堂筋店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:43:39",
+      "book": {
+        "hotel": {
+          "name": "ホテルフクラシア大阪ベイ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "神戸牛焼肉 和ノ宮 なんば御堂筋店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。営業時間，近辺の駅からの所要時間を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "大阪府大阪市住之江区南港北1丁目7-50",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１０時",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:43:57"
+    },
+    {
+      "role": 0,
+      "content": "昼１１時から夜１０時まで営業しています。なんば駅から徒歩で1分とアクセスもよいです。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "神戸牛焼肉 和ノ宮 なんば御堂筋店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:44:21",
+      "book": {
+        "hotel": {
+          "name": "ホテルフクラシア大阪ベイ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "神戸牛焼肉 和ノ宮 なんば御堂筋店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では予約をお願いします。人数は3人、日付は2/17、時間は10:40です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "大阪府大阪市住之江区南港北1丁目7-50",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１０時",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "昼１１時から夜１０時",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "なんば駅から徒歩で1分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:44:59"
+    },
+    {
+      "role": 0,
+      "content": "予約成功しました。予約番号は26118です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "神戸牛焼肉 和ノ宮 なんば御堂筋店",
+              "value": {
+                "people": "3",
+                "day": [
+                  2,
+                  17
+                ],
+                "time": "10:40"
+              },
+              "timestamp": 1669650310781,
+              "success": true,
+              "ref": "26118"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:45:22",
+      "book": {
+        "hotel": {
+          "name": "ホテルフクラシア大阪ベイ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "神戸牛焼肉 和ノ宮 なんば御堂筋店",
+          "value": {
+            "people": "3",
+            "day": [
+              2,
+              17
+            ],
+            "time": "10:40"
+          },
+          "timestamp": 1669650310781,
+          "success": true,
+          "ref": "26118"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あと、天候を調べてほしいです。地区は大正区、日付は2/17です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "大阪府大阪市住之江区南港北1丁目7-50",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１０時",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "昼１１時から夜１０時",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "なんば駅から徒歩で1分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "26118",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:45:56"
+    },
+    {
+      "role": 0,
+      "content": "2/17 大阪 大正区 の天気は晴時々曇、最低気温3.6度、最高気温11.5度です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "大阪",
+            "area": "大正区",
+            "day": [
+              2,
+              17
+            ]
+          },
+          "book": [],
+          "timestamp": 1669650379275,
+          "selectedResults": [
+            "2/17 大阪 大正区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "大阪",
+          "area": "大正区",
+          "day": [
+            2,
+            17
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:46:44",
+      "book": {
+        "hotel": {
+          "name": "ホテルフクラシア大阪ベイ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "神戸牛焼肉 和ノ宮 なんば御堂筋店",
+          "value": {
+            "people": "3",
+            "day": [
+              2,
+              17
+            ],
+            "time": "10:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "解決しました。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "大阪府大阪市住之江区南港北1丁目7-50",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１０時",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "昼１１時から夜１０時",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "なんば駅から徒歩で1分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "26118",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "11.5度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:46:55"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 15:47:01"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 15:47:04"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:52",
+  "final_state": {
+    "restaurant": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "安め",
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "大阪",
+      "area": "大正区",
+      "day": [
+        2,
+        17
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ホテルフクラシア大阪ベイ",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "神戸牛焼肉 和ノ宮 なんば御堂筋店",
+      "value": {
+        "people": "3",
+        "day": [
+          2,
+          17
+        ],
+        "time": "10:40"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

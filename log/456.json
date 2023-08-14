@@ -1,0 +1,1325 @@
+{
+  "id": 456,
+  "dialogue_code": "dialogue_0456kIBW",
+  "status_code": 2,
+  "user": [
+    2,
+    230
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0230PdiU"
+  ],
+  "task": 626,
+  "task_name": "main_306",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "fail_info": {
+          "city": "東京",
+          "genre": "商店街",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "東京",
+          "genre": "dontcare",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "area"
+        ]
+      },
+      "weather": {
+        "info": {
+          "city": "東京",
+          "day": "4/4",
+          "area": "豊島区"
+        },
+        "reqt": [
+          "mintemperature",
+          "weather"
+        ]
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>東京</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．ジャンルは<b style='color:blue;'>商店街</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところがない場合は，ジャンルは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，エリア</b>を聞いてください．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>4/4</b>です．地区は<b style='color:blue;'>豊島区</b>です．",
+        "<b style='color:green;'>最低気温，天気</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "area",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "mintemperature",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "weather",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "東京へ旅行に行く予定なのですが、買い物できるところはありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:30:24"
+    },
+    {
+      "role": 0,
+      "content": "はい、50件ほど候補がございます。なにかご希望の条件など、ございませんか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666852227841
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:30:46",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "商店街で駐車場を無料で利用できるところがいいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:31:01"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では候補が見つかりませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "商店街",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1666852267849
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "商店街",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:31:21",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。それではジャンルはなんでも大丈夫です。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:31:34"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。そういたしますと、ポケモンセンターメガトウキョーはいかがでしょうか？ジャンルは、文房具・雑貨, おもちゃ, お土産となります。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1666852295913,
+          "selectedResults": [
+            "ポケモンセンターメガトウキョー"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:31:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。エリアとしてはどこになりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ポケモンセンターメガトウキョー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:32:20"
+    },
+    {
+      "role": 0,
+      "content": "豊島区エリアにございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:32:31",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "了解です。当日の天候を知りたいのですが、豊島区の4/4はどうですか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ポケモンセンターメガトウキョー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "豊島区",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:33:19"
+    },
+    {
+      "role": 0,
+      "content": "4/4の豊島区の天気予報は雨となっております。最低気温は11度、最低気温は22.9度になる予想です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "東京",
+            "area": "豊島区",
+            "day": [
+              4,
+              4
+            ]
+          },
+          "book": [],
+          "timestamp": 1666852412705,
+          "selectedResults": [
+            "4/4 東京 豊島区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "東京",
+          "area": "豊島区",
+          "day": [
+            4,
+            4
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:34:08",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ポケモンセンターメガトウキョー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "豊島区",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "11度",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "雨",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:34:30"
+    },
+    {
+      "role": 0,
+      "content": "他になにかお調べすることなどございませんか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "東京",
+            "area": "豊島区",
+            "day": [
+              4,
+              4
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "東京",
+          "area": "豊島区",
+          "day": [
+            4,
+            4
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:34:39",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "大丈夫です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ポケモンセンターメガトウキョー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "豊島区",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "11度",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "雨",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:34:49"
+    },
+    {
+      "role": 0,
+      "content": "ご利用ありがとうございました。また何かございましたら、お気軽にお問い合わせください。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "東京",
+            "area": "豊島区",
+            "day": [
+              4,
+              4
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "東京",
+          "area": "豊島区",
+          "day": [
+            4,
+            4
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:34:54",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-27 06:35:06"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-27 06:35:12"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:57",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "東京",
+      "area": "豊島区",
+      "day": [
+        4,
+        4
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

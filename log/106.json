@@ -1,0 +1,2024 @@
+{
+  "id": 106,
+  "dialogue_code": "dialogue_0106iUSJ",
+  "status_code": 2,
+  "user": [
+    4,
+    203
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0203Sqra"
+  ],
+  "task": 256,
+  "task_name": "105",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "info": {
+          "city": "那覇",
+          "station": "おもろまち駅"
+        },
+        "reqt": [
+          "parking"
+        ]
+      },
+      "hotel": {
+        "fail_info": {
+          "city": "那覇",
+          "genre": "リゾートホテル",
+          "withrestaurant": "有り",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "那覇",
+          "genre": "リゾートホテル",
+          "withrestaurant": "有り",
+          "parking": "有り(有料)"
+        },
+        "reqt": [
+          "name",
+          "address",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "7/12",
+          "stay": 4
+        }
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>那覇</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．最寄り駅が<b style='color:blue;'>おもろまち駅</b>のところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>駐車場の有無</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．宿のタイプは<b style='color:blue;'>リゾートホテル</b>です．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合う場所が見つからない場合は，<b style='color:blue;'>有料</b>の駐車場でもよいものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，住所</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>7/12</b>です．宿泊日数は<b style='color:blue;'>4</b>泊です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "parking",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "address",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "hotel"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんばんは！\n今度、那覇に旅行に行きたいので、案内をお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-04 09:08:01"
+    },
+    {
+      "role": 0,
+      "content": "承知致しました。\nどのようなお手伝いを致しましょう？",
+      "payload": [
+        {}
+      ],
+      "state": {},
+      "created_at": "2022-10-04 09:08:24",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "当日、買い物ができるところを探しているんですけど、おもろまち駅が最寄り駅になるようなところ、どこかありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-04 09:09:03"
+    },
+    {
+      "role": 0,
+      "content": "はい、サンエー那覇メインプレイスというショッピングモールがございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "おもろまち駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1664874566927,
+          "selectedResults": [
+            "サンエー那覇メインプレイス",
+            "サンエー那覇メインプレイス"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "おもろまち駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-04 09:10:09",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そういうところがあったんですね！\nちなみにそこって、駐車場はありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-04 09:10:37"
+    },
+    {
+      "role": 0,
+      "content": "はい、駐車場は無料でご利用いただけます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "おもろまち駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "おもろまち駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-04 09:11:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね！ありがとうございます！\nあ、あと、当日に泊まる宿泊施設も探しているんですけど、タイプ的にはリゾートホテルで、とりあえず探していただけますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "parking",
+          "有り",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-04 09:12:25"
+    },
+    {
+      "role": 0,
+      "content": "承知致しました。\nリゾートホテルタイプでしたら、14件ございます。\nエリアやご予算のご希望はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1664874769638
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "おもろまち駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-04 09:13:41",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "えっと、レストランが併設されているところで、あと、無料で駐車場が使えるところだと、どこかありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "parking",
+          "有り",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-04 09:14:23"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません、その条件ですとご紹介可能なホテルがございませんでした。\nいかが致しましょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1664874879254
+        },
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1664874926030
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "おもろまち駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-04 09:15:29",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。では、駐車場は有料のところでも大丈夫です。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "parking",
+          "有り",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-04 09:15:54"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。\nご紹介可能なホテルが13件ございます。\n他にご希望はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(有料)",
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1664874962054
+        },
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(有料)",
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1664874972566
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "おもろまち駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-04 09:17:13",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "他は特にありません。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "parking",
+          "有り",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-04 09:17:36"
+    },
+    {
+      "role": 0,
+      "content": "それでは、ハイアット リージェンシー 那覇 沖縄というホテルはいかがでしょう？\n値段帯は安めで、Wi-Fiが無料となっております。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(有料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ハイアット リージェンシー 那覇 沖縄",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "ホテルアクアチッタナハ by WBF",
+            "OKINAWA KARIYUSHI RESORT EXES NAHA",
+            "ホテルオーシャン那覇国際通り",
+            "ホテルパームロイヤルNAHA国際通り",
+            "ロワジール スパタワー 那覇",
+            "ハイアット リージェンシー 那覇 沖縄"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "おもろまち駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-04 09:19:15",
+      "book": {
+        "hotel": {
+          "name": "ハイアット リージェンシー 那覇 沖縄",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！良さそうなところですね！\nそちらのホテルの住所は、どちらになりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "parking",
+          "有り",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-04 09:19:55"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。\n住所は、那覇市牧志3丁目6-20、電話番号は、0988668888となっております。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(有料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ハイアット リージェンシー 那覇 沖縄",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "おもろまち駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-04 09:20:40",
+      "book": {
+        "hotel": {
+          "name": "ハイアット リージェンシー 那覇 沖縄",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！\nでは、そちらに泊まろうかと思うのですが、３人で７月１２日から４泊で、予約をお願いしてもよろしいですか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "parking",
+          "有り",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ハイアット リージェンシー 那覇 沖縄",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "那覇市牧志3丁目6-20",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-04 09:21:44"
+    },
+    {
+      "role": 0,
+      "content": "承知致しました。\nご予約完了致しました。\n予約番号は、66325　となります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(有料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ハイアット リージェンシー 那覇 沖縄",
+              "value": {
+                "people": "3",
+                "day": [
+                  7,
+                  12
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1664875326750,
+              "success": true,
+              "ref": "66325"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "おもろまち駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-04 09:22:47",
+      "book": {
+        "hotel": {
+          "name": "ハイアット リージェンシー 那覇 沖縄",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              12
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1664875326750,
+          "success": true,
+          "ref": "66325"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！助かりました！",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "parking",
+          "有り",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ハイアット リージェンシー 那覇 沖縄",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "那覇市牧志3丁目6-20",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "66325",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-04 09:23:05"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(有料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ハイアット リージェンシー 那覇 沖縄",
+              "value": {
+                "people": "3",
+                "day": [
+                  7,
+                  12
+                ],
+                "stay": "4"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "おもろまち駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-04 09:23:15",
+      "book": {
+        "hotel": {
+          "name": "ハイアット リージェンシー 那覇 沖縄",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              12
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あとは大丈夫です！ご案内、本当にありがとうございました！",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "parking",
+          "有り",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ハイアット リージェンシー 那覇 沖縄",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "address",
+          "那覇市牧志3丁目6-20",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "66325",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-04 09:23:36"
+    },
+    {
+      "role": 0,
+      "content": "承知致しました。\nありがとうございました。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(有料)",
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ハイアット リージェンシー 那覇 沖縄",
+              "value": {
+                "people": "3",
+                "day": [
+                  7,
+                  12
+                ],
+                "stay": "4"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "おもろまち駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-04 09:23:51",
+      "book": {
+        "hotel": {
+          "name": "ハイアット リージェンシー 那覇 沖縄",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              12
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-04 09:24:10"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-04 09:24:11"
+    }
+  ],
+  "created_at": "2022-09-18 06:27:10",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "那覇",
+      "name": null,
+      "genre": "リゾートホテル",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(有料)",
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "那覇",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": "おもろまち駅",
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ハイアット リージェンシー 那覇 沖縄",
+      "value": {
+        "people": "3",
+        "day": [
+          7,
+          12
+        ],
+        "stay": "4"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

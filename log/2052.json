@@ -1,0 +1,1002 @@
+{
+  "id": 2052,
+  "dialogue_code": "dialogue_2052TeuZ",
+  "status_code": 2,
+  "user": [
+    20,
+    247
+  ],
+  "username": [
+    "operator_0020cvID",
+    "customer_0247aACL"
+  ],
+  "task": 2222,
+  "task_name": "main_1902",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "fail_info": {
+          "city": "大阪",
+          "station": "天王寺駅",
+          "area": "天王寺区"
+        },
+        "info": {
+          "city": "大阪",
+          "station": "天王寺駅",
+          "area": "dontcare"
+        },
+        "reqt": [
+          "accesstime"
+        ]
+      },
+      "weather": {
+        "info": {
+          "city": "大阪",
+          "day": "8/29",
+          "area": "東成区"
+        },
+        "reqt": [
+          "maxtemperature",
+          "weather"
+        ]
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．最寄り駅が<b style='color:blue;'>天王寺駅</b>のところにしてください．地区は<b style='color:blue;'>天王寺区</b>です．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>近辺の駅からの所要時間</b>を聞いてください．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>8/29</b>です．地区は<b style='color:blue;'>東成区</b>です．",
+        "<b style='color:green;'>最高気温，天気</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "maxtemperature",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "weather",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪に旅行を考えていて、最寄り駅が天王寺駅で、地区が天王寺区のショッピングできそうなところはありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:42:36"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。条件に合うお買い物の店舗は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "天王寺区",
+            "station": "天王寺駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667320994203
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "station": "天王寺駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 16:43:24",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。では地区はどこでもいいので、買い物できそうなところを教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:43:57"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、アカチャンホンポ あべのイトーヨーカドー店はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "天王寺駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667321044779,
+          "selectedResults": [
+            "アカチャンホンポ あべのイトーヨーカドー店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "天王寺駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 16:44:14",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そこにします。そのお店の、近辺の駅からの所要時間ってどれくらいですか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:45:04"
+    },
+    {
+      "role": 0,
+      "content": "はい。天王寺駅から徒歩で2分となっております。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "天王寺駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "天王寺駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 16:45:28",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日の天候って調べてもらえますか？8/29の、東成区なんですけど。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "天王寺駅から徒歩で2分",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:46:41"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。8/29の東成区の天気予報は晴となっております。最低気温は25.2度、最高気温は31.3度になる予報です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "大阪",
+            "area": "東成区",
+            "day": [
+              8,
+              29
+            ]
+          },
+          "book": [],
+          "timestamp": 1667321223464,
+          "selectedResults": [
+            "8/29 大阪 東成区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "天王寺駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "大阪",
+          "area": "東成区",
+          "day": [
+            8,
+            29
+          ]
+        }
+      },
+      "created_at": "2022-11-01 16:47:27",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ご丁寧に調べていただき、ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "天王寺駅から徒歩で2分",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "晴",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "31.3度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:48:13"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はありますか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "大阪",
+            "area": "東成区",
+            "day": [
+              8,
+              29
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "天王寺駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "大阪",
+          "area": "東成区",
+          "day": [
+            8,
+            29
+          ]
+        }
+      },
+      "created_at": "2022-11-01 16:48:26",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいえ、大丈夫です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "天王寺駅から徒歩で2分",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "晴",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "31.3度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 16:48:38"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 16:48:47"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 16:48:47"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:08",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": "天王寺駅",
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "大阪",
+      "area": "東成区",
+      "day": [
+        8,
+        29
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

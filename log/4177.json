@@ -1,0 +1,2277 @@
+{
+  "id": 4177,
+  "dialogue_code": "dialogue_4177OeYr",
+  "status_code": 2,
+  "user": [
+    9,
+    335
+  ],
+  "username": [
+    "operator_0009Tmbt",
+    "customer_0335cZjE"
+  ],
+  "task": 4447,
+  "task_name": "main2_1427",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "名古屋",
+          "wifi": "有り(無料)",
+          "station": "丸の内駅",
+          "genre": "シティホテル"
+        },
+        "reqt": [
+          "name",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 3,
+          "day": "11/6",
+          "stay": 4
+        },
+        "book": {
+          "people": 2,
+          "day": "11/6",
+          "stay": 4
+        }
+      },
+      "attraction": {
+        "info": {
+          "city": "名古屋",
+          "genre": "教室・ワークショップ・体験",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "adultfee"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "名古屋",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "11/6",
+          "time": "11:40",
+          "departurepoint": "hotel",
+          "arrivalpoint": "attraction"
+        },
+        "book": {
+          "day": "11/6",
+          "time": "12:40",
+          "departurepoint": "hotel",
+          "arrivalpoint": "attraction"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>名古屋</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>丸の内駅</b>のところにしてください．宿のタイプは<b style='color:blue;'>シティホテル</b>です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>11/6</b>です．宿泊日数は<b style='color:blue;'>4</b>泊です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>2</b>に変更します．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．ジャンルは<b style='color:blue;'>教室・ワークショップ・体験</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称，大人入場料</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>11/6</b>です．時間は<b style='color:blue;'>11:40</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>12:40</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "adultfee",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "attraction",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "名古屋のシティホテルを探しています。wifiが無料で、最寄りが丸の内駅のところはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 23:29:21"
+    },
+    {
+      "role": 0,
+      "content": "名古屋のホテルですね、1件みつかりました。　アイリス愛知はいかがですか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "シティホテル",
+            "area": null,
+            "pricerange": null,
+            "station": "丸の内駅",
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "アイリス愛知",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669764600205,
+          "selectedResults": [
+            "アイリス愛知"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": null,
+          "station": "丸の内駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 23:30:25",
+      "book": {
+        "hotel": {
+          "name": "アイリス愛知",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこの予約をしたいです。11月6日から4泊分お願いします。人数は3人です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "アイリス愛知",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 23:31:19"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。　その条件では、予約出来ませんでした。　どうされますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "シティホテル",
+            "area": null,
+            "pricerange": null,
+            "station": "丸の内駅",
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "アイリス愛知",
+              "value": {
+                "people": "3",
+                "day": [
+                  11,
+                  6
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1669764708279,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": null,
+          "station": "丸の内駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 23:31:52",
+      "book": {
+        "hotel": {
+          "name": "アイリス愛知",
+          "value": {
+            "people": "3",
+            "day": [
+              11,
+              6
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1669764708279,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、人数を2人に減らしてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "アイリス愛知",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 23:32:10"
+    },
+    {
+      "role": 0,
+      "content": "予約出来ました。予約番号は、79014です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "シティホテル",
+            "area": null,
+            "pricerange": null,
+            "station": "丸の内駅",
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "アイリス愛知",
+              "value": {
+                "people": "2",
+                "day": [
+                  11,
+                  6
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1669764742846,
+              "success": true,
+              "ref": "79014"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": null,
+          "station": "丸の内駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 23:32:30",
+      "book": {
+        "hotel": {
+          "name": "アイリス愛知",
+          "value": {
+            "people": "2",
+            "day": [
+              11,
+              6
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1669764742846,
+          "success": true,
+          "ref": "79014"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日観光するところも決めたいのですが、ワークショップや体験などができるところはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "アイリス愛知",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79014",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 23:33:32"
+    },
+    {
+      "role": 0,
+      "content": "それでしたら、名古屋市農業センターdelaふぁーむがおすすめですよ。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "教室・ワークショップ・体験",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669764839549,
+          "selectedResults": [
+            "名古屋市農業センターdelaふぁーむ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": null,
+          "station": "丸の内駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 23:34:31",
+      "book": {
+        "hotel": {
+          "name": "アイリス愛知",
+          "value": {
+            "people": "2",
+            "day": [
+              11,
+              6
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこは駐車場は無料ですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "アイリス愛知",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79014",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 23:34:47"
+    },
+    {
+      "role": 0,
+      "content": "はい、駐車場は無料駐車場が利用できます。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "教室・ワークショップ・体験",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": null,
+          "station": "丸の内駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 23:35:20",
+      "book": {
+        "hotel": {
+          "name": "アイリス愛知",
+          "value": {
+            "people": "2",
+            "day": [
+              11,
+              6
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。大人の入場料はいくらですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "アイリス愛知",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79014",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "名古屋市農業センターdelaふぁーむ",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 23:35:42"
+    },
+    {
+      "role": 0,
+      "content": "大人の入場料は、無料となっています。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "教室・ワークショップ・体験",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": null,
+          "station": "丸の内駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 23:35:57",
+      "book": {
+        "hotel": {
+          "name": "アイリス愛知",
+          "value": {
+            "people": "2",
+            "day": [
+              11,
+              6
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。当日のタクシーもこのまま探したいです。キャッシュレス払いできる会社でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "アイリス愛知",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79014",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "名古屋市農業センターdelaふぁーむ",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "無料",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 23:36:37"
+    },
+    {
+      "role": 0,
+      "content": "それでしたら、名鉄西部交通西部はいかがですか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "名鉄西部交通西部",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669765015815,
+          "selectedResults": [
+            "名鉄西部交通西部"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": null,
+          "station": "丸の内駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 23:37:06",
+      "book": {
+        "hotel": {
+          "name": "アイリス愛知",
+          "value": {
+            "people": "2",
+            "day": [
+              11,
+              6
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "名鉄西部交通西部",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。11月6日の11時40分から予約をお願いします。アイリス愛知から名古屋市農業センターdelaふぁーむまででお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "アイリス愛知",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79014",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "名古屋市農業センターdelaふぁーむ",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "無料",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "名鉄西部交通西部",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 23:38:07"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、その条件では、予約出来ませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "名鉄西部交通西部",
+              "value": {
+                "day": [
+                  11,
+                  6
+                ],
+                "time": "11:40",
+                "departurepoint": "アイリス愛知",
+                "arrivalpoint": "名古屋市農業センターdelaふぁーむ"
+              },
+              "timestamp": 1669765120594,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": null,
+          "station": "丸の内駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 23:38:50",
+      "book": {
+        "hotel": {
+          "name": "アイリス愛知",
+          "value": {
+            "people": "2",
+            "day": [
+              11,
+              6
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "名鉄西部交通西部",
+          "value": {
+            "day": [
+              11,
+              6
+            ],
+            "time": "11:40",
+            "departurepoint": "アイリス愛知",
+            "arrivalpoint": "名古屋市農業センターdelaふぁーむ"
+          },
+          "timestamp": 1669765120594,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "時間を12時40分からにするとどうですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "アイリス愛知",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79014",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "名古屋市農業センターdelaふぁーむ",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "無料",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "名鉄西部交通西部",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 23:39:09"
+    },
+    {
+      "role": 0,
+      "content": "予約出来ました。予約番号は、62052となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "名鉄西部交通西部",
+              "value": {
+                "day": [
+                  11,
+                  6
+                ],
+                "time": "12:40",
+                "departurepoint": "アイリス愛知",
+                "arrivalpoint": "名古屋市農業センターdelaふぁーむ"
+              },
+              "timestamp": 1669765163418,
+              "success": true,
+              "ref": "62052"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": null,
+          "station": "丸の内駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 23:39:32",
+      "book": {
+        "hotel": {
+          "name": "アイリス愛知",
+          "value": {
+            "people": "2",
+            "day": [
+              11,
+              6
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "名鉄西部交通西部",
+          "value": {
+            "day": [
+              11,
+              6
+            ],
+            "time": "12:40",
+            "departurepoint": "アイリス愛知",
+            "arrivalpoint": "名古屋市農業センターdelaふぁーむ"
+          },
+          "timestamp": 1669765163418,
+          "success": true,
+          "ref": "62052"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "アイリス愛知",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79014",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "名古屋市農業センターdelaふぁーむ",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "無料",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "名鉄西部交通西部",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "62052",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 23:39:43"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はありますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "名鉄西部交通西部",
+              "value": {
+                "day": [
+                  11,
+                  6
+                ],
+                "time": "12:40",
+                "departurepoint": "アイリス愛知",
+                "arrivalpoint": "名古屋市農業センターdelaふぁーむ"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": null,
+          "station": "丸の内駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 23:39:55",
+      "book": {
+        "hotel": {
+          "name": "アイリス愛知",
+          "value": {
+            "people": "2",
+            "day": [
+              11,
+              6
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "名鉄西部交通西部",
+          "value": {
+            "day": [
+              11,
+              6
+            ],
+            "time": "12:40",
+            "departurepoint": "アイリス愛知",
+            "arrivalpoint": "名古屋市農業センターdelaふぁーむ"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特に無いです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "アイリス愛知",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79014",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "名古屋市農業センターdelaふぁーむ",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "無料",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "名鉄西部交通西部",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "62052",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 23:40:04"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "名鉄西部交通西部",
+              "value": {
+                "day": [
+                  11,
+                  6
+                ],
+                "time": "12:40",
+                "departurepoint": "アイリス愛知",
+                "arrivalpoint": "名古屋市農業センターdelaふぁーむ"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": null,
+          "station": "丸の内駅",
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 23:40:14",
+      "book": {
+        "hotel": {
+          "name": "アイリス愛知",
+          "value": {
+            "people": "2",
+            "day": [
+              11,
+              6
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "名鉄西部交通西部",
+          "value": {
+            "day": [
+              11,
+              6
+            ],
+            "time": "12:40",
+            "departurepoint": "アイリス愛知",
+            "arrivalpoint": "名古屋市農業センターdelaふぁーむ"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 23:40:36"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 23:40:39"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:00",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "名古屋",
+      "name": null,
+      "genre": "シティホテル",
+      "area": null,
+      "pricerange": null,
+      "station": "丸の内駅",
+      "wifi": "有り(無料)",
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "名古屋",
+      "name": null,
+      "genre": "教室・ワークショップ・体験",
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "名古屋",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "アイリス愛知",
+      "value": {
+        "people": "2",
+        "day": [
+          11,
+          6
+        ],
+        "stay": "4"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "名鉄西部交通西部",
+      "value": {
+        "day": [
+          11,
+          6
+        ],
+        "time": "12:40",
+        "departurepoint": "アイリス愛知",
+        "arrivalpoint": "名古屋市農業センターdelaふぁーむ"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

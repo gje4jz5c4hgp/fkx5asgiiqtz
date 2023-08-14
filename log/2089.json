@@ -1,0 +1,3107 @@
+{
+  "id": 2089,
+  "dialogue_code": "dialogue_2089qoAJ",
+  "status_code": 2,
+  "user": [
+    20,
+    251
+  ],
+  "username": [
+    "operator_0020cvID",
+    "customer_0251Yuvr"
+  ],
+  "task": 2906,
+  "task_name": "fixed_86",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "info": {
+          "city": "仙台",
+          "area": "宮城野区",
+          "parking": "有り(無料)",
+          "genre": "スポーツ"
+        },
+        "reqt": [
+          "name",
+          "accesstime"
+        ]
+      },
+      "restaurant": {
+        "info": {
+          "city": "仙台",
+          "parking": "有り(無料)",
+          "pricerange": "安め"
+        },
+        "reqt": [
+          "name",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "4/13",
+          "time": "13:40"
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "仙台",
+          "jumbo": "対応",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "4/13",
+          "time": "12:10",
+          "departurepoint": "shopping",
+          "arrivalpoint": "restaurant"
+        },
+        "book": {
+          "day": "4/13",
+          "time": "13:00",
+          "departurepoint": "shopping",
+          "arrivalpoint": "restaurant"
+        }
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>仙台</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．地区は<b style='color:blue;'>宮城野区</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．ジャンルは<b style='color:blue;'>スポーツ</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，近辺の駅からの所要時間</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．予算は<b style='color:blue;'>安め</b>が希望です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>4/13</b>です．時間は<b style='color:blue;'>13:40</b>です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>4/13</b>です．時間は<b style='color:blue;'>12:10</b>です．出発地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．目的地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>13:00</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "restaurant",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "仙台への旅行を検討しています。当日買い物が出来る場所を探しているのですが、色々お伺いしてもよろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:41:25"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。何か他の希望の要件はございますか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667331694755
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:41:39",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "宮城野区で、スポーツ関連のお店を探しています。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:41:54"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、スポーツデポ 仙台新港店はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "スポーツ",
+            "area": "宮城野区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667331725663,
+          "selectedResults": [
+            "スポーツデポ 仙台新港店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:42:15",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ちなみに、そちらは無料で駐車場は利用出来ますかね？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:42:36"
+    },
+    {
+      "role": 0,
+      "content": "はい。利用できます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "スポーツ",
+            "area": "宮城野区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:42:49",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "助かります。そちらへの近辺の駅からの所要時間ってわかりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:43:19"
+    },
+    {
+      "role": 0,
+      "content": "はい。中野栄駅からタクシーで7分となります。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "スポーツ",
+            "area": "宮城野区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:43:31",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ついでに、当日の飲食店も探しているのですが、続けて大丈夫ですか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "中野栄駅からタクシーで7分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:44:04"
+    },
+    {
+      "role": 0,
+      "content": "はい。ご案内させていただきます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "スポーツ",
+            "area": "宮城野区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:44:13",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。安めの予算で、駐車場が無料で利用出来る所を探しているのですが。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "中野栄駅からタクシーで7分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:44:42"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、回転鮨 清次郎 仙台泉店はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667331892766
+        },
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "回転鮨 清次郎 仙台泉店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667331902737,
+          "selectedResults": [
+            "回転鮨 清次郎 仙台泉店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:45:11",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "回転鮨 清次郎 仙台泉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらにしてみようと思います。このままこのお店を予約したいのですが、お願いしてもよろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "中野栄駅からタクシーで7分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "回転鮨 清次郎 仙台泉店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:45:40"
+    },
+    {
+      "role": 0,
+      "content": "はい。詳細な情報をお伺いしていいですか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "回転鮨 清次郎 仙台泉店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:45:56",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "回転鮨 清次郎 仙台泉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。4月13日の13時40分で、3人でお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "中野栄駅からタクシーで7分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "回転鮨 清次郎 仙台泉店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:46:28"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、21756です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "回転鮨 清次郎 仙台泉店",
+              "value": {
+                "people": "3",
+                "day": [
+                  4,
+                  13
+                ],
+                "time": "13:40"
+              },
+              "timestamp": 1667332005804,
+              "success": true,
+              "ref": "21756"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:46:52",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "回転鮨 清次郎 仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              4,
+              13
+            ],
+            "time": "13:40"
+          },
+          "timestamp": 1667332005804,
+          "success": true,
+          "ref": "21756"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。最後に、当日利用出来るタクシー会社についても聞きたいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "中野栄駅からタクシーで7分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "回転鮨 清次郎 仙台泉店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "21756",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:47:19"
+    },
+    {
+      "role": 0,
+      "content": "はい。ご案内させていただきます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "回転鮨 清次郎 仙台泉店",
+              "value": {
+                "people": "3",
+                "day": [
+                  4,
+                  13
+                ],
+                "time": "13:40"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:47:28",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "回転鮨 清次郎 仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              4,
+              13
+            ],
+            "time": "13:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ジャンボタクシーを利用できて、尚且つキャッシュレス払いも出来る所ってありますかね？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "中野栄駅からタクシーで7分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "回転鮨 清次郎 仙台泉店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "21756",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:47:59"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、仙台タクシーグループはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "仙台タクシーグループ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667332093943,
+          "selectedResults": [
+            "仙台タクシーグループ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:48:22",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "回転鮨 清次郎 仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              4,
+              13
+            ],
+            "time": "13:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "仙台タクシーグループ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらの電話番号を教えて貰えますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "中野栄駅からタクシーで7分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "回転鮨 清次郎 仙台泉店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "21756",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "仙台タクシーグループ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:48:56"
+    },
+    {
+      "role": 0,
+      "content": "はい。電話番号は0570061616です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "仙台タクシーグループ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:49:10",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "回転鮨 清次郎 仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              4,
+              13
+            ],
+            "time": "13:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "仙台タクシーグループ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。このままこちらを予約したいのですが、大丈夫ですか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "中野栄駅からタクシーで7分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "回転鮨 清次郎 仙台泉店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "21756",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "仙台タクシーグループ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570061616",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:49:31"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。出発時刻と、出発地と目的地はお決まりでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "仙台タクシーグループ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:49:39",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "回転鮨 清次郎 仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              4,
+              13
+            ],
+            "time": "13:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "仙台タクシーグループ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。4月13日の12時10分で、スポーツデポ 仙台新港店から、回転鮨 清次郎 仙台泉店まででお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "中野栄駅からタクシーで7分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "回転鮨 清次郎 仙台泉店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "21756",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "仙台タクシーグループ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570061616",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:50:29"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では予約できませんでした。どうされますか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "仙台タクシーグループ",
+              "value": {},
+              "timestamp": 1667332237365,
+              "success": true,
+              "ref": "40551"
+            },
+            {
+              "name": "仙台タクシーグループ",
+              "value": {
+                "day": [
+                  4,
+                  13
+                ],
+                "time": "12:10",
+                "departurepoint": "スポーツデポ 仙台新港店",
+                "arrivalpoint": "回転鮨 清次郎 仙台泉店"
+              },
+              "timestamp": 1667332244044,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:50:53",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "回転鮨 清次郎 仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              4,
+              13
+            ],
+            "time": "13:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "仙台タクシーグループ",
+          "value": {
+            "day": [
+              4,
+              13
+            ],
+            "time": "12:10",
+            "departurepoint": "スポーツデポ 仙台新港店",
+            "arrivalpoint": "回転鮨 清次郎 仙台泉店"
+          },
+          "timestamp": 1667332244044,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、時間を13時に変更出来ますか？それなら如何でしょうか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "中野栄駅からタクシーで7分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "回転鮨 清次郎 仙台泉店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "21756",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "仙台タクシーグループ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570061616",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:51:24"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、30391です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "仙台タクシーグループ",
+              "value": {
+                "day": [
+                  4,
+                  13
+                ],
+                "time": "13:00",
+                "departurepoint": "スポーツデポ 仙台新港店",
+                "arrivalpoint": "回転鮨 清次郎 仙台泉店"
+              },
+              "timestamp": 1667332295110,
+              "success": true,
+              "ref": "30391"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:51:41",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "回転鮨 清次郎 仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              4,
+              13
+            ],
+            "time": "13:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "仙台タクシーグループ",
+          "value": {
+            "day": [
+              4,
+              13
+            ],
+            "time": "13:00",
+            "departurepoint": "スポーツデポ 仙台新港店",
+            "arrivalpoint": "回転鮨 清次郎 仙台泉店"
+          },
+          "timestamp": 1667332295110,
+          "success": true,
+          "ref": "30391"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。これで当日は大丈夫そうです。長々とすみませんでした。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "スポーツデポ 仙台新港店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "中野栄駅からタクシーで7分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "回転鮨 清次郎 仙台泉店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "21756",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "仙台タクシーグループ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570061616",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "30391",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 19:51:59"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "仙台タクシーグループ",
+              "value": {
+                "day": [
+                  4,
+                  13
+                ],
+                "time": "13:00",
+                "departurepoint": "スポーツデポ 仙台新港店",
+                "arrivalpoint": "回転鮨 清次郎 仙台泉店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "スポーツ",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 19:52:07",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "回転鮨 清次郎 仙台泉店",
+          "value": {
+            "people": "3",
+            "day": [
+              4,
+              13
+            ],
+            "time": "13:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "仙台タクシーグループ",
+          "value": {
+            "day": [
+              4,
+              13
+            ],
+            "time": "13:00",
+            "departurepoint": "スポーツデポ 仙台新港店",
+            "arrivalpoint": "回転鮨 清次郎 仙台泉店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 19:52:13"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 19:52:17"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:09",
+  "final_state": {
+    "restaurant": {
+      "city": "仙台",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "安め",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "仙台",
+      "name": null,
+      "genre": "スポーツ",
+      "area": "宮城野区",
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "仙台",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "回転鮨 清次郎 仙台泉店",
+      "value": {
+        "people": "3",
+        "day": [
+          4,
+          13
+        ],
+        "time": "13:40"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "仙台タクシーグループ",
+      "value": {
+        "day": [
+          4,
+          13
+        ],
+        "time": "13:00",
+        "departurepoint": "スポーツデポ 仙台新港店",
+        "arrivalpoint": "回転鮨 清次郎 仙台泉店"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

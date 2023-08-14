@@ -1,0 +1,1661 @@
+{
+  "id": 4562,
+  "dialogue_code": "dialogue_4562IlxZ",
+  "status_code": 2,
+  "user": [
+    9,
+    287
+  ],
+  "username": [
+    "operator_0009Tmbt",
+    "customer_0287TqaG"
+  ],
+  "task": 4832,
+  "task_name": "main2_1812",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "京都",
+          "withrestaurant": "有り"
+        },
+        "info": {
+          "city": "京都",
+          "withrestaurant": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "pricerange"
+        ]
+      },
+      "weather": {
+        "info": {
+          "city": "京都",
+          "day": "11/1",
+          "area": "東山区"
+        },
+        "reqt": [
+          "mintemperature"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "京都",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "11/1",
+          "time": "12:30",
+          "departurepoint": "ホテル近江屋",
+          "arrivalpoint": "hotel"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，レストランの有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，値段帯</b>を聞いてください．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>11/1</b>です．地区は<b style='color:blue;'>東山区</b>です．",
+        "<b style='color:green;'>最低気温</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>11/1</b>です．時間は<b style='color:blue;'>12:30</b>です．出発地は<b style='color:blue;'>ホテル近江屋</b>というところです．目的地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "pricerange",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "mintemperature",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "weather",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都へ旅行するのですがレストラン併設の宿泊施設を探しています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 04:15:32"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。　その条件では、見つけられませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1669695354522
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 04:15:58",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "なるほど！それではレストランがなくてもいいところがあれば紹介して下さい。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 04:16:34"
+    },
+    {
+      "role": 0,
+      "content": "それでしたら、藤ホテル京都五条はいかがですか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "藤ホテル京都五条",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669695406788,
+          "selectedResults": [
+            "藤ホテル京都五条"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 04:16:59",
+      "book": {
+        "hotel": {
+          "name": "藤ホテル京都五条",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "お値段はどれくらいですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 04:17:25"
+    },
+    {
+      "role": 0,
+      "content": "値段帯は、安め以外の料金の記載はございません。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "藤ホテル京都五条",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 04:18:03",
+      "book": {
+        "hotel": {
+          "name": "藤ホテル京都五条",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね！11月1日の東山区の最低気温はどんな感じでしょう？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "藤ホテル京都五条",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め以外の料金の記載なし",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 04:19:15"
+    },
+    {
+      "role": 0,
+      "content": "その日の最低気温は、6.1度です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "東山区",
+            "day": [
+              11,
+              1
+            ]
+          },
+          "book": [],
+          "timestamp": 1669695584089,
+          "selectedResults": [
+            "11/1 京都 東山区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "東山区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-29 04:20:04",
+      "book": {
+        "hotel": {
+          "name": "藤ホテル京都五条",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。キャッシュレス対応のジャンボタクシーはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "藤ホテル京都五条",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め以外の料金の記載なし",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "6.1度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 04:21:15"
+    },
+    {
+      "role": 0,
+      "content": "それでしたら、洛東タクシー株式会社はいかがですか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "洛東タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669695697103,
+          "selectedResults": [
+            "洛東タクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "東山区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-29 04:21:52",
+      "book": {
+        "hotel": {
+          "name": "藤ホテル京都五条",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "洛東タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ホテル近江屋から藤ホテル京都五条まで11/1に12:30で予約可能ですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "藤ホテル京都五条",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め以外の料金の記載なし",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "6.1度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 04:23:03"
+    },
+    {
+      "role": 0,
+      "content": "予約出来ました。予約番号は、15559です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "洛東タクシー株式会社",
+              "value": {
+                "day": [
+                  11,
+                  1
+                ],
+                "time": "12:30",
+                "departurepoint": "ホテル近江屋",
+                "arrivalpoint": "藤ホテル京都五条"
+              },
+              "timestamp": 1669695817220,
+              "success": true,
+              "ref": "15559"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "東山区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-29 04:23:41",
+      "book": {
+        "hotel": {
+          "name": "藤ホテル京都五条",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "洛東タクシー株式会社",
+          "value": {
+            "day": [
+              11,
+              1
+            ],
+            "time": "12:30",
+            "departurepoint": "ホテル近江屋",
+            "arrivalpoint": "藤ホテル京都五条"
+          },
+          "timestamp": 1669695817220,
+          "success": true,
+          "ref": "15559"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。とりあえず電話番号も聞いておいていいですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "藤ホテル京都五条",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め以外の料金の記載なし",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "6.1度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "15559",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 04:24:18"
+    },
+    {
+      "role": 0,
+      "content": "はい、電話番号は0755931112です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "洛東タクシー株式会社",
+              "value": {
+                "day": [
+                  11,
+                  1
+                ],
+                "time": "12:30",
+                "departurepoint": "ホテル近江屋",
+                "arrivalpoint": "藤ホテル京都五条"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "東山区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-29 04:24:38",
+      "book": {
+        "hotel": {
+          "name": "藤ホテル京都五条",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "洛東タクシー株式会社",
+          "value": {
+            "day": [
+              11,
+              1
+            ],
+            "time": "12:30",
+            "departurepoint": "ホテル近江屋",
+            "arrivalpoint": "藤ホテル京都五条"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "助かりました！以上です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "藤ホテル京都五条",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め以外の料金の記載なし",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "6.1度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0755931112",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "15559",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 04:24:56"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "洛東タクシー株式会社",
+              "value": {
+                "day": [
+                  11,
+                  1
+                ],
+                "time": "12:30",
+                "departurepoint": "ホテル近江屋",
+                "arrivalpoint": "藤ホテル京都五条"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "東山区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-29 04:25:09",
+      "book": {
+        "hotel": {
+          "name": "藤ホテル京都五条",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "洛東タクシー株式会社",
+          "value": {
+            "day": [
+              11,
+              1
+            ],
+            "time": "12:30",
+            "departurepoint": "ホテル近江屋",
+            "arrivalpoint": "藤ホテル京都五条"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [
+            0
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 04:25:21"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 04:25:22"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:02",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "京都",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": "京都",
+      "area": "東山区",
+      "day": [
+        11,
+        1
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "藤ホテル京都五条",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "洛東タクシー株式会社",
+      "value": {
+        "day": [
+          11,
+          1
+        ],
+        "time": "12:30",
+        "departurepoint": "ホテル近江屋",
+        "arrivalpoint": "藤ホテル京都五条"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

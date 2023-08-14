@@ -1,0 +1,2443 @@
+{
+  "id": 3813,
+  "dialogue_code": "dialogue_3813ojWc",
+  "status_code": 2,
+  "user": [
+    9,
+    270
+  ],
+  "username": [
+    "operator_0009Tmbt",
+    "customer_0270xRuW"
+  ],
+  "task": 4083,
+  "task_name": "main2_1063",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "info": {
+          "city": "大阪",
+          "parking": "有り(無料)",
+          "station": "ドーム前千代崎駅"
+        },
+        "reqt": [
+          "name",
+          "opentime"
+        ]
+      },
+      "hotel": {
+        "fail_info": {
+          "city": "大阪",
+          "area": "住之江区",
+          "parking": "有り(無料)",
+          "wifi": "有り(無料)"
+        },
+        "info": {
+          "city": "大阪",
+          "area": "dontcare",
+          "parking": "有り(無料)",
+          "wifi": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "station"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "大阪",
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "day": "5/23",
+          "time": "15:10",
+          "departurepoint": "shopping",
+          "arrivalpoint": "hotel"
+        }
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>ドーム前千代崎駅</b>のところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，営業時間</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．地区は<b style='color:blue;'>住之江区</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，最寄り駅</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>5/23</b>です．時間は<b style='color:blue;'>15:10</b>です．出発地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．目的地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "opentime",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "station",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪へ旅行を計画しています。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:16:40"
+    },
+    {
+      "role": 0,
+      "content": "どのようなお店や施設をご希望ですか？",
+      "payload": [
+        {}
+      ],
+      "state": {},
+      "created_at": "2022-11-28 12:16:50",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "買い物ができる場所を探しています。ドーム前千代橋駅が最寄り駅で無料駐車場がある施設はありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:17:56"
+    },
+    {
+      "role": 0,
+      "content": "1件みつかりました。　IKEA鶴浜ストアはいかがですか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "ドーム前千代崎駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669637921171,
+          "selectedResults": [
+            "IKEA鶴浜ストア"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "ドーム前千代崎駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:18:50",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、そちらの営業時間はわかりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "IKEA鶴浜ストア",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:19:43"
+    },
+    {
+      "role": 0,
+      "content": "営業時間は、10時から20時までとなっています。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "ドーム前千代崎駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "ドーム前千代崎駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:20:04",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "IKEA鶴浜ストア",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "10時から20時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:20:33"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はありますか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "ドーム前千代崎駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "ドーム前千代崎駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:20:38",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "当日泊まれる宿泊施設も探しています。住之江区で無料駐車場があって、無料Wi-Fiが使える施設はありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "IKEA鶴浜ストア",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "10時から20時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:21:53"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。　その条件では、見つかりませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "住之江区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1669638151197
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "住之江区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "ドーム前千代崎駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:22:30",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか、では地区は住之江区ではなくてもよいので他にありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "IKEA鶴浜ストア",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "10時から20時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:23:23"
+    },
+    {
+      "role": 0,
+      "content": "1件みつかりました。ビジネス旅館 励明園はいかがですか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ビジネス旅館 励明園",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669638217221,
+          "selectedResults": [
+            "ビジネス旅館 励明園"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "ドーム前千代崎駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:23:46",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの最寄り駅はどちらですか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "IKEA鶴浜ストア",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "10時から20時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:24:19"
+    },
+    {
+      "role": 0,
+      "content": "最寄り駅は、大阪港駅になります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ビジネス旅館 励明園",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "ドーム前千代崎駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:24:43",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ついでにタクシー会社も探していただいていいですか？ジャンボタクシーが利用できるタクシー会社はありますか？キャッシュレス払いができるところが希望です。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "IKEA鶴浜ストア",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "10時から20時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "大阪港駅",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:26:19"
+    },
+    {
+      "role": 0,
+      "content": "では、大宝タクシー株式会社はいかがですか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "大宝タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669638402425,
+          "selectedResults": [
+            "大宝タクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "ドーム前千代崎駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:26:52",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大宝タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。そちらの電話番号はわかりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "IKEA鶴浜ストア",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "10時から20時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "大阪港駅",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "大宝タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:27:28"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は、0647020011です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "大宝タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "ドーム前千代崎駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:27:42",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大宝タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらで予約をお願いします。5/23に15:10で。IKEA鶴浜ストア出発でビジネス旅館 励明園までお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "IKEA鶴浜ストア",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "10時から20時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "大阪港駅",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "大宝タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "0647020011",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:29:49"
+    },
+    {
+      "role": 0,
+      "content": "予約出来ました。予約番号は、36533になります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "大宝タクシー株式会社",
+              "value": {
+                "day": [
+                  5,
+                  23
+                ],
+                "time": "15:10",
+                "departurepoint": "IKEA鶴浜ストア",
+                "arrivalpoint": "ビジネス旅館 励明園"
+              },
+              "timestamp": 1669638623506,
+              "success": true,
+              "ref": "36533"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "ドーム前千代崎駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:30:29",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大宝タクシー株式会社",
+          "value": {
+            "day": [
+              5,
+              23
+            ],
+            "time": "15:10",
+            "departurepoint": "IKEA鶴浜ストア",
+            "arrivalpoint": "ビジネス旅館 励明園"
+          },
+          "timestamp": 1669638623506,
+          "success": true,
+          "ref": "36533"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "IKEA鶴浜ストア",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "10時から20時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "大阪港駅",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0647020011",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "大宝タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "36533",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:31:01"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はありますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "大宝タクシー株式会社",
+              "value": {
+                "day": [
+                  5,
+                  23
+                ],
+                "time": "15:10",
+                "departurepoint": "IKEA鶴浜ストア",
+                "arrivalpoint": "ビジネス旅館 励明園"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "ドーム前千代崎駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:31:05",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大宝タクシー株式会社",
+          "value": {
+            "day": [
+              5,
+              23
+            ],
+            "time": "15:10",
+            "departurepoint": "IKEA鶴浜ストア",
+            "arrivalpoint": "ビジネス旅館 励明園"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありません。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "IKEA鶴浜ストア",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "10時から20時",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "ビジネス旅館 励明園",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "station",
+          "大阪港駅",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0647020011",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "大宝タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "36533",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:31:19"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "大宝タクシー株式会社",
+              "value": {
+                "day": [
+                  5,
+                  23
+                ],
+                "time": "15:10",
+                "departurepoint": "IKEA鶴浜ストア",
+                "arrivalpoint": "ビジネス旅館 励明園"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "ドーム前千代崎駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "大阪",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:31:25",
+      "book": {
+        "hotel": {
+          "name": "ビジネス旅館 励明園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "大宝タクシー株式会社",
+          "value": {
+            "day": [
+              5,
+              23
+            ],
+            "time": "15:10",
+            "departurepoint": "IKEA鶴浜ストア",
+            "arrivalpoint": "ビジネス旅館 励明園"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 12:31:39"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 12:31:44"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:58",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": "有り(無料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": "ドーム前千代崎駅",
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": "大阪",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ビジネス旅館 励明園",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "大宝タクシー株式会社",
+      "value": {
+        "day": [
+          5,
+          23
+        ],
+        "time": "15:10",
+        "departurepoint": "IKEA鶴浜ストア",
+        "arrivalpoint": "ビジネス旅館 励明園"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

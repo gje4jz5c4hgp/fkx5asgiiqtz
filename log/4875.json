@@ -1,0 +1,1463 @@
+{
+  "id": 4875,
+  "dialogue_code": "dialogue_4875rplN",
+  "status_code": 2,
+  "user": [
+    24,
+    268
+  ],
+  "username": [
+    "operator_0024oczP",
+    "customer_0268pGnH"
+  ],
+  "task": 5145,
+  "task_name": "main2_2125",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "京都",
+          "withrestaurant": "有り",
+          "station": "京都駅"
+        },
+        "reqt": [
+          "name",
+          "reference"
+        ],
+        "book": {
+          "people": 2,
+          "day": "3/5",
+          "stay": 3
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "京都",
+          "jumbo": "対応",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "3/5",
+          "time": "12:40",
+          "departurepoint": "hotel",
+          "arrivalpoint": "先斗町駿河屋"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．最寄り駅が<b style='color:blue;'>京都駅</b>のところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>3/5</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>3/5</b>です．時間は<b style='color:blue;'>12:40</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は<b style='color:blue;'>先斗町駿河屋</b>というところです．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都まで旅行に行きたいと思っているのですが、最寄り駅が京都駅で、レストランが併設されている宿泊先はありませんか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 00:38:42"
+    },
+    {
+      "role": 0,
+      "content": "天然温泉 蓮花の湯 御宿 野乃京都七条など、30件見つかりました。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "京都駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1669768760369
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "京都駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 00:39:39",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにしようと思います。3/5から3泊、2名で予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 00:40:18"
+    },
+    {
+      "role": 0,
+      "content": "予約が完了しました。予約番号は58419です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "京都駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+              "value": {
+                "people": "2",
+                "day": [
+                  3,
+                  5
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1669768849999,
+              "success": true,
+              "ref": "58419"
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "天然温泉 蓮花の湯 御宿 野乃京都七条"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "京都駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 00:41:12",
+      "book": {
+        "hotel": {
+          "name": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+          "value": {
+            "people": "2",
+            "day": [
+              3,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1669768849999,
+          "success": true,
+          "ref": "58419"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ジャンボタクシーが使えて、キャッシュレス払いができるタクシー会社も探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "天然温泉 蓮花の湯 御宿 野乃京都七条",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "58419",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 00:42:09"
+    },
+    {
+      "role": 0,
+      "content": "帝産京都自動車株式会社など、10件見つかりました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1669768956176
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "京都駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 00:43:00",
+      "book": {
+        "hotel": {
+          "name": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+          "value": {
+            "people": "2",
+            "day": [
+              3,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "帝産京都自動車株式会社の電話番号をおしえてもらえますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "天然温泉 蓮花の湯 御宿 野乃京都七条",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "58419",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 00:43:30"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は0756611881となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "帝産京都自動車株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "帝産京都自動車株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "京都駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 00:43:49",
+      "book": {
+        "hotel": {
+          "name": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+          "value": {
+            "people": "2",
+            "day": [
+              3,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "帝産京都自動車株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "3/5のお昼の12時40分に天然温泉 蓮花の湯 御宿 野乃京都七条から、先斗町駿河屋まで予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "天然温泉 蓮花の湯 御宿 野乃京都七条",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "58419",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "帝産京都自動車株式会社",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0756611881",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 00:44:45"
+    },
+    {
+      "role": 0,
+      "content": "予約が完了しました。予約番号は52733です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "帝産京都自動車株式会社",
+              "value": {
+                "day": [
+                  3,
+                  5
+                ],
+                "time": "12:40",
+                "departurepoint": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+                "arrivalpoint": "先斗町駿河屋"
+              },
+              "timestamp": 1669769110910,
+              "success": true,
+              "ref": "52733"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "京都駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 00:45:32",
+      "book": {
+        "hotel": {
+          "name": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+          "value": {
+            "people": "2",
+            "day": [
+              3,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "帝産京都自動車株式会社",
+          "value": {
+            "day": [
+              3,
+              5
+            ],
+            "time": "12:40",
+            "departurepoint": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+            "arrivalpoint": "先斗町駿河屋"
+          },
+          "timestamp": 1669769110910,
+          "success": true,
+          "ref": "52733"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "天然温泉 蓮花の湯 御宿 野乃京都七条",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "58419",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "帝産京都自動車株式会社",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0756611881",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "52733",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 00:45:43"
+    },
+    {
+      "role": 0,
+      "content": "他に何かご希望はありますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "帝産京都自動車株式会社",
+              "value": {
+                "day": [
+                  3,
+                  5
+                ],
+                "time": "12:40",
+                "departurepoint": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+                "arrivalpoint": "先斗町駿河屋"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "京都駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 00:45:51",
+      "book": {
+        "hotel": {
+          "name": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+          "value": {
+            "people": "2",
+            "day": [
+              3,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "帝産京都自動車株式会社",
+          "value": {
+            "day": [
+              3,
+              5
+            ],
+            "time": "12:40",
+            "departurepoint": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+            "arrivalpoint": "先斗町駿河屋"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "もう大丈夫です、ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "天然温泉 蓮花の湯 御宿 野乃京都七条",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "58419",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "帝産京都自動車株式会社",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0756611881",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "52733",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 00:45:54"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "帝産京都自動車株式会社",
+              "value": {
+                "day": [
+                  3,
+                  5
+                ],
+                "time": "12:40",
+                "departurepoint": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+                "arrivalpoint": "先斗町駿河屋"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "京都駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 00:46:07",
+      "book": {
+        "hotel": {
+          "name": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+          "value": {
+            "people": "2",
+            "day": [
+              3,
+              5
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "帝産京都自動車株式会社",
+          "value": {
+            "day": [
+              3,
+              5
+            ],
+            "time": "12:40",
+            "departurepoint": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+            "arrivalpoint": "先斗町駿河屋"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "特になし。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 00:46:28"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 2,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": "帝産京都自動車株式会社の電話番号をおしえてもらえますか？\n→「教えて」としたかったのですが、変換できずに送ってしまいました。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 00:46:52"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:04",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "京都駅",
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "京都",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+      "value": {
+        "people": "2",
+        "day": [
+          3,
+          5
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "帝産京都自動車株式会社",
+      "value": {
+        "day": [
+          3,
+          5
+        ],
+        "time": "12:40",
+        "departurepoint": "天然温泉 蓮花の湯 御宿 野乃京都七条",
+        "arrivalpoint": "先斗町駿河屋"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

@@ -1,0 +1,1871 @@
+{
+  "id": 1492,
+  "dialogue_code": "dialogue_1492KvOX",
+  "status_code": 2,
+  "user": [
+    4,
+    242
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0242Heoe"
+  ],
+  "task": 1662,
+  "task_name": "main_1342",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "東京",
+          "area": "新宿区",
+          "withrestaurant": "有り"
+        },
+        "info": {
+          "city": "東京",
+          "area": "新宿区",
+          "withrestaurant": "dontcare"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "restaurant": {
+        "fail_info": {
+          "city": "東京",
+          "area": "渋谷区",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "東京",
+          "area": "渋谷区",
+          "parking": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "genre",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "8/15",
+          "time": "14:20"
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "東京",
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "day": "8/15",
+          "time": "12:30",
+          "departurepoint": "hotel",
+          "arrivalpoint": "restaurant"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>東京</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．地区は<b style='color:blue;'>新宿区</b>です．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，レストランの有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．地区は<b style='color:blue;'>渋谷区</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，駐車場の有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，ジャンル</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>8/15</b>です．時間は<b style='color:blue;'>14:20</b>です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>8/15</b>です．時間は<b style='color:blue;'>12:30</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "東京で宿泊施設を探してください。新宿区でレストランを併設しているところはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:43:18"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、その条件ではご案内ができません。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "新宿区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1667216623252
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "新宿区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:44:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "併設レストランの条件の除いてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:44:21"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、ビジネスホテル新大久保石亭はいかがでしょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "新宿区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ビジネスホテル新大久保石亭",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667216665879,
+          "selectedResults": [
+            "ビジネスホテル新大久保石亭"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "新宿区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:44:44",
+      "book": {
+        "hotel": {
+          "name": "ビジネスホテル新大久保石亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、そちらにします。あと、飲食店情報もお願いできますか？渋谷区で無料駐車場があるお店を探しています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネスホテル新大久保石亭",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:45:19"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。その条件ではご紹介できないのですが、いかが致しましょう？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "渋谷区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667216745503
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "新宿区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:46:10",
+      "book": {
+        "hotel": {
+          "name": "ビジネスホテル新大久保石亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、駐車場の条件を除いて再検索お願いできますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネスホテル新大久保石亭",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:46:26"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、神戸鉄板焼 白秋はいかがでしょう？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "渋谷区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "神戸鉄板焼 白秋",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667216792613,
+          "selectedResults": [
+            "神戸鉄板焼 白秋",
+            "吟味焼肉 じゃんか道玄坂",
+            "BISTRO BINGO",
+            "原価ビストロBAN! 代々木西口",
+            "セントベーネ",
+            "神戸鉄板焼 白秋",
+            "セントベーネ",
+            "神戸鉄板焼 白秋"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "新宿区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:47:06",
+      "book": {
+        "hotel": {
+          "name": "ビジネスホテル新大久保石亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "神戸鉄板焼 白秋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そのお店のジャンルは何ですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネスホテル新大久保石亭",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "神戸鉄板焼 白秋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:47:21"
+    },
+    {
+      "role": 0,
+      "content": "はい、ジャンルは焼肉、ホルモンとなります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "渋谷区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "神戸鉄板焼 白秋",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "新宿区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:47:38",
+      "book": {
+        "hotel": {
+          "name": "ビジネスホテル新大久保石亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "神戸鉄板焼 白秋",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そのお店で予約をお願いします。8/15の14:20、3人で予約をしたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネスホテル新大久保石亭",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "神戸鉄板焼 白秋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "焼肉、ホルモン",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:48:06"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。予約が完了し、ご予約番号は、62677となります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "渋谷区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "神戸鉄板焼 白秋",
+              "value": {
+                "people": "3",
+                "day": [
+                  8,
+                  15
+                ],
+                "time": "14:20"
+              },
+              "timestamp": 1667216902221,
+              "success": true,
+              "ref": "62677"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "新宿区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:48:43",
+      "book": {
+        "hotel": {
+          "name": "ビジネスホテル新大久保石亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "神戸鉄板焼 白秋",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              15
+            ],
+            "time": "14:20"
+          },
+          "timestamp": 1667216902221,
+          "success": true,
+          "ref": "62677"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。最後に、タクシー会社の情報も教えてください。キャッシュレス対応していて、ジャンボタクシーも運営されている会社はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネスホテル新大久保石亭",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "神戸鉄板焼 白秋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "焼肉、ホルモン",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "62677",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:49:20"
+    },
+    {
+      "role": 0,
+      "content": "はい、トーショー交通はいかがでしょう？電話番号は0423441111となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "トーショー交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667216980384,
+          "selectedResults": [
+            "トーショー交通"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "新宿区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:50:05",
+      "book": {
+        "hotel": {
+          "name": "ビジネスホテル新大久保石亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "神戸鉄板焼 白秋",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              15
+            ],
+            "time": "14:20"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "トーショー交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらで予約をお願いします。8/15の12:30で、ビジネスホテル新大久保石亭発、神戸鉄板焼 白秋着でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネスホテル新大久保石亭",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "神戸鉄板焼 白秋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "焼肉、ホルモン",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "62677",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0423441111",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "トーショー交通",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:51:06"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。予約が完了し、ご予約番号は、35869となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "トーショー交通",
+              "value": {
+                "day": [
+                  8,
+                  15
+                ],
+                "time": "12:30",
+                "departurepoint": "ビジネスホテル新大久保石亭",
+                "arrivalpoint": "、神戸鉄板焼 白秋"
+              },
+              "timestamp": 1667217093315,
+              "success": true,
+              "ref": "35869"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "新宿区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:51:54",
+      "book": {
+        "hotel": {
+          "name": "ビジネスホテル新大久保石亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "神戸鉄板焼 白秋",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              15
+            ],
+            "time": "14:20"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "トーショー交通",
+          "value": {
+            "day": [
+              8,
+              15
+            ],
+            "time": "12:30",
+            "departurepoint": "ビジネスホテル新大久保石亭",
+            "arrivalpoint": "、神戸鉄板焼 白秋"
+          },
+          "timestamp": 1667217093315,
+          "success": true,
+          "ref": "35869"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます！",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ビジネスホテル新大久保石亭",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "神戸鉄板焼 白秋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "焼肉、ホルモン",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "62677",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0423441111",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "トーショー交通",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "35869",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:52:02"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 11:52:08"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 11:52:10"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:04",
+  "final_state": {
+    "restaurant": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": "渋谷区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": "新宿区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "東京",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ビジネスホテル新大久保石亭",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "神戸鉄板焼 白秋",
+      "value": {
+        "people": "3",
+        "day": [
+          8,
+          15
+        ],
+        "time": "14:20"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "トーショー交通",
+      "value": {
+        "day": [
+          8,
+          15
+        ],
+        "time": "12:30",
+        "departurepoint": "ビジネスホテル新大久保石亭",
+        "arrivalpoint": "、神戸鉄板焼 白秋"
+      },
+      "timestamp": 1667217093315,
+      "success": true,
+      "ref": "35869"
+    }
+  }
+}

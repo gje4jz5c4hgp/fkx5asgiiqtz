@@ -1,0 +1,2522 @@
+{
+  "id": 3081,
+  "dialogue_code": "dialogue_3081VvvU",
+  "status_code": 2,
+  "user": [
+    25,
+    300
+  ],
+  "username": [
+    "operator_0025tpXO",
+    "customer_0300czaw"
+  ],
+  "task": 3351,
+  "task_name": "main2_331",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "京都",
+          "wifi": "有り(無料)",
+          "station": "七条駅",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "priceinfo",
+          "accesstime"
+        ]
+      },
+      "attraction": {
+        "fail_info": {
+          "city": "京都",
+          "genre": "テーマパーク",
+          "station": "北山駅"
+        },
+        "info": {
+          "city": "京都",
+          "genre": "テーマパーク",
+          "station": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "adultfee",
+          "area"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "京都",
+          "jumbo": "対応",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "10/1",
+          "time": "16:30",
+          "departurepoint": "hotel",
+          "arrivalpoint": "attraction"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>七条駅</b>のところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，料金情報，近辺の駅からの所要時間</b>を聞いてください．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．ジャンルは<b style='color:blue;'>テーマパーク</b>です．最寄り駅が<b style='color:blue;'>北山駅</b>のところにしてください．",
+        "希望に合うところが見つからない場合は，最寄り駅は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称，大人入場料，エリア</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>10/1</b>です．時間は<b style='color:blue;'>16:30</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "priceinfo",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "adultfee",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "area",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "attraction",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都へ行こうと思っているのですが、最寄り駅が七条駅の宿泊施設を探しています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:50:31"
+    },
+    {
+      "role": 0,
+      "content": "七条駅には宿泊施設が２件ありますが、京都らしい、京都 高瀬川別邸、こちらをお勧めします。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "七条駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "京都 高瀬川別邸",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669690246715,
+          "selectedResults": [
+            "ホテル エムズ・エスト七条",
+            "京都 高瀬川別邸"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "七条駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:51:19",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "Wi-Fiと駐車場は無料ですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:51:45"
+    },
+    {
+      "role": 0,
+      "content": "はい、WiFiと駐車場ともに無料です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "七条駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "京都 高瀬川別邸",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "七条駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:51:57",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。駅からの所要時間はどのくらいですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:52:39"
+    },
+    {
+      "role": 0,
+      "content": "七条駅から徒歩で5分\n、その他、京都駅から徒歩で9分",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "七条駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "京都 高瀬川別邸",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "七条駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:52:55",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "料金情報をお願いできますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "徒歩で5分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:53:30"
+    },
+    {
+      "role": 0,
+      "content": "値段帯は高めです。詳細の料金情報は不明です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "七条駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "京都 高瀬川別邸",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "七条駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:53:50",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。それと、テーマパークに行きたいのですが。北山駅が近いところで。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "徒歩で5分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:55:23"
+    },
+    {
+      "role": 0,
+      "content": "北山にテーマパークはなさそうです。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "テーマパーク",
+            "area": null,
+            "station": "北山駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669690544054
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "七条駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "テーマパーク",
+          "area": null,
+          "station": "北山駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:55:53",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、北山駅は気にしなくても大丈夫です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "徒歩で5分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:56:16"
+    },
+    {
+      "role": 0,
+      "content": "京都でテーマパークは２つありますが、東映太秦映画村、こちらをお勧めします。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "テーマパーク",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669690579442,
+          "selectedResults": [
+            "東映太秦映画村"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "七条駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "テーマパーク",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:56:40",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "エリアはどちらになりますか？入場料も教えて下さい。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "徒歩で5分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:57:23"
+    },
+    {
+      "role": 0,
+      "content": "右京区です。大人２４００円、中高生１４００円、３歳以上１２００円です。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "テーマパーク",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "七条駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "テーマパーク",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:57:44",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ジャンボタクシーを利用したいのですが、キャッスレスだと嬉しいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "徒歩で5分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "東映太秦映画村",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "２４００円",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "area",
+          "右京区",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:59:11"
+    },
+    {
+      "role": 0,
+      "content": "両方に対応しているところで、高速タクシー株式会社をお勧めします。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669690759864,
+          "selectedResults": [
+            "高速タクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "七条駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "テーマパーク",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:59:35",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "電話番号を教えて下さい。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "徒歩で5分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "東映太秦映画村",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "２４００円",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "area",
+          "右京区",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "高速タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:59:59"
+    },
+    {
+      "role": 0,
+      "content": "0756015588です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "七条駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "テーマパーク",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 03:00:14",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予約をお願いします。10/1の16：30で、京都 高瀬川別邸から東映太秦映画村までお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "徒歩で5分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "東映太秦映画村",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "２４００円",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "area",
+          "右京区",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "高速タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0756015588",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 03:01:33"
+    },
+    {
+      "role": 0,
+      "content": "予約成功しました。予約番号は35600です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  10,
+                  1
+                ],
+                "time": "16:30",
+                "departurepoint": "京都 高瀬川別邸",
+                "arrivalpoint": "東映太秦映画村"
+              },
+              "timestamp": 1669690908995,
+              "success": true,
+              "ref": "35600"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "七条駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "テーマパーク",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 03:01:59",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              10,
+              1
+            ],
+            "time": "16:30",
+            "departurepoint": "京都 高瀬川別邸",
+            "arrivalpoint": "東映太秦映画村"
+          },
+          "timestamp": 1669690908995,
+          "success": true,
+          "ref": "35600"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。では、失礼します。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "京都 高瀬川別邸",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "徒歩で5分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "東映太秦映画村",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "２４００円",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "area",
+          "右京区",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "高速タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0756015588",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "35600",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 03:02:32"
+    },
+    {
+      "role": 0,
+      "content": "よい旅を",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "高速タクシー株式会社",
+              "value": {
+                "day": [
+                  10,
+                  1
+                ],
+                "time": "16:30",
+                "departurepoint": "京都 高瀬川別邸",
+                "arrivalpoint": "東映太秦映画村"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "七条駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": "テーマパーク",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 03:02:43",
+      "book": {
+        "hotel": {
+          "name": "京都 高瀬川別邸",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "高速タクシー株式会社",
+          "value": {
+            "day": [
+              10,
+              1
+            ],
+            "time": "16:30",
+            "departurepoint": "京都 高瀬川別邸",
+            "arrivalpoint": "東映太秦映画村"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 03:02:50"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 03:02:53"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:53",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "七条駅",
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "京都",
+      "name": null,
+      "genre": "テーマパーク",
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "京都",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "京都 高瀬川別邸",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "高速タクシー株式会社",
+      "value": {
+        "day": [
+          10,
+          1
+        ],
+        "time": "16:30",
+        "departurepoint": "京都 高瀬川別邸",
+        "arrivalpoint": "東映太秦映画村"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

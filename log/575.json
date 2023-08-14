@@ -1,0 +1,1667 @@
+{
+  "id": 575,
+  "dialogue_code": "dialogue_0575IpjX",
+  "status_code": 2,
+  "user": [
+    4,
+    203
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0203Sqra"
+  ],
+  "task": 745,
+  "task_name": "main_425",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "京都",
+          "genre": "和食",
+          "pricerange": "高め"
+        },
+        "reqt": [
+          "name",
+          "area",
+          "closed"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "京都",
+          "cashless": "対応"
+        },
+        "info": {
+          "city": "京都",
+          "cashless": "dontcare"
+        },
+        "reqt": [
+          "phone",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "12/24",
+          "time": "09:40",
+          "departurepoint": "コンフォートホテル京都東寺",
+          "arrivalpoint": "restaurant"
+        },
+        "book": {
+          "day": "12/24",
+          "time": "10:30",
+          "departurepoint": "コンフォートホテル京都東寺",
+          "arrivalpoint": "restaurant"
+        }
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．ジャンルは<b style='color:blue;'>和食</b>です．予算は<b style='color:blue;'>高め</b>が希望です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，エリア，定休日</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "希望に合うところが見つからない場合は，キャッシュレス払いの可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>12/24</b>です．時間は<b style='color:blue;'>09:40</b>です．出発地は<b style='color:blue;'>コンフォートホテル京都東寺</b>というところです．目的地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>10:30</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "area",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "closed",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは。今度、京都旅行に行こうかと思っているんですが、飲食店の案内をお願いできますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 09:16:11"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666948583535
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 09:16:43",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "希望としては、和食で、予算は高めでお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 09:17:18"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、沖よしはいかがでしょう？エリアは東山区、最寄りの東福寺駅から徒歩で11分となります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "和食",
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "沖よし",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666948657814,
+          "selectedResults": [
+            "下鴨茶寮 本店",
+            "京のSAKESORA",
+            "沖よし",
+            "祇園 京料理 花咲",
+            "ぎおん 佐藤",
+            "閑臥庵",
+            "下鴨茶寮 本店",
+            "京のSAKESORA",
+            "沖よし"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 09:18:38",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "沖よし",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。そちらのお店の定休日についても、お聞きしてよろしいですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "沖よし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "東山区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 09:19:52"
+    },
+    {
+      "role": 0,
+      "content": "はい、定休日は水曜日となります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "和食",
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "沖よし",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 09:20:12",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "沖よし",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、タクシー会社も探していただきたいのですが、キャッシュレス払いに対応しているところでお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "沖よし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "東山区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "水曜日",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 09:21:00"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。キャッシュレスに対応しているタクシー会社はございません。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [],
+          "timestamp": 1666948874525
+        },
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [],
+          "timestamp": 1666948883237
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 09:22:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "沖よし",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。では、キャッシュレスについては考えなくて大丈夫です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "沖よし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "東山区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "水曜日",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 09:22:24"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。では、彌榮自動車株式会社はいかがでしょう？ジャンボタクシーには対応しております。電話番号は、0758421212となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "彌榮自動車株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666948949845,
+          "selectedResults": [
+            "彌榮自動車株式会社",
+            "ギオン自動車株式会社",
+            "ユニオン株式会社",
+            "彌榮自動車株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 09:23:39",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "沖よし",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "彌榮自動車株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "お探しいただき、ありがとうございます。では、そちらで予約をお願いします。12月24日の9時40分に、コンフォートホテル京都東寺から、先ほどの沖よしまでで、手配をお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "沖よし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "東山区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "水曜日",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0758421212",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 09:25:07"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。その条件では予約ができませんでした。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "彌榮自動車株式会社",
+              "value": {
+                "day": [
+                  12,
+                  24
+                ],
+                "time": "09:40",
+                "departurepoint": "コンフォートホテル京都東寺",
+                "arrivalpoint": "沖よし"
+              },
+              "timestamp": 1666949150373,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 09:26:15",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "沖よし",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "彌榮自動車株式会社",
+          "value": {
+            "day": [
+              12,
+              24
+            ],
+            "time": "09:40",
+            "departurepoint": "コンフォートホテル京都東寺",
+            "arrivalpoint": "沖よし"
+          },
+          "timestamp": 1666949150373,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうでしたか。では、時間を変更してください。10時30分でお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "沖よし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "東山区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "水曜日",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0758421212",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 09:26:48"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。予約が完了し、ご予約番号は、78925となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "彌榮自動車株式会社",
+              "value": {
+                "day": [
+                  12,
+                  24
+                ],
+                "time": "10:30",
+                "departurepoint": "コンフォートホテル京都東寺",
+                "arrivalpoint": "沖よし"
+              },
+              "timestamp": 1666949225020,
+              "success": true,
+              "ref": "78925"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 09:27:32",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "沖よし",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "彌榮自動車株式会社",
+          "value": {
+            "day": [
+              12,
+              24
+            ],
+            "time": "10:30",
+            "departurepoint": "コンフォートホテル京都東寺",
+            "arrivalpoint": "沖よし"
+          },
+          "timestamp": 1666949225020,
+          "success": true,
+          "ref": "78925"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予約のお手配、ありがとうございました。あとは大丈夫です。この度は色々とありがとうございました。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "沖よし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "area",
+          "東山区",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "closed",
+          "水曜日",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0758421212",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "78925",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 09:28:18"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "彌榮自動車株式会社",
+              "value": {
+                "day": [
+                  12,
+                  24
+                ],
+                "time": "10:30",
+                "departurepoint": "コンフォートホテル京都東寺",
+                "arrivalpoint": "沖よし"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": "和食",
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 09:28:37",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "沖よし",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "彌榮自動車株式会社",
+          "value": {
+            "day": [
+              12,
+              24
+            ],
+            "time": "10:30",
+            "departurepoint": "コンフォートホテル京都東寺",
+            "arrivalpoint": "沖よし"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-28 09:28:46"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-28 09:28:47"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:58",
+  "final_state": {
+    "restaurant": {
+      "city": "京都",
+      "name": null,
+      "genre": "和食",
+      "area": null,
+      "pricerange": "高め",
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "京都",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "沖よし",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "彌榮自動車株式会社",
+      "value": {
+        "day": [
+          12,
+          24
+        ],
+        "time": "10:30",
+        "departurepoint": "コンフォートホテル京都東寺",
+        "arrivalpoint": "沖よし"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

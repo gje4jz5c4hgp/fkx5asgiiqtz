@@ -1,0 +1,937 @@
+{
+  "id": 561,
+  "dialogue_code": "dialogue_0561muhg",
+  "status_code": 2,
+  "user": [
+    4,
+    209
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0209LJle"
+  ],
+  "task": 731,
+  "task_name": "main_411",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "東京",
+          "withrestaurant": "有り",
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）"
+        },
+        "reqt": [
+          "phone",
+          "accesstime",
+          "pricerange",
+          "reference"
+        ],
+        "book": {
+          "people": 2,
+          "day": "2/25",
+          "stay": 4
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>東京</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．宿のタイプは<b style='color:blue;'>簡易宿所（ベッドハウス・山小屋・カプセルホテル等）</b>です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>電話番号，近辺の駅からの所要時間，値段帯</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>2/25</b>です．宿泊日数は<b style='color:blue;'>4</b>泊です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "phone",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "accesstime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "pricerange",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "東京へ旅行に行くので、当日泊まる宿泊施設を探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:46:30"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。宿のタイプやエリアなどのご希望はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666860401089
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:47:04",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "宿のタイプは簡易宿所（ベッドハウス・山小屋・カプセルホテル等）を希望します。また、便利なのでレストランが併設されているとうれしいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:47:29"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。それでは、ファーストキャビン愛宕山はいかがでしょう？エリアは港区、値段帯は安めとなります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ファーストキャビン愛宕山",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666860463089,
+          "selectedResults": [
+            "MyCUBE by MYSTAYS浅草蔵前",
+            "ファーストキャビン愛宕山"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:48:22",
+      "book": {
+        "hotel": {
+          "name": "ファーストキャビン愛宕山",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではそちらでお願いします。電話番号と近辺の駅からの所要時間も教えて頂けないでしょうか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:48:46"
+    },
+    {
+      "role": 0,
+      "content": "はい、電話番号は、0334331126、近辺の御成門駅から徒歩で5分となります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ファーストキャビン愛宕山",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:49:32",
+      "book": {
+        "hotel": {
+          "name": "ファーストキャビン愛宕山",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらで予約をお願いできますか？人数は2人で日付は2/25です。4泊でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "0334331126",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "御成門駅から徒歩で5分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:50:15"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。予約が完了し、ご予約番号は、22709となります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ファーストキャビン愛宕山",
+              "value": {
+                "people": "2",
+                "day": [
+                  2,
+                  25
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1666860638930,
+              "success": true,
+              "ref": "22709"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 08:51:05",
+      "book": {
+        "hotel": {
+          "name": "ファーストキャビン愛宕山",
+          "value": {
+            "people": "2",
+            "day": [
+              2,
+              25
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1666860638930,
+          "success": true,
+          "ref": "22709"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "0334331126",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "御成門駅から徒歩で5分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "22709",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 08:51:14"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-27 08:51:21"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-27 08:51:22"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:58",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "東京",
+      "name": null,
+      "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ファーストキャビン愛宕山",
+      "value": {
+        "people": "2",
+        "day": [
+          2,
+          25
+        ],
+        "stay": "4"
+      },
+      "timestamp": 1666860638930,
+      "success": true,
+      "ref": "22709"
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

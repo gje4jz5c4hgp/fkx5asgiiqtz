@@ -1,0 +1,1629 @@
+{
+  "id": 92,
+  "dialogue_code": "dialogue_0092wuUU",
+  "status_code": 2,
+  "user": [
+    2,
+    203
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0203Sqra"
+  ],
+  "task": 242,
+  "task_name": "91",
+  "task_content": {
+    "goals": {
+      "taxi": {
+        "info": {
+          "city": "名古屋",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "cashless",
+          "reference"
+        ],
+        "book": {
+          "day": "4/18",
+          "time": "13:30",
+          "departurepoint": "ヨドバシカメラ マルチメディア名古屋松坂屋店",
+          "arrivalpoint": "ORPHEE"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "名古屋",
+          "area": "千種区",
+          "day": "4/18"
+        },
+        "reqt": [
+          "weather",
+          "maxtemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "taxi": [
+        "あなたは<b style='color:blue;'>名古屋</b>への旅行を計画しています．",
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>キャッシュレス対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>4/18</b>です．時間は<b style='color:blue;'>13:30</b>です．出発地は<b style='color:blue;'>ヨドバシカメラ マルチメディア名古屋松坂屋店</b>というところです．目的地は<b style='color:blue;'>ORPHEE</b>というところです．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>千種区</b>です．日付は<b style='color:blue;'>4/18</b>です．",
+        "<b style='color:green;'>天気，最高気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        1,
+        "taxi",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "weather",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "maxtemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "taxi",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんばんは。\n名古屋への旅行を計画しているのですが、案内をお願いできますか？",
+      "payload": [
+        [
+          1,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          1,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 16:04:50"
+    },
+    {
+      "role": 0,
+      "content": "こんばんは。名古屋へのご旅行ですね、かしこまりました。どういったご案内をさしあげましょうか？",
+      "payload": [
+        {}
+      ],
+      "state": {},
+      "created_at": "2022-10-03 16:05:22",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "タクシー会社を探していただきたいのですが、ジャンボタクシーを利用できるところで、お願いしたいです。",
+      "payload": [
+        [
+          1,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          1,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 16:06:10"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。名古屋でジャンボタクシーをご利用いただけるタクシー会社は、20社ほどございます。他にご希望の条件などはございますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1664813180214
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-03 16:06:58",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特にありません。",
+      "payload": [
+        [
+          1,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          1,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 16:07:09"
+    },
+    {
+      "role": 0,
+      "content": "では、伸和交通はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "伸和交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "三晃タクシー",
+            "愛電交通",
+            "名鉄交通第一",
+            "伸和交通"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-03 16:07:33",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "伸和交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですね、それでは、伸和交通がキャッシュレス対応かどうか教えていただけますでしょうか？",
+      "payload": [
+        [
+          1,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          1,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 16:08:46"
+    },
+    {
+      "role": 0,
+      "content": "はい。伸和交通でしたら、キャッシュレス払いにも対応しております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "伸和交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-03 16:09:11",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "伸和交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。ありがとうございます。\nでは、そちらのタクシーの予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "taxi",
+          "cashless",
+          "対応している",
+          false
+        ],
+        [
+          1,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 16:10:17"
+    },
+    {
+      "role": 0,
+      "content": "はい、ご予約承ります。ご利用予定の日付、出発時刻、出発地と目的地をお伺いしてもよろしいでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "伸和交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-03 16:10:50",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "伸和交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、わかりました。\n日時は、4月18日の13時30分、ヨドバシカメラ マルチメディア名古屋松坂屋店から、ORPHEEというところまでで、予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "taxi",
+          "cashless",
+          "対応している",
+          false
+        ],
+        [
+          1,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 16:11:41"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。4月18日13時30分にて、ご予約をお取りしました。予約番号は、92828です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "伸和交通",
+              "value": {
+                "day": [
+                  4,
+                  18
+                ],
+                "time": "13:30",
+                "departurepoint": "ヨドバシカメラ マルチメディア名古屋松坂屋店",
+                "arrivalpoint": "ORPHEE"
+              },
+              "timestamp": 1664813525170,
+              "success": true,
+              "ref": "92828"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-03 16:12:56",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "伸和交通",
+          "value": {
+            "day": [
+              4,
+              18
+            ],
+            "time": "13:30",
+            "departurepoint": "ヨドバシカメラ マルチメディア名古屋松坂屋店",
+            "arrivalpoint": "ORPHEE"
+          },
+          "timestamp": 1664813525170,
+          "success": true,
+          "ref": "92828"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "お手配、ありがとうございます。\nあと、4月18日の千種区の天候についても伺いたいのですが。",
+      "payload": [
+        [
+          1,
+          "taxi",
+          "cashless",
+          "対応している",
+          false
+        ],
+        [
+          1,
+          "taxi",
+          "reference",
+          "92828",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 16:13:50"
+    },
+    {
+      "role": 0,
+      "content": "はい、かしこまりました。千種区の4月18日のお天気は晴れ、最高気温19.7度の予報が出ております。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "名古屋",
+            "area": "千種区",
+            "day": [
+              4,
+              18
+            ]
+          },
+          "book": [],
+          "timestamp": 1664813648302,
+          "selectedResults": [
+            "4/18 名古屋 千種区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "名古屋",
+          "area": "千種区",
+          "day": [
+            4,
+            18
+          ]
+        }
+      },
+      "created_at": "2022-10-03 16:14:52",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "伸和交通",
+          "value": {
+            "day": [
+              4,
+              18
+            ],
+            "time": "13:30",
+            "departurepoint": "ヨドバシカメラ マルチメディア名古屋松坂屋店",
+            "arrivalpoint": "ORPHEE"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "taxi",
+          "cashless",
+          "対応している",
+          false
+        ],
+        [
+          1,
+          "taxi",
+          "reference",
+          "92828",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "晴れ",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "19.7度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 16:15:26"
+    },
+    {
+      "role": 0,
+      "content": "はい。この他にも何かお手伝いできることはございますでしょうか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "名古屋",
+            "area": "千種区",
+            "day": [
+              4,
+              18
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "名古屋",
+          "area": "千種区",
+          "day": [
+            4,
+            18
+          ]
+        }
+      },
+      "created_at": "2022-10-03 16:16:02",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "伸和交通",
+          "value": {
+            "day": [
+              4,
+              18
+            ],
+            "time": "13:30",
+            "departurepoint": "ヨドバシカメラ マルチメディア名古屋松坂屋店",
+            "arrivalpoint": "ORPHEE"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いえ、もう大丈夫です。この度は、ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "taxi",
+          "cashless",
+          "対応している",
+          false
+        ],
+        [
+          1,
+          "taxi",
+          "reference",
+          "92828",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "weather",
+          "晴れ",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "19.7度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 16:16:33"
+    },
+    {
+      "role": 0,
+      "content": "とんでもございません。こちらこそ、お問い合わせいただき、誠にありがとうございました。また何かございましたら、お気軽にご利用くださいませ。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "名古屋",
+            "area": "千種区",
+            "day": [
+              4,
+              18
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "名古屋",
+          "area": "千種区",
+          "day": [
+            4,
+            18
+          ]
+        }
+      },
+      "created_at": "2022-10-03 16:16:58",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "伸和交通",
+          "value": {
+            "day": [
+              4,
+              18
+            ],
+            "time": "13:30",
+            "departurepoint": "ヨドバシカメラ マルチメディア名古屋松坂屋店",
+            "arrivalpoint": "ORPHEE"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-03 16:17:10"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 2,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v2",
+          "params": [
+            3
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": "こちらが質問する前に、天気、最高気温について答えてもらったので、情報は得られましたが「聞く」という形ではできませんでした。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-03 16:18:09"
+    }
+  ],
+  "created_at": "2022-09-18 06:27:10",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "名古屋",
+      "name": null,
+      "cashless": null,
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": "名古屋",
+      "area": "千種区",
+      "day": [
+        4,
+        18
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "伸和交通",
+      "value": {
+        "day": [
+          4,
+          18
+        ],
+        "time": "13:30",
+        "departurepoint": "ヨドバシカメラ マルチメディア名古屋松坂屋店",
+        "arrivalpoint": "ORPHEE"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

@@ -1,0 +1,1384 @@
+{
+  "id": 2080,
+  "dialogue_code": "dialogue_2080SFdB",
+  "status_code": 2,
+  "user": [
+    22,
+    240
+  ],
+  "username": [
+    "operator_0022UfuU",
+    "customer_0240HAqG"
+  ],
+  "task": 2250,
+  "task_name": "main_1930",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "fail_info": {
+          "city": "東京",
+          "parking": "有り(無料)",
+          "genre": "おもちゃ"
+        },
+        "info": {
+          "city": "東京",
+          "parking": "有り(無料)",
+          "genre": "dontcare"
+        },
+        "reqt": [
+          "accesstime"
+        ]
+      },
+      "restaurant": {
+        "info": {
+          "city": "東京",
+          "parking": "有り(無料)",
+          "pricerange": "高め"
+        },
+        "reqt": [
+          "accesstime"
+        ]
+      },
+      "hotel": {
+        "info": {
+          "city": "東京",
+          "pricerange": "高め"
+        },
+        "reqt": [
+          "genre"
+        ]
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>東京</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．ジャンルは<b style='color:blue;'>おもちゃ</b>です．",
+        "希望に合うところがない場合は，ジャンルは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>近辺の駅からの所要時間</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．予算は<b style='color:blue;'>高め</b>が希望です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>近辺の駅からの所要時間</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．予算は<b style='color:blue;'>高め</b>が希望です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>タイプ</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "accesstime",
+        ""
+      ],
+      [
+        3,
+        "hotel",
+        "genre",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "restaurant",
+      "hotel"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "東京でおもちゃが買えるお店ってありますか？駐車場が無料で使えるところだといいのですが。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "genre",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 12:19:31"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件ではおもちゃ屋さんはお探しすることが出来ませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "おもちゃ",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667305190375
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "おもちゃ",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 12:19:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、ジャンルは問わないので、駐車場が無料で、買い物ができるお店を探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "genre",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 12:20:39"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それでは京王百貨店新宿店はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667305254411,
+          "selectedResults": [
+            "京王百貨店新宿店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 12:21:13",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "よさそうですね。近辺の駅からの所要時間も教えてもらえますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "genre",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 12:21:34"
+    },
+    {
+      "role": 0,
+      "content": "はい。新宿駅から徒歩で1分でございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 12:21:51",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。当日食事もしたいので、予算高めのお店をどこか探してください。駐車場が無料で使えるところだと嬉しいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "新宿駅から徒歩で1分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "genre",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 12:22:51"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それではユニオン スクエア トウキョウはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ユニオン スクエア トウキョウ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667305409899,
+          "selectedResults": [
+            "ユニオン スクエア トウキョウ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 12:23:44",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ユニオン スクエア トウキョウ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。ちなみに、近辺の駅からお店まではどのくらい時間がかかりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "新宿駅から徒歩で1分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "genre",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 12:24:04"
+    },
+    {
+      "role": 0,
+      "content": "はい、六本木駅から徒歩で3分でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ユニオン スクエア トウキョウ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 12:24:14",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ユニオン スクエア トウキョウ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "なるほど。あと、当日泊まれるところも探してほしいです。予算は高めのところでお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "新宿駅から徒歩で1分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "六本木駅から徒歩で3分",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "genre",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 12:25:05"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それではグランドハイアット東京はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "グランドハイアット東京",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667305521199,
+          "selectedResults": [
+            "グランドハイアット東京"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 12:25:32",
+      "book": {
+        "hotel": {
+          "name": "グランドハイアット東京",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ユニオン スクエア トウキョウ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらはどういったタイプの宿泊施設になりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "新宿駅から徒歩で1分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "六本木駅から徒歩で3分",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "genre",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 12:25:54"
+    },
+    {
+      "role": 0,
+      "content": "タイプはリゾートホテルでございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "グランドハイアット東京",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 12:26:09",
+      "book": {
+        "hotel": {
+          "name": "グランドハイアット東京",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ユニオン スクエア トウキョウ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "参考になりました。どうもありがとうございました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "accesstime",
+          "新宿駅から徒歩で1分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "六本木駅から徒歩で3分",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "genre",
+          "リゾートホテル",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 12:26:24"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 12:26:32"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 12:26:33"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:08",
+  "final_state": {
+    "restaurant": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "高め",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "高め",
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "グランドハイアット東京",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "ユニオン スクエア トウキョウ",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

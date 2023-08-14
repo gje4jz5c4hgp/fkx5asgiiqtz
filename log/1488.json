@@ -1,0 +1,1564 @@
+{
+  "id": 1488,
+  "dialogue_code": "dialogue_1488BXZb",
+  "status_code": 2,
+  "user": [
+    4,
+    242
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0242Heoe"
+  ],
+  "task": 1658,
+  "task_name": "main_1338",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "福岡",
+          "genre": "シティホテル",
+          "pricerange": "普通"
+        },
+        "info": {
+          "city": "福岡",
+          "genre": "リゾートホテル",
+          "pricerange": "普通"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "福岡",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "福岡",
+          "parking": "有り(有料)"
+        },
+        "reqt": [
+          "name",
+          "station"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "福岡",
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "day": "4/15",
+          "time": "16:20",
+          "departurepoint": "hotel",
+          "arrivalpoint": "shopping"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>福岡</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．宿のタイプは<b style='color:blue;'>シティホテル</b>です．予算は<b style='color:blue;'>普通</b>が希望です．",
+        "希望に合うところがない場合は，宿のタイプを<b style='color:blue;'>リゾートホテル</b>に変更します．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合う場所が見つからない場合は，<b style='color:blue;'>有料</b>の駐車場でもよいものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，最寄り駅</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>4/15</b>です．時間は<b style='color:blue;'>16:20</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "station",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "shopping",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "福岡で宿泊施設を探してまして。宿泊料が普通ぐらいのシティホテルはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:13:53"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。その条件ではご案内ができません。いかが致しますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": "シティホテル",
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1667214855840
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": "シティホテル",
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:14:35",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、宿のタイプをリゾートホテルに変えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:14:48"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。エリアでいうと博多区にある、WITH THE STYLE FUKUOKAはいかがでしょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "WITH THE STYLE FUKUOKA",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667214896433,
+          "selectedResults": [
+            "WITH THE STYLE FUKUOKA"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:15:25",
+      "book": {
+        "hotel": {
+          "name": "WITH THE STYLE FUKUOKA",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。ついでに買い物スポットもお聞きしていいですか？無料駐車場があるところを探してます。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "WITH THE STYLE FUKUOKA",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:15:58"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。その条件ではご紹介できないのですが、いかが致しましょう？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667214980527
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:16:44",
+      "book": {
+        "hotel": {
+          "name": "WITH THE STYLE FUKUOKA",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか、、、なら、有料でもいいので、駐車場があるところを探してください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "WITH THE STYLE FUKUOKA",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:17:03"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、ありがとうございます。エリアでいうと博多区にある、紀伊國屋書店 福岡本店はいかがでしょう？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": "有り(有料)"
+          },
+          "book": [],
+          "timestamp": 1667215028546,
+          "selectedResults": [
+            "紀伊國屋書店 福岡本店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(有料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:17:43",
+      "book": {
+        "hotel": {
+          "name": "WITH THE STYLE FUKUOKA",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "最寄り駅はどちらになりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "WITH THE STYLE FUKUOKA",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "紀伊國屋書店 福岡本店",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:17:59"
+    },
+    {
+      "role": 0,
+      "content": "はい、最寄りの博多駅から徒歩で1分となります。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": "有り(有料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(有料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:18:18",
+      "book": {
+        "hotel": {
+          "name": "WITH THE STYLE FUKUOKA",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "最後にタクシー会社の情報もお願いできますか？キャッシュレスとジャンボタクシーに対応している会社がいいのですが。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "WITH THE STYLE FUKUOKA",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "紀伊國屋書店 福岡本店",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "博多駅",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:18:55"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。（株）第一交通はいかがでしょう？電話番号は、0924816400となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "（株）第一交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667215147132,
+          "selectedResults": [
+            "（株）第一交通"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(有料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:19:34",
+      "book": {
+        "hotel": {
+          "name": "WITH THE STYLE FUKUOKA",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（株）第一交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらでお願いします。4/15の16:20で予約できますか？出発はWITH THE STYLE FUKUOKAで、紀伊國屋書店 福岡本店までお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "WITH THE STYLE FUKUOKA",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "紀伊國屋書店 福岡本店",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "博多駅",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0924816400",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "（株）第一交通",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:20:29"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。予約が完了し、ご予約番号は、6901となります。他にご用件はございますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "（株）第一交通",
+              "value": {
+                "day": [
+                  4,
+                  15
+                ],
+                "time": "16:20",
+                "departurepoint": "WITH THE STYLE FUKUOKA",
+                "arrivalpoint": "紀伊國屋書店 福岡本店"
+              },
+              "timestamp": 1667215253565,
+              "success": true,
+              "ref": "6901"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(有料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 11:21:21",
+      "book": {
+        "hotel": {
+          "name": "WITH THE STYLE FUKUOKA",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（株）第一交通",
+          "value": {
+            "day": [
+              4,
+              15
+            ],
+            "time": "16:20",
+            "departurepoint": "WITH THE STYLE FUKUOKA",
+            "arrivalpoint": "紀伊國屋書店 福岡本店"
+          },
+          "timestamp": 1667215253565,
+          "success": true,
+          "ref": "6901"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "以上です。ありがとうございました！",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "WITH THE STYLE FUKUOKA",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "紀伊國屋書店 福岡本店",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "博多駅",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0924816400",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "（株）第一交通",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "6901",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 11:21:35"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 11:21:41"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 11:21:43"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:04",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "福岡",
+      "name": null,
+      "genre": "リゾートホテル",
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "福岡",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": "有り(有料)"
+    },
+    "taxi": {
+      "city": "福岡",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "WITH THE STYLE FUKUOKA",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "（株）第一交通",
+      "value": {
+        "day": [
+          4,
+          15
+        ],
+        "time": "16:20",
+        "departurepoint": "WITH THE STYLE FUKUOKA",
+        "arrivalpoint": "紀伊國屋書店 福岡本店"
+      },
+      "timestamp": 1667215253565,
+      "success": true,
+      "ref": "6901"
+    }
+  }
+}

@@ -1,0 +1,2295 @@
+{
+  "id": 155,
+  "dialogue_code": "dialogue_0155gXKB",
+  "status_code": 2,
+  "user": [
+    8,
+    205
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0205tFcD"
+  ],
+  "task": 325,
+  "task_name": "main_5",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "名古屋",
+          "genre": "旅館",
+          "wifi": "有り(無料)",
+          "area": "中村区"
+        },
+        "reqt": [
+          "address",
+          "parking",
+          "checkouttime",
+          "reference"
+        ],
+        "book": {
+          "people": 2,
+          "day": "2/8",
+          "stay": 3
+        }
+      },
+      "shopping": {
+        "info": {
+          "city": "名古屋",
+          "area": "港区"
+        },
+        "reqt": [
+          "closed"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>名古屋</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．宿のタイプは<b style='color:blue;'>旅館</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>中村区</b>です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>住所，駐車場の有無，チェックアウト終了時刻</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>2/8</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．地区は<b style='color:blue;'>港区</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>定休日</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "address",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "parking",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkouttime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "closed",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "shopping"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんばんは。名古屋旅行を考えているんですが、泊るところについて、少し調べていただいてもいいですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 11:59:45"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。",
+      "payload": [
+        {}
+      ],
+      "state": {},
+      "created_at": "2022-10-20 12:00:00",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "できれば旅館っぽいところが良いなと思っています。地域は中村区で、ありそうでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:00:27"
+    },
+    {
+      "role": 0,
+      "content": "はい。条件に当てはまるところが二件ございますがほかに何か条件はございますか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "中村区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "かね秀旅館",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666267254496,
+          "selectedResults": [
+            "かね秀旅館"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "中村区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 12:01:17",
+      "book": {
+        "hotel": {
+          "name": "かね秀旅館",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、wifiが無料なところで。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:01:42"
+    },
+    {
+      "role": 0,
+      "content": "ではかね秀旅館はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "中村区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "かね秀旅館",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "中村区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 12:02:01",
+      "book": {
+        "hotel": {
+          "name": "かね秀旅館",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですね。そこは駐車場が用意されていますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:02:21"
+    },
+    {
+      "role": 0,
+      "content": "有料ですが駐車場もございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "中村区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "かね秀旅館",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "中村区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 12:02:36",
+      "book": {
+        "hotel": {
+          "name": "かね秀旅館",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。詳しい住所を伺ってもいいですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:03:05"
+    },
+    {
+      "role": 0,
+      "content": "住所は愛知県名古屋市中村区名駅南1丁目10-2です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "中村区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "かね秀旅館",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "中村区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 12:03:19",
+      "book": {
+        "hotel": {
+          "name": "かね秀旅館",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "チェックアウトは何時まででしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中村区名駅南1丁目10-2",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:03:37"
+    },
+    {
+      "role": 0,
+      "content": "10:00となっております。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "中村区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "かね秀旅館",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "中村区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 12:03:52",
+      "book": {
+        "hotel": {
+          "name": "かね秀旅館",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこで2名で予約を取りたいんですが、お願いできますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中村区名駅南1丁目10-2",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:04:18"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。宿泊の日付と宿泊日数を教えていただけますか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "中村区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "かね秀旅館",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "中村区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 12:04:46",
+      "book": {
+        "hotel": {
+          "name": "かね秀旅館",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。2月の8日から3泊でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中村区名駅南1丁目10-2",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:05:01"
+    },
+    {
+      "role": 0,
+      "content": "予約が完了いたしました。予約番号は58597でございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "旅館",
+            "area": "中村区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "かね秀旅館",
+              "value": {
+                "people": "2",
+                "day": [
+                  2,
+                  8
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1666267518695,
+              "success": true,
+              "ref": "58597"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "中村区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 12:05:44",
+      "book": {
+        "hotel": {
+          "name": "かね秀旅館",
+          "value": {
+            "people": "2",
+            "day": [
+              2,
+              8
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1666267518695,
+          "success": true,
+          "ref": "58597"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あともう一つ、買い物場所も探したくて。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中村区名駅南1丁目10-2",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "58597",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:06:09"
+    },
+    {
+      "role": 0,
+      "content": "はい。条件はございますか。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": null,
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "中村区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 12:06:32",
+      "book": {
+        "hotel": {
+          "name": "かね秀旅館",
+          "value": {
+            "people": "2",
+            "day": [
+              2,
+              8
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "港区あたりのお店でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中村区名駅南1丁目10-2",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "58597",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:06:51"
+    },
+    {
+      "role": 0,
+      "content": "Maker's Pierというショッピングモールはいかがですか。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": "港区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666267637289,
+          "selectedResults": [
+            "Maker's Pier"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "中村区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": "港区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 12:07:39",
+      "book": {
+        "hotel": {
+          "name": "かね秀旅館",
+          "value": {
+            "people": "2",
+            "day": [
+              2,
+              8
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "良さそうですね。お休みの日とかあるんでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中村区名駅南1丁目10-2",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "58597",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:07:58"
+    },
+    {
+      "role": 0,
+      "content": "定休日は不定休となっております。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": "港区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "中村区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": "港区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 12:08:10",
+      "book": {
+        "hotel": {
+          "name": "かね秀旅館",
+          "value": {
+            "people": "2",
+            "day": [
+              2,
+              8
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。今日はありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中村区名駅南1丁目10-2",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "58597",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "不定休",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:08:25"
+    },
+    {
+      "role": 0,
+      "content": "ほかに用件はございませんか。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": null,
+            "area": "港区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "旅館",
+          "area": "中村区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": null,
+          "area": "港区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 12:08:40",
+      "book": {
+        "hotel": {
+          "name": "かね秀旅館",
+          "value": {
+            "people": "2",
+            "day": [
+              2,
+              8
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、もう大丈夫です。また何かあったらよろしくお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中村区名駅南1丁目10-2",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10:00",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "58597",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "不定休",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 12:08:51"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-20 12:09:03"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-20 12:09:06"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:55",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "名古屋",
+      "name": null,
+      "genre": "旅館",
+      "area": "中村区",
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "名古屋",
+      "name": null,
+      "genre": null,
+      "area": "港区",
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "かね秀旅館",
+      "value": {
+        "people": "2",
+        "day": [
+          2,
+          8
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

@@ -1,0 +1,1916 @@
+{
+  "id": 25,
+  "dialogue_code": "dialogue_0025QZDK",
+  "status_code": 2,
+  "user": [
+    2,
+    202
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0202FLfk"
+  ],
+  "task": 175,
+  "task_name": "24",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "info": {
+          "city": "京都",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "address"
+        ]
+      },
+      "restaurant": {
+        "info": {
+          "city": "京都",
+          "name": "epice"
+        },
+        "reqt": [
+          "accesstime",
+          "address",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 2,
+          "day": "1/13",
+          "time": "16:00"
+        },
+        "book": {
+          "people": 2,
+          "day": "1/13",
+          "time": "16:40"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "京都",
+          "day": "1/13",
+          "area": "上京区"
+        },
+        "reqt": [
+          "weather",
+          "mintemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>住所</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．店名が<b style='color:blue;'>epice</b>というところです．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>近辺の駅からの所要時間，住所</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>1/13</b>です．時間は<b style='color:blue;'>16:00</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>16:40</b>に変更します．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>1/13</b>です．地区は<b style='color:blue;'>上京区</b>です．",
+        "<b style='color:green;'>天気，最低気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "address",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "address",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "weather",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "mintemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "restaurant",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都に旅行するんですけど、駐車場が無料の買い物できるところって有りませんか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 04:41:56"
+    },
+    {
+      "role": 0,
+      "content": "ご利用ありがとうございます。京都でお買い物ですね。無料駐車場完備のお店は、大丸京都店をはじめ、11件ほどございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1664772141585,
+          "selectedResults": [
+            "大丸京都店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-03 04:42:52",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "大丸って百貨店ですよね、そこでいいです。そこの住所を教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 04:43:45"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。大丸京都店の住所は、京都府京都市下京区四条通高倉西入立売西町79です。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-03 04:44:04",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。えっと、食事する場所も探してるんですけど、epiceっていうお店ありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "京都府京都市下京区四条通高倉西入立売西町79",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 04:44:50"
+    },
+    {
+      "role": 0,
+      "content": "はい、epiceですね。ございます。京都の上京区ですが、お間違えございませんか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": "epice",
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "epice",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1664772307769,
+          "selectedResults": [
+            "epice"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": "epice",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-03 04:45:45",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "epice",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこだと思います。近い駅からどのぐらい時間かかりますかね？　住所も知りたいんですけど。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "京都府京都市下京区四条通高倉西入立売西町79",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 04:46:32"
+    },
+    {
+      "role": 0,
+      "content": "近くの駅からですと、出町柳駅から徒歩で8分、今出川駅からは徒歩で11分ほどかかります。住所は、京都府京都市上京区寺町通り今出川下る真如堂前町105です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": "epice",
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "epice",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": "epice",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-03 04:47:15",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "epice",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "1月13日の16時から、2人で予約できますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "京都府京都市下京区四条通高倉西入立売西町79",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "徒歩8分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "京都府京都市上京区寺町通り今出川下る真如堂前町105",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 04:48:08"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。1月13日の16時から2名様ではご予約をお取りすることができませんでした。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": "epice",
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "epice",
+              "value": {
+                "people": "2",
+                "day": [
+                  1,
+                  13
+                ],
+                "time": "16:00"
+              },
+              "timestamp": 1664772507427,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": "epice",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-03 04:48:56",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "epice",
+          "value": {
+            "people": "2",
+            "day": [
+              1,
+              13
+            ],
+            "time": "16:00"
+          },
+          "timestamp": 1664772507427,
+          "success": false,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ええ！　しょうがないなあ、じゃあ16時40分からにします。それでも無理ですか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "京都府京都市下京区四条通高倉西入立売西町79",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "徒歩8分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "京都府京都市上京区寺町通り今出川下る真如堂前町105",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 04:49:41"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。1月13日16時40分から2名様で、確かにご予約承りました。ご予約番号は、18285でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": "epice",
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "epice",
+              "value": {
+                "people": "2",
+                "day": [
+                  1,
+                  13
+                ],
+                "time": "16:40"
+              },
+              "timestamp": 1664772591049,
+              "success": true,
+              "ref": "18285"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": "epice",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-03 04:50:37",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "epice",
+          "value": {
+            "people": "2",
+            "day": [
+              1,
+              13
+            ],
+            "time": "16:40"
+          },
+          "timestamp": 1664772591049,
+          "success": true,
+          "ref": "18285"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ああ、よかった。さすがですね。同じ1月13日の上京区の天候なんかも分かります？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "京都府京都市下京区四条通高倉西入立売西町79",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "徒歩8分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "京都府京都市上京区寺町通り今出川下る真如堂前町105",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "18285",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 04:51:31"
+    },
+    {
+      "role": 0,
+      "content": "はい。お調べいたしましたところ、1月13日の上京区は曇りの予報となっております。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "上京区",
+            "day": [
+              1,
+              13
+            ]
+          },
+          "book": [],
+          "timestamp": 1664772731995,
+          "selectedResults": [
+            "1/13 京都 上京区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": "epice",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "上京区",
+          "day": [
+            1,
+            13
+          ]
+        }
+      },
+      "created_at": "2022-10-03 04:52:47",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "epice",
+          "value": {
+            "people": "2",
+            "day": [
+              1,
+              13
+            ],
+            "time": "16:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "曇りかあ、寒いのかなあ？　最低気温も分かったりしますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "京都府京都市下京区四条通高倉西入立売西町79",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "徒歩8分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "京都府京都市上京区寺町通り今出川下る真如堂前町105",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "18285",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "曇り",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 04:53:35"
+    },
+    {
+      "role": 0,
+      "content": "はい、最低気温は2.7度です。最高気温も7.1度までしか上がらないようです。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "上京区",
+            "day": [
+              1,
+              13
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": "epice",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "上京区",
+          "day": [
+            1,
+            13
+          ]
+        }
+      },
+      "created_at": "2022-10-03 04:54:12",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "epice",
+          "value": {
+            "people": "2",
+            "day": [
+              1,
+              13
+            ],
+            "time": "16:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いやあ、なんでも分かっちゃうんですね。たすかりました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "京都府京都市下京区四条通高倉西入立売西町79",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "徒歩8分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "京都府京都市上京区寺町通り今出川下る真如堂前町105",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "18285",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "曇り",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "2.7度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 04:54:36"
+    },
+    {
+      "role": 0,
+      "content": "こちらこそ、ご利用ありがとうございました。他にご用件はございますか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "上京区",
+            "day": [
+              1,
+              13
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": "epice",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "上京区",
+          "day": [
+            1,
+            13
+          ]
+        }
+      },
+      "created_at": "2022-10-03 04:54:50",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "epice",
+          "value": {
+            "people": "2",
+            "day": [
+              1,
+              13
+            ],
+            "time": "16:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "今日はこれで十分です。お世話になりました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "京都府京都市下京区四条通高倉西入立売西町79",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "accesstime",
+          "徒歩8分",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "京都府京都市上京区寺町通り今出川下る真如堂前町105",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "18285",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "曇り",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "2.7度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-03 04:55:21"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-03 04:55:33"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [
+            3
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "誤字「住所は、京都府京都市上京区寺町通り今出川下る真如堂前町105です、」→「住所は、京都府京都市上京区寺町通り今出川下る真如堂前町105です。」",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-03 04:56:02"
+    }
+  ],
+  "created_at": "2022-09-18 06:27:09",
+  "final_state": {
+    "restaurant": {
+      "city": "京都",
+      "name": "epice",
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "京都",
+      "area": "上京区",
+      "day": [
+        1,
+        13
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "epice",
+      "value": {
+        "people": "2",
+        "day": [
+          1,
+          13
+        ],
+        "time": "16:40"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

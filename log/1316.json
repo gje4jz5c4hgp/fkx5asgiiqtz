@@ -1,0 +1,2110 @@
+{
+  "id": 1316,
+  "dialogue_code": "dialogue_1316qteu",
+  "status_code": 2,
+  "user": [
+    2,
+    288
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0288awdK"
+  ],
+  "task": 1486,
+  "task_name": "main_1166",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "名古屋",
+          "genre": "ビジネスホテル",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "accesstime",
+          "station",
+          "address",
+          "reference"
+        ],
+        "book": {
+          "people": 2,
+          "day": "5/17",
+          "stay": 3
+        }
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "名古屋",
+          "area": "北区",
+          "parking": "有り(無料)",
+          "genre": "ファッション"
+        },
+        "info": {
+          "city": "名古屋",
+          "area": "dontcare",
+          "parking": "有り(無料)",
+          "genre": "ファッション"
+        },
+        "reqt": [
+          "accesstime",
+          "closed",
+          "name"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>名古屋</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．宿のタイプは<b style='color:blue;'>ビジネスホテル</b>です．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>近辺の駅からの所要時間，最寄り駅，住所</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>5/17</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．地区は<b style='color:blue;'>北区</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．ジャンルは<b style='color:blue;'>ファッション</b>です．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>近辺の駅からの所要時間，定休日，店舗名</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "accesstime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "station",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "address",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "closed",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "shopping"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは。名古屋へ旅行予定で、宿泊施設を探しています。ビジネスホテルでレストランがある所がよいのですが、どこかありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 07:58:43"
+    },
+    {
+      "role": 0,
+      "content": "ご利用ありがとうございます。そうしますと、29件ほど、ご案内可能ですが、エリアなど、何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "ビジネスホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1667116742770
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 07:59:31",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特にエリアの希望もありませんので、ビジネスホテルでレストランがあれば、おすすめの所を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:00:12"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、ジャストインプレミアム名古屋駅はいかがでしょうか？中区エリアにある、お安めのビジネスホテルとなります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "ビジネスホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ジャストインプレミアム名古屋駅",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "ジャストインプレミアム名古屋駅"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:00:38",
+      "book": {
+        "hotel": {
+          "name": "ジャストインプレミアム名古屋駅",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "便利そうですね。そちらの駅からの所用時間、最寄り駅の名前と、施設のホテルを教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:01:08"
+    },
+    {
+      "role": 0,
+      "content": "最寄りは国際センター駅です。国際センター駅から徒歩で3分、ほかにも丸の内駅から徒歩で5分、名古屋駅から徒歩で10分、名古屋駅からタクシーで3分といった行き方がございます。ホテル名は、ジャストインプレミアム名古屋駅ですが、ご質問の答えになっておりますでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "ビジネスホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ジャストインプレミアム名古屋駅",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:02:11",
+      "book": {
+        "hotel": {
+          "name": "ジャストインプレミアム名古屋駅",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "色んな駅から行けて便利ですね。すみませんが住所もお願いできますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "最短徒歩3分、タクシーで3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "国際センター駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:03:32"
+    },
+    {
+      "role": 0,
+      "content": "はい、住所は、愛知県名古屋市中区丸の内1丁目13-9でございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "ビジネスホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ジャストインプレミアム名古屋駅",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:03:48",
+      "book": {
+        "hotel": {
+          "name": "ジャストインプレミアム名古屋駅",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "5/17に2名で、3泊の宿泊予約をお願いしたいのですが、可能ですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "最短徒歩3分、タクシーで3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "国際センター駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中区丸の内1丁目13-9",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:04:13"
+    },
+    {
+      "role": 0,
+      "content": "はい、ご予約承りました。予約番号は、3353です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "ビジネスホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ジャストインプレミアム名古屋駅",
+              "value": {
+                "people": "2",
+                "day": [
+                  5,
+                  17
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1667117060507,
+              "success": true,
+              "ref": "3353"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:04:35",
+      "book": {
+        "hotel": {
+          "name": "ジャストインプレミアム名古屋駅",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1667117060507,
+          "success": true,
+          "ref": "3353"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。お手数おかけしました。もう一つ、北区で買い物ができるところを探しています。ファッションをメインで行きたいのですが、駐車場無料の所はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "最短徒歩3分、タクシーで3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "国際センター駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中区丸の内1丁目13-9",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "35691",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:06:15"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件ですと、ご案内できるところが見つかりませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "ファッション",
+            "area": "北区",
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667117191898
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ファッション",
+          "area": "北区",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:06:44",
+      "book": {
+        "hotel": {
+          "name": "ジャストインプレミアム名古屋駅",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうしましたら、北区以外でお願いいたします",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "最短徒歩3分、タクシーで3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "国際センター駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中区丸の内1丁目13-9",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "35691",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:06:56"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。そうしますと、3件ご案内可能です。例えば、名東区エリアにある、アイスランドマーケットというお店はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "ファッション",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667117216921,
+          "selectedResults": [
+            "東急ハンズ名古屋店",
+            "アイスランドマーケット"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:07:25",
+      "book": {
+        "hotel": {
+          "name": "ジャストインプレミアム名古屋駅",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこに行きたいです。近辺の駅からの所用時間と、定休日を教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "最短徒歩3分、タクシーで3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "国際センター駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中区丸の内1丁目13-9",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "35691",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:07:47"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。最寄りの本郷駅から徒歩で4分でアクセス可能です。定休日は、盆期間, 正月となっております。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "ファッション",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:08:12",
+      "book": {
+        "hotel": {
+          "name": "ジャストインプレミアム名古屋駅",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "色々とサポートありがとうございました。助かりました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "最短徒歩3分、タクシーで3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "国際センター駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中区丸の内1丁目13-9",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "35691",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "徒歩で4分",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "盆期間, 正月",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "アイスランドマーケット",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:08:45"
+    },
+    {
+      "role": 0,
+      "content": "他になにかお調べすることはございますか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "ファッション",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:08:52",
+      "book": {
+        "hotel": {
+          "name": "ジャストインプレミアム名古屋駅",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いえ、大丈夫です。どうもありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "最短徒歩3分、タクシーで3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "国際センター駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "愛知県名古屋市中区丸の内1丁目13-9",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "35691",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "徒歩で4分",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "closed",
+          "盆期間, 正月",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "アイスランドマーケット",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:09:12"
+    },
+    {
+      "role": 0,
+      "content": "こちらこそ、ありがとうございます。またのご利用をお待ちしております。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "ファッション",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ビジネスホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:09:16",
+      "book": {
+        "hotel": {
+          "name": "ジャストインプレミアム名古屋駅",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 2,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [
+            4,
+            1
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "・質問の「施設のホテル」が何を指すかわからなかったので、施設名を答えて、質問の答えになっているかを確認しました。\n・予約完了後に、宿泊日数変更を言われたので、再度、その条件で予約実行しました。（キャンセルの手順がないため）",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-30 08:09:37"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [
+            2
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": "途中で宿泊数を間違えたため、再度予約しなおしていただきました",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-30 08:09:48"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:03",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "名古屋",
+      "name": null,
+      "genre": "ビジネスホテル",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "名古屋",
+      "name": null,
+      "genre": "ファッション",
+      "area": null,
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ジャストインプレミアム名古屋駅",
+      "value": {
+        "people": "2",
+        "day": [
+          5,
+          17
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

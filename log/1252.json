@@ -1,0 +1,2170 @@
+{
+  "id": 1252,
+  "dialogue_code": "dialogue_1252VMdi",
+  "status_code": 2,
+  "user": [
+    2,
+    251
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0251Yuvr"
+  ],
+  "task": 1422,
+  "task_name": "main_1102",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "大阪",
+          "area": "天王寺区"
+        },
+        "reqt": [
+          "genre",
+          "pricerange",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 3,
+          "day": "5/7",
+          "stay": 2
+        },
+        "book": {
+          "people": 2,
+          "day": "5/7",
+          "stay": 2
+        }
+      },
+      "restaurant": {
+        "fail_info": {
+          "city": "大阪",
+          "pricerange": "普通",
+          "wifi": "有り(無料)"
+        },
+        "info": {
+          "city": "大阪",
+          "pricerange": "普通",
+          "wifi": "dontcare"
+        },
+        "reqt": [
+          "parking",
+          "genre"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．地区は<b style='color:blue;'>天王寺区</b>です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>タイプ，値段帯</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>5/7</b>です．宿泊日数は<b style='color:blue;'>2</b>泊です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>2</b>に変更します．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．予算は<b style='color:blue;'>普通</b>が希望です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，Wi-Fiの有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>駐車場の有無，ジャンル</b>を聞いてください．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．最寄り駅が<b style='color:blue;'>宮ノ森駅</b>のところにしてください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．ジャンルは<b style='color:blue;'>アートギャラリー</b>です．",
+        "希望に合うところがない場合は，ジャンルは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>営業時間，子供入場料</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "genre",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "pricerange",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "parking",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "genre",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "opentime",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "childfee",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant",
+      "attraction"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪への旅行を検討しています。当日宿泊できる施設を探しているのですが、お伺いしてもよろしいですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 14:21:32"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご希望の条件は何かございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1667398895889
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 14:21:41",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。天王寺区で探しているのですが、何処かありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 14:22:05"
+    },
+    {
+      "role": 0,
+      "content": "はい、3件ほどご案内可能です。たとえば、シェラトン都ホテル大阪というシティホテルはいかがでしょうか？お値段帯としては、お安めですよ。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "天王寺区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "シェラトン都ホテル大阪",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667398928489,
+          "selectedResults": [
+            "シェラトン都ホテル大阪"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 14:22:31",
+      "book": {
+        "hotel": {
+          "name": "シェラトン都ホテル大阪",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね！そこにします。早速予約をお願いしたいのですが、よろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "シティホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 14:23:05"
+    },
+    {
+      "role": 0,
+      "content": "はい、承ります。ご宿泊予定の人数と日付、ご宿泊日数はお決まりでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "天王寺区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "シェラトン都ホテル大阪",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 14:23:18",
+      "book": {
+        "hotel": {
+          "name": "シェラトン都ホテル大阪",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、人数は3人で、日付は5月7日。宿泊日数は2泊でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "シティホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 14:23:49"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件では予約できませんでした。いかがいたしましょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "天王寺区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "シェラトン都ホテル大阪",
+              "value": {
+                "people": "3",
+                "day": [
+                  5,
+                  7
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1667399035466,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 14:24:06",
+      "book": {
+        "hotel": {
+          "name": "シェラトン都ホテル大阪",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              7
+            ],
+            "stay": "2"
+          },
+          "timestamp": 1667399035466,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですね。でしたら、人数を1人減らして、2人とかでしたらどうでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "シティホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 14:24:33"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。2名様にて、ご予約完了いたしました。予約番号は、12082でございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "天王寺区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "シェラトン都ホテル大阪",
+              "value": {
+                "people": "2",
+                "day": [
+                  5,
+                  7
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1667399074641,
+              "success": true,
+              "ref": "12082"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 14:24:49",
+      "book": {
+        "hotel": {
+          "name": "シェラトン都ホテル大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              7
+            ],
+            "stay": "2"
+          },
+          "timestamp": 1667399074641,
+          "success": true,
+          "ref": "12082"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。最後に、当日利用できる飲食店を探しているのですが、よろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "シティホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "12082",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 14:25:15"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。お食事のジャンルやエリアなど、何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667399121681
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 14:25:32",
+      "book": {
+        "hotel": {
+          "name": "シェラトン都ホテル大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              7
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。予算は普通で、Wi-Fiが無料で利用できるお店ってありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "シティホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "12082",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 14:25:56"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件では、該当するところがありませんでした。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667399159688
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 14:26:10",
+      "book": {
+        "hotel": {
+          "name": "シェラトン都ホテル大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              7
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。でしたら、予算が普通だけで良いので、何処か該当する店舗はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "シティホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "12082",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 14:26:39"
+    },
+    {
+      "role": 0,
+      "content": "そういたしますと、例えば、大衆ビストロ 匠というお店はいかがでしょうか？ジャンルとしては、イタリアン・フレンチ, 和食です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "大衆ビストロ 匠",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667399204635,
+          "selectedResults": [
+            "大衆ビストロ 匠"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 14:27:15",
+      "book": {
+        "hotel": {
+          "name": "シェラトン都ホテル大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              7
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "大衆ビストロ 匠",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。そこで検討したいです。ちなみに、このお店には駐車場はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "シティホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "12082",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "イタリアン・フレンチ・和食",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 14:27:50"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。こちらのお店には駐車場はついておりません。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "大衆ビストロ 匠",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 14:28:01",
+      "book": {
+        "hotel": {
+          "name": "シェラトン都ホテル大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              7
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "大衆ビストロ 匠",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。引き続き検討してみます。これで大丈夫です。ご対応、ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "シティホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "12082",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "無",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "イタリアン・フレンチ・和食",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 14:28:24"
+    },
+    {
+      "role": 0,
+      "content": "承知いたしました。本日はご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "大衆ビストロ 匠",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "天王寺区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 14:28:28",
+      "book": {
+        "hotel": {
+          "name": "シェラトン都ホテル大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              5,
+              7
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "大衆ビストロ 匠",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 2,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [
+            0
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "私の操作が間違えているのでしょうか。\nあと、顧客側発話に、この案件に関わる内容が含まれてしまいました。「でしたらこれで大丈夫です。ご対応、ありがとうございました。(申し送りが必要かもしれません)」",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-02 14:36:31"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 2,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [
+            3
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": "最後の観光名所の条件で、条件に合う施設がみつかりませんでした。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-02 14:37:50"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:03",
+  "final_state": {
+    "restaurant": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": "天王寺区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "シェラトン都ホテル大阪",
+      "value": {
+        "people": "2",
+        "day": [
+          5,
+          7
+        ],
+        "stay": "2"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "大衆ビストロ 匠",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

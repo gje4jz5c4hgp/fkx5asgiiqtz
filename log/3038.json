@@ -1,0 +1,1927 @@
+{
+  "id": 3038,
+  "dialogue_code": "dialogue_3038hWHo",
+  "status_code": 2,
+  "user": [
+    25,
+    209
+  ],
+  "username": [
+    "operator_0025tpXO",
+    "customer_0209LJle"
+  ],
+  "task": 3308,
+  "task_name": "main2_288",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "那覇",
+          "area": "真和志",
+          "withrestaurant": "有り",
+          "genre": "リゾートホテル"
+        },
+        "reqt": [
+          "name",
+          "accesstime",
+          "checkintime",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 4,
+          "day": "5/31",
+          "stay": 3
+        },
+        "book": {
+          "people": 3,
+          "day": "5/31",
+          "stay": 3
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "那覇",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "jumbo",
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "5/31",
+          "time": "13:30",
+          "departurepoint": "hotel",
+          "arrivalpoint": "やっぱりステーキ 国際通りがじゅまる店"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>那覇</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．地区は<b style='color:blue;'>真和志</b>です．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．宿のタイプは<b style='color:blue;'>リゾートホテル</b>です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，近辺の駅からの所要時間，チェックイン開始時刻</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>5/31</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>3</b>に変更します．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，ジャンボタクシー対応，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>5/31</b>です．時間は<b style='color:blue;'>13:30</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は<b style='color:blue;'>やっぱりステーキ 国際通りがじゅまる店</b>というところです．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "accesstime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkintime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "jumbo",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "那覇旅行で、泊まる宿泊施設を探していただけますでしょうか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 08:54:38"
+    },
+    {
+      "role": 0,
+      "content": "はい、ご希望の条件をおきかせください。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 08:54:49",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "真和志周辺で、レストランが併設されているリゾートホテルはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 08:55:10"
+    },
+    {
+      "role": 0,
+      "content": "真和志でレストラン併設のリゾートホテルは３件ありますが、ノボテル沖縄那覇をお勧めします。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": "真和志",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ノボテル沖縄那覇",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669712129676,
+          "selectedResults": [
+            "ホテルオーシャン那覇国際通り",
+            "ノボテル沖縄那覇"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": "真和志",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 08:55:59",
+      "book": {
+        "hotel": {
+          "name": "ノボテル沖縄那覇",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではそちらにします。近辺の駅からの所要時間とチェックイン開始時刻について教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 08:56:13"
+    },
+    {
+      "role": 0,
+      "content": "安里駅から徒歩で20分、チェックインは１５時からになります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": "真和志",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ノボテル沖縄那覇",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": "真和志",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 08:56:30",
+      "book": {
+        "hotel": {
+          "name": "ノボテル沖縄那覇",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。4人で5/31から3泊泊まりたいのですが、予約できますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ノボテル沖縄那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 08:56:55"
+    },
+    {
+      "role": 0,
+      "content": "その条件だと予約に失敗してしまいました。少し条件を変更していただけないでしょうか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": "真和志",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ノボテル沖縄那覇",
+              "value": {
+                "people": "4",
+                "day": [
+                  5,
+                  31
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1669712234258,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": "真和志",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 08:57:21",
+      "book": {
+        "hotel": {
+          "name": "ノボテル沖縄那覇",
+          "value": {
+            "people": "4",
+            "day": [
+              5,
+              31
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1669712234258,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "3人であれば予約できますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ノボテル沖縄那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "安里駅から徒歩で20分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "１５時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 08:57:35"
+    },
+    {
+      "role": 0,
+      "content": "３人なら予約できました。予約番号は40817です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": "真和志",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ノボテル沖縄那覇",
+              "value": {
+                "people": "3",
+                "day": [
+                  5,
+                  31
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1669712260084,
+              "success": true,
+              "ref": "40817"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": "真和志",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 08:57:53",
+      "book": {
+        "hotel": {
+          "name": "ノボテル沖縄那覇",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              31
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1669712260084,
+          "success": true,
+          "ref": "40817"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。キャッシュレス払いできるタクシー会社も教えていただけますでしょうか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ノボテル沖縄那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "安里駅から徒歩で20分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "１５時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "40817",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 08:58:12"
+    },
+    {
+      "role": 0,
+      "content": "那覇でキャッシュレス対応のタクシー会社はいくつかありますが、丸二タクシーをお勧めします。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "丸二タクシー",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669712304865,
+          "selectedResults": [
+            "丸二タクシー"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": "真和志",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 08:58:43",
+      "book": {
+        "hotel": {
+          "name": "ノボテル沖縄那覇",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              31
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "丸二タクシー",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではそちらを使いたいと思います。ジャンボタクシー対応可否と電話番号を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ノボテル沖縄那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "安里駅から徒歩で20分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "１５時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "40817",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 08:59:04"
+    },
+    {
+      "role": 0,
+      "content": "ジャンボ対応しています。電話は0988552140になります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "丸二タクシー",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": "真和志",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 08:59:23",
+      "book": {
+        "hotel": {
+          "name": "ノボテル沖縄那覇",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              31
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "丸二タクシー",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではそちらで予約をお願いできますでしょうか。5/31の13:30で、出発地はノボテル沖縄那覇、目的地はやっぱりステーキ 国際通りがじゅまる店でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ノボテル沖縄那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "安里駅から徒歩で20分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "１５時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "40817",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "丸二タクシー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "対応",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0988552140",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 09:00:13"
+    },
+    {
+      "role": 0,
+      "content": "予約成功しました。予約番号は55710です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "丸二タクシー",
+              "value": {
+                "day": [
+                  5,
+                  31
+                ],
+                "time": "13:30",
+                "departurepoint": "ノボテル沖縄那覇",
+                "arrivalpoint": "やっぱりステーキ 国際通りがじゅまる店"
+              },
+              "timestamp": 1669712433209,
+              "success": true,
+              "ref": "55710"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": "真和志",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "那覇",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 09:00:46",
+      "book": {
+        "hotel": {
+          "name": "ノボテル沖縄那覇",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              31
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "丸二タクシー",
+          "value": {
+            "day": [
+              5,
+              31
+            ],
+            "time": "13:30",
+            "departurepoint": "ノボテル沖縄那覇",
+            "arrivalpoint": "やっぱりステーキ 国際通りがじゅまる店"
+          },
+          "timestamp": 1669712433209,
+          "success": true,
+          "ref": "55710"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ノボテル沖縄那覇",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "安里駅から徒歩で20分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "１５時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "40817",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "丸二タクシー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "対応",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0988552140",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "55710",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 09:00:55"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 09:01:01"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 09:01:03"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:53",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "那覇",
+      "name": null,
+      "genre": "リゾートホテル",
+      "area": "真和志",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "那覇",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ノボテル沖縄那覇",
+      "value": {
+        "people": "3",
+        "day": [
+          5,
+          31
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "丸二タクシー",
+      "value": {
+        "day": [
+          5,
+          31
+        ],
+        "time": "13:30",
+        "departurepoint": "ノボテル沖縄那覇",
+        "arrivalpoint": "やっぱりステーキ 国際通りがじゅまる店"
+      },
+      "timestamp": 1669712433209,
+      "success": true,
+      "ref": "55710"
+    }
+  }
+}

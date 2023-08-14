@@ -1,0 +1,1345 @@
+{
+  "id": 2998,
+  "dialogue_code": "dialogue_2998Cros",
+  "status_code": 2,
+  "user": [
+    25,
+    278
+  ],
+  "username": [
+    "operator_0025tpXO",
+    "customer_0278uKJi"
+  ],
+  "task": 3268,
+  "task_name": "main2_248",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "大阪",
+          "withrestaurant": "有り",
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）"
+        },
+        "reqt": [
+          "phone",
+          "priceinfo",
+          "checkouttime",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 2,
+          "day": "12/17",
+          "stay": 3
+        },
+        "book": {
+          "people": 2,
+          "day": "12/17",
+          "stay": 2
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "大阪",
+          "area": "東淀川区",
+          "day": "12/17"
+        },
+        "reqt": [
+          "mintemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．宿のタイプは<b style='color:blue;'>簡易宿所（ベッドハウス・山小屋・カプセルホテル等）</b>です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>電話番号，料金情報，チェックアウト終了時刻</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>12/17</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．",
+        "希望の条件が合わない場合は，宿泊日数を<b style='color:blue;'>2</b>泊に変更します．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>東淀川区</b>です．日付は<b style='color:blue;'>12/17</b>です．",
+        "<b style='color:green;'>最低気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "phone",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "priceinfo",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkouttime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "mintemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪への旅行を計画しています。\n当日泊まれる宿泊施設を探してください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:19:17"
+    },
+    {
+      "role": 0,
+      "content": "ご希望の条件をおきかせください。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:19:28",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "レストランが併設されているところにしてください。宿のタイプは簡易宿所（ベッドハウス・山小屋・カプセルホテル等）が希望です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:19:43"
+    },
+    {
+      "role": 0,
+      "content": "大阪でレストラン併設の簡易宿泊所は３つありますが、9別邸 大阪谷町 MAISON DE 9、こちらをおすすめします。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "9別邸 大阪谷町 MAISON DE 9",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669648803625,
+          "selectedResults": [
+            "9別邸 大阪谷町 MAISON DE 9"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:20:33",
+      "book": {
+        "hotel": {
+          "name": "9別邸 大阪谷町 MAISON DE 9",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。では、電話番号，料金情報，チェックアウト終了時刻を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:20:58"
+    },
+    {
+      "role": 0,
+      "content": "0665326100、チェックアウトは１０時、値段帯は高めですが、料金詳細は不明ですね。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "9別邸 大阪谷町 MAISON DE 9",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:21:32",
+      "book": {
+        "hotel": {
+          "name": "9別邸 大阪谷町 MAISON DE 9",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予約をお願いします。人数は2人、日付は12/17、宿泊日数は3泊希望です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "0665326100",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１０時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:22:06"
+    },
+    {
+      "role": 0,
+      "content": "その条件だと予約に失敗してしまいました。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "9別邸 大阪谷町 MAISON DE 9",
+              "value": {
+                "people": "2",
+                "day": [
+                  12,
+                  17
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1669648937489,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:22:22",
+      "book": {
+        "hotel": {
+          "name": "9別邸 大阪谷町 MAISON DE 9",
+          "value": {
+            "people": "2",
+            "day": [
+              12,
+              17
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1669648937489,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "なるほど。では、宿泊日数を2泊に変更します。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "0665326100",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１０時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:22:31"
+    },
+    {
+      "role": 0,
+      "content": "２泊なら予約できました。予約番号は45561です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "9別邸 大阪谷町 MAISON DE 9",
+              "value": {
+                "people": "2",
+                "day": [
+                  12,
+                  17
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1669648955947,
+              "success": true,
+              "ref": "45561"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:22:50",
+      "book": {
+        "hotel": {
+          "name": "9別邸 大阪谷町 MAISON DE 9",
+          "value": {
+            "people": "2",
+            "day": [
+              12,
+              17
+            ],
+            "stay": "2"
+          },
+          "timestamp": 1669648955947,
+          "success": true,
+          "ref": "45561"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あと、東淀川区の12/17の天候として、最低気温が知りたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "0665326100",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１０時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "45561",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:23:54"
+    },
+    {
+      "role": 0,
+      "content": "その日の最低気温は6.5度ですね。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "大阪",
+            "area": "東淀川区",
+            "day": [
+              12,
+              17
+            ]
+          },
+          "book": [],
+          "timestamp": 1669649056158,
+          "selectedResults": [
+            "12/17 大阪 東淀川区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "大阪",
+          "area": "東淀川区",
+          "day": [
+            12,
+            17
+          ]
+        }
+      },
+      "created_at": "2022-11-28 15:24:28",
+      "book": {
+        "hotel": {
+          "name": "9別邸 大阪谷町 MAISON DE 9",
+          "value": {
+            "people": "2",
+            "day": [
+              12,
+              17
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "解決しました。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "phone",
+          "0665326100",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１０時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "45561",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "mintemperature",
+          "6.5度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 15:24:38"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 15:24:44"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [
+            1
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "天気曇りを回答わすれてしまいました。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 15:25:06"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:52",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "大阪",
+      "name": null,
+      "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "大阪",
+      "area": "東淀川区",
+      "day": [
+        12,
+        17
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "9別邸 大阪谷町 MAISON DE 9",
+      "value": {
+        "people": "2",
+        "day": [
+          12,
+          17
+        ],
+        "stay": "2"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

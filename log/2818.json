@@ -1,0 +1,2623 @@
+{
+  "id": 2818,
+  "dialogue_code": "dialogue_2818eNmb",
+  "status_code": 2,
+  "user": [
+    2,
+    272
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0272SIEo"
+  ],
+  "task": 3088,
+  "task_name": "main2_68",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "東京",
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "checkouttime",
+          "address",
+          "reference"
+        ],
+        "book": {
+          "people": 2,
+          "day": "10/2",
+          "stay": 4
+        }
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "東京",
+          "genre": "コンビニ",
+          "area": "千代田区"
+        },
+        "info": {
+          "city": "東京",
+          "genre": "文房具・雑貨",
+          "area": "千代田区"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "東京",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "day": "10/2",
+          "time": "11:20",
+          "departurepoint": "hotel",
+          "arrivalpoint": "shopping"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>東京</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，チェックアウト終了時刻，住所</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>10/2</b>です．宿泊日数は<b style='color:blue;'>4</b>泊です．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．ジャンルは<b style='color:blue;'>コンビニ</b>です．地区は<b style='color:blue;'>千代田区</b>です．",
+        "希望に合うところがない場合は，ジャンルを<b style='color:blue;'>文房具・雑貨</b>に変更します．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>10/2</b>です．時間は<b style='color:blue;'>11:20</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkouttime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "address",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "shopping",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "東京へ行く予定で宿泊施設を探しています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:49:13"
+    },
+    {
+      "role": 0,
+      "content": "東京の宿泊施設ですね。ご希望の条件は何かございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1669621760442
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:49:35",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "Wi-Fiが無料で駐車場も無料の所が良いです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:50:01"
+    },
+    {
+      "role": 0,
+      "content": "そうしますと、港区エリアにあるシティホテルの、The Okura Tokyoはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "The Okura Tokyo",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669621805418,
+          "selectedResults": [
+            "The Okura Tokyo"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:50:21",
+      "book": {
+        "hotel": {
+          "name": "The Okura Tokyo",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。チェックアウト終了時刻と住所を教えてもらえますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:50:49"
+    },
+    {
+      "role": 0,
+      "content": "はい。チェックアウトはお昼12時までとなっております。住所は、東京都港区虎ノ門2丁目10-4です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "The Okura Tokyo",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:51:05",
+      "book": {
+        "hotel": {
+          "name": "The Okura Tokyo",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "10/2から4泊で2人で予約を取りたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The Okura Tokyo",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "お昼12時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "東京都港区虎ノ門2丁目10-4",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:52:03"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。ご予約完了いたしました。予約番号は、79546です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "The Okura Tokyo",
+              "value": {
+                "people": "2",
+                "day": [
+                  10,
+                  2
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1669621931123,
+              "success": true,
+              "ref": "79546"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:52:22",
+      "book": {
+        "hotel": {
+          "name": "The Okura Tokyo",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              2
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1669621931123,
+          "success": true,
+          "ref": "79546"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あと千代田区で買い物ができるところを探しています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The Okura Tokyo",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "お昼12時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "東京都港区虎ノ門2丁目10-4",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79546",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:52:54"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。候補は7件ございますが、たとえば、Calbee+東京駅店はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "千代田区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669621983688,
+          "selectedResults": [
+            "Calbee+東京駅店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:53:18",
+      "book": {
+        "hotel": {
+          "name": "The Okura Tokyo",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              2
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "すみません。コンビニがいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The Okura Tokyo",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "お昼12時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "東京都港区虎ノ門2丁目10-4",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79546",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:53:34"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件では、該当するところがありませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "コンビニ",
+            "area": "千代田区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669622018673
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "コンビニ",
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:53:50",
+      "book": {
+        "hotel": {
+          "name": "The Okura Tokyo",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              2
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "文房具・雑貨系だとありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The Okura Tokyo",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "お昼12時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "東京都港区虎ノ門2丁目10-4",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79546",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:54:03"
+    },
+    {
+      "role": 0,
+      "content": "はい、2件ございます。たとえば、東京キャラクターストリートというお店ですが、いかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "文房具・雑貨",
+            "area": "千代田区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669622049595,
+          "selectedResults": [
+            "東京キャラクターストリート"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:54:31",
+      "book": {
+        "hotel": {
+          "name": "The Okura Tokyo",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              2
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。あとタクシーも探しています。キャッシュレス払いできる会社がいいのですが",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The Okura Tokyo",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "お昼12時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "東京都港区虎ノ門2丁目10-4",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79546",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "東京キャラクターストリート",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:55:22"
+    },
+    {
+      "role": 0,
+      "content": "では、小金井交通はいかがでしょうか？こちらでしたら、ジャンボタクシーもご利用いただけますよ。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "小金井交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669622131843,
+          "selectedResults": [
+            "小金井交通"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:55:45",
+      "book": {
+        "hotel": {
+          "name": "The Okura Tokyo",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              2
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "小金井交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "電話番号を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The Okura Tokyo",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "お昼12時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "東京都港区虎ノ門2丁目10-4",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79546",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "東京キャラクターストリート",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "小金井交通",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:56:04"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は、0423811482でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "小金井交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:56:14",
+      "book": {
+        "hotel": {
+          "name": "The Okura Tokyo",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              2
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "小金井交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "10/2の11:20にThe Okura Tokyoから東京キャラクターストリートまで予約をお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The Okura Tokyo",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "お昼12時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "東京都港区虎ノ門2丁目10-4",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79546",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "東京キャラクターストリート",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0423811482",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "小金井交通",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:57:10"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。ご予約完了いたしました。予約番号は、84498です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "小金井交通",
+              "value": {
+                "day": [
+                  10,
+                  2
+                ],
+                "time": "11:20",
+                "departurepoint": "The Okura Tokyo",
+                "arrivalpoint": "東京キャラクターストリート"
+              },
+              "timestamp": 1669622248763,
+              "success": true,
+              "ref": "84498"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:57:41",
+      "book": {
+        "hotel": {
+          "name": "The Okura Tokyo",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              2
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "小金井交通",
+          "value": {
+            "day": [
+              10,
+              2
+            ],
+            "time": "11:20",
+            "departurepoint": "The Okura Tokyo",
+            "arrivalpoint": "東京キャラクターストリート"
+          },
+          "timestamp": 1669622248763,
+          "success": true,
+          "ref": "84498"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "助かりました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The Okura Tokyo",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "お昼12時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "東京都港区虎ノ門2丁目10-4",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79546",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "東京キャラクターストリート",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0423811482",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "小金井交通",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "84498",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:57:53"
+    },
+    {
+      "role": 0,
+      "content": "他にお調べすることはございませんか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "小金井交通",
+              "value": {
+                "day": [
+                  10,
+                  2
+                ],
+                "time": "11:20",
+                "departurepoint": "The Okura Tokyo",
+                "arrivalpoint": "東京キャラクターストリート"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:58:06",
+      "book": {
+        "hotel": {
+          "name": "The Okura Tokyo",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              2
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "小金井交通",
+          "value": {
+            "day": [
+              10,
+              2
+            ],
+            "time": "11:20",
+            "departurepoint": "The Okura Tokyo",
+            "arrivalpoint": "東京キャラクターストリート"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特にないです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The Okura Tokyo",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "お昼12時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "東京都港区虎ノ門2丁目10-4",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "79546",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "東京キャラクターストリート",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0423811482",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "小金井交通",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "84498",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 07:58:14"
+    },
+    {
+      "role": 0,
+      "content": "承知いたしました。本日はご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "小金井交通",
+              "value": {
+                "day": [
+                  10,
+                  2
+                ],
+                "time": "11:20",
+                "departurepoint": "The Okura Tokyo",
+                "arrivalpoint": "東京キャラクターストリート"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 07:58:16",
+      "book": {
+        "hotel": {
+          "name": "The Okura Tokyo",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              2
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "小金井交通",
+          "value": {
+            "day": [
+              10,
+              2
+            ],
+            "time": "11:20",
+            "departurepoint": "The Okura Tokyo",
+            "arrivalpoint": "東京キャラクターストリート"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 07:58:23"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 07:58:24"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:51",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": "有り(無料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "東京",
+      "name": null,
+      "genre": "文房具・雑貨",
+      "area": "千代田区",
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "東京",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "The Okura Tokyo",
+      "value": {
+        "people": "2",
+        "day": [
+          10,
+          2
+        ],
+        "stay": "4"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "小金井交通",
+      "value": {
+        "day": [
+          10,
+          2
+        ],
+        "time": "11:20",
+        "departurepoint": "The Okura Tokyo",
+        "arrivalpoint": "東京キャラクターストリート"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

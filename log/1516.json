@@ -1,0 +1,2521 @@
+{
+  "id": 1516,
+  "dialogue_code": "dialogue_1516eLci",
+  "status_code": 2,
+  "user": [
+    4,
+    209
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0209LJle"
+  ],
+  "task": 1686,
+  "task_name": "main_1366",
+  "task_content": {
+    "goals": {
+      "attraction": {
+        "info": {
+          "city": "那覇",
+          "area": "本庁",
+          "wifi": "有り(無料)"
+        },
+        "reqt": [
+          "address",
+          "name"
+        ]
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "那覇",
+          "parking": "有り(無料)",
+          "area": "小禄",
+          "genre": "食料品"
+        },
+        "info": {
+          "city": "那覇",
+          "parking": "有り(無料)",
+          "area": "小禄",
+          "genre": "dontcare"
+        },
+        "reqt": [
+          "station",
+          "opentime",
+          "name"
+        ]
+      },
+      "restaurant": {
+        "fail_info": {
+          "city": "那覇",
+          "genre": "洋食・西洋料理",
+          "area": "本庁",
+          "wifi": "有り(無料)"
+        },
+        "info": {
+          "city": "那覇",
+          "genre": "洋食・西洋料理",
+          "area": "dontcare",
+          "wifi": "有り(無料)"
+        },
+        "reqt": [
+          "parking",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "1/25",
+          "time": "14:30"
+        }
+      }
+    },
+    "descriptions": {
+      "attraction": [
+        "あなたは<b style='color:blue;'>那覇</b>への旅行を計画しています．",
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．地区は<b style='color:blue;'>本庁</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>住所，名称</b>を聞いてください．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>小禄</b>です．ジャンルは<b style='color:blue;'>食料品</b>です．",
+        "希望に合うところがない場合は，ジャンルは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>最寄り駅，営業時間，店舗名</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．ジャンルは<b style='color:blue;'>洋食・西洋料理</b>です．地区は<b style='color:blue;'>本庁</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>駐車場の有無</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>1/25</b>です．時間は<b style='color:blue;'>14:30</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "attraction",
+        "address",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "station",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "opentime",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "restaurant",
+        "parking",
+        ""
+      ],
+      [
+        3,
+        "restaurant",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "attraction",
+      "shopping",
+      "restaurant"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "那覇旅行で当日訪れる観光名所のおすすめはありますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:44:09"
+    },
+    {
+      "role": 0,
+      "content": "何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667205860344
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:44:32",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "本庁地区で、Wi-Fiが無料で利用できる場所だとうれしいです。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:44:49"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、パレットくもじはいかがでしょう？何かご案内致しましょうか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": "本庁",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667205898030,
+          "selectedResults": [
+            "パレットくもじ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "本庁",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:45:22",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではそちらに伺いたいと思います。住所も教えていただけますでしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:45:39"
+    },
+    {
+      "role": 0,
+      "content": "はい、住所は沖縄県那覇市久茂地1丁目1番1号となります。他にご案内できることはございますか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": "本庁",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "本庁",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:46:08",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日買い物ができるところもついでに教えてください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "住所は沖縄県那覇市久茂地1丁目1番1号",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "パレットくもじ",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:46:30"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667206003624
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "本庁",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:46:57",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "駐車場を無料で利用できるお店で、小禄地区の食料品でいいところはありますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "住所は沖縄県那覇市久茂地1丁目1番1号",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "パレットくもじ",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:47:24"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、その条件ではご案内ができません。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "食料品",
+            "area": "小禄",
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667206067309
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "本庁",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": "食料品",
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:48:13",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "それでは、ジャンルは何でも大丈夫です。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "住所は沖縄県那覇市久茂地1丁目1番1号",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "パレットくもじ",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:48:24"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、LEO & JOEはいかがでしょう？何かご案内致しましょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": "小禄",
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667206113396,
+          "selectedResults": [
+            "LEO & JOE"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "本庁",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:48:56",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらに行きたいと思います。最寄り駅と営業時間の情報もいただけますでしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "住所は沖縄県那覇市久茂地1丁目1番1号",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "パレットくもじ",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:49:22"
+    },
+    {
+      "role": 0,
+      "content": "はい、最寄りの奥武山公園駅から徒歩で2分となります。営業時間は10時から18時です。他にご案内が必要なことはございますか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": "小禄",
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "本庁",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:50:08",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日食事ができる飲食店についても教えていただけますでしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "住所は沖縄県那覇市久茂地1丁目1番1号",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "パレットくもじ",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "奥武山公園駅",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "10時から18時",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:50:39"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667206248888
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "本庁",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:50:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "洋食・西洋料理店を本庁周辺で探しています。また、Wi-Fiが無料で利用できるところがいいです。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "住所は沖縄県那覇市久茂地1丁目1番1号",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "パレットくもじ",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "奥武山公園駅",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "10時から18時",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:51:28"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、その条件ではご案内ができません。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "洋食・西洋料理",
+            "area": "本庁",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667206311290
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "洋食・西洋料理",
+          "area": "本庁",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "本庁",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:52:16",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "それでは、場所はこだわらなくて構いません。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "住所は沖縄県那覇市久茂地1丁目1番1号",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "パレットくもじ",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "奥武山公園駅",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "10時から18時",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:52:29"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、エリアでいうと真和志にある、LE GOURMANDはいかがでしょう？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "洋食・西洋料理",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "LE GOURMAND",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667206354723,
+          "selectedResults": [
+            "LE GOURMAND"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "洋食・西洋料理",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "本庁",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:53:10",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "LE GOURMAND",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらにします。駐車場はありますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "住所は沖縄県那覇市久茂地1丁目1番1号",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "パレットくもじ",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "奥武山公園駅",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "10時から18時",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "LE GOURMAND",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:53:27"
+    },
+    {
+      "role": 0,
+      "content": "はい、駐車場は無料でご利用いただけます。予約はいかがされますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "洋食・西洋料理",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "LE GOURMAND",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "洋食・西洋料理",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "本庁",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:53:53",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "LE GOURMAND",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "お願いします。3人で1/25の14:30からは可能でしょうか。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "住所は沖縄県那覇市久茂地1丁目1番1号",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "パレットくもじ",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "奥武山公園駅",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "10時から18時",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "あり",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:54:22"
+    },
+    {
+      "role": 0,
+      "content": "はい、予約が完了し、ご予約番号は、42762となります。他にご用件はございますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": "洋食・西洋料理",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "LE GOURMAND",
+              "value": {
+                "people": "3",
+                "day": [
+                  1,
+                  25
+                ],
+                "time": "14:30"
+              },
+              "timestamp": 1667206482082,
+              "success": true,
+              "ref": "42762"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": null,
+          "genre": "洋食・西洋料理",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "本庁",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 08:55:09",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "LE GOURMAND",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              25
+            ],
+            "time": "14:30"
+          },
+          "timestamp": 1667206482082,
+          "success": true,
+          "ref": "42762"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "他は大丈夫です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "address",
+          "住所は沖縄県那覇市久茂地1丁目1番1号",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "name",
+          "パレットくもじ",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "station",
+          "奥武山公園駅",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "opentime",
+          "10時から18時",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "LEO & JOE",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "parking",
+          "あり",
+          false
+        ],
+        [
+          3,
+          "restaurant",
+          "reference",
+          "42762",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 08:55:26"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 08:55:33"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 08:55:35"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:05",
+  "final_state": {
+    "restaurant": {
+      "city": "那覇",
+      "name": null,
+      "genre": "洋食・西洋料理",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "那覇",
+      "name": null,
+      "genre": null,
+      "area": "本庁",
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null
+    },
+    "shopping": {
+      "city": "那覇",
+      "name": null,
+      "genre": null,
+      "area": "小禄",
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "LE GOURMAND",
+      "value": {
+        "people": "3",
+        "day": [
+          1,
+          25
+        ],
+        "time": "14:30"
+      },
+      "timestamp": 1667206482082,
+      "success": true,
+      "ref": "42762"
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

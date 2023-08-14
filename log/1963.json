@@ -1,0 +1,1963 @@
+{
+  "id": 1963,
+  "dialogue_code": "dialogue_1963vlQf",
+  "status_code": 2,
+  "user": [
+    22,
+    281
+  ],
+  "username": [
+    "operator_0022UfuU",
+    "customer_0281HucT"
+  ],
+  "task": 2133,
+  "task_name": "main_1813",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "info": {
+          "city": "横浜",
+          "parking": "有り(無料)",
+          "station": "新横浜駅"
+        },
+        "reqt": [
+          "name",
+          "address"
+        ]
+      },
+      "weather": {
+        "info": {
+          "city": "横浜",
+          "area": "金沢区",
+          "day": "11/1"
+        },
+        "reqt": [
+          "maxtemperature"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "横浜",
+          "jumbo": "対応"
+        },
+        "info": {
+          "city": "横浜",
+          "jumbo": "dontcare"
+        },
+        "reqt": [
+          "cashless",
+          "reference"
+        ],
+        "book": {
+          "day": "11/1",
+          "time": "10:50",
+          "departurepoint": "世界のビール博物館 横浜店",
+          "arrivalpoint": "shopping"
+        }
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>横浜</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>新横浜駅</b>のところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，住所</b>を聞いてください．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>金沢区</b>です．日付は<b style='color:blue;'>11/1</b>です．",
+        "<b style='color:green;'>最高気温</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，ジャンボタクシーの利用可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>キャッシュレス対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>11/1</b>です．時間は<b style='color:blue;'>10:50</b>です．出発地は<b style='color:blue;'>世界のビール博物館 横浜店</b>というところです．目的地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "address",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "maxtemperature",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "weather",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "横浜への旅行を考えています。当日買い物ができるところを教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 03:43:35"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。50件ほどございますが。何かその他に条件はございますか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667274226516
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 03:44:04",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "駐車場が無料で最寄り駅が新横浜駅が希望です。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 03:44:43"
+    },
+    {
+      "role": 0,
+      "content": "それでしたら、新横浜プリンスペペがございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "新横浜駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667274302295,
+          "selectedResults": [
+            "新横浜プリンスペペ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 03:45:10",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこが良いですね。そこの住所を教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 03:45:32"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。住所は神奈川県横浜市港北区新横浜3丁目4でございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "新横浜駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-01 03:45:46",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あと当日11/1の金沢区の最高気温を教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "新横浜プリンスペペ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市港北区新横浜3丁目4",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 03:46:37"
+    },
+    {
+      "role": 0,
+      "content": "はい、当日最高気温は18.3度となっております。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "横浜",
+            "area": "金沢区",
+            "day": [
+              11,
+              1
+            ]
+          },
+          "book": [],
+          "timestamp": 1667274417307,
+          "selectedResults": [
+            "11/1 横浜 金沢区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "金沢区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-01 03:47:09",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "当日はジャンボタクシーを使いたいのでタクシー会社を探してください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "新横浜プリンスペペ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市港北区新横浜3丁目4",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "18.3度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 03:47:46"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件に該当するタクシー会社を見つけることが出来ませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1667274483653
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "金沢区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-01 03:48:23",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "でしたらジャンボタクシーでなくても良いです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "新横浜プリンスペペ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市港北区新横浜3丁目4",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "18.3度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 03:48:44"
+    },
+    {
+      "role": 0,
+      "content": "では、東宝タクシー株式会社はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "東宝タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667274537219,
+          "selectedResults": [
+            "東宝タクシー株式会社",
+            "日本交通横浜株式会社",
+            "富士見交通株式会社",
+            "横浜北交通株式会社",
+            "東宝タクシー株式会社",
+            "アサヒタクシー株式会社",
+            "東宝タクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "金沢区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-01 03:49:25",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東宝タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこが良さそうですね。そこはキャッシュレス対応でしょうか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "新横浜プリンスペペ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市港北区新横浜3丁目4",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "18.3度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 03:50:00"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。キャッシュレスは非対応となっております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "東宝タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "金沢区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-01 03:50:15",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東宝タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。そこに予約をしたいので日付は11/1の10:50で出発地は世界のビール博物館 横浜店で目的地は新横浜プリンスペペで予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "新横浜プリンスペペ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市港北区新横浜3丁目4",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "18.3度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 03:51:59"
+    },
+    {
+      "role": 0,
+      "content": "お待たせいたしました。予約番号65119で承らせていただきました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "東宝タクシー株式会社",
+              "value": {
+                "day": [
+                  11,
+                  1
+                ],
+                "time": "10:50",
+                "departurepoint": "世界のビール博物館 横浜店",
+                "arrivalpoint": "新横浜プリンスペペ"
+              },
+              "timestamp": 1667274742467,
+              "success": true,
+              "ref": "65119"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "金沢区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-01 03:52:35",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東宝タクシー株式会社",
+          "value": {
+            "day": [
+              11,
+              1
+            ],
+            "time": "10:50",
+            "departurepoint": "世界のビール博物館 横浜店",
+            "arrivalpoint": "新横浜プリンスペペ"
+          },
+          "timestamp": 1667274742467,
+          "success": true,
+          "ref": "65119"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "新横浜プリンスペペ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市港北区新横浜3丁目4",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "18.3度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "対応せず",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "65119",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 03:53:10"
+    },
+    {
+      "role": 0,
+      "content": "その他にご用件はございますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "東宝タクシー株式会社",
+              "value": {
+                "day": [
+                  11,
+                  1
+                ],
+                "time": "10:50",
+                "departurepoint": "世界のビール博物館 横浜店",
+                "arrivalpoint": "新横浜プリンスペペ"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "金沢区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-01 03:53:19",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東宝タクシー株式会社",
+          "value": {
+            "day": [
+              11,
+              1
+            ],
+            "time": "10:50",
+            "departurepoint": "世界のビール博物館 横浜店",
+            "arrivalpoint": "新横浜プリンスペペ"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "大丈夫です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "新横浜プリンスペペ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "address",
+          "神奈川県横浜市港北区新横浜3丁目4",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "18.3度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "対応せず",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "65119",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-01 03:53:36"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。またお待ちしております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "東宝タクシー株式会社",
+              "value": {
+                "day": [
+                  11,
+                  1
+                ],
+                "time": "10:50",
+                "departurepoint": "世界のビール博物館 横浜店",
+                "arrivalpoint": "新横浜プリンスペペ"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "新横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "金沢区",
+          "day": [
+            11,
+            1
+          ]
+        }
+      },
+      "created_at": "2022-11-01 03:53:43",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東宝タクシー株式会社",
+          "value": {
+            "day": [
+              11,
+              1
+            ],
+            "time": "10:50",
+            "departurepoint": "世界のビール博物館 横浜店",
+            "arrivalpoint": "新横浜プリンスペペ"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 03:53:59"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-01 03:53:59"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:08",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "横浜",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": "新横浜駅",
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": "横浜",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "横浜",
+      "area": "金沢区",
+      "day": [
+        11,
+        1
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "東宝タクシー株式会社",
+      "value": {
+        "day": [
+          11,
+          1
+        ],
+        "time": "10:50",
+        "departurepoint": "世界のビール博物館 横浜店",
+        "arrivalpoint": "新横浜プリンスペペ"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

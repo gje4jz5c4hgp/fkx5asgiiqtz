@@ -1,0 +1,1923 @@
+{
+  "id": 2241,
+  "dialogue_code": "dialogue_2241sROl",
+  "status_code": 2,
+  "user": [
+    2,
+    255
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0255dhLh"
+  ],
+  "task": 2411,
+  "task_name": "main_2091",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "info": {
+          "city": "横浜",
+          "station": "横浜駅",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "closed",
+          "area"
+        ]
+      },
+      "weather": {
+        "info": {
+          "city": "横浜",
+          "day": "12/27",
+          "area": "緑区"
+        },
+        "reqt": [
+          "maxtemperature"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "横浜",
+          "jumbo": "対応"
+        },
+        "info": {
+          "city": "横浜",
+          "jumbo": "dontcare"
+        },
+        "reqt": [
+          "cashless",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "day": "12/27",
+          "time": "14:50",
+          "departurepoint": "shopping",
+          "arrivalpoint": "横浜なかや 大関本店"
+        }
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>横浜</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．最寄り駅が<b style='color:blue;'>横浜駅</b>のところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，定休日，エリア</b>を聞いてください．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>12/27</b>です．地区は<b style='color:blue;'>緑区</b>です．",
+        "<b style='color:green;'>最高気温</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，ジャンボタクシーの利用可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>キャッシュレス対応，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>12/27</b>です．時間は<b style='color:blue;'>14:50</b>です．出発地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．目的地は<b style='color:blue;'>横浜なかや 大関本店</b>というところです．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "closed",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "area",
+        ""
+      ],
+      [
+        2,
+        "weather",
+        "maxtemperature",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "weather",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "横浜へ旅行に行くので、買い物ができるところを探してください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-03 04:31:30"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ジャンルやエリアなど、何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667449893610
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-03 04:31:40",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "最寄り駅が横浜駅で、駐車場を無料で利用できるところにしてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-03 04:31:49"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、横浜タカシマヤは如何でしょうか？ジャンルとしては、百貨店や総合スーパーのお店となります。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "横浜駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667449914674,
+          "selectedResults": [
+            "Cosme Kitchen ルミネ横浜",
+            "横浜タカシマヤ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-03 04:32:17",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの定休日とエリアを教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-03 04:32:35"
+    },
+    {
+      "role": 0,
+      "content": "こちらは、定休日はございません。エリアは西区にございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "横浜駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-03 04:32:45",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。次に緑区の12/27の天候を教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西区",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-03 04:33:15"
+    },
+    {
+      "role": 0,
+      "content": "当日の天気は、曇時々晴の予報です。最低気温は1.6度、最高気温は12.8度の予想となっております。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "横浜",
+            "area": "緑区",
+            "day": [
+              12,
+              27
+            ]
+          },
+          "book": [],
+          "timestamp": 1667450009241,
+          "selectedResults": [
+            "12/27 横浜 緑区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "緑区",
+          "day": [
+            12,
+            27
+          ]
+        }
+      },
+      "created_at": "2022-11-03 04:33:47",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あとジャンボタクシーが利用できるタクシー会社を調べてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西区",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "12.8度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-03 04:34:20"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件ですと、ご案内できるところが見つかりませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1667450064537
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "緑区",
+          "day": [
+            12,
+            27
+          ]
+        }
+      },
+      "created_at": "2022-11-03 04:34:33",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではジャンボタクシーは利用できなくても構いません。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西区",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "12.8度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-03 04:34:45"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、東宝タクシー株式会社はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "東宝タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667450084545,
+          "selectedResults": [
+            "東都東タクシー株式会社",
+            "東宝タクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "緑区",
+          "day": [
+            12,
+            27
+          ]
+        }
+      },
+      "created_at": "2022-11-03 04:34:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東宝タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらにします。ちなみにキャッシュレス対応はしていますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西区",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "12.8度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "東宝タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-03 04:35:19"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。こちらはキャッシュレスのお支払いにも非対応となっております。対応している会社でお探ししましょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "東宝タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "緑区",
+          "day": [
+            12,
+            27
+          ]
+        }
+      },
+      "created_at": "2022-11-03 04:35:36",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東宝タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いえ、東宝タクシーで構いません。タクシーの予約をお願いします。日付は12/27、時間は14:50、出発地は横浜タカシマヤで、目的地は横浜なかや 大関本店です。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西区",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "12.8度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "なし",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "東宝タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-03 04:36:43"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。ご予約完了いたしました。予約番号は、69898です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "東宝タクシー株式会社",
+              "value": {
+                "day": [
+                  12,
+                  27
+                ],
+                "time": "14:50",
+                "departurepoint": "横浜タカシマヤ",
+                "arrivalpoint": "横浜なかや 大関本店"
+              },
+              "timestamp": 1667450218082,
+              "success": true,
+              "ref": "69898"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "緑区",
+          "day": [
+            12,
+            27
+          ]
+        }
+      },
+      "created_at": "2022-11-03 04:37:09",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東宝タクシー株式会社",
+          "value": {
+            "day": [
+              12,
+              27
+            ],
+            "time": "14:50",
+            "departurepoint": "横浜タカシマヤ",
+            "arrivalpoint": "横浜なかや 大関本店"
+          },
+          "timestamp": 1667450218082,
+          "success": true,
+          "ref": "69898"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。以上です。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "横浜タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西区",
+          false
+        ],
+        [
+          2,
+          "weather",
+          "maxtemperature",
+          "12.8度",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "なし",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "東宝タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "69898",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-03 04:37:20"
+    },
+    {
+      "role": 0,
+      "content": "承知いたしました。本日はご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "東宝タクシー株式会社",
+              "value": {
+                "day": [
+                  12,
+                  27
+                ],
+                "time": "14:50",
+                "departurepoint": "横浜タカシマヤ",
+                "arrivalpoint": "横浜なかや 大関本店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "横浜駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "横浜",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "横浜",
+          "area": "緑区",
+          "day": [
+            12,
+            27
+          ]
+        }
+      },
+      "created_at": "2022-11-03 04:37:29",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東宝タクシー株式会社",
+          "value": {
+            "day": [
+              12,
+              27
+            ],
+            "time": "14:50",
+            "departurepoint": "横浜タカシマヤ",
+            "arrivalpoint": "横浜なかや 大関本店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-03 04:37:34"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-03 04:37:35"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:10",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "横浜",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": "横浜駅",
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": "横浜",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "横浜",
+      "area": "緑区",
+      "day": [
+        12,
+        27
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "東宝タクシー株式会社",
+      "value": {
+        "day": [
+          12,
+          27
+        ],
+        "time": "14:50",
+        "departurepoint": "横浜タカシマヤ",
+        "arrivalpoint": "横浜なかや 大関本店"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

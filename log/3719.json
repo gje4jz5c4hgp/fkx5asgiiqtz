@@ -1,0 +1,2186 @@
+{
+  "id": 3719,
+  "dialogue_code": "dialogue_3719QhaQ",
+  "status_code": 2,
+  "user": [
+    20,
+    270
+  ],
+  "username": [
+    "operator_0020cvID",
+    "customer_0270xRuW"
+  ],
+  "task": 3989,
+  "task_name": "main2_969",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "福岡",
+          "area": "東区",
+          "pricerange": "普通"
+        },
+        "info": {
+          "city": "福岡",
+          "area": "東区",
+          "pricerange": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "genre",
+          "withrestaurant",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "1/11",
+          "stay": 2
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "福岡",
+          "jumbo": "対応",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "1/11",
+          "time": "13:50",
+          "departurepoint": "hotel",
+          "arrivalpoint": "中国大明火鍋城"
+        },
+        "book": {
+          "day": "1/11",
+          "time": "14:40",
+          "departurepoint": "hotel",
+          "arrivalpoint": "中国大明火鍋城"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>福岡</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．地区は<b style='color:blue;'>東区</b>です．予算は<b style='color:blue;'>普通</b>が希望です．",
+        "希望に合うところが見つからない場合は，予算は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，タイプ，レストランの有無</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>1/11</b>です．宿泊日数は<b style='color:blue;'>2</b>泊です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>1/11</b>です．時間は<b style='color:blue;'>13:50</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は<b style='color:blue;'>中国大明火鍋城</b>というところです．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>14:40</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "genre",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "withrestaurant",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "福岡へ旅行を計画しているのですが、宿泊施設を探していただけますか？東区で予算は普通でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:07:49"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。条件に合う宿泊施設は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1669814294074
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:18:29",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、予算は普通ではなくても大丈夫なので、他によいところはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:19:22"
+    },
+    {
+      "role": 0,
+      "content": "はい。それでは\tThe358 SORAはいかがですか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "The358 SORA",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669814368115,
+          "selectedResults": [
+            "The358 SORA"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:19:39",
+      "book": {
+        "hotel": {
+          "name": "The358 SORA",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらは宿のタイプはどんな感じ出すか？レストランはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The358 SORA",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:21:14"
+    },
+    {
+      "role": 0,
+      "content": "リゾートホテルになります。また、レストランもございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "The358 SORA",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:21:43",
+      "book": {
+        "hotel": {
+          "name": "The358 SORA",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では予約をお願いします。1/11に3名、2泊でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The358 SORA",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "リゾートホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:22:54"
+    },
+    {
+      "role": 0,
+      "content": "ご予約承りました。予約番号は52701です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "The358 SORA",
+              "value": {
+                "people": "3",
+                "day": [
+                  1,
+                  11
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1669814586027,
+              "success": true,
+              "ref": "52701"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:23:25",
+      "book": {
+        "hotel": {
+          "name": "The358 SORA",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "2"
+          },
+          "timestamp": 1669814586027,
+          "success": true,
+          "ref": "52701"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The358 SORA",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "リゾートホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "52701",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:23:50"
+    },
+    {
+      "role": 0,
+      "content": "こちらこそありがとうございました。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "The358 SORA",
+              "value": {
+                "people": "3",
+                "day": [
+                  1,
+                  11
+                ],
+                "stay": "2"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:23:56",
+      "book": {
+        "hotel": {
+          "name": "The358 SORA",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "タクシー会社も探してください。ジャンボタクシーが利用できて、キャッシュレス払いができるところでお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The358 SORA",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "リゾートホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "52701",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:25:54"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。福岡交通（株）はいかがですか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡交通（株）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669814769949,
+          "selectedResults": [
+            "福岡交通（株）"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:26:20",
+      "book": {
+        "hotel": {
+          "name": "The358 SORA",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡交通（株）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの電話番号はわかりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The358 SORA",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "リゾートホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "52701",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "福岡交通（株）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:27:12"
+    },
+    {
+      "role": 0,
+      "content": "はい。0570081234です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡交通（株）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:27:24",
+      "book": {
+        "hotel": {
+          "name": "The358 SORA",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡交通（株）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ではそちらで予約できますか？1/11、13:50にThe358 SORAを出発で、中国大明火鍋城までお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The358 SORA",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "リゾートホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "52701",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0570081234",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "福岡交通（株）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:29:54"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では予約できませんでした。どうされますか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡交通（株）",
+              "value": {
+                "day": [
+                  1,
+                  11
+                ],
+                "time": "13:50",
+                "departurepoint": "The358 SORA",
+                "arrivalpoint": "国大明火鍋城"
+              },
+              "timestamp": 1669815006746,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:30:18",
+      "book": {
+        "hotel": {
+          "name": "The358 SORA",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡交通（株）",
+          "value": {
+            "day": [
+              1,
+              11
+            ],
+            "time": "13:50",
+            "departurepoint": "The358 SORA",
+            "arrivalpoint": "国大明火鍋城"
+          },
+          "timestamp": 1669815006746,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか、では14:40だと予約できますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The358 SORA",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "リゾートホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "52701",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0570081234",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "福岡交通（株）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:31:06"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約承りました。予約番号は、68418です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡交通（株）",
+              "value": {
+                "day": [
+                  1,
+                  11
+                ],
+                "time": "14:40",
+                "departurepoint": "The358 SORA",
+                "arrivalpoint": "国大明火鍋城"
+              },
+              "timestamp": 1669815074164,
+              "success": true,
+              "ref": "68418"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:31:24",
+      "book": {
+        "hotel": {
+          "name": "The358 SORA",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡交通（株）",
+          "value": {
+            "day": [
+              1,
+              11
+            ],
+            "time": "14:40",
+            "departurepoint": "The358 SORA",
+            "arrivalpoint": "国大明火鍋城"
+          },
+          "timestamp": 1669815074164,
+          "success": true,
+          "ref": "68418"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "The358 SORA",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "genre",
+          "リゾートホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "withrestaurant",
+          "あり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "52701",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0570081234",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "福岡交通（株）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "68418",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:31:50"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡交通（株）",
+              "value": {
+                "day": [
+                  1,
+                  11
+                ],
+                "time": "14:40",
+                "departurepoint": "The358 SORA",
+                "arrivalpoint": "国大明火鍋城"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:32:04",
+      "book": {
+        "hotel": {
+          "name": "The358 SORA",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡交通（株）",
+          "value": {
+            "day": [
+              1,
+              11
+            ],
+            "time": "14:40",
+            "departurepoint": "The358 SORA",
+            "arrivalpoint": "国大明火鍋城"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 13:32:14"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 13:32:20"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:57",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "福岡",
+      "name": null,
+      "genre": null,
+      "area": "東区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "福岡",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "The358 SORA",
+      "value": {
+        "people": "3",
+        "day": [
+          1,
+          11
+        ],
+        "stay": "2"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "福岡交通（株）",
+      "value": {
+        "day": [
+          1,
+          11
+        ],
+        "time": "14:40",
+        "departurepoint": "The358 SORA",
+        "arrivalpoint": "国大明火鍋城"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

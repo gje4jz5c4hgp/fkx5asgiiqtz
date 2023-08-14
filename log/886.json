@@ -1,0 +1,2381 @@
+{
+  "id": 886,
+  "dialogue_code": "dialogue_0886nloY",
+  "status_code": 2,
+  "user": [
+    9,
+    203
+  ],
+  "username": [
+    "operator_0009Tmbt",
+    "customer_0203Sqra"
+  ],
+  "task": 1056,
+  "task_name": "main_736",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "京都",
+          "parking": "有り(無料)",
+          "pricerange": "普通"
+        },
+        "reqt": [
+          "name",
+          "checkouttime",
+          "priceinfo",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 4,
+          "day": "5/4",
+          "stay": 3
+        },
+        "book": {
+          "people": 4,
+          "day": "5/4",
+          "stay": 2
+        }
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "京都",
+          "parking": "有り(無料)",
+          "genre": "書籍"
+        },
+        "info": {
+          "city": "京都",
+          "parking": "有り(無料)",
+          "genre": "ショッピングモール"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "京都",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "reference"
+        ],
+        "book": {
+          "day": "5/4",
+          "time": "16:20",
+          "departurepoint": "hotel",
+          "arrivalpoint": "shopping"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．予算は<b style='color:blue;'>普通</b>が希望です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，チェックアウト終了時刻，料金情報</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>5/4</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．",
+        "希望の条件が合わない場合は，宿泊日数を<b style='color:blue;'>2</b>泊に変更します．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．ジャンルは<b style='color:blue;'>書籍</b>です．",
+        "希望に合うところがない場合は，ジャンルを<b style='color:blue;'>ショッピングモール</b>に変更します．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>5/4</b>です．時間は<b style='color:blue;'>16:20</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkouttime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "priceinfo",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "shopping",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは。京都に旅行に行こうと思っているので、宿泊施設の案内をお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:55:35"
+    },
+    {
+      "role": 0,
+      "content": "アルモントホテル京都は、いかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "アルモントホテル京都",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667030153227,
+          "selectedResults": [
+            "アルモントホテル京都"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:56:07",
+      "book": {
+        "hotel": {
+          "name": "アルモントホテル京都",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "駐車場を無料で、予算が普通くらいのところを希望したいのですが、そちらはいかがでしょうか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:56:52"
+    },
+    {
+      "role": 0,
+      "content": "それでは、なごみ宿 都和はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "なごみ宿 都和",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667030238310,
+          "selectedResults": [
+            "なごみ宿 都和"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:57:31",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。それでは、そちらについて詳しく教えてください。チェックアウト終了時刻と、料金情報はどのくらいになりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "なごみ宿 都和",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:58:17"
+    },
+    {
+      "role": 0,
+      "content": "チェックアウト終了時刻は、10時です。　料金情報の詳しい記載はございません。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "なごみ宿 都和",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:59:08",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。お調べいただき、ありがとうございます。では、そちらの宿を予約したいのですが、５月４日から３泊で４人お願いできますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "なごみ宿 都和",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "記載なしで不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 08:00:14"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。　その条件では、予約出来ませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "なごみ宿 都和",
+              "value": {
+                "people": "4",
+                "day": [
+                  5,
+                  4
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1667030442174,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 08:00:54",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "4",
+            "day": [
+              5,
+              4
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1667030442174,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうでしたか。では、２泊で予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "なごみ宿 都和",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 08:01:16"
+    },
+    {
+      "role": 0,
+      "content": "予約出来ました。予約番号は、59737です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "なごみ宿 都和",
+              "value": {
+                "people": "4",
+                "day": [
+                  5,
+                  4
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1667030485018,
+              "success": true,
+              "ref": "59737"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 08:01:34",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "4",
+            "day": [
+              5,
+              4
+            ],
+            "stay": "2"
+          },
+          "timestamp": 1667030485018,
+          "success": true,
+          "ref": "59737"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。書き控えました。あと、書籍の買い物ができるところを探していまして。駐車場が無料で利用できるところで、どこかありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "なごみ宿 都和",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "59737",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 08:02:27"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。　その条件では、ないようです。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "書籍",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667030570603
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": "書籍",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 08:02:52",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "4",
+            "day": [
+              5,
+              4
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。では、書籍ではなく、ショッピングモールでお願します。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "なごみ宿 都和",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "59737",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 08:03:20"
+    },
+    {
+      "role": 0,
+      "content": "道の駅 ウッディー京北は、いかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": "ショッピングモール",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667030611874,
+          "selectedResults": [
+            "道の駅 ウッディー京北"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 08:03:44",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "4",
+            "day": [
+              5,
+              4
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、そちらに伺ってみようかと思います。当日に利用できるタクシー会社も探していただきたいのですが、キャッシュレス対応のところで、どこかありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "なごみ宿 都和",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "59737",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "道の駅 ウッディー京北",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 08:04:42"
+    },
+    {
+      "role": 0,
+      "content": "帝産京都自動車株式会社は、いかがですか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "帝産京都自動車株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667030704089,
+          "selectedResults": [
+            "帝産京都自動車株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 08:05:17",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "4",
+            "day": [
+              5,
+              4
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "帝産京都自動車株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、そちらの予約をお願いします。５月４日の16時20分に、先ほどのなごみ宿 都和から、道の駅 ウッディー京北まででお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "なごみ宿 都和",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "59737",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "道の駅 ウッディー京北",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "帝産京都自動車株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 08:06:17"
+    },
+    {
+      "role": 0,
+      "content": "予約出来ました。予約番号は、32819です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "帝産京都自動車株式会社",
+              "value": {
+                "day": [
+                  5,
+                  4
+                ],
+                "time": "16:20",
+                "departurepoint": "なごみ宿 都和",
+                "arrivalpoint": "道の駅 ウッディー京北"
+              },
+              "timestamp": 1667030809541,
+              "success": true,
+              "ref": "32819"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 08:06:59",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "4",
+            "day": [
+              5,
+              4
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "帝産京都自動車株式会社",
+          "value": {
+            "day": [
+              5,
+              4
+            ],
+            "time": "16:20",
+            "departurepoint": "なごみ宿 都和",
+            "arrivalpoint": "道の駅 ウッディー京北"
+          },
+          "timestamp": 1667030809541,
+          "success": true,
+          "ref": "32819"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。これで、楽しい旅行ができそうです。本日は色々とありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "なごみ宿 都和",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "59737",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "道の駅 ウッディー京北",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "帝産京都自動車株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "32819",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 08:07:34"
+    },
+    {
+      "role": 0,
+      "content": "他にご用件はございますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "帝産京都自動車株式会社",
+              "value": {
+                "day": [
+                  5,
+                  4
+                ],
+                "time": "16:20",
+                "departurepoint": "なごみ宿 都和",
+                "arrivalpoint": "道の駅 ウッディー京北"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 08:07:42",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "4",
+            "day": [
+              5,
+              4
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "帝産京都自動車株式会社",
+          "value": {
+            "day": [
+              5,
+              4
+            ],
+            "time": "16:20",
+            "departurepoint": "なごみ宿 都和",
+            "arrivalpoint": "道の駅 ウッディー京北"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いえ、もう大丈夫です。それでは、失礼いたします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "なごみ宿 都和",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "59737",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "道の駅 ウッディー京北",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "帝産京都自動車株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "32819",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 08:07:58"
+    },
+    {
+      "role": 0,
+      "content": "承知致しました。　ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "帝産京都自動車株式会社",
+              "value": {
+                "day": [
+                  5,
+                  4
+                ],
+                "time": "16:20",
+                "departurepoint": "なごみ宿 都和",
+                "arrivalpoint": "道の駅 ウッディー京北"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": "ショッピングモール",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 08:08:03",
+      "book": {
+        "hotel": {
+          "name": "なごみ宿 都和",
+          "value": {
+            "people": "4",
+            "day": [
+              5,
+              4
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "帝産京都自動車株式会社",
+          "value": {
+            "day": [
+              5,
+              4
+            ],
+            "time": "16:20",
+            "departurepoint": "なごみ宿 都和",
+            "arrivalpoint": "道の駅 ウッディー京北"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-29 08:08:14"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-29 08:08:14"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:00",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "京都",
+      "name": null,
+      "genre": "ショッピングモール",
+      "area": null,
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": "京都",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "なごみ宿 都和",
+      "value": {
+        "people": "4",
+        "day": [
+          5,
+          4
+        ],
+        "stay": "2"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "帝産京都自動車株式会社",
+      "value": {
+        "day": [
+          5,
+          4
+        ],
+        "time": "16:20",
+        "departurepoint": "なごみ宿 都和",
+        "arrivalpoint": "道の駅 ウッディー京北"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

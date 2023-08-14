@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>対話アノテーション</title>
+
+  <link href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+        rel="stylesheet" type="text/css">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/bootstrap-vue.min.css" rel="stylesheet"> <!-- version 2.1.0 -->
+  <link href="./css/fontawesome.all.css" rel="stylesheet">
+  <link href="./css/select2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/vue-select@3.20.0/dist/vue-select.css">
+
+  <style type="text/css">
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      /* font-family: 'Lato', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif; */
+      font-family: 'Hiragino Sans GB', sans-serif;
+    }
+
+    .card{
+      border-width: 3px;
+      border-radius: 12px;
+    }
+    body{
+      background-color: #f7f7f7;
+    }
+
+    #chatbox-screen {
+      overflow-y: auto;
+      background-color: #f3f3f3;
+      background-color: white;
+      border-radius: 12px;
+    }
+
+    #chatbox-sender {
+      max-height: 108px;
+      min-height: 108px;
+      padding: 8px 12px;
+      resize: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+      outline: none;
+      overflow-y: auto;
+      /* background-color: #f3f3f3; */
+      background-color: white;
+    }
+
+    #chatbox-footer {
+      border: none;
+      padding: 6px;
+      /* background-color: #f3f3f3; */
+      background-color: white;
+      border-radius: 12px;
+    }
+
+    .chatmsg {
+      max-width: 300px;
+      margin: 1px 15px 6px;
+      padding: 4px 8px;
+      
+      border-radius: 3px;
+    }
+    
+    .chatmsg-left {
+      /* background-color: #ffffff; */
+      background-color: #eee;
+    }
+
+    .chatmsg-right {
+      background-color: #a2e563;
+    }
+
+    .card-header, .card-footer{
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+
+    <div style="height: 84%">
+        <div class="container-fluid h-100" >
+            <div class="row px-3 h-100" id="annotation">
+                <div class="col-12 my-3 px-2 h-100 col-lg-6">
+                    <div id="chatbox" class="card h-100">
+                        <div class="px-2 py-1" style="background-color: white; border-radius: 12px;">
+                            <strong style="font-size: 20px">対話履歴</strong>
+                        </div>
+                        <!-- <div class="card-header">
+                            <h4>対話履歴</h4>
+                        </div> -->
+                        <hr class="my-0">
+                        <div id="chatbox-screen" class="card-body">  
+                            <chatmsg
+                            v-for="(message, idx) in messages" 
+                            v-if="message.content !=='' && Math.floor((idx + 1) / 2) <= num_turns"
+                            :key="message.id"
+                            :content="nl2br(message.content)" 
+                            :ourside="message.role === 1"
+                            :turnidx="Math.floor((idx + 1) / 2)"
+                            />
+                            
+                        </div>
+                        <div class="card-footer " style="border-radius: 0 0 7px 12px;">
+                            <div class="text-center" style="margin-bottom: 0.5em;">
+                                <span v-text="num_turns"></span>ターン目 / 全<span v-text="Math.floor((messages.length + 1) / 2) - 1"></span>ターン
+                            </div>
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center" style="cursor: pointer;">
+                                    <li class="page-item disabled" v-if="num_turns == 1">
+                                        <a class="page-link" aria-disabled="true">前のターンへ</a>
+                                    </li>
+                                    <li class="page-item" v-else>
+                                        <a class="page-link" @click="clickNext(-1)">前のターンへ</a>
+                                    </li>
+                                    <li class="page-item"  v-if="num_turns == Math.floor((messages.length + 1)  / 2) - 1">
+                                        <a class="page-link" style="background-color: #0069d9; border-color: #0062cc; color: white;" @click="clickExport()">作業結果記録を出力</a>
+                                    </li>
+                                    <li class="page-item" v-else>
+                                        <a class="page-link" @click="clickNext(1)">次のターンへ</a>
+                                    </li>
+                                </ul>
+                            </nav>
+        
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 my-3 px-2 h-100 col-lg-6" >
+                    <div id="questionnaire" class="card h-100" style="overflow: auto">
+                        <!-- <div class="card-header">
+                        <h4>作業欄</h4>
+                        </div> -->
+                        <div class="px-2 py-1" style="background-color: white; border-radius: 12px;">
+                            <strong style="font-size: 20px">顧客が着目している施設の情報</strong>
+                        </div>
+                        <hr class="my-0">
+
+                        <div class="card-body" style="overflow-y: auto;">
+                            <!-- <div class="mb-5 border rounded p-3	">
+                                説明 (あれば)
+                            </div> -->
+
+                            <!-- <div  :key="" v-if="activeField" class="form-group row">
+                                <label class="col-3 col-form-label col-form-label-sm " ><h6 class="font-weight-bold">カテゴリ</h6></label>
+                                <span v-text="slots[activeField].ja"></span>
+                            </div> -->
+                            <div v-for="(item, name) in annotations[num_turns - 1].slots" :key="" v-if="activeField" class="form-group row">
+                                
+                                <label class="col-3 col-form-label col-form-label-sm" >
+                                    <h6 class="font-weight-bold" >
+                                        <span v-if="activeField === 'taxi'" >
+                                            <span v-if="name === 'name'" v-text="'タクシー会社の名称'"></span>
+                                            <span v-else v-text="'タクシー会社の' + item.ja"></span>
+                                        </span>
+                                        <span v-else-if="activeField === 'hotel' && name === 'withrestaurant'" v-text="'宿泊施設内のレストランの有無'"></span>
+                                        <span v-else-if="activeField === 'weather' && name === 'area'" v-text="'天気のエリア条件'"></span>
+                                        <span v-else v-text="slots[activeField].ja + 'の' + item.ja"></span>
+                                    </h6>
+                                </label>
+                                <!-- <span v-text="messages[2 * num_turns - 1].state[activeField][name]" ></span> -->
+                                <template v-if="item.type === 'between'">
+                                  <div class="col-4">
+                                    <input v-model="item.params[0]" type="number" class="form-control form-control-sm">
+                                  </div>
+                                  <div class="ml-2">~</div>
+                                  <div class="col-4 ml-auto">
+                                    <input v-model="item.params[1]" type="number" class="form-control form-control-sm">
+                                  </div>
+                                </template>
+                      
+                                <template v-else-if="item.type === 'postcode'">
+                                    <div class="col-4">
+                                        <input v-model="item.params[0]" type="number" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="ml-2">-</div>
+                                    <div class="col-4 ml-auto">
+                                        <input v-model="item.params[1]" type="number" class="form-control form-control-sm">
+                                    </div>
+                                </template>
+                      
+                                <div v-else-if="item.type === 'select' || item.type === 'select-in' || item.type === 'candidate'" class="col-9">
+                                    <v-select 
+                                        v-model="item.params" 
+                                        @input="changeValue(num_turns)" 
+                                        class="" 
+                                        :options="item.options.map((x) => {return {'value': x, 'label': x}})" 
+                                        placeholder="-- 情報無し --"
+                                        :multiple="item.type === 'select-in'"
+                                        :reduce="option => option.value">
+                                    </v-select>
+                                </div>
+                      
+                                <div v-else-if="item.type === 'select-child' || item.type === 'candidate-child'" class="col-9" >
+                                    <v-select  
+                                        v-model="item.params" 
+                                        @input="changeValue(num_turns)" 
+                                        class=""  
+                                        :options="item.options[city].map((x) => {return {'value': x, 'label': x}})" 
+                                        placeholder="-- 情報無し --"
+                                        :reduce="option => option.value">
+                                    </v-select>
+                                   
+                                </div>
+                      
+                                <div v-else-if="item.type === 'time'" class="col-9">
+                                  <input v-model="item.params" class="form-control form-control-sm" type="time">
+                                </div>
+                      
+                                <!-- <div v-else-if="item.type === 'candidate'" class="col-9">
+                                  <v-select v-model="item.params" class="" :options="[{'value': null, 'label': '-- 情報無し --'}].concat(item.options.map((x) => {return {'value': x, 'label': x}}))" :reduce="option => option.value"></v-select>
+                                </div>
+                      
+                                <div v-else-if="item.type === 'candidate-child'" class="col-9" >
+                                  <v-select v-if="annotations[num_turns - 1].slots[item.parent] && annotations[num_turns - 1].slots[item.parent]['params']" v-model="item.params" class="" :options="[{'value': null, 'label': '-- 情報無し --'}].concat(item.options[annotations[num_turns - 1].slots[item.parent]['params']].map((x) => {return {'value': x, 'label': x}}))" :reduce="option => option.value"></v-select>
+                                  <v-select v-else v-model="item.params" class="" :options="[{'value': null, 'label': '-- 情報無し --'}]" :reduce="option => option.value"></v-select>
+                                </div> -->
+                      
+                                <div v-else-if="item.type === 'date'" class="col-9">
+                                  <select type="select-child" v-model="item.params[0]" class="form-control" style="display: inline; width: auto;" @change="changeValue(num_turns)">
+                                    <option :value='null' >- 月 -</option>
+                                    <option v-for="i in 12" v-text="i + '月'" :value='i'></option>
+                                  </select>
+                                  <select type="select-child" v-model="item.params[1]" class="form-control" style="display: inline; width: auto;" @change="changeValue(num_turns)">
+                                    <option :value='null' >- 日 -</option>
+                                    <option v-for="i in 31" v-text="i + '日'" :value='i'></option>
+                                  </select>
+                                </div>
+                      
+                                <div v-else class="col-9">
+                                    <input v-model="item.params" class="form-control form-control-sm" list="data">
+                                </div>
+                      
+                            </div>
+
+                            <!-- <div class="card-footer ">
+                            </div> -->
+                            
+                        </div>
+            
+                    </div>
+                </div>
+
+                <!-- <div class="col-12 col-lg-4 my-3 px-2 h-100 {{'' if role else 'd-none'}}">
+                <div id="render1" class="card h-100" style="overflow: auto">
+                    <div class="card-header">
+                    <h4>対話シナリオ</h4>
+                    </div>
+                </div>
+                </div> -->
+                
+            </div>
+        </div>
+    </div>
+
+<script src="./js/polyfill.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/vue.min.js"></script>
+<script src="./js/bootstrap-vue.min.js"></script> <!-- version 2.1.0 -->
+<script src="./js/axios.min.js"></script>
+<script src="./js/socket.io.min.js"></script>
+<script src="./js/select2.min.js"></script>
+<script src="./js/jszip.min.js"></script>
+<script src="https://unpkg.com/vue-select@3.20.0"></script>
+
+<script type="text/javascript">
+    Vue.component('v-select', VueSelect.VueSelect);
+    const annotation = new Vue({
+        el: '#annotation',
+        data () {
+        return {
+            // questions: [],
+            // canSubmit: true,
+            messages: [],
+            num_turns: 1,
+            slots: {},
+            task_content: {},
+            city: "",
+            activeField: null,
+            annotations: [],
+            room_id : 3,
+            // ファイルが出力済みを表す変数
+            isFileDownloaded: false,
+        }
+     },
+ 
+     methods: {
+
+        nl2br: str => str.replace(/(?:\r\n|\r|\n)/g, '<br />'),
+        async loadmessages() {
+            let url = new URL(window.location.href);
+            let params = url.searchParams;
+            if(params.get("id") && !isNaN(params.get("id")))
+                this.room_id =  Number(params.get("id")) ;
+            try {
+             
+                const res = await axios.get('./log/' + String(this.room_id) + '.json');
+                const res_slots = await axios.get('./data/slots.json');
+                this.messages = res.data.messages;   
+                this.task_content = res.data.task_content;      
+                this.city = this.task_content["goals"][this.task_content["domains"][0]]["info"]["city"];
+                
+                this.slots = res_slots.data;            
+            
+            } catch (error) {
+                console.log(error.response.status, error.response.statusText);
+            }
+
+            for(let num_turns=1; num_turns <= 1; num_turns+=1){
+                let domain = null;
+                if(this.messages[num_turns * 2 - 1]['payload'].length - 1 >= 0)
+                    domain = this.messages[num_turns * 2 - 1]['payload'][this.messages[num_turns * 2 - 1]['payload'].length - 1]['field'];
+                this.annotations.push({
+                    "domain": domain,
+                    "slots": {},
+                });
+
+                if(domain){
+                    for(slot in this.slots[domain].slots){
+                        if(this.slots[domain].slots[slot].informable){
+                            if(this.annotations.length * 2 + 1 < this.messages.length){ //最後のターンでない
+                                if(this.messages[this.annotations.length * 2  + 1].state[domain][slot])
+                                    continue
+                            }
+                            else if(this.messages[this.annotations.length * 2  - 1].state[domain][slot]) // 最後のターン
+                                continue
+                            this.annotations[this.annotations.length - 1].slots[slot] = JSON.parse(JSON.stringify(this.slots[domain].slots[slot]));
+                            // slotが"parking", "wifi", "withrestaurant"のいずれかであれば，optionsに"無し"を追加
+                            if(slot === "parking" || slot === "wifi" || slot === "withrestaurant"){
+                                this.annotations[this.annotations.length - 1].slots[slot].options.push("無し");
+                            }
+                        }  
+                    }
+                }
+                this.changeTurn();
+            }
+                
+
+        },
+        async loadslots() {
+          try {
+            const res = await axios.get('./data/slots.json');
+            this.slots = res.data;
+            } catch (error) {
+                console.log(error.response.status, error.response.statusText);
+            }
+            
+        },
+        clickNext(x){
+            this.num_turns += x
+            if(this.num_turns < 1){
+                this.num_turns = 1
+            }
+            if(this.num_turns > Math.floor((this.messages.length + 1)  / 2) - 1){
+                this.num_turns = Math.floor((this.messages.length + 1)  / 2) - 1
+            }
+    
+
+
+            if(this.num_turns  > this.annotations.length){
+                let domain = null;
+                if(this.messages[this.num_turns * 2 - 1]['payload'].length - 1 >= 0)
+                    domain = this.messages[this.num_turns * 2 - 1]['payload'][this.messages[this.num_turns * 2 - 1]['payload'].length - 1]['field'];
+                this.annotations.push({
+                    "domain": domain,
+                    "slots": {},
+                });
+
+                if(domain){
+                    for(slot in this.slots[domain].slots){
+                        if(this.slots[domain].slots[slot].informable){
+                            if(this.annotations.length * 2 + 1 < this.messages.length){ //最後のターンでない
+                                if(this.messages[this.annotations.length * 2  + 1].state[domain][slot])
+                                    continue
+                            }
+                            else if(this.messages[this.annotations.length * 2  - 1].state[domain][slot]) // 最後のターン
+                                continue
+                            
+                            
+                            this.annotations[this.annotations.length - 1].slots[slot] = JSON.parse(JSON.stringify(this.slots[domain].slots[slot]));
+                            if(this.annotations[this.annotations.length - 2].domain === domain && slot in this.annotations[this.annotations.length - 2].slots){
+                                this.annotations[this.annotations.length - 1].slots[slot].params = JSON.parse(JSON.stringify(this.annotations[this.annotations.length - 2].slots[slot].params))
+                            }
+                            // slotが"parking", "wifi", "withrestaurant"のいずれかであれば，optionsに"無し"を追加
+                            if(slot === "parking" || slot === "wifi" || slot === "withrestaurant"){
+                                this.annotations[this.annotations.length - 1].slots[slot].options.push("無し");
+                            }
+                            
+                        }  
+                    }
+                }
+                console.log("new page");
+            }
+
+            const el = document.getElementById('chatbox-screen');
+            this.$nextTick(() => {
+                el.scrollTop = el.scrollHeight
+            })
+            this.changeTurn();
+        },
+        changeTurn(){
+            this.activeField = this.annotations[this.num_turns - 1].domain;
+        },
+        changeValue(num_turns){
+            this.annotations = JSON.parse(JSON.stringify(this.annotations));
+        },
+        clickExport(){
+            console.log("Export");
+            //すでに出力済みである場合は，再度出力するかを確認
+            if(this.isFileDownloaded && !confirm("すでに作業結果を出力済みです．再度出力しますか?")){
+                return;
+            }
+            // this.annotationsをjsonに出力
+            // jsonのblobを作成
+            const jsonBlob = new Blob([JSON.stringify(this.annotations)], {type: "application/json;charset=utf-8"});
+            // zipに追加
+            const zip = new JSZip();
+            zip.file("annotation_" + String(this.room_id) + ".json", jsonBlob);
+            // zipを圧縮し出力
+            let room_id = this.room_id;
+            zip.generateAsync({type: "blob"}).then(function(blob) {
+                const a = document.createElement("a");
+                a.href = URL.createObjectURL(blob);
+                // 勝手に解凍するのを防ぐために拡張子を.binにする
+                a.download = "annotation_" + String(room_id) + ".bin";
+                a.click();
+                a.remove();
+            });
+
+            this.isFileDownloaded = true;
+        },
+     },
+     mounted () {
+        window.localStorage.clear();
+    //    this.loadquestions();
+        this.loadmessages();
+        this.loadslots();
+        
+        // const el = document.getElementById('chatbox-screen');
+        // this.$nextTick(() => {
+        //     el.scrollTop = el.scrollHeight
+        // })
+        },
+        components: {
+        chatmsg: {
+            props: {
+                ourside: {
+                    type: Boolean,
+                    required: true,
+                },
+                content: {
+                    type: String,
+                    required: true
+                },
+                turnidx: {
+                    tyoe: Number,
+                    required: true
+                }
+            },
+            methods: {
+            nl2br: str => str.replace(/(?:\r\n|\r|\n)/g, '<br />')
+            },
+            template: `
+            <div :class="'row justify-content-' + (ourside ? 'end' : 'start')">
+                <div class="" v-show="!ourside "><img src="./img/operator.svg" width="50"></div>
+                <div class="text-size-small pt-4" v-show="ourside"><small v-text="turnidx"></small></div>
+                <div class="">
+                    <div class="pl-3 pr-3 " :style="'width: auto; text-align: ' +  (ourside ? 'end' : 'start') + ';'"><small class="font-weight-bold "  v-text="(ourside ? '顧客' : 'オペレータ')"></small></div>
+                    <div :class="'float-right chatmsg chatmsg-' + (ourside ? 'right' : 'left')" v-html="nl2br(content)"></div>
+                </div>
+                
+                <div class="" v-show="ourside "><img src="./img/customer.svg" width="50"></div>
+            </div>
+            `
+        }
+     },
+   });
+
+
+
+ </script>
+</body>
+</html>

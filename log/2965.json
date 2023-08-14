@@ -1,0 +1,2384 @@
+{
+  "id": 2965,
+  "dialogue_code": "dialogue_2965HweZ",
+  "status_code": 2,
+  "user": [
+    4,
+    273
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0273qHNI"
+  ],
+  "task": 3235,
+  "task_name": "main2_215",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "fail_info": {
+          "city": "東京",
+          "area": "渋谷区",
+          "pricerange": "普通",
+          "genre": "和食"
+        },
+        "info": {
+          "city": "東京",
+          "area": "渋谷区",
+          "pricerange": "dontcare",
+          "genre": "和食"
+        },
+        "reqt": [
+          "closed",
+          "phone",
+          "opentime",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "2/13",
+          "time": "09:30"
+        }
+      },
+      "shopping": {
+        "info": {
+          "city": "東京",
+          "genre": "お土産"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "hotel": {
+        "fail_info": {
+          "city": "東京",
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "withrestaurant": "有り",
+          "pricerange": "高め"
+        },
+        "info": {
+          "city": "東京",
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "withrestaurant": "有り",
+          "pricerange": "dontcare"
+        },
+        "reqt": [
+          "address",
+          "station"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>東京</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．地区は<b style='color:blue;'>渋谷区</b>です．予算は<b style='color:blue;'>普通</b>が希望です．ジャンルは<b style='color:blue;'>和食</b>です．",
+        "希望に合うところが見つからない場合は，予算は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>定休日，電話番号，営業時間</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>2/13</b>です．時間は<b style='color:blue;'>09:30</b>です．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．ジャンルは<b style='color:blue;'>お土産</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．宿のタイプは<b style='color:blue;'>簡易宿所（ベッドハウス・山小屋・カプセルホテル等）</b>です．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．予算は<b style='color:blue;'>高め</b>が希望です．",
+        "希望に合うところが見つからない場合は，予算は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>住所，最寄り駅</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "closed",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "phone",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "opentime",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "hotel",
+        "address",
+        ""
+      ],
+      [
+        3,
+        "hotel",
+        "station",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "shopping",
+      "hotel"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "今度東京へ行くんですが、渋谷区で予算は普通くらいの飲食店を探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 04:37:37"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。熊本牧場直営 木本商店はいかがでしょう？ジャンルは、居酒屋、郷土料理となります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "渋谷区",
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "熊本牧場直営 木本商店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669610290181,
+          "selectedResults": [
+            "吟味焼肉 じゃんか道玄坂",
+            "東南アジア屋台酒場 バグース",
+            "熊本牧場直営 木本商店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "渋谷区",
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 04:38:38",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "熊本牧場直営 木本商店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "和食のお店も探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 04:39:16"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、和食の条件を追加すると、ご案内可能な飲食店がございません。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "和食",
+            "area": "渋谷区",
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669610372486
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": "和食",
+          "area": "渋谷区",
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 04:40:09",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "熊本牧場直営 木本商店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。じゃあ予算にはこだわらないことにします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 04:40:34"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、BISTRO BINGOはいかがでしょう？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "和食",
+            "area": "渋谷区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "BISTRO BINGO",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669610445440,
+          "selectedResults": [
+            "BISTRO BINGO"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": "和食",
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 04:41:08",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "BISTRO BINGO",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。では、そこの定休日と電話番号と営業時間もおしえてもらえますか。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "closed",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 04:41:42"
+    },
+    {
+      "role": 0,
+      "content": "はい、電話番号は0367127830、営業時間は11時30分から15時と、17時から20時となります。定休日はございません。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "和食",
+            "area": "渋谷区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "BISTRO BINGO",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": "和食",
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 04:42:31",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "BISTRO BINGO",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ではそこの予約をお願いできますか？2/13の9：30で３名です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0367127830",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11時30分から15時、17時から20時",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 04:43:13"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、念のための確認ですが、午前9時30分でよろしいでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "和食",
+            "area": "渋谷区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "BISTRO BINGO",
+              "value": {
+                "people": "3",
+                "day": [
+                  2,
+                  13
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": "和食",
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 04:44:06",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "BISTRO BINGO",
+          "value": {
+            "people": "3",
+            "day": [
+              2,
+              13
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、午前です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0367127830",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11時30分から15時、17時から20時",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 04:44:20"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。予約が完了し、ご予約番号は、39212となります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "和食",
+            "area": "渋谷区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "BISTRO BINGO",
+              "value": {
+                "people": "3",
+                "day": [
+                  2,
+                  13
+                ],
+                "time": "09:30"
+              },
+              "timestamp": 1669610682089,
+              "success": true,
+              "ref": "39212"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": "和食",
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 04:45:01",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "BISTRO BINGO",
+          "value": {
+            "people": "3",
+            "day": [
+              2,
+              13
+            ],
+            "time": "09:30"
+          },
+          "timestamp": 1669610682089,
+          "success": true,
+          "ref": "39212"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、お土産が買えるお店も探してもらえますか",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0367127830",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11時30分から15時、17時から20時",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "39212",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 04:45:21"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。エリアでいうと中央区にある、わしたショップ銀座店はいかがでしょう？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "お土産",
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669610746146,
+          "selectedResults": [
+            "わしたショップ銀座店",
+            "新宿高野 本店",
+            "わしたショップ銀座店",
+            "グラスファクトリー 創吉",
+            "北海道どさんこプラザ有楽町店",
+            "せとうち旬彩館",
+            "わしたショップ銀座店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": "和食",
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "お土産",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 04:46:20",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "BISTRO BINGO",
+          "value": {
+            "people": "3",
+            "day": [
+              2,
+              13
+            ],
+            "time": "09:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。それから、レストランが併設されていて、予算高めの簡易宿所はありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0367127830",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11時30分から15時、17時から20時",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "39212",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "わしたショップ銀座店",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 04:47:13"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、この条件ではご案内ができません。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1669610870181
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": "和食",
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "お土産",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 04:47:56",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "BISTRO BINGO",
+          "value": {
+            "people": "3",
+            "day": [
+              2,
+              13
+            ],
+            "time": "09:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、予算にはこだわらず探してください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0367127830",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11時30分から15時、17時から20時",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "39212",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "わしたショップ銀座店",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 04:48:17"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。エリアでいうと新宿区にある、UNPLAN Kagurazakaはいかがでしょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "UNPLAN Kagurazaka",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669610912924,
+          "selectedResults": [
+            "UNPLAN Kagurazaka"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": "和食",
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "お土産",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 04:48:57",
+      "book": {
+        "hotel": {
+          "name": "UNPLAN Kagurazaka",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "BISTRO BINGO",
+          "value": {
+            "people": "3",
+            "day": [
+              2,
+              13
+            ],
+            "time": "09:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ではそこの住所と最寄り駅も教えてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0367127830",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11時30分から15時、17時から20時",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "39212",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "わしたショップ銀座店",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 04:49:15"
+    },
+    {
+      "role": 0,
+      "content": "はい、住所は東京都新宿区天神町23-1、最寄りの神楽坂駅から徒歩で3分となります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "UNPLAN Kagurazaka",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": "和食",
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "お土産",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 04:49:49",
+      "book": {
+        "hotel": {
+          "name": "UNPLAN Kagurazaka",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "BISTRO BINGO",
+          "value": {
+            "people": "3",
+            "day": [
+              2,
+              13
+            ],
+            "time": "09:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。以上で結構です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0367127830",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11時30分から15時、17時から20時",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "39212",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "わしたショップ銀座店",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "address",
+          "東京都新宿区天神町23-1",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "神楽坂駅",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 04:50:14"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "UNPLAN Kagurazaka",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": "和食",
+          "area": "渋谷区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": "お土産",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 04:50:18",
+      "book": {
+        "hotel": {
+          "name": "UNPLAN Kagurazaka",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "BISTRO BINGO",
+          "value": {
+            "people": "3",
+            "day": [
+              2,
+              13
+            ],
+            "time": "09:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 04:50:31"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 04:50:33"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:52",
+  "final_state": {
+    "restaurant": {
+      "city": "東京",
+      "name": null,
+      "genre": "和食",
+      "area": "渋谷区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "東京",
+      "name": null,
+      "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "東京",
+      "name": null,
+      "genre": "お土産",
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "UNPLAN Kagurazaka",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "BISTRO BINGO",
+      "value": {
+        "people": "3",
+        "day": [
+          2,
+          13
+        ],
+        "time": "09:30"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

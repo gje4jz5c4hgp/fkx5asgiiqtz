@@ -1,0 +1,1650 @@
+{
+  "id": 4622,
+  "dialogue_code": "dialogue_4622ueRT",
+  "status_code": 2,
+  "user": [
+    8,
+    313
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0313EOoD"
+  ],
+  "task": 4892,
+  "task_name": "main2_1872",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "info": {
+          "city": "名古屋",
+          "genre": "文房具・雑貨",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "station",
+          "area"
+        ]
+      },
+      "restaurant": {
+        "info": {
+          "city": "名古屋",
+          "station": "国際センター駅",
+          "genre": "お好み焼き・たこ焼き"
+        },
+        "reqt": [
+          "name",
+          "reference"
+        ],
+        "book": {
+          "people": 4,
+          "day": "10/28",
+          "time": "16:50"
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "名古屋",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "10/28",
+          "time": "15:30",
+          "departurepoint": "shopping",
+          "arrivalpoint": "restaurant"
+        }
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>名古屋</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．ジャンルは<b style='color:blue;'>文房具・雑貨</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，最寄り駅，エリア</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．最寄り駅が<b style='color:blue;'>国際センター駅</b>のところにしてください．ジャンルは<b style='color:blue;'>お好み焼き・たこ焼き</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>10/28</b>です．時間は<b style='color:blue;'>16:50</b>です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>10/28</b>です．時間は<b style='color:blue;'>15:30</b>です．出発地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．目的地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "station",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "area",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "restaurant",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "すみません、名古屋旅行したいと思っていますが、文房具・雑貨のお店はありますか？駐車場が無料のところでお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:49:12"
+    },
+    {
+      "role": 0,
+      "content": "では東急ハンズ名古屋店はいかがですか。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "文房具・雑貨",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1669625368545,
+          "selectedResults": [
+            "ポケモンセンターナゴヤ",
+            "東急ハンズ名古屋店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:49:38",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "有名ですよね。最寄り駅とエリアってわかりますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:49:57"
+    },
+    {
+      "role": 0,
+      "content": "最寄り駅は名古屋駅で、エリアは中村区でございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "文房具・雑貨",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:50:11",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます、買い物したいと思います。それから、飲食店で、お好み焼き・たこ焼きのお店が国際センター駅近くにありませんか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "東急ハンズ名古屋店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "station",
+          "名古屋駅",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "中村区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:50:54"
+    },
+    {
+      "role": 0,
+      "content": "はい。じゃけん 名古屋2号店がございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "お好み焼き・たこ焼き",
+            "area": null,
+            "pricerange": null,
+            "station": "国際センター駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "じゃけん 名古屋2号店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669625475982,
+          "selectedResults": [
+            "じゃけん 名古屋2号店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "お好み焼き・たこ焼き",
+          "area": null,
+          "pricerange": null,
+          "station": "国際センター駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:51:25",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "じゃけん 名古屋2号店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらを予約できますか？人数は4人で、10月28日の16時50分にお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "東急ハンズ名古屋店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "station",
+          "名古屋駅",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "中村区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:51:50"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。予約番号は59367でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "genre": "お好み焼き・たこ焼き",
+            "area": null,
+            "pricerange": null,
+            "station": "国際センター駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "じゃけん 名古屋2号店",
+              "value": {
+                "people": "4",
+                "day": [
+                  10,
+                  28
+                ],
+                "time": "16:50"
+              },
+              "timestamp": 1669625520611,
+              "success": true,
+              "ref": "59367"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "お好み焼き・たこ焼き",
+          "area": null,
+          "pricerange": null,
+          "station": "国際センター駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:52:14",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "じゃけん 名古屋2号店",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              28
+            ],
+            "time": "16:50"
+          },
+          "timestamp": 1669625520611,
+          "success": true,
+          "ref": "59367"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "助かります。お手数なんですが、タクシー予約もお願いしたいです。キャッシュレス払いできるといいんですが。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "東急ハンズ名古屋店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "station",
+          "名古屋駅",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "中村区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "じゃけん 名古屋2号店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "59367",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:52:45"
+    },
+    {
+      "role": 0,
+      "content": "では名古屋エムケイがございます。こちらジャンボタクシーにも対応しております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "名古屋エムケイ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669625579182,
+          "selectedResults": [
+            "名古屋エムケイ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "お好み焼き・たこ焼き",
+          "area": null,
+          "pricerange": null,
+          "station": "国際センター駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:53:11",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "じゃけん 名古屋2号店",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              28
+            ],
+            "time": "16:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "名古屋エムケイ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。そちらに頼みたいですが、念のために電話番号も教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "東急ハンズ名古屋店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "station",
+          "名古屋駅",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "中村区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "じゃけん 名古屋2号店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "59367",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:53:28"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は0529125908でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "名古屋エムケイ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "お好み焼き・たこ焼き",
+          "area": null,
+          "pricerange": null,
+          "station": "国際センター駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:53:36",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "じゃけん 名古屋2号店",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              28
+            ],
+            "time": "16:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "名古屋エムケイ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。では10月28日の15時30分に、東急ハンズ名古屋店からじゃけん 名古屋2号店までで予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "東急ハンズ名古屋店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "station",
+          "名古屋駅",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "中村区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "じゃけん 名古屋2号店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "59367",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0529125908",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:54:27"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。予約番号は45898でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "名古屋",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "名古屋エムケイ",
+              "value": {
+                "day": [
+                  10,
+                  28
+                ],
+                "time": "15:30",
+                "departurepoint": "東急ハンズ名古屋店",
+                "arrivalpoint": "じゃけん 名古屋2号店"
+              },
+              "timestamp": 1669625686271,
+              "success": true,
+              "ref": "45898"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "お好み焼き・たこ焼き",
+          "area": null,
+          "pricerange": null,
+          "station": "国際センター駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "名古屋",
+          "name": null,
+          "genre": "文房具・雑貨",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "名古屋",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:54:57",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "じゃけん 名古屋2号店",
+          "value": {
+            "people": "4",
+            "day": [
+              10,
+              28
+            ],
+            "time": "16:50"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "名古屋エムケイ",
+          "value": {
+            "day": [
+              10,
+              28
+            ],
+            "time": "15:30",
+            "departurepoint": "東急ハンズ名古屋店",
+            "arrivalpoint": "じゃけん 名古屋2号店"
+          },
+          "timestamp": 1669625686271,
+          "success": true,
+          "ref": "45898"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "スムーズに予約できて良かったです。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "東急ハンズ名古屋店",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "station",
+          "名古屋駅",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "中村区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "じゃけん 名古屋2号店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "59367",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0529125908",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "45898",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:55:13"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 08:55:20"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 08:55:22"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:02",
+  "final_state": {
+    "restaurant": {
+      "city": "名古屋",
+      "name": null,
+      "genre": "お好み焼き・たこ焼き",
+      "area": null,
+      "pricerange": null,
+      "station": "国際センター駅",
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "名古屋",
+      "name": null,
+      "genre": "文房具・雑貨",
+      "area": null,
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": "名古屋",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "じゃけん 名古屋2号店",
+      "value": {
+        "people": "4",
+        "day": [
+          10,
+          28
+        ],
+        "time": "16:50"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "名古屋エムケイ",
+      "value": {
+        "day": [
+          10,
+          28
+        ],
+        "time": "15:30",
+        "departurepoint": "東急ハンズ名古屋店",
+        "arrivalpoint": "じゃけん 名古屋2号店"
+      },
+      "timestamp": 1669625686271,
+      "success": true,
+      "ref": "45898"
+    }
+  }
+}

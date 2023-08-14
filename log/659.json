@@ -1,0 +1,2098 @@
+{
+  "id": 659,
+  "dialogue_code": "dialogue_0659Astm",
+  "status_code": 2,
+  "user": [
+    2,
+    278
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0278uKJi"
+  ],
+  "task": 829,
+  "task_name": "main_509",
+  "task_content": {
+    "goals": {
+      "attraction": {
+        "info": {
+          "city": "京都",
+          "wifi": "有り(無料)",
+          "area": "左京区"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "genre"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "京都",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "8/14",
+          "time": "12:00",
+          "departurepoint": "ステーキ花郷 祇園店",
+          "arrivalpoint": "attraction"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "京都",
+          "area": "西京区",
+          "day": "8/14"
+        },
+        "reqt": [
+          "mintemperature",
+          "weather"
+        ]
+      }
+    },
+    "descriptions": {
+      "attraction": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>左京区</b>です．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称，電話番号，ジャンル</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>8/14</b>です．時間は<b style='color:blue;'>12:00</b>です．出発地は<b style='color:blue;'>ステーキ花郷 祇園店</b>というところです．目的地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>西京区</b>です．日付は<b style='color:blue;'>8/14</b>です．",
+        "<b style='color:green;'>最低気温，天気</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "phone",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "mintemperature",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "weather",
+        ""
+      ]
+    ],
+    "domains": [
+      "attraction",
+      "taxi",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都への旅行を計画していますが、観光名所を教えてください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 01:37:52"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ジャンルやエリアなど、何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667007474956
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 01:38:04",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "Wi-Fiが無料で利用できるところで、地区は左京区です。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 01:38:20"
+    },
+    {
+      "role": 0,
+      "content": "では、国立京都国際会館はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "左京区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667007507532,
+          "selectedResults": [
+            "国立京都国際会館"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "左京区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 01:38:39",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこの電話番号、ジャンルは何ですか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "国立京都国際会館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 01:39:02"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は、0757051218です。ジャンルは、コンサート・ショーとなっております。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "左京区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "左京区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 01:39:16",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では当日利用できるタクシー会社を探してください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "国立京都国際会館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0757051218",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "genre",
+          "コンサート・ショー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 01:39:38"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。株式会社キャビックというところはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "株式会社キャビック",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667007580827,
+          "selectedResults": [
+            "京都観光バス株式会社",
+            "株式会社キャビック"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "左京区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 01:40:01",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "株式会社キャビック",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこはジャンボタクシーが利用できますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "国立京都国際会館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0757051218",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "genre",
+          "コンサート・ショー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 01:40:16"
+    },
+    {
+      "role": 0,
+      "content": "はい、ご利用可能です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "株式会社キャビック",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "左京区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 01:40:24",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "株式会社キャビック",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、そのタクシー会社の電話番号を教えてください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "国立京都国際会館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0757051218",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "genre",
+          "コンサート・ショー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 01:40:41"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は、0758642100です。ご予約もなさいますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "株式会社キャビック",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "左京区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 01:40:54",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "株式会社キャビック",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですね。予約をお願いします。日付は8/14、時間は12:00、出発地はステーキ花郷 祇園店で、目的地は国立京都国際会館です。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "国立京都国際会館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0757051218",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "genre",
+          "コンサート・ショー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0758642100",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 01:41:51"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。ご予約番号は、49747でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "株式会社キャビック",
+              "value": {
+                "day": [
+                  8,
+                  14
+                ],
+                "time": "12:00",
+                "departurepoint": "ステーキ花郷 祇園店",
+                "arrivalpoint": "国立京都国際会館"
+              },
+              "timestamp": 1667007724277,
+              "success": true,
+              "ref": "49747"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "左京区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 01:42:22",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "株式会社キャビック",
+          "value": {
+            "day": [
+              8,
+              14
+            ],
+            "time": "12:00",
+            "departurepoint": "ステーキ花郷 祇園店",
+            "arrivalpoint": "国立京都国際会館"
+          },
+          "timestamp": 1667007724277,
+          "success": true,
+          "ref": "49747"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あと、西京区の8/14の最低気温，天気を教えてください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "国立京都国際会館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0757051218",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "genre",
+          "コンサート・ショー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0758642100",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "49747",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 01:43:04"
+    },
+    {
+      "role": 0,
+      "content": "最低気温は、22度の予想です。天気は、曇の予報となっております。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "西京区",
+            "day": [
+              8,
+              14
+            ]
+          },
+          "book": [],
+          "timestamp": 1667007802910,
+          "selectedResults": [
+            "8/14 京都 西京区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "左京区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "西京区",
+          "day": [
+            8,
+            14
+          ]
+        }
+      },
+      "created_at": "2022-10-29 01:43:44",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "株式会社キャビック",
+          "value": {
+            "day": [
+              8,
+              14
+            ],
+            "time": "12:00",
+            "departurepoint": "ステーキ花郷 祇園店",
+            "arrivalpoint": "国立京都国際会館"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。助かりました。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "国立京都国際会館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0757051218",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "genre",
+          "コンサート・ショー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0758642100",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "49747",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "22度",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "曇",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 01:44:18"
+    },
+    {
+      "role": 0,
+      "content": "他にお調べすることはございますか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "西京区",
+            "day": [
+              8,
+              14
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "左京区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "西京区",
+          "day": [
+            8,
+            14
+          ]
+        }
+      },
+      "created_at": "2022-10-29 01:44:25",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "株式会社キャビック",
+          "value": {
+            "day": [
+              8,
+              14
+            ],
+            "time": "12:00",
+            "departurepoint": "ステーキ花郷 祇園店",
+            "arrivalpoint": "国立京都国際会館"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "大丈夫です。他にはありません。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "国立京都国際会館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0757051218",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "genre",
+          "コンサート・ショー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0758642100",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "49747",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "22度",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "曇",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 01:44:36"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ではまたのご利用をお待ちしております。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "西京区",
+            "day": [
+              8,
+              14
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "左京区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "西京区",
+          "day": [
+            8,
+            14
+          ]
+        }
+      },
+      "created_at": "2022-10-29 01:44:44",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "株式会社キャビック",
+          "value": {
+            "day": [
+              8,
+              14
+            ],
+            "time": "12:00",
+            "departurepoint": "ステーキ花郷 祇園店",
+            "arrivalpoint": "国立京都国際会館"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-29 01:44:52"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-29 01:44:52"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:58",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": "左京区",
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "京都",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "京都",
+      "area": "西京区",
+      "day": [
+        8,
+        14
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "株式会社キャビック",
+      "value": {
+        "day": [
+          8,
+          14
+        ],
+        "time": "12:00",
+        "departurepoint": "ステーキ花郷 祇園店",
+        "arrivalpoint": "国立京都国際会館"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

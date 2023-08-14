@@ -1,0 +1,1872 @@
+{
+  "id": 1578,
+  "dialogue_code": "dialogue_1578WTBs",
+  "status_code": 2,
+  "user": [
+    8,
+    231
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0231ZBtW"
+  ],
+  "task": 1748,
+  "task_name": "main_1428",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "fail_info": {
+          "city": "仙台",
+          "parking": "有り(無料)",
+          "station": "東仙台駅",
+          "pricerange": "普通"
+        },
+        "info": {
+          "city": "仙台",
+          "parking": "有り(無料)",
+          "station": "dontcare",
+          "pricerange": "普通"
+        },
+        "reqt": [
+          "name",
+          "reference"
+        ],
+        "book": {
+          "people": 2,
+          "day": "10/24",
+          "time": "11:10"
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "仙台",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "cashless",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "day": "10/24",
+          "time": "09:40",
+          "departurepoint": "restaurant",
+          "arrivalpoint": "なか卯 仙台駅東口店"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "仙台",
+          "area": "太白区",
+          "day": "10/24"
+        },
+        "reqt": [
+          "weather"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>仙台</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>東仙台駅</b>のところにしてください．予算は<b style='color:blue;'>普通</b>が希望です．",
+        "希望に合うところが見つからない場合は，最寄り駅は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>10/24</b>です．時間は<b style='color:blue;'>11:10</b>です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>キャッシュレス対応，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>10/24</b>です．時間は<b style='color:blue;'>09:40</b>です．出発地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．目的地は<b style='color:blue;'>なか卯 仙台駅東口店</b>というところです．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>太白区</b>です．日付は<b style='color:blue;'>10/24</b>です．",
+        "<b style='color:green;'>天気</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "weather",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "taxi",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "仙台へ旅行予定なのですが、値段が普通くらいの飲食店を探してください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 02:26:35"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ほかにご希望の条件はございますか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667183207442
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 02:27:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですね。駐車場が無料で使えて、最寄り駅が東仙台駅のところにしてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 02:27:24"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件で案内できるところがございませんでした。いかがなさいますか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": "東仙台駅",
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667183255593
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": "東仙台駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 02:27:44",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。なら最寄り駅はどこでも大丈夫です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 02:28:04"
+    },
+    {
+      "role": 0,
+      "content": "では炭火焼肉 彩火はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "炭火焼肉 彩火",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667183289653,
+          "selectedResults": [
+            "炭火焼肉 彩火"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": "",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 02:28:20",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "炭火焼肉 彩火",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。2人で10/24の11:10から予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "炭火焼肉 彩火",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 02:28:48"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。予約番号は88785でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": "",
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "炭火焼肉 彩火",
+              "value": {
+                "people": "2",
+                "day": [
+                  10,
+                  24
+                ],
+                "time": "11:10"
+              },
+              "timestamp": 1667183342327,
+              "success": true,
+              "ref": "88785"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": "",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 02:29:15",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "炭火焼肉 彩火",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              24
+            ],
+            "time": "11:10"
+          },
+          "timestamp": 1667183342327,
+          "success": true,
+          "ref": "88785"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日ジャンボタクシーを利用予定なのですが、調べてもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "炭火焼肉 彩火",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "88785",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 02:29:59"
+    },
+    {
+      "role": 0,
+      "content": "では（株）フタバタクシーがございます。こちらキャッシュレスにも対応しております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "（株）フタバタクシー",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667183410441,
+          "selectedResults": [
+            "（株）フタバタクシー"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": "",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 02:30:25",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "炭火焼肉 彩火",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              24
+            ],
+            "time": "11:10"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（株）フタバタクシー",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。10/24の9:40で炭火焼肉 彩火からなか卯 仙台駅東口店までの利用予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "炭火焼肉 彩火",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "88785",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "あり",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "（株）フタバタクシー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 02:31:12"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。予約番号は53248でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "（株）フタバタクシー",
+              "value": {
+                "day": [
+                  10,
+                  24
+                ],
+                "time": "09:40",
+                "departurepoint": "炭火焼肉 彩火",
+                "arrivalpoint": "なか卯 仙台駅東口店"
+              },
+              "timestamp": 1667183494755,
+              "success": true,
+              "ref": "53248"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": "",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 02:31:50",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "炭火焼肉 彩火",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              24
+            ],
+            "time": "11:10"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（株）フタバタクシー",
+          "value": {
+            "day": [
+              10,
+              24
+            ],
+            "time": "09:40",
+            "departurepoint": "炭火焼肉 彩火",
+            "arrivalpoint": "なか卯 仙台駅東口店"
+          },
+          "timestamp": 1667183494755,
+          "success": true,
+          "ref": "53248"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日10/24の太白区の天気を教えてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "炭火焼肉 彩火",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "88785",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "あり",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "（株）フタバタクシー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "53248",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 02:32:18"
+    },
+    {
+      "role": 0,
+      "content": "天気は晴のち雨、最低気温が9.8度で最高気温が23.1度でございます。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "太白区",
+            "day": [
+              10,
+              24
+            ]
+          },
+          "book": [],
+          "timestamp": 1667183552110,
+          "selectedResults": [
+            "10/24 仙台 太白区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": "",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "太白区",
+          "day": [
+            10,
+            24
+          ]
+        }
+      },
+      "created_at": "2022-10-31 02:32:54",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "炭火焼肉 彩火",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              24
+            ],
+            "time": "11:10"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（株）フタバタクシー",
+          "value": {
+            "day": [
+              10,
+              24
+            ],
+            "time": "09:40",
+            "departurepoint": "炭火焼肉 彩火",
+            "arrivalpoint": "なか卯 仙台駅東口店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "炭火焼肉 彩火",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "88785",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "あり",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "（株）フタバタクシー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "53248",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "晴のち雨",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 02:33:06"
+    },
+    {
+      "role": 0,
+      "content": "ほかにご用件はございますか。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "太白区",
+            "day": [
+              10,
+              24
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": "",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "太白区",
+          "day": [
+            10,
+            24
+          ]
+        }
+      },
+      "created_at": "2022-10-31 02:33:13",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "炭火焼肉 彩火",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              24
+            ],
+            "time": "11:10"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（株）フタバタクシー",
+          "value": {
+            "day": [
+              10,
+              24
+            ],
+            "time": "09:40",
+            "departurepoint": "炭火焼肉 彩火",
+            "arrivalpoint": "なか卯 仙台駅東口店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いえ、もう大丈夫です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "炭火焼肉 彩火",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "88785",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "あり",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "（株）フタバタクシー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "53248",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "晴のち雨",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 02:33:25"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "太白区",
+            "day": [
+              10,
+              24
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": "",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "太白区",
+          "day": [
+            10,
+            24
+          ]
+        }
+      },
+      "created_at": "2022-10-31 02:33:28",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "炭火焼肉 彩火",
+          "value": {
+            "people": "2",
+            "day": [
+              10,
+              24
+            ],
+            "time": "11:10"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（株）フタバタクシー",
+          "value": {
+            "day": [
+              10,
+              24
+            ],
+            "time": "09:40",
+            "departurepoint": "炭火焼肉 彩火",
+            "arrivalpoint": "なか卯 仙台駅東口店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 02:33:35"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 02:33:49"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:05",
+  "final_state": {
+    "restaurant": {
+      "city": "仙台",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": "",
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "仙台",
+      "name": null,
+      "cashless": null,
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": "仙台",
+      "area": "太白区",
+      "day": [
+        10,
+        24
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "炭火焼肉 彩火",
+      "value": {
+        "people": "2",
+        "day": [
+          10,
+          24
+        ],
+        "time": "11:10"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "（株）フタバタクシー",
+      "value": {
+        "day": [
+          10,
+          24
+        ],
+        "time": "09:40",
+        "departurepoint": "炭火焼肉 彩火",
+        "arrivalpoint": "なか卯 仙台駅東口店"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

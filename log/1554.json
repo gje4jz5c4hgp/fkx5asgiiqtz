@@ -1,0 +1,1423 @@
+{
+  "id": 1554,
+  "dialogue_code": "dialogue_1554MRQn",
+  "status_code": 2,
+  "user": [
+    2,
+    270
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0270xRuW"
+  ],
+  "task": 1724,
+  "task_name": "main_1404",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "仙台",
+          "pricerange": "普通",
+          "area": "太白区",
+          "station": "長町南駅"
+        },
+        "reqt": [
+          "opentime"
+        ]
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "仙台",
+          "genre": "書籍",
+          "area": "宮城野区",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "仙台",
+          "genre": "書籍",
+          "area": "dontcare",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "accesstime",
+          "name"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>仙台</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．予算は<b style='color:blue;'>普通</b>が希望です．地区は<b style='color:blue;'>太白区</b>です．最寄り駅が<b style='color:blue;'>長町南駅</b>のところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>営業時間</b>を聞いてください．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．ジャンルは<b style='color:blue;'>書籍</b>です．地区は<b style='color:blue;'>宮城野区</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>近辺の駅からの所要時間，店舗名</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "opentime",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "shopping"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "仙台へ旅行を計画しているんですが。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 12:10:55"
+    },
+    {
+      "role": 0,
+      "content": "仙台のご旅行ですね。本日はどのようなお手伝いをいたしましょうか？",
+      "payload": [
+        {}
+      ],
+      "state": {},
+      "created_at": "2022-10-31 12:11:09",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "当日に食事ができる飲食店を探していただきたいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 12:12:01"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。お食事のジャンルやエリアなど、何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667218324567
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 12:12:15",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特にジャンルの希望はありません。ただ、予算は普通くらいでエリアは太白区がよいです。最寄りの駅が長町南駅でお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 12:14:03"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。そうしますと、2件ご案内可能です。例えば、目利きの銀次 長町南駅前店という、ジャンルが居酒屋, 寿司・魚料理のお店はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "太白区",
+            "pricerange": "普通",
+            "station": "長町南駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "目利きの銀次 長町南駅前店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667218456566,
+          "selectedResults": [
+            "目利きの銀次 長町南駅前店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "普通",
+          "station": "長町南駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 12:14:44",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "目利きの銀次 長町南駅前店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。そこでお願いします。営業時間を教えてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 12:16:03"
+    },
+    {
+      "role": 0,
+      "content": "営業時間は、11:00～25:00でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "太白区",
+            "pricerange": "普通",
+            "station": "長町南駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "目利きの銀次 長町南駅前店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "普通",
+          "station": "長町南駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 12:16:13",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "目利きの銀次 長町南駅前店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あと、当日に書籍を買えるところもお願いします。宮城野区あたりが希望です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11：00～25：00",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 12:18:44"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件ですと、ご案内できるところが見つかりませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "書籍",
+            "area": "宮城野区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667218745463
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "普通",
+          "station": "長町南駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "書籍",
+          "area": "宮城野区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 12:19:16",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "目利きの銀次 長町南駅前店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "それでは、エリアは問わないので書籍が買えるところはありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11：00～25：00",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 12:20:27"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。そうしますと、7件ほど候補がございます。たとえば、くまざわ書店 アリオ仙台泉店というお店が泉区エリアにありますが、いかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "書籍",
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667218833959,
+          "selectedResults": [
+            "くまざわ書店 アリオ仙台泉店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "普通",
+          "station": "長町南駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "書籍",
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 12:21:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "目利きの銀次 長町南駅前店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "その中で無料の駐車場はありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11：00～25：00",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 12:21:51"
+    },
+    {
+      "role": 0,
+      "content": "無料駐車場を併設している場所ですと、5件ご案内可能です。では、絵本と木のおもちゃ 横田や、というところはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "書籍",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667218920072,
+          "selectedResults": [
+            "絵本と木のおもちゃ 横田や"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "普通",
+          "station": "長町南駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "書籍",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 12:22:25",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "目利きの銀次 長町南駅前店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではそこでお願いします。念のため近辺の駅からの所要時間も教えてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11：00～25：00",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 12:23:21"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。北仙台駅からはタクシーで7分、北山駅からですと徒歩で9分です。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "書籍",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "普通",
+          "station": "長町南駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "仙台",
+          "name": null,
+          "genre": "書籍",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 12:23:44",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "目利きの銀次 長町南駅前店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "11：00～25：00",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "北山駅から徒歩で9分",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "絵本と木のおもちゃ　横田や",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 12:25:27"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 2,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "途中で終わってしまったようです。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 12:25:51"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 12:26:18"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:05",
+  "final_state": {
+    "restaurant": {
+      "city": "仙台",
+      "name": null,
+      "genre": null,
+      "area": "太白区",
+      "pricerange": "普通",
+      "station": "長町南駅",
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "仙台",
+      "name": null,
+      "genre": "書籍",
+      "area": null,
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "目利きの銀次 長町南駅前店",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

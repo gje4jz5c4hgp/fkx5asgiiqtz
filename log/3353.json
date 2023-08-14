@@ -1,0 +1,2230 @@
+{
+  "id": 3353,
+  "dialogue_code": "dialogue_3353wpip",
+  "status_code": 2,
+  "user": [
+    7,
+    235
+  ],
+  "username": [
+    "operator_0007wTiH",
+    "customer_0235IpFM"
+  ],
+  "task": 3623,
+  "task_name": "main2_603",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "大阪",
+          "withrestaurant": "有り",
+          "pricerange": "高め",
+          "station": "大阪駅"
+        },
+        "info": {
+          "city": "大阪",
+          "withrestaurant": "有り",
+          "pricerange": "dontcare",
+          "station": "大阪駅"
+        },
+        "reqt": [
+          "accesstime",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 2,
+          "day": "9/10",
+          "stay": 2
+        },
+        "book": {
+          "people": 2,
+          "day": "9/10",
+          "stay": 1
+        }
+      },
+      "restaurant": {
+        "fail_info": {
+          "city": "大阪",
+          "pricerange": "普通",
+          "area": "中央区"
+        },
+        "info": {
+          "city": "大阪",
+          "pricerange": "dontcare",
+          "area": "中央区"
+        },
+        "reqt": [
+          "priceinfo",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "9/10",
+          "time": "15:30"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．予算は<b style='color:blue;'>高め</b>が希望です．最寄り駅が<b style='color:blue;'>大阪駅</b>のところにしてください．",
+        "希望に合うところが見つからない場合は，予算は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>近辺の駅からの所要時間</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>9/10</b>です．宿泊日数は<b style='color:blue;'>2</b>泊です．",
+        "希望の条件が合わない場合は，宿泊日数を<b style='color:blue;'>1</b>泊に変更します．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．予算は<b style='color:blue;'>普通</b>が希望です．地区は<b style='color:blue;'>中央区</b>です．",
+        "希望に合うところが見つからない場合は，予算は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>料金情報，店名</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>9/10</b>です．時間は<b style='color:blue;'>15:30</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "accesstime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "priceinfo",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪への旅行を計画中で、レストラン付きの宿泊施設を探しています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:55:24"
+    },
+    {
+      "role": 0,
+      "content": "67件ございます。ホテルプラザオーサカ\nアパホテル〈御堂筋本町駅前〉\nワイズホテル新大阪などはいかがですか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1669467500030
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:56:25",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。最寄りが大阪駅で、予算は高めの施設が良いです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:56:48"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。検索結果がございません。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "高め",
+            "station": "大阪駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1669467574391
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": "大阪駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:57:29",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。それでは、予算はいくらでも構いませんので、良さそうな施設をいくつか教えていただきたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:57:51"
+    },
+    {
+      "role": 0,
+      "content": "ホテル阪急レスパイア大阪\nホテル法華クラブ大阪\n大阪東急REIホテルなどはいかがですか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "大阪駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1669467643830
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "大阪駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:58:41",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ホテル阪急レスパイア大阪にしようと思います。最寄駅からの所要時間は分かりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:59:01"
+    },
+    {
+      "role": 0,
+      "content": "大阪駅から徒歩で3分です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "大阪駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテル阪急レスパイア大阪",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "ホテル阪急レスパイア大阪"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "大阪駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 12:59:20",
+      "book": {
+        "hotel": {
+          "name": "ホテル阪急レスパイア大阪",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。9/10から2人で2泊予約したいのですが、可能でしょうか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "大阪駅から徒歩で3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 12:59:52"
+    },
+    {
+      "role": 0,
+      "content": "予約ができませんでした。申し訳ございません。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "大阪駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテル阪急レスパイア大阪",
+              "value": {
+                "people": "2",
+                "day": [
+                  9,
+                  10
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1669467753357,
+              "success": false,
+              "ref": ""
+            },
+            {
+              "name": "ホテル阪急レスパイア大阪",
+              "value": {
+                "people": "2",
+                "day": [
+                  9,
+                  10
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1669467754827,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "大阪駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 13:00:32",
+      "book": {
+        "hotel": {
+          "name": "ホテル阪急レスパイア大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              10
+            ],
+            "stay": "2"
+          },
+          "timestamp": 1669467754827,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。それでは、1泊で構わないので予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "大阪駅から徒歩で3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 13:00:49"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約完了しております。予約番号は24529",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "大阪駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテル阪急レスパイア大阪",
+              "value": {
+                "people": "2",
+                "day": [
+                  9,
+                  10
+                ],
+                "stay": "1"
+              },
+              "timestamp": 1669467808288,
+              "success": true,
+              "ref": "24529"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "大阪駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 13:01:29",
+      "book": {
+        "hotel": {
+          "name": "ホテル阪急レスパイア大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              10
+            ],
+            "stay": "1"
+          },
+          "timestamp": 1669467808288,
+          "success": true,
+          "ref": "24529"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日中央区で食事をしたいのですが、予算が普通の飲食店はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "大阪駅から徒歩で3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "24529",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 13:02:03"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。検索結果がございません。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669467904379
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "大阪駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 13:02:58",
+      "book": {
+        "hotel": {
+          "name": "ホテル阪急レスパイア大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              10
+            ],
+            "stay": "1"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。それでは、予算はいくらでも構いません。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "大阪駅から徒歩で3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "24529",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 13:03:14"
+    },
+    {
+      "role": 0,
+      "content": "25件見つかりました。牛歩、すしはな 三ツ寺店、レスプリ ドゥ クゥー ドゥ フランスなどはいかがですか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669467942135
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "大阪駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 13:03:56",
+      "book": {
+        "hotel": {
+          "name": "ホテル阪急レスパイア大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              10
+            ],
+            "stay": "1"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "すしはな 三ツ寺店にしようと思います。料金についての情報はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "大阪駅から徒歩で3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "24529",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "すしはな 三ツ寺店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 13:04:32"
+    },
+    {
+      "role": 0,
+      "content": "料金情報は不明です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "すしはな 三ツ寺店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "すしはな 三ツ寺店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "大阪駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 13:04:56",
+      "book": {
+        "hotel": {
+          "name": "ホテル阪急レスパイア大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              10
+            ],
+            "stay": "1"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "すしはな 三ツ寺店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。それでは9/10の15:30から、3名で予約をお願いできますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "大阪駅から徒歩で3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "24529",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "すしはな 三ツ寺店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 13:05:34"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約完了しております。予約番号は50430です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "すしはな 三ツ寺店",
+              "value": {
+                "people": "3",
+                "day": [
+                  9,
+                  10
+                ],
+                "time": "15:30"
+              },
+              "timestamp": 1669468101298,
+              "success": true,
+              "ref": "50430"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "大阪駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 13:06:31",
+      "book": {
+        "hotel": {
+          "name": "ホテル阪急レスパイア大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              10
+            ],
+            "stay": "1"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "すしはな 三ツ寺店",
+          "value": {
+            "people": "3",
+            "day": [
+              9,
+              10
+            ],
+            "time": "15:30"
+          },
+          "timestamp": 1669468101298,
+          "success": true,
+          "ref": "50430"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "非常に助かります。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "大阪駅から徒歩で3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "24529",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "すしはな 三ツ寺店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "50430",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 13:06:43"
+    },
+    {
+      "role": 0,
+      "content": "とんでもないです。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "すしはな 三ツ寺店",
+              "value": {
+                "people": "3",
+                "day": [
+                  9,
+                  10
+                ],
+                "time": "15:30"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "大阪駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-26 13:07:04",
+      "book": {
+        "hotel": {
+          "name": "ホテル阪急レスパイア大阪",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              10
+            ],
+            "stay": "1"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "すしはな 三ツ寺店",
+          "value": {
+            "people": "3",
+            "day": [
+              9,
+              10
+            ],
+            "time": "15:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。それでは、失礼します。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "大阪駅から徒歩で3分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "24529",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "すしはな 三ツ寺店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "50430",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-26 13:07:12"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-26 13:07:22"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-26 13:07:29"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:55",
+  "final_state": {
+    "restaurant": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": "中央区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "大阪駅",
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ホテル阪急レスパイア大阪",
+      "value": {
+        "people": "2",
+        "day": [
+          9,
+          10
+        ],
+        "stay": "1"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "すしはな 三ツ寺店",
+      "value": {
+        "people": "3",
+        "day": [
+          9,
+          10
+        ],
+        "time": "15:30"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

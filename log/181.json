@@ -1,0 +1,2350 @@
+{
+  "id": 181,
+  "dialogue_code": "dialogue_0181FdqE",
+  "status_code": 2,
+  "user": [
+    2,
+    214
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0214XrbI"
+  ],
+  "task": 351,
+  "task_name": "main_31",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "札幌",
+          "area": "手稲区",
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "札幌",
+          "area": "dontcare",
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "pricerange",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "5/22",
+          "stay": 3
+        }
+      },
+      "shopping": {
+        "fail_info": {
+          "city": "札幌",
+          "parking": "有り(無料)",
+          "area": "東区",
+          "genre": "燃料"
+        },
+        "info": {
+          "city": "札幌",
+          "parking": "有り(無料)",
+          "area": "東区",
+          "genre": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "accesstime"
+        ]
+      },
+      "attraction": {
+        "info": {
+          "city": "札幌",
+          "genre": "歴史的な散策エリア",
+          "area": "中央区"
+        },
+        "reqt": [
+          "childfee",
+          "closed",
+          "station"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>札幌</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．地区は<b style='color:blue;'>手稲区</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>値段帯</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>5/22</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>東区</b>です．ジャンルは<b style='color:blue;'>燃料</b>です．",
+        "希望に合うところがない場合は，ジャンルは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，近辺の駅からの所要時間</b>を聞いてください．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．ジャンルは<b style='color:blue;'>歴史的な散策エリア</b>です．地区は<b style='color:blue;'>中央区</b>です．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>子供入場料，定休日，最寄り駅</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "pricerange",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "accesstime",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "childfee",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "closed",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "station",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "shopping",
+      "attraction"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは。札幌へ旅行に行きたいと考えており、宿泊施設を探しています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:00:15"
+    },
+    {
+      "role": 0,
+      "content": "ご利用ありがとうございます。札幌の宿泊施設ですね。エリアなどでご希望の条件はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666526419250
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:00:48",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "手稲地区で考えています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:01:09"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。手稲区エリアですと、ご案内できる施設が見つけられませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "手稲区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666526480434
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "手稲区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:01:47",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "Wi-Fi、駐車場を無料で利用できるところであれば、地区はとこでもかまいません。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:02:34"
+    },
+    {
+      "role": 0,
+      "content": "そういたしますと、6件ほどございます。たとえば、定山渓ビューホテルはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "定山渓ビューホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666526565956,
+          "selectedResults": [
+            "定山渓ビューホテル"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:03:15",
+      "book": {
+        "hotel": {
+          "name": "定山渓ビューホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこでお願い致します。ちなみにお値段帯はどれくらいでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:03:49"
+    },
+    {
+      "role": 0,
+      "content": "お値段は、安めのリゾートホテルとなっております。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "定山渓ビューホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:04:05",
+      "book": {
+        "hotel": {
+          "name": "定山渓ビューホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。では、5/22から3泊、3人で予約をお願いできますでしょうか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:04:37"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。予約を完了いたしました。ご予約番号は、65604です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "定山渓ビューホテル",
+              "value": {
+                "people": "3",
+                "day": [
+                  5,
+                  22
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1666526686420,
+              "success": true,
+              "ref": "65604"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:05:10",
+      "book": {
+        "hotel": {
+          "name": "定山渓ビューホテル",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1666526686420,
+          "success": true,
+          "ref": "65604"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。当日東区で燃料系のお買い物をしたいと考えています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65604",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:05:56"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。札幌の東区で燃料を扱っているお店はご案内できるところがございません。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "燃料",
+            "area": "東区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666526783027
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": "燃料",
+          "area": "東区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:06:55",
+      "book": {
+        "hotel": {
+          "name": "定山渓ビューホテル",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。でしたら、駐車場が無料で利用できれば、どんなジャンルのお買い物でも大丈夫です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65604",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:07:24"
+    },
+    {
+      "role": 0,
+      "content": "そういたしますと、４件ほどご案内可能です。百貨店や総合スーパーの、アリオ札幌はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1666526851756,
+          "selectedResults": [
+            "アリオ札幌"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:08:04",
+      "book": {
+        "hotel": {
+          "name": "定山渓ビューホテル",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、アリオ札幌に行きたいと思います。ちなみにこちらのお店は近くの駅からアクセスすると、どれくらいの時間がかかりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65604",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:08:57"
+    },
+    {
+      "role": 0,
+      "content": "東区役所前駅からは徒歩で15分、苗穂駅からでしたら徒歩3分ほどでアクセス可能です。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:09:19",
+      "book": {
+        "hotel": {
+          "name": "定山渓ビューホテル",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。当日観光をしたいのですが、中央区で歴史的な散策ができるスポットはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65604",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "アリオ札幌",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "東区役所前駅からは徒歩で15分、苗穂駅から徒歩3分",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:10:27"
+    },
+    {
+      "role": 0,
+      "content": "はい。大倉山ジャンプ競技場はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "歴史的な散策エリア",
+            "area": "中央区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666527051107,
+          "selectedResults": [
+            "大倉山ジャンプ競技場"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "札幌",
+          "name": null,
+          "genre": "歴史的な散策エリア",
+          "area": "中央区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:11:05",
+      "book": {
+        "hotel": {
+          "name": "定山渓ビューホテル",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらでお願いします。子どもの入場料はいくらかかりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65604",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "アリオ札幌",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "東区役所前駅からは徒歩で15分、苗穂駅から徒歩3分",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:11:28"
+    },
+    {
+      "role": 0,
+      "content": "子供入場料は、1000円となっております。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "歴史的な散策エリア",
+            "area": "中央区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "札幌",
+          "name": null,
+          "genre": "歴史的な散策エリア",
+          "area": "中央区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:11:58",
+      "book": {
+        "hotel": {
+          "name": "定山渓ビューホテル",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。こちらの場所の定休日を最寄り駅を教えて下さい。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65604",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "アリオ札幌",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "東区役所前駅からは徒歩で15分、苗穂駅から徒歩3分",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:12:20"
+    },
+    {
+      "role": 0,
+      "content": "最寄り駅は円山公園駅です。定休日はございません。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "札幌",
+            "name": null,
+            "genre": "歴史的な散策エリア",
+            "area": "中央区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "札幌",
+          "name": null,
+          "genre": "歴史的な散策エリア",
+          "area": "中央区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "札幌",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:12:43",
+      "book": {
+        "hotel": {
+          "name": "定山渓ビューホテル",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              22
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ご丁寧な対応、ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65604",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "アリオ札幌",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "accesstime",
+          "東区役所前駅からは徒歩で15分、苗穂駅から徒歩3分",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "1000円",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "closed",
+          "なし",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "station",
+          "円山公園駅",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:13:11"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "子供入場料と大人入場料が、料金情報と比較して、反転しているように見受けられます。子供入場料欄のものを返しました。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-23 12:13:33"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-23 12:13:39"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:55",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "札幌",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": "有り(無料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "札幌",
+      "name": null,
+      "genre": "歴史的な散策エリア",
+      "area": "中央区",
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "札幌",
+      "name": null,
+      "genre": null,
+      "area": "東区",
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "定山渓ビューホテル",
+      "value": {
+        "people": "3",
+        "day": [
+          5,
+          22
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

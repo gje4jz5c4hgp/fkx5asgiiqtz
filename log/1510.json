@@ -1,0 +1,1520 @@
+{
+  "id": 1510,
+  "dialogue_code": "dialogue_1510nyDO",
+  "status_code": 2,
+  "user": [
+    4,
+    247
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0247aACL"
+  ],
+  "task": 1680,
+  "task_name": "main_1360",
+  "task_content": {
+    "goals": {
+      "attraction": {
+        "info": {
+          "city": "京都",
+          "name": "京都府立府民ホールALTI"
+        },
+        "reqt": [
+          "opentime",
+          "address"
+        ]
+      },
+      "shopping": {
+        "info": {
+          "city": "京都",
+          "area": "下京区",
+          "parking": "有り(無料)",
+          "station": "烏丸駅"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "京都",
+          "jumbo": "対応",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "9/24",
+          "time": "15:00",
+          "departurepoint": "attraction",
+          "arrivalpoint": "shopping"
+        },
+        "book": {
+          "day": "9/24",
+          "time": "15:30",
+          "departurepoint": "attraction",
+          "arrivalpoint": "shopping"
+        }
+      }
+    },
+    "descriptions": {
+      "attraction": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．名前が<b style='color:blue;'>京都府立府民ホールALTI</b>というところです．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>営業時間，住所</b>を聞いてください．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．地区は<b style='color:blue;'>下京区</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>烏丸駅</b>のところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>9/24</b>です．時間は<b style='color:blue;'>15:00</b>です．出発地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．目的地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>15:30</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "attraction",
+        "opentime",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "address",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "attraction",
+      "shopping",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは。京都に行こうと考えているのですが、京都府立府民ホールALTIっていう観光名所はありますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 07:50:10"
+    },
+    {
+      "role": 0,
+      "content": "はい、上京区にございます。ジャンルは、コンサート、ショー、となります。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": "京都府立府民ホールALTI",
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667375429308,
+          "selectedResults": [
+            "京都府立府民ホールALTI"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": "京都府立府民ホールALTI",
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 07:50:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。営業時間と住所はわかりますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 07:51:30"
+    },
+    {
+      "role": 0,
+      "content": "はい、営業時間は9時から21時30分、住所は京都府京都市上京区烏丸通一条下ル龍前町590-1となります。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "京都",
+            "name": "京都府立府民ホールALTI",
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": "京都府立府民ホールALTI",
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 07:51:58",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、下京区で買い物ができるところを探しています。駐車場が無料で使えて、最寄り駅が烏丸駅のところがいいです。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "opentime",
+          "9時から21時30分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "address",
+          "京都府京都市上京区烏丸通一条下ル龍前町590-1",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 07:53:25"
+    },
+    {
+      "role": 0,
+      "content": "大丸京都店がございます。ジャンルは百貨店や総合スーパーとなります。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "下京区",
+            "station": "烏丸駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667375642365,
+          "selectedResults": [
+            "大丸京都店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": "京都府立府民ホールALTI",
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "烏丸駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 07:54:24",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、ジャンボタクシーが利用できてキャッシュレス払いが可能なタクシー会社を探していただけますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "opentime",
+          "9時から21時30分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "address",
+          "京都府京都市上京区烏丸通一条下ル龍前町590-1",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "大丸京都店",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 07:55:20"
+    },
+    {
+      "role": 0,
+      "content": "はい、洛東タクシー株式会社はいかがでしょう？電話番号は、0755931112となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "洛東タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667375741305,
+          "selectedResults": [
+            "洛東タクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": "京都府立府民ホールALTI",
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "烏丸駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 07:56:15",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "洛東タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。ではそのタクシー会社で、9/24の15:00で、出発地は京都府立府民ホールALTI、目的地は大丸京都店で、予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "opentime",
+          "9時から21時30分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "address",
+          "京都府京都市上京区烏丸通一条下ル龍前町590-1",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "大丸京都店",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "洛東タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0755931112",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 07:58:05"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。この条件では予約ができませんでした。いかがされますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "洛東タクシー株式会社",
+              "value": {
+                "day": [
+                  9,
+                  24
+                ],
+                "time": "15:00",
+                "departurepoint": "京都府立府民ホールALTI",
+                "arrivalpoint": "大丸京都店"
+              },
+              "timestamp": 1667375917147,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": "京都府立府民ホールALTI",
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "烏丸駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 07:58:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "洛東タクシー株式会社",
+          "value": {
+            "day": [
+              9,
+              24
+            ],
+            "time": "15:00",
+            "departurepoint": "京都府立府民ホールALTI",
+            "arrivalpoint": "大丸京都店"
+          },
+          "timestamp": 1667375917147,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。じゃあ時間を15：30にしたら予約できますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "opentime",
+          "9時から21時30分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "address",
+          "京都府京都市上京区烏丸通一条下ル龍前町590-1",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "大丸京都店",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "洛東タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0755931112",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 07:59:23"
+    },
+    {
+      "role": 0,
+      "content": "はい、予約が可能になりまして、ご予約番号は、56648となります。他にご用件はございますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "洛東タクシー株式会社",
+              "value": {
+                "day": [
+                  9,
+                  24
+                ],
+                "time": "15:30",
+                "departurepoint": "京都府立府民ホールALTI",
+                "arrivalpoint": "大丸京都店"
+              },
+              "timestamp": 1667375970175,
+              "success": true,
+              "ref": "56648"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": "京都府立府民ホールALTI",
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "烏丸駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:00:00",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "洛東タクシー株式会社",
+          "value": {
+            "day": [
+              9,
+              24
+            ],
+            "time": "15:30",
+            "departurepoint": "京都府立府民ホールALTI",
+            "arrivalpoint": "大丸京都店"
+          },
+          "timestamp": 1667375970175,
+          "success": true,
+          "ref": "56648"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。いえ、大丈夫です。案内ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "opentime",
+          "9時から21時30分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "address",
+          "京都府京都市上京区烏丸通一条下ル龍前町590-1",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "大丸京都店",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "洛東タクシー株式会社",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0755931112",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "56648",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 08:00:25"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "洛東タクシー株式会社",
+              "value": {
+                "day": [
+                  9,
+                  24
+                ],
+                "time": "15:30",
+                "departurepoint": "京都府立府民ホールALTI",
+                "arrivalpoint": "大丸京都店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "京都",
+          "name": "京都府立府民ホールALTI",
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "station": "烏丸駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 08:00:32",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "洛東タクシー株式会社",
+          "value": {
+            "day": [
+              9,
+              24
+            ],
+            "time": "15:30",
+            "departurepoint": "京都府立府民ホールALTI",
+            "arrivalpoint": "大丸京都店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-02 08:00:43"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-02 08:00:45"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:05",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "京都",
+      "name": "京都府立府民ホールALTI",
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": "下京区",
+      "station": "烏丸駅",
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": "京都",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "洛東タクシー株式会社",
+      "value": {
+        "day": [
+          9,
+          24
+        ],
+        "time": "15:30",
+        "departurepoint": "京都府立府民ホールALTI",
+        "arrivalpoint": "大丸京都店"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

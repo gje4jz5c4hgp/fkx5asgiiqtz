@@ -1,0 +1,2569 @@
+{
+  "id": 4851,
+  "dialogue_code": "dialogue_4851NEvO",
+  "status_code": 2,
+  "user": [
+    25,
+    293
+  ],
+  "username": [
+    "operator_0025tpXO",
+    "customer_0293GPhj"
+  ],
+  "task": 5121,
+  "task_name": "main2_2101",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "東京",
+          "genre": "旅館",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "name"
+        ]
+      },
+      "restaurant": {
+        "info": {
+          "city": "東京",
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "genre",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "5/18",
+          "time": "15:30"
+        }
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "東京",
+          "jumbo": "対応"
+        },
+        "info": {
+          "city": "東京",
+          "jumbo": "dontcare"
+        },
+        "reqt": [
+          "phone",
+          "cashless",
+          "reference"
+        ],
+        "book": {
+          "day": "5/18",
+          "time": "14:10",
+          "departurepoint": "hotel",
+          "arrivalpoint": "restaurant"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>東京</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．宿のタイプは<b style='color:blue;'>旅館</b>です．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，ジャンル</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>5/18</b>です．時間は<b style='color:blue;'>15:30</b>です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，ジャンボタクシーの利用可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，キャッシュレス対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>5/18</b>です．時間は<b style='color:blue;'>14:10</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "東京に旅行したいのですが、宿泊する旅館を探しています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:16:40"
+    },
+    {
+      "role": 0,
+      "content": "ご希望の条件をおきかせください。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:16:53",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "レストランが併設されているところが良いです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:17:11"
+    },
+    {
+      "role": 0,
+      "content": "東京でレストラン有の宿泊施設は６２件あります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテル椿山荘東京",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669637838981,
+          "selectedResults": [
+            "ホテル椿山荘東京"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:17:36",
+      "book": {
+        "hotel": {
+          "name": "ホテル椿山荘東京",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "場所なども決めていないのですが、レストランがある旅館でおすすめはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:18:29"
+    },
+    {
+      "role": 0,
+      "content": "東京でレストランがある旅館は５件あります。その中から、新宿御苑にある、ONSEN RYOKAN 由縁 新宿をオススメします。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "旅館",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ONSEN RYOKAN 由縁 新宿",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669637922041,
+          "selectedResults": [
+            "星のや東京",
+            "PROSTYLE旅館 東京浅草",
+            "旅館浅草指月",
+            "PROSTYLE旅館 東京浅草",
+            "ONSEN RYOKAN 由縁 新宿"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:19:29",
+      "book": {
+        "hotel": {
+          "name": "ONSEN RYOKAN 由縁 新宿",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。それと、Wi-Fiが無料の飲食店も探しているのですが、駐車場も無料のところはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ONSEN RYOKAN 由縁 新宿",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:20:44"
+    },
+    {
+      "role": 0,
+      "content": "東京でWiFiと駐車場無料の飲食店は、バルバッコア 六本木ヒルズ店、こちら一択です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "バルバッコア 六本木ヒルズ店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669638054983,
+          "selectedResults": [
+            "バルバッコア 六本木ヒルズ店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:21:15",
+      "book": {
+        "hotel": {
+          "name": "ONSEN RYOKAN 由縁 新宿",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "バルバッコア 六本木ヒルズ店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "どのようなジャンルのお店ですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ONSEN RYOKAN 由縁 新宿",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "バルバッコア 六本木ヒルズ店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:21:41"
+    },
+    {
+      "role": 0,
+      "content": "洋食・西洋料理, 居酒屋です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "バルバッコア 六本木ヒルズ店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:21:51",
+      "book": {
+        "hotel": {
+          "name": "ONSEN RYOKAN 由縁 新宿",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "バルバッコア 六本木ヒルズ店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ONSEN RYOKAN 由縁 新宿",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "バルバッコア 六本木ヒルズ店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理, 居酒屋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:22:12"
+    },
+    {
+      "role": 0,
+      "content": "人数と日付時刻をどうぞ",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "バルバッコア 六本木ヒルズ店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:22:27",
+      "book": {
+        "hotel": {
+          "name": "ONSEN RYOKAN 由縁 新宿",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "バルバッコア 六本木ヒルズ店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "3名で、5月18日、時間は15時30分です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ONSEN RYOKAN 由縁 新宿",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "バルバッコア 六本木ヒルズ店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理, 居酒屋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:22:56"
+    },
+    {
+      "role": 0,
+      "content": "予約成功しました。予約番号は32004です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "バルバッコア 六本木ヒルズ店",
+              "value": {
+                "people": "3",
+                "day": [
+                  5,
+                  18
+                ],
+                "time": "15:30"
+              },
+              "timestamp": 1669638190441,
+              "success": true,
+              "ref": "32004"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:23:21",
+      "book": {
+        "hotel": {
+          "name": "ONSEN RYOKAN 由縁 新宿",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "バルバッコア 六本木ヒルズ店",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              18
+            ],
+            "time": "15:30"
+          },
+          "timestamp": 1669638190441,
+          "success": true,
+          "ref": "32004"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。当日、ジャンボタクシーを利用できるタクシー会社はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ONSEN RYOKAN 由縁 新宿",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "バルバッコア 六本木ヒルズ店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理, 居酒屋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "32004",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:24:09"
+    },
+    {
+      "role": 0,
+      "content": "東京にはジャンボタクシー対応の会社はなさそうです。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1669638259352
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:24:31",
+      "book": {
+        "hotel": {
+          "name": "ONSEN RYOKAN 由縁 新宿",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "バルバッコア 六本木ヒルズ店",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              18
+            ],
+            "time": "15:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、ジャンボタクシーでなくていいので、予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ONSEN RYOKAN 由縁 新宿",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "バルバッコア 六本木ヒルズ店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理, 居酒屋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "32004",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:25:02"
+    },
+    {
+      "role": 0,
+      "content": "グリーンキャブでいかがでしょうか、日付と時刻、出発地と目的地をお願いします。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "グリーンキャブ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669638306613,
+          "selectedResults": [
+            "グリーンキャブ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:25:26",
+      "book": {
+        "hotel": {
+          "name": "ONSEN RYOKAN 由縁 新宿",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "バルバッコア 六本木ヒルズ店",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              18
+            ],
+            "time": "15:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "グリーンキャブ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "グリーンキャブでお願いします。5月18日、14時10分に、先ほど紹介していただいた宿泊施設から、予約をしていただいたレストランまでお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ONSEN RYOKAN 由縁 新宿",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "バルバッコア 六本木ヒルズ店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理, 居酒屋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "32004",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:26:50"
+    },
+    {
+      "role": 0,
+      "content": "予約成功しました。予約番号は90288です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "グリーンキャブ",
+              "value": {
+                "day": [
+                  5,
+                  18
+                ],
+                "time": "14:10",
+                "departurepoint": "ONSEN RYOKAN 由縁 新宿",
+                "arrivalpoint": "バルバッコア 六本木ヒルズ店"
+              },
+              "timestamp": 1669638439798,
+              "success": true,
+              "ref": "90288"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:27:36",
+      "book": {
+        "hotel": {
+          "name": "ONSEN RYOKAN 由縁 新宿",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "バルバッコア 六本木ヒルズ店",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              18
+            ],
+            "time": "15:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "グリーンキャブ",
+          "value": {
+            "day": [
+              5,
+              18
+            ],
+            "time": "14:10",
+            "departurepoint": "ONSEN RYOKAN 由縁 新宿",
+            "arrivalpoint": "バルバッコア 六本木ヒルズ店"
+          },
+          "timestamp": 1669638439798,
+          "success": true,
+          "ref": "90288"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ちなみに、電話番号とキャッシュレス決済が可能かどうかも教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ONSEN RYOKAN 由縁 新宿",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "バルバッコア 六本木ヒルズ店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理, 居酒屋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "32004",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "90288",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:28:22"
+    },
+    {
+      "role": 0,
+      "content": "0332038181、キャッシュレスに対応しています。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "グリーンキャブ",
+              "value": {
+                "day": [
+                  5,
+                  18
+                ],
+                "time": "14:10",
+                "departurepoint": "ONSEN RYOKAN 由縁 新宿",
+                "arrivalpoint": "バルバッコア 六本木ヒルズ店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:28:35",
+      "book": {
+        "hotel": {
+          "name": "ONSEN RYOKAN 由縁 新宿",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "バルバッコア 六本木ヒルズ店",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              18
+            ],
+            "time": "15:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "グリーンキャブ",
+          "value": {
+            "day": [
+              5,
+              18
+            ],
+            "time": "14:10",
+            "departurepoint": "ONSEN RYOKAN 由縁 新宿",
+            "arrivalpoint": "バルバッコア 六本木ヒルズ店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ONSEN RYOKAN 由縁 新宿",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "バルバッコア 六本木ヒルズ店",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "genre",
+          "洋食・西洋料理, 居酒屋",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "32004",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0332038181",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "可",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "90288",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 12:29:11"
+    },
+    {
+      "role": 0,
+      "content": "よい旅を",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "グリーンキャブ",
+              "value": {
+                "day": [
+                  5,
+                  18
+                ],
+                "time": "14:10",
+                "departurepoint": "ONSEN RYOKAN 由縁 新宿",
+                "arrivalpoint": "バルバッコア 六本木ヒルズ店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 12:29:18",
+      "book": {
+        "hotel": {
+          "name": "ONSEN RYOKAN 由縁 新宿",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "バルバッコア 六本木ヒルズ店",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              18
+            ],
+            "time": "15:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "グリーンキャブ",
+          "value": {
+            "day": [
+              5,
+              18
+            ],
+            "time": "14:10",
+            "departurepoint": "ONSEN RYOKAN 由縁 新宿",
+            "arrivalpoint": "バルバッコア 六本木ヒルズ店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 12:29:25"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 12:29:27"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:04",
+  "final_state": {
+    "restaurant": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "東京",
+      "name": null,
+      "genre": "旅館",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "東京",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ONSEN RYOKAN 由縁 新宿",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "バルバッコア 六本木ヒルズ店",
+      "value": {
+        "people": "3",
+        "day": [
+          5,
+          18
+        ],
+        "time": "15:30"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "グリーンキャブ",
+      "value": {
+        "day": [
+          5,
+          18
+        ],
+        "time": "14:10",
+        "departurepoint": "ONSEN RYOKAN 由縁 新宿",
+        "arrivalpoint": "バルバッコア 六本木ヒルズ店"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

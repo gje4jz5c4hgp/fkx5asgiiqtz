@@ -1,0 +1,1962 @@
+{
+  "id": 4166,
+  "dialogue_code": "dialogue_4166AroV",
+  "status_code": 2,
+  "user": [
+    2,
+    281
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0281HucT"
+  ],
+  "task": 4436,
+  "task_name": "main2_1416",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "fail_info": {
+          "city": "東京",
+          "area": "足立区"
+        },
+        "info": {
+          "city": "東京",
+          "area": "千代田区"
+        },
+        "reqt": [
+          "name",
+          "genre",
+          "opentime"
+        ]
+      },
+      "restaurant": {
+        "info": {
+          "city": "東京",
+          "name": "SIAM BBQ"
+        },
+        "reqt": [
+          "area",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "8/25",
+          "time": "15:40"
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "東京",
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "8/25",
+          "time": "14:30",
+          "departurepoint": "shopping",
+          "arrivalpoint": "restaurant"
+        }
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>東京</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．地区は<b style='color:blue;'>足立区</b>です．",
+        "希望に合うところが見つからない場合は，地区を<b style='color:blue;'>千代田区</b>とします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，ジャンル，営業時間</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日は<b style='color:blue;'>SIAM BBQ</b>という飲食店で食事をする予定です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>エリア</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>8/25</b>です．時間は<b style='color:blue;'>15:40</b>です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>8/25</b>です．時間は<b style='color:blue;'>14:30</b>です．出発地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．目的地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "genre",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "opentime",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "area",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "restaurant",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "東京へ旅行にいこいうと思っています。当日買い物ができるところを教えてくだだい。地区は足立区が希望です。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:52:50"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件ですと、ご案内できるところがありませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "足立区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669812779790
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "足立区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:53:09",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "でしたら、地区は千代田区にします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:53:30"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。そうしますと7件ご案内可能です。たとえば、KITTE丸の内というショッピングモールはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "千代田区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669812813646,
+          "selectedResults": [
+            "KITTE丸の内"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:53:49",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこが良さそうです。そこのジャンルと営業時間を教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:54:21"
+    },
+    {
+      "role": 0,
+      "content": "はい、ジャンルは、ショッピングモールとなります。営業時間は、11:00～21:00でございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "千代田区",
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:54:36",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "当日はSIAM BBQという飲食店で食事する予定です。そこのエリアを教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "KITTE丸の内",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "ショッピングモール",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "11:00～21:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:55:49"
+    },
+    {
+      "role": 0,
+      "content": "SIAM BBQですね。エリアは、千代田区にございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": "SIAM BBQ",
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "SIAM BBQ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669812960014,
+          "selectedResults": [
+            "SIAM BBQ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": "SIAM BBQ",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:56:12",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "SIAM BBQ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこの予約したいので人数は３人で日付は8/25時間は15:40でお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "KITTE丸の内",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "ショッピングモール",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "11:00～21:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "area",
+          "千代田区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:57:01"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。ご予約完了いたしました。予約番号は、52664です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": "SIAM BBQ",
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "SIAM BBQ",
+              "value": {
+                "people": "3",
+                "day": [
+                  8,
+                  25
+                ],
+                "time": "15:40"
+              },
+              "timestamp": 1669813037822,
+              "success": true,
+              "ref": "52664"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": "SIAM BBQ",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:57:29",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "SIAM BBQ",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              25
+            ],
+            "time": "15:40"
+          },
+          "timestamp": 1669813037822,
+          "success": true,
+          "ref": "52664"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あと当日利用できるタクシー会社を探しています。キャッシュレス対応でジャンボタクシーが利用できるところが希望です。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "KITTE丸の内",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "ショッピングモール",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "11:00～21:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "area",
+          "千代田区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "52664",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:58:32"
+    },
+    {
+      "role": 0,
+      "content": "では、小金井交通はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "小金井交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669813119775,
+          "selectedResults": [
+            "小金井交通"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": "SIAM BBQ",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:58:47",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "SIAM BBQ",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              25
+            ],
+            "time": "15:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "小金井交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこの電話番号を教えてください。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "KITTE丸の内",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "ショッピングモール",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "11:00～21:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "area",
+          "千代田区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "52664",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:59:09"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は、0423811482でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "小金井交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": "SIAM BBQ",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:59:17",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "SIAM BBQ",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              25
+            ],
+            "time": "15:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "小金井交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そのタクシー会社に予約したいので日付は8/25で時間は14:30で出発地はKITTE丸の内で目的地はSIAM BBQでお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "KITTE丸の内",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "ショッピングモール",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "11:00～21:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "area",
+          "千代田区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "52664",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0423811482",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:01:07"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご予約完了しました。予約番号は、40999です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "小金井交通",
+              "value": {
+                "day": [
+                  8,
+                  25
+                ],
+                "time": "14:30",
+                "departurepoint": "KITTE丸の内",
+                "arrivalpoint": "SIAM BBQ"
+              },
+              "timestamp": 1669813285614,
+              "success": true,
+              "ref": "40999"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": "SIAM BBQ",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:01:40",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "SIAM BBQ",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              25
+            ],
+            "time": "15:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "小金井交通",
+          "value": {
+            "day": [
+              8,
+              25
+            ],
+            "time": "14:30",
+            "departurepoint": "KITTE丸の内",
+            "arrivalpoint": "SIAM BBQ"
+          },
+          "timestamp": 1669813285614,
+          "success": true,
+          "ref": "40999"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "KITTE丸の内",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "genre",
+          "ショッピングモール",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "opentime",
+          "11:00～21:00",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "area",
+          "千代田区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "52664",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0423811482",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "40999",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:02:03"
+    },
+    {
+      "role": 0,
+      "content": "こちらこそ、ありがとうございます。もし他にご質問がないようでしたら、これにて失礼いたします。本日はご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "小金井交通",
+              "value": {
+                "day": [
+                  8,
+                  25
+                ],
+                "time": "14:30",
+                "departurepoint": "KITTE丸の内",
+                "arrivalpoint": "SIAM BBQ"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": "SIAM BBQ",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "千代田区",
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:02:07",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "SIAM BBQ",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              25
+            ],
+            "time": "15:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "小金井交通",
+          "value": {
+            "day": [
+              8,
+              25
+            ],
+            "time": "14:30",
+            "departurepoint": "KITTE丸の内",
+            "arrivalpoint": "SIAM BBQ"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 13:02:18"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 13:02:20"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:00",
+  "final_state": {
+    "restaurant": {
+      "city": "東京",
+      "name": "SIAM BBQ",
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": "千代田区",
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "東京",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "SIAM BBQ",
+      "value": {
+        "people": "3",
+        "day": [
+          8,
+          25
+        ],
+        "time": "15:40"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "小金井交通",
+      "value": {
+        "day": [
+          8,
+          25
+        ],
+        "time": "14:30",
+        "departurepoint": "KITTE丸の内",
+        "arrivalpoint": "SIAM BBQ"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

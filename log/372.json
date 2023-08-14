@@ -1,0 +1,2048 @@
+{
+  "id": 372,
+  "dialogue_code": "dialogue_0372bSPb",
+  "status_code": 2,
+  "user": [
+    4,
+    207
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0207aJor"
+  ],
+  "task": 542,
+  "task_name": "main_222",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "仙台",
+          "genre": "旅館",
+          "wifi": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "pricerange",
+          "checkouttime",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 3,
+          "day": "8/4",
+          "stay": 4
+        },
+        "book": {
+          "people": 3,
+          "day": "8/4",
+          "stay": 3
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "仙台",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "reference"
+        ],
+        "book": {
+          "day": "8/4",
+          "time": "12:00",
+          "departurepoint": "hotel",
+          "arrivalpoint": "ホテルグリーンセレク"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "仙台",
+          "day": "8/4",
+          "area": "宮城野区"
+        },
+        "reqt": [
+          "mintemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>仙台</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．宿のタイプは<b style='color:blue;'>旅館</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，値段帯，チェックアウト終了時刻</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>8/4</b>です．宿泊日数は<b style='color:blue;'>4</b>泊です．",
+        "希望の条件が合わない場合は，宿泊日数を<b style='color:blue;'>3</b>泊に変更します．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>8/4</b>です．時間は<b style='color:blue;'>12:00</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は<b style='color:blue;'>ホテルグリーンセレク</b>というところです．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>8/4</b>です．地区は<b style='color:blue;'>宮城野区</b>です．",
+        "<b style='color:green;'>最低気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "pricerange",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkouttime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "mintemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "taxi",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "今度仙台に行くのですが、泊まれるところを探しています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:14:36"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。他にご希望はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1667027684601
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:14:59",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "旅館で、Wi-Fiが無料で利用できるところがいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:15:13"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、奥州秋保温泉 蘭亭はいかがでしょう？ご案内できることはございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "旅館",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "奥州秋保温泉 蘭亭",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667027725225,
+          "selectedResults": [
+            "奥州秋保温泉 蘭亭"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:15:58",
+      "book": {
+        "hotel": {
+          "name": "奥州秋保温泉 蘭亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの値段帯と，チェックアウト終了時刻を教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:16:26"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。値段帯は安め、チェックアウト終了時刻は10時となります。他に必要なご案内はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "旅館",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "奥州秋保温泉 蘭亭",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:17:10",
+      "book": {
+        "hotel": {
+          "name": "奥州秋保温泉 蘭亭",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらの旅館を、8/4に３名で４泊、予約をお願いできますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "奥州秋保温泉 蘭亭",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:18:10"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。その条件では予約ができませんでした。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "旅館",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "奥州秋保温泉 蘭亭",
+              "value": {
+                "people": "3",
+                "day": [
+                  8,
+                  4
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1667027909057,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:18:52",
+      "book": {
+        "hotel": {
+          "name": "奥州秋保温泉 蘭亭",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              4
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1667027909057,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、３泊に変更してください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "奥州秋保温泉 蘭亭",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:19:05"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。予約が完了し、ご予約番号は、37631となります。他にご用件はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "旅館",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "奥州秋保温泉 蘭亭",
+              "value": {
+                "people": "3",
+                "day": [
+                  8,
+                  4
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1667027948208,
+              "success": true,
+              "ref": "37631"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:19:42",
+      "book": {
+        "hotel": {
+          "name": "奥州秋保温泉 蘭亭",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              4
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1667027948208,
+          "success": true,
+          "ref": "37631"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日タクシーを利用したいのですが、キャッシュレス払いできるところはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "奥州秋保温泉 蘭亭",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "37631",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:20:23"
+    },
+    {
+      "role": 0,
+      "content": "はい、では、仙台タクシーグループはいかがでしょう？ジャンボタクシーにも対応しております。電話番号は0570061616となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "仙台タクシーグループ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667028036399,
+          "selectedResults": [
+            "（株）泉交通",
+            "仙台タクシーグループ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:21:28",
+      "book": {
+        "hotel": {
+          "name": "奥州秋保温泉 蘭亭",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              4
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "仙台タクシーグループ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "助かります。では、8/4当日の12:00で、奥州秋保温泉 蘭亭からホテルグリーンセレクまで予約をお願いできますでしょうか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "奥州秋保温泉 蘭亭",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "37631",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "仙台タクシーグループ",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0570061616",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:22:29"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。予約が完了し、ご予約番号は、9842となります。他にご案内できることはございますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "仙台タクシーグループ",
+              "value": {
+                "day": [
+                  8,
+                  4
+                ],
+                "time": "12:00",
+                "departurepoint": "奥州秋保温泉 蘭亭",
+                "arrivalpoint": "ホテルグリーンセレク"
+              },
+              "timestamp": 1667028189975,
+              "success": true,
+              "ref": "9842"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:23:47",
+      "book": {
+        "hotel": {
+          "name": "奥州秋保温泉 蘭亭",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              4
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "仙台タクシーグループ",
+          "value": {
+            "day": [
+              8,
+              4
+            ],
+            "time": "12:00",
+            "departurepoint": "奥州秋保温泉 蘭亭",
+            "arrivalpoint": "ホテルグリーンセレク"
+          },
+          "timestamp": 1667028189975,
+          "success": true,
+          "ref": "9842"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと最後に、8/4当日の宮城野区の天気を知りたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "奥州秋保温泉 蘭亭",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "37631",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "仙台タクシーグループ",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0570061616",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "9842",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:24:23"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。天気は曇、最低気温20.2度、最高気温30.6度となります。他にお忘れのことはございませんか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "宮城野区",
+            "day": [
+              8,
+              4
+            ]
+          },
+          "book": [],
+          "timestamp": 1667028285165,
+          "selectedResults": [
+            "8/4 仙台 宮城野区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "宮城野区",
+          "day": [
+            8,
+            4
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:25:42",
+      "book": {
+        "hotel": {
+          "name": "奥州秋保温泉 蘭亭",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              4
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "仙台タクシーグループ",
+          "value": {
+            "day": [
+              8,
+              4
+            ],
+            "time": "12:00",
+            "departurepoint": "奥州秋保温泉 蘭亭",
+            "arrivalpoint": "ホテルグリーンセレク"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。以上です、ありがとうございました！",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "奥州秋保温泉 蘭亭",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "10時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "37631",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "仙台タクシーグループ",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0570061616",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "9842",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "20.2度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-29 07:26:03"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "宮城野区",
+            "day": [
+              8,
+              4
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": "旅館",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "宮城野区",
+          "day": [
+            8,
+            4
+          ]
+        }
+      },
+      "created_at": "2022-10-29 07:26:10",
+      "book": {
+        "hotel": {
+          "name": "奥州秋保温泉 蘭亭",
+          "value": {
+            "people": "3",
+            "day": [
+              8,
+              4
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "仙台タクシーグループ",
+          "value": {
+            "day": [
+              8,
+              4
+            ],
+            "time": "12:00",
+            "departurepoint": "奥州秋保温泉 蘭亭",
+            "arrivalpoint": "ホテルグリーンセレク"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-29 07:26:18"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-29 07:26:19"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:56",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "仙台",
+      "name": null,
+      "genre": "旅館",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "仙台",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": "仙台",
+      "area": "宮城野区",
+      "day": [
+        8,
+        4
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "奥州秋保温泉 蘭亭",
+      "value": {
+        "people": "3",
+        "day": [
+          8,
+          4
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "仙台タクシーグループ",
+      "value": {
+        "day": [
+          8,
+          4
+        ],
+        "time": "12:00",
+        "departurepoint": "奥州秋保温泉 蘭亭",
+        "arrivalpoint": "ホテルグリーンセレク"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

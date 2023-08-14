@@ -1,0 +1,2384 @@
+{
+  "id": 4370,
+  "dialogue_code": "dialogue_4370yLlI",
+  "status_code": 2,
+  "user": [
+    2,
+    305
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0305DWoj"
+  ],
+  "task": 4640,
+  "task_name": "main2_1620",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "fail_info": {
+          "city": "京都",
+          "station": "北大路駅"
+        },
+        "info": {
+          "city": "京都",
+          "station": "洛西口駅"
+        },
+        "reqt": [
+          "genre",
+          "name",
+          "area"
+        ]
+      },
+      "restaurant": {
+        "fail_info": {
+          "city": "京都",
+          "pricerange": "高め",
+          "station": "烏丸御池駅"
+        },
+        "info": {
+          "city": "京都",
+          "pricerange": "dontcare",
+          "station": "烏丸御池駅"
+        },
+        "reqt": [
+          "address",
+          "parking",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 4,
+          "day": "1/19",
+          "time": "13:30"
+        },
+        "book": {
+          "people": 3,
+          "day": "1/19",
+          "time": "13:30"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "京都",
+          "day": "1/19",
+          "area": "下京区"
+        },
+        "reqt": [
+          "weather",
+          "mintemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．最寄り駅が<b style='color:blue;'>北大路駅</b>のところにしてください．",
+        "希望に合う場所が見つからない場合は，最寄り駅が<b style='color:blue;'>洛西口駅</b>でもよいものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>ジャンル，店舗名，エリア</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．予算は<b style='color:blue;'>高め</b>が希望です．最寄り駅が<b style='color:blue;'>烏丸御池駅</b>のところにしてください．",
+        "希望に合うところが見つからない場合は，予算は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>住所，駐車場の有無</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>4</b>人です．日付は<b style='color:blue;'>1/19</b>です．時間は<b style='color:blue;'>13:30</b>です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>3</b>に変更します．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>1/19</b>です．地区は<b style='color:blue;'>下京区</b>です．",
+        "<b style='color:green;'>天気，最低気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "genre",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "area",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "address",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "parking",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "weather",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "mintemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "restaurant",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都への旅行を考えていて、北大路駅が最寄りの買い物ができるところを探していただきたいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:16:16"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件ですと、ご案内できるところが見つかりませんでした。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "北大路駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669688184774
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "北大路駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:16:33",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "それでは最寄り駅が洛西口駅であればどこかありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:16:55"
+    },
+    {
+      "role": 0,
+      "content": "はい、洛西タカシマヤというところが1件ご案内できます、いかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "洛西口駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669688218197,
+          "selectedResults": [
+            "洛西タカシマヤ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "洛西口駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:17:11",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこでお願いします。ジャンルとエリアを教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "洛西タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:17:32"
+    },
+    {
+      "role": 0,
+      "content": "はい、ジャンルは、百貨店や総合スーパーです。エリアは西京区にございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "洛西口駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "洛西口駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:17:47",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。烏丸御池駅が最寄り駅になる当日食事ができる飲食店も探していただけますか？予算は高めがいいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "genre",
+          "百貨店や総合スーパー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "洛西タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:18:56"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件では、該当するところがありませんでした。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "高め",
+            "station": "烏丸御池駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669688346966
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": "烏丸御池駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "洛西口駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:19:14",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予算の希望を考えなければ、ありそうですか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "genre",
+          "百貨店や総合スーパー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "洛西タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:19:41"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。そういたしますと、例えばブロシェットという、洋食・西洋料理ジャンルのお店がございますが、いかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "烏丸御池駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "ブロシェット",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669688382492,
+          "selectedResults": [
+            "ブロシェット"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "烏丸御池駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "洛西口駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:20:01",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ブロシェット",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そこにします。住所を教えていただけますか？あと、駐車場はありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "genre",
+          "百貨店や総合スーパー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "洛西タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:20:34"
+    },
+    {
+      "role": 0,
+      "content": "住所は、京都府京都市中京区東洞院通御池下ル笹屋町438-4 シカタアブニールビルディング1Fです。駐車場は、申し訳ありません、こちらは併設しておりません。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "烏丸御池駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "ブロシェット",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "烏丸御池駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "洛西口駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:20:51",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ブロシェット",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。そこの予約をお願いします。1/19の13時30分から4人で予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "genre",
+          "百貨店や総合スーパー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "洛西タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "京都府京都市中京区東洞院通御池下ル笹屋町438-4 シカタアブニールビルディング1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "無",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:21:54"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件では予約できませんでした。いかがいたしましょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "烏丸御池駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "ブロシェット",
+              "value": {
+                "people": "4",
+                "day": [
+                  1,
+                  19
+                ],
+                "time": "13:30"
+              },
+              "timestamp": 1669688523891,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "烏丸御池駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "洛西口駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:22:12",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ブロシェット",
+          "value": {
+            "people": "4",
+            "day": [
+              1,
+              19
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 1669688523891,
+          "success": false,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、人数を3人に変更して予約していただけますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "genre",
+          "百貨店や総合スーパー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "洛西タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "京都府京都市中京区東洞院通御池下ル笹屋町438-4 シカタアブニールビルディング1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "無",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:22:35"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。3名様にて、ご予約完了いたしました。予約番号は、63938です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "烏丸御池駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "ブロシェット",
+              "value": {
+                "people": "3",
+                "day": [
+                  1,
+                  19
+                ],
+                "time": "13:30"
+              },
+              "timestamp": 1669688555930,
+              "success": true,
+              "ref": "63938"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "烏丸御池駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "洛西口駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:22:45",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ブロシェット",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              19
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 1669688555930,
+          "success": true,
+          "ref": "63938"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。最後に、下京区の1/19の天気と最低気温を教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "genre",
+          "百貨店や総合スーパー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "洛西タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "京都府京都市中京区東洞院通御池下ル笹屋町438-4 シカタアブニールビルディング1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "無",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "63938",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:23:26"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。当日の天気は、曇時々晴の予想です。最低気温は、5.5度まで下がる見込みです。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "下京区",
+            "day": [
+              1,
+              19
+            ]
+          },
+          "book": [],
+          "timestamp": 1669688616580,
+          "selectedResults": [
+            "1/19 京都 下京区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "烏丸御池駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "洛西口駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "下京区",
+          "day": [
+            1,
+            19
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:24:02",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ブロシェット",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              19
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "genre",
+          "百貨店や総合スーパー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "洛西タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "京都府京都市中京区東洞院通御池下ル笹屋町438-4 シカタアブニールビルディング1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "無",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "63938",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "曇時々晴",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "5.5度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:24:18"
+    },
+    {
+      "role": 0,
+      "content": "ほかに何かお調べすることはございませんか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "下京区",
+            "day": [
+              1,
+              19
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "烏丸御池駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "洛西口駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "下京区",
+          "day": [
+            1,
+            19
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:24:24",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ブロシェット",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              19
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、大丈夫です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "genre",
+          "百貨店や総合スーパー",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "name",
+          "洛西タカシマヤ",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "area",
+          "西京区",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "京都府京都市中京区東洞院通御池下ル笹屋町438-4 シカタアブニールビルディング1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "parking",
+          "無",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "63938",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "曇時々晴",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "5.5度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 02:24:33"
+    },
+    {
+      "role": 0,
+      "content": "承知いたしました。本日はご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "下京区",
+            "day": [
+              1,
+              19
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "烏丸御池駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "洛西口駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "下京区",
+          "day": [
+            1,
+            19
+          ]
+        }
+      },
+      "created_at": "2022-11-29 02:24:35",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ブロシェット",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              19
+            ],
+            "time": "13:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 02:24:42"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 02:24:44"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:01",
+  "final_state": {
+    "restaurant": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "烏丸御池駅",
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": "洛西口駅",
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "京都",
+      "area": "下京区",
+      "day": [
+        1,
+        19
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "ブロシェット",
+      "value": {
+        "people": "3",
+        "day": [
+          1,
+          19
+        ],
+        "time": "13:30"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

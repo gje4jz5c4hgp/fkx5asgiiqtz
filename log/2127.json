@@ -1,0 +1,2776 @@
+{
+  "id": 2127,
+  "dialogue_code": "dialogue_2127qgDN",
+  "status_code": 2,
+  "user": [
+    22,
+    228
+  ],
+  "username": [
+    "operator_0022UfuU",
+    "customer_0228vLGA"
+  ],
+  "task": 2297,
+  "task_name": "main_1977",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "info": {
+          "city": "福岡",
+          "genre": "ファッション",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "closed"
+        ]
+      },
+      "restaurant": {
+        "info": {
+          "city": "福岡",
+          "area": "中央区"
+        },
+        "reqt": [
+          "name",
+          "address",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 3,
+          "day": "5/6",
+          "time": "16:40"
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "福岡",
+          "jumbo": "対応",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "day": "5/6",
+          "time": "15:20",
+          "departurepoint": "shopping",
+          "arrivalpoint": "restaurant"
+        }
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>福岡</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．ジャンルは<b style='color:blue;'>ファッション</b>です．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，電話番号，定休日</b>を聞いてください．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．地区は<b style='color:blue;'>中央区</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，住所</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>5/6</b>です．時間は<b style='color:blue;'>16:40</b>です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>2</b>に変更します．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>5/6</b>です．時間は<b style='color:blue;'>15:20</b>です．出発地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．目的地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "phone",
+        ""
+      ],
+      [
+        1,
+        "shopping",
+        "closed",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "address",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "restaurant",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "福岡へ行こうと思っています。駐車場が無料で利用できるファッション系のお店を探していただきたいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:09:07"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それではベイサイドプレイス博多はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": "ファッション",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667347764139,
+          "selectedResults": [
+            "ヨドバシ博多",
+            "アビスパ福岡 オフィシャルショップ",
+            "ベイサイドプレイス博多"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:09:42",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの電話番号、定休日を教えていただけますでしょうか。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:09:57"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は0922817701、定休日はございません。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": "ファッション",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:10:11",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ベイサイドプレイス博多",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "0922817701",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:10:35"
+    },
+    {
+      "role": 0,
+      "content": "その他に何かご用件はございますか？",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": "ファッション",
+            "area": null,
+            "station": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:10:46",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "中央区にある飲食店を探していただきたいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ベイサイドプレイス博多",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "0922817701",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:10:59"
+    },
+    {
+      "role": 0,
+      "content": "その条件ですと、53件ほど飲食店が見つかりました。何か拘りはございますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667347873700
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:11:31",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特に他の希望はありません。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ベイサイドプレイス博多",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "0922817701",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:11:41"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それでは博多水炊きさもんじはいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "博多水炊きさもんじ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "松阪牛専門焼肉 慶",
+            "博多水炊きさもんじ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:12:21",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多水炊きさもんじ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの住所を教えていただけますでしょうか。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ベイサイドプレイス博多",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "0922817701",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:12:35"
+    },
+    {
+      "role": 0,
+      "content": "はい、住所は福岡県福岡市中央区天神3丁目4番28号 天神ブロードウェイビル1Fでございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "博多水炊きさもんじ",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:12:46",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多水炊きさもんじ",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、5月6日16時40分から3人で予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ベイサイドプレイス博多",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "0922817701",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "博多水炊きさもんじ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "福岡県福岡市中央区天神3丁目4番28号 天神ブロードウェイビル1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:13:14"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。予約番号16357でお取りさせていただきました。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "博多水炊きさもんじ",
+              "value": {},
+              "timestamp": 1667348006991,
+              "success": true,
+              "ref": "16357"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:13:38",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多水炊きさもんじ",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              6
+            ],
+            "time": "16:40"
+          },
+          "timestamp": 1667348006991,
+          "success": true,
+          "ref": "16357"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ベイサイドプレイス博多",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "0922817701",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "博多水炊きさもんじ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "福岡県福岡市中央区天神3丁目4番28号 天神ブロードウェイビル1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "16357",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:13:51"
+    },
+    {
+      "role": 0,
+      "content": "その他に御用件はございますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "中央区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "博多水炊きさもんじ",
+              "value": {
+                "people": "3",
+                "day": [
+                  5,
+                  6
+                ],
+                "time": "16:40"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:14:06",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多水炊きさもんじ",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              6
+            ],
+            "time": "16:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ジャンボタクシーが利用できてキャッシュレス払いができるタクシー会社を探していただきたいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ベイサイドプレイス博多",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "0922817701",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "博多水炊きさもんじ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "福岡県福岡市中央区天神3丁目4番28号 天神ブロードウェイビル1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "16357",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:14:26"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。それでは福岡交通（株）はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡交通（株）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667348077466,
+          "selectedResults": [
+            "福岡交通（株）"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:14:48",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多水炊きさもんじ",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              6
+            ],
+            "time": "16:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡交通（株）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの電話番号を教えていただけますでしょうか。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ベイサイドプレイス博多",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "0922817701",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "博多水炊きさもんじ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "福岡県福岡市中央区天神3丁目4番28号 天神ブロードウェイビル1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "16357",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:14:57"
+    },
+    {
+      "role": 0,
+      "content": "はい、電話番号は0570081234でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡交通（株）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:15:07",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多水炊きさもんじ",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              6
+            ],
+            "time": "16:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡交通（株）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、5月6日15時20分ベイサイドプレイス博多から博多水炊きさもんじまで予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ベイサイドプレイス博多",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "0922817701",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "博多水炊きさもんじ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "福岡県福岡市中央区天神3丁目4番28号 天神ブロードウェイビル1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "16357",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570081234",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "福岡交通（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:15:50"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約番号3866でお取りさせていただきました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡交通（株）",
+              "value": {
+                "day": [
+                  5,
+                  6
+                ],
+                "time": "15:20",
+                "departurepoint": "ベイサイドプレイス博多",
+                "arrivalpoint": "博多水炊きさもんじ"
+              },
+              "timestamp": 1667348171888,
+              "success": true,
+              "ref": "3866"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:16:21",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多水炊きさもんじ",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              6
+            ],
+            "time": "16:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡交通（株）",
+          "value": {
+            "day": [
+              5,
+              6
+            ],
+            "time": "15:20",
+            "departurepoint": "ベイサイドプレイス博多",
+            "arrivalpoint": "博多水炊きさもんじ"
+          },
+          "timestamp": 1667348171888,
+          "success": true,
+          "ref": "3866"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ベイサイドプレイス博多",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "0922817701",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "博多水炊きさもんじ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "福岡県福岡市中央区天神3丁目4番28号 天神ブロードウェイビル1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "16357",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570081234",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "福岡交通（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "3866",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:17:00"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡交通（株）",
+              "value": {
+                "day": [
+                  5,
+                  6
+                ],
+                "time": "15:20",
+                "departurepoint": "ベイサイドプレイス博多",
+                "arrivalpoint": "博多水炊きさもんじ"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "中央区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ファッション",
+          "area": null,
+          "station": null,
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 00:17:07",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多水炊きさもんじ",
+          "value": {
+            "people": "3",
+            "day": [
+              5,
+              6
+            ],
+            "time": "16:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡交通（株）",
+          "value": {
+            "day": [
+              5,
+              6
+            ],
+            "time": "15:20",
+            "departurepoint": "ベイサイドプレイス博多",
+            "arrivalpoint": "博多水炊きさもんじ"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "name",
+          "ベイサイドプレイス博多",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "phone",
+          "0922817701",
+          false
+        ],
+        [
+          1,
+          "shopping",
+          "closed",
+          "無し",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "name",
+          "博多水炊きさもんじ",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "福岡県福岡市中央区天神3丁目4番28号 天神ブロードウェイビル1F",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "reference",
+          "16357",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570081234",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "福岡交通（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "3866",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 00:17:15"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-02 00:17:24"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 2,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [
+            3,
+            1,
+            4
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "予約番号を伝える際にコピペして、発信する際にキーボードの操作ミスでコピペした部分を消して送信してしまった。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-02 00:18:14"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:09",
+  "final_state": {
+    "restaurant": {
+      "city": "福岡",
+      "name": null,
+      "genre": null,
+      "area": "中央区",
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "福岡",
+      "name": null,
+      "genre": "ファッション",
+      "area": null,
+      "station": null,
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": "福岡",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "博多水炊きさもんじ",
+      "value": {
+        "people": "3",
+        "day": [
+          5,
+          6
+        ],
+        "time": "16:40"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "福岡交通（株）",
+      "value": {
+        "day": [
+          5,
+          6
+        ],
+        "time": "15:20",
+        "departurepoint": "ベイサイドプレイス博多",
+        "arrivalpoint": "博多水炊きさもんじ"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

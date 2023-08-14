@@ -1,0 +1,2475 @@
+{
+  "id": 635,
+  "dialogue_code": "dialogue_0635nsZe",
+  "status_code": 2,
+  "user": [
+    8,
+    207
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0207aJor"
+  ],
+  "task": 805,
+  "task_name": "main_485",
+  "task_content": {
+    "goals": {
+      "shopping": {
+        "info": {
+          "city": "大阪",
+          "station": "ドーム前駅",
+          "genre": "百貨店や総合スーパー",
+          "area": "西区"
+        },
+        "reqt": [
+          "address"
+        ]
+      },
+      "attraction": {
+        "fail_info": {
+          "city": "大阪",
+          "wifi": "有り(無料)",
+          "genre": "工場見学"
+        },
+        "info": {
+          "city": "大阪",
+          "wifi": "有り(無料)",
+          "genre": "dontcare"
+        },
+        "reqt": [
+          "opentime",
+          "accesstime",
+          "address"
+        ]
+      },
+      "hotel": {
+        "info": {
+          "city": "大阪",
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）"
+        },
+        "reqt": [
+          "priceinfo",
+          "station",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "12/1",
+          "stay": 3
+        }
+      }
+    },
+    "descriptions": {
+      "shopping": [
+        "あなたは<b style='color:blue;'>大阪</b>への旅行を計画しています．",
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．最寄り駅が<b style='color:blue;'>ドーム前駅</b>のところにしてください．ジャンルは<b style='color:blue;'>百貨店や総合スーパー</b>です．地区は<b style='color:blue;'>西区</b>です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>住所</b>を聞いてください．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．ジャンルは<b style='color:blue;'>工場見学</b>です．",
+        "希望に合うところがない場合は，ジャンルは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>営業時間，近辺の駅からの所要時間，住所</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．宿のタイプは<b style='color:blue;'>簡易宿所（ベッドハウス・山小屋・カプセルホテル等）</b>です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>料金情報，最寄り駅</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>12/1</b>です．宿泊日数は<b style='color:blue;'>3</b>泊です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "shopping",
+        "address",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "opentime",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "accesstime",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "address",
+        ""
+      ],
+      [
+        3,
+        "hotel",
+        "priceinfo",
+        ""
+      ],
+      [
+        3,
+        "hotel",
+        "station",
+        ""
+      ],
+      [
+        3,
+        "hotel",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "shopping",
+      "attraction",
+      "hotel"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "大阪で買い物ができるところを探しています。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:25:44"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご希望の条件はございますか。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666941951162
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:25:56",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "西区で、百貨店や総合スーパーがいいです。最寄り駅がドーム前駅だと助かります。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:26:30"
+    },
+    {
+      "role": 0,
+      "content": "その条件ですとイオン大阪ドームシティ店がございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "百貨店や総合スーパー",
+            "area": "西区",
+            "station": "ドーム前駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666942017077,
+          "selectedResults": [
+            "イオン大阪ドームシティ店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": "百貨店や総合スーパー",
+          "area": "西区",
+          "station": "ドーム前駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:27:08",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらの住所を教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:27:23"
+    },
+    {
+      "role": 0,
+      "content": "住所は大阪府大阪市西区千代崎3丁目13-1でございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "百貨店や総合スーパー",
+            "area": "西区",
+            "station": "ドーム前駅",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": "百貨店や総合スーパー",
+          "area": "西区",
+          "station": "ドーム前駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:27:35",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、当日観光したいのですが、Wi-Fiが無料で、工場見学できるところはありますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "大阪府大阪市西区千代崎3丁目13-1",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:28:28"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件ですと案内できるところがございません。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "工場見学",
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666942131502
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": "工場見学",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": "百貨店や総合スーパー",
+          "area": "西区",
+          "station": "ドーム前駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:29:00",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、ジャンルは特にこだわりません。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "大阪府大阪市西区千代崎3丁目13-1",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:29:14"
+    },
+    {
+      "role": 0,
+      "content": "ではユニバーサル・シティウォーク大阪はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666942160809,
+          "selectedResults": [
+            "ユニバーサル・シティウォーク大阪"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": "百貨店や総合スーパー",
+          "area": "西区",
+          "station": "ドーム前駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:29:30",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこに行ってみます。営業時間と住所、あと近くの駅からの所要時間を教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "大阪府大阪市西区千代崎3丁目13-1",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:30:06"
+    },
+    {
+      "role": 0,
+      "content": "営業時間は店舗により異なるとのことです。ユニバーサルシティ駅から徒歩で1分でございます。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": "百貨店や総合スーパー",
+          "area": "西区",
+          "station": "ドーム前駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:30:36",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。住所も教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "大阪府大阪市西区千代崎3丁目13-1",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "店舗により異なる",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "1分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:31:19"
+    },
+    {
+      "role": 0,
+      "content": "住所は大阪府大阪市此花区島屋6丁目2番61号でございます。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": "百貨店や総合スーパー",
+          "area": "西区",
+          "station": "ドーム前駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:31:31",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、当日泊まるところも探しています。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "大阪府大阪市西区千代崎3丁目13-1",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "店舗により異なる",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "1分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "大阪府大阪市此花区島屋6丁目2番61号",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:32:06"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご希望の条件はございますか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666942332930
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": "百貨店や総合スーパー",
+          "area": "西区",
+          "station": "ドーム前駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:32:17",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "簡易宿所がいいです。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "大阪府大阪市西区千代崎3丁目13-1",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "店舗により異なる",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "1分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "大阪府大阪市此花区島屋6丁目2番61号",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:32:42"
+    },
+    {
+      "role": 0,
+      "content": "ではジェイホッパーズ大阪ユニバーサルはいかがでしょうか。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ジェイホッパーズ大阪ユニバーサル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666942371452,
+          "selectedResults": [
+            "ジェイホッパーズ大阪ユニバーサル"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": "百貨店や総合スーパー",
+          "area": "西区",
+          "station": "ドーム前駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:33:00",
+      "book": {
+        "hotel": {
+          "name": "ジェイホッパーズ大阪ユニバーサル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。料金情報と最寄り駅を教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "大阪府大阪市西区千代崎3丁目13-1",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "店舗により異なる",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "1分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "大阪府大阪市此花区島屋6丁目2番61号",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:33:19"
+    },
+    {
+      "role": 0,
+      "content": "値段帯は安めでございます。安治川口駅からは徒歩で5分でございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ジェイホッパーズ大阪ユニバーサル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": "百貨店や総合スーパー",
+          "area": "西区",
+          "station": "ドーム前駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:33:45",
+      "book": {
+        "hotel": {
+          "name": "ジェイホッパーズ大阪ユニバーサル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこの予約をお願いします。12/1の３名で３泊で予約できますか？",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "大阪府大阪市西区千代崎3丁目13-1",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "店舗により異なる",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "1分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "大阪府大阪市此花区島屋6丁目2番61号",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "安治川口駅",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:34:36"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。予約番号は28947でございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ジェイホッパーズ大阪ユニバーサル",
+              "value": {
+                "people": "3",
+                "day": [
+                  12,
+                  1
+                ],
+                "stay": "3"
+              },
+              "timestamp": 1666942487152,
+              "success": true,
+              "ref": "28947"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": "百貨店や総合スーパー",
+          "area": "西区",
+          "station": "ドーム前駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:35:08",
+      "book": {
+        "hotel": {
+          "name": "ジェイホッパーズ大阪ユニバーサル",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              1
+            ],
+            "stay": "3"
+          },
+          "timestamp": 1666942487152,
+          "success": true,
+          "ref": "28947"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。以上になります、お世話になりました。",
+      "payload": [
+        [
+          1,
+          "shopping",
+          "address",
+          "大阪府大阪市西区千代崎3丁目13-1",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "店舗により異なる",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "accesstime",
+          "1分",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "address",
+          "大阪府大阪市此花区島屋6丁目2番61号",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "priceinfo",
+          "安め",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "station",
+          "安治川口駅",
+          false
+        ],
+        [
+          3,
+          "hotel",
+          "reference",
+          "28947",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-28 07:35:29"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "大阪",
+            "name": null,
+            "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ジェイホッパーズ大阪ユニバーサル",
+              "value": {
+                "people": "3",
+                "day": [
+                  12,
+                  1
+                ],
+                "stay": "3"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "大阪",
+          "name": null,
+          "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "大阪",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": "大阪",
+          "name": null,
+          "genre": "百貨店や総合スーパー",
+          "area": "西区",
+          "station": "ドーム前駅",
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-28 07:35:35",
+      "book": {
+        "hotel": {
+          "name": "ジェイホッパーズ大阪ユニバーサル",
+          "value": {
+            "people": "3",
+            "day": [
+              12,
+              1
+            ],
+            "stay": "3"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-28 07:35:44"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-28 07:35:45"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:58",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "大阪",
+      "name": null,
+      "genre": "簡易宿所（ベッドハウス・山小屋・カプセルホテル等）",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "大阪",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null
+    },
+    "shopping": {
+      "city": "大阪",
+      "name": null,
+      "genre": "百貨店や総合スーパー",
+      "area": "西区",
+      "station": "ドーム前駅",
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ジェイホッパーズ大阪ユニバーサル",
+      "value": {
+        "people": "3",
+        "day": [
+          12,
+          1
+        ],
+        "stay": "3"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

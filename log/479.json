@@ -1,0 +1,3527 @@
+{
+  "id": 479,
+  "dialogue_code": "dialogue_0479MeMJ",
+  "status_code": 2,
+  "user": [
+    2,
+    230
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0230PdiU"
+  ],
+  "task": 649,
+  "task_name": "main_329",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "福岡",
+          "withrestaurant": "有り",
+          "area": "東区",
+          "wifi": "有り(無料)"
+        },
+        "info": {
+          "city": "福岡",
+          "withrestaurant": "有り",
+          "area": "早良区",
+          "wifi": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "checkintime",
+          "priceinfo",
+          "reference"
+        ],
+        "book": {
+          "people": 2,
+          "day": "8/27",
+          "stay": 4
+        }
+      },
+      "attraction": {
+        "fail_info": {
+          "city": "福岡",
+          "area": "東区",
+          "genre": "科学館"
+        },
+        "info": {
+          "city": "福岡",
+          "area": "東区",
+          "genre": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "adultfee"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "福岡",
+          "jumbo": "対応",
+          "cashless": "対応"
+        },
+        "info": {
+          "city": "福岡",
+          "jumbo": "対応",
+          "cashless": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "8/27",
+          "time": "15:30",
+          "departurepoint": "hotel",
+          "arrivalpoint": "attraction"
+        },
+        "book": {
+          "day": "8/27",
+          "time": "16:20",
+          "departurepoint": "hotel",
+          "arrivalpoint": "attraction"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>福岡</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．地区は<b style='color:blue;'>東区</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，地区を<b style='color:blue;'>早良区</b>とします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，チェックイン開始時刻，料金情報</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>8/27</b>です．宿泊日数は<b style='color:blue;'>4</b>泊です．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．地区は<b style='color:blue;'>東区</b>です．ジャンルは<b style='color:blue;'>科学館</b>です．",
+        "希望に合うところがない場合は，ジャンルは<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称，大人入場料</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "希望に合うところが見つからない場合は，キャッシュレス払いの可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>8/27</b>です．時間は<b style='color:blue;'>15:30</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>16:20</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkintime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "priceinfo",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "adultfee",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "attraction",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "福岡へ旅行したいのですが、宿泊施設はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:46:29"
+    },
+    {
+      "role": 0,
+      "content": "はい、97件ほど、ご案内可能です。なにかご希望の条件はございますでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666853191642
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:46:49",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。東区で、レストランが併設されていて、Wi-Fiが無料で利用できるところがいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:47:30"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件では、該当するものがありませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [],
+          "timestamp": 1666853259680
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:47:47",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では早良区でお願いできますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:48:02"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。3件候補がござます。たとえば、ザ・レジデンシャルスイート・福岡というところは如何でしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "早良区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ザ・レジデンシャルスイート・福岡",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666853282305,
+          "selectedResults": [
+            "ザ・レジデンシャルスイート・福岡"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:48:28",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらでおねがいします。チェックイン開始時刻と料金情報を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:49:01"
+    },
+    {
+      "role": 0,
+      "content": "チェックイン開始は、15時からとなっております。お値段については、普通の料金設定ということ以外、ご提供出来る情報がございません。申し訳ありません。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "早良区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ザ・レジデンシャルスイート・福岡",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:49:39",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "了解です。8/27から4泊したいのですが、予約は可能ですか？人数は二人です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:50:19"
+    },
+    {
+      "role": 0,
+      "content": "ご予約ありがとうございます。予約番号65199にて、承りました。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "早良区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ザ・レジデンシャルスイート・福岡",
+              "value": {
+                "people": "2",
+                "day": [
+                  8,
+                  27
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1666853427164,
+              "success": true,
+              "ref": "65199"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:50:43",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1666853427164,
+          "success": true,
+          "ref": "65199"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。続いて東区で科学館の観光名所を探しているのですが、ありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65199",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:51:33"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件では、該当する観光名所がありませんでした。いかがいたしましょうか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": "科学館",
+            "area": "東区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666853506520
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "福岡",
+          "name": null,
+          "genre": "科学館",
+          "area": "東区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:52:09",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。では、ジャンルを考慮しないとした場合はどうですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65199",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:52:28"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。そうしますと、マリンワールド 海の中道はいかがでしょうか？ジャンルは、水族館, 美術館・博物館となっております。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666853549947,
+          "selectedResults": [
+            "マリンワールド 海の中道"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:52:55",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。大人入場料はわかりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65199",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "マリンワールド 海の中道",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:53:19"
+    },
+    {
+      "role": 0,
+      "content": "はい。高校生以上の大人入場料は、2350円です。シニアの場合は、1,880円になります。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "東区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:53:48",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかります。当日利用できるジャンボタクシーを利用できて、キャッシュレス払いができるタクシー会社を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65199",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "マリンワールド 海の中道",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "高校生以上の大人入場料は、2350円です。シニアの場合は、1,880円になります。",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:54:54"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。福岡でジャンボタクシーとキャッシュレス払いの両方に対応している会社は、ご案内できるところがありませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1666853702633
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:55:28",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "なるほど。では、キャッシュレス払いができなくても大丈夫です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65199",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "マリンワールド 海の中道",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "高校生以上の大人入場料は、2350円です。シニアの場合は、1,880円になります。",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:55:49"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、西日本自動車（株）は如何でしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "西日本自動車（株）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666853750536,
+          "selectedResults": [
+            "西日本自動車（株）"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:56:07",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "西日本自動車（株）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこにします。電話番号を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65199",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "マリンワールド 海の中道",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "高校生以上の大人入場料は、2350円です。シニアの場合は、1,880円になります。",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "西日本自動車（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:56:23"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は、0570075678です。ご予約も可能ですが、いかがいたしますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "西日本自動車（株）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:56:35",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "西日本自動車（株）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "お願いします。8/27の時間は15:30で予約したいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65199",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "マリンワールド 海の中道",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "高校生以上の大人入場料は、2350円です。シニアの場合は、1,880円になります。",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "西日本自動車（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570075678",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:56:57"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。ご出発予定地と目的地もお願いできますでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "西日本自動車（株）",
+              "value": {
+                "day": [
+                  8,
+                  27
+                ],
+                "time": "15:30",
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:57:21",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "西日本自動車（株）",
+          "value": {
+            "day": [
+              8,
+              27
+            ],
+            "time": "15:30",
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。出発地が先ほどの宿泊所で、目的地が先ほどの観光施設でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65199",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "マリンワールド 海の中道",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "高校生以上の大人入場料は、2350円です。シニアの場合は、1,880円になります。",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "西日本自動車（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570075678",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:57:49"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件では、該当するものがありませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "西日本自動車（株）",
+              "value": {
+                "day": [
+                  8,
+                  27
+                ],
+                "time": "15:30",
+                "departurepoint": "ザ・レジデンシャルスイート・福岡",
+                "arrivalpoint": "マリンワールド 海の中道"
+              },
+              "timestamp": 1666853889744,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:58:19",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "西日本自動車（株）",
+          "value": {
+            "day": [
+              8,
+              27
+            ],
+            "time": "15:30",
+            "departurepoint": "ザ・レジデンシャルスイート・福岡",
+            "arrivalpoint": "マリンワールド 海の中道"
+          },
+          "timestamp": 1666853889744,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。では時間を16：20に変更します。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65199",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "マリンワールド 海の中道",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "高校生以上の大人入場料は、2350円です。シニアの場合は、1,880円になります。",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "西日本自動車（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570075678",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:58:38"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。予約を完了いたしました。予約番号は、91835となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "西日本自動車（株）",
+              "value": {
+                "day": [
+                  8,
+                  27
+                ],
+                "time": "16:20",
+                "departurepoint": "ザ・レジデンシャルスイート・福岡",
+                "arrivalpoint": "マリンワールド 海の中道"
+              },
+              "timestamp": 1666853922321,
+              "success": true,
+              "ref": "91835"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:58:57",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "西日本自動車（株）",
+          "value": {
+            "day": [
+              8,
+              27
+            ],
+            "time": "16:20",
+            "departurepoint": "ザ・レジデンシャルスイート・福岡",
+            "arrivalpoint": "マリンワールド 海の中道"
+          },
+          "timestamp": 1666853922321,
+          "success": true,
+          "ref": "91835"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "了解です。ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65199",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "マリンワールド 海の中道",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "高校生以上の大人入場料は、2350円です。シニアの場合は、1,880円になります。",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "西日本自動車（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570075678",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "91835",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:59:16"
+    },
+    {
+      "role": 0,
+      "content": "他にお調べすることはございませんか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "西日本自動車（株）",
+              "value": {
+                "day": [
+                  8,
+                  27
+                ],
+                "time": "16:20",
+                "departurepoint": "ザ・レジデンシャルスイート・福岡",
+                "arrivalpoint": "マリンワールド 海の中道"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:59:25",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "西日本自動車（株）",
+          "value": {
+            "day": [
+              8,
+              27
+            ],
+            "time": "16:20",
+            "departurepoint": "ザ・レジデンシャルスイート・福岡",
+            "arrivalpoint": "マリンワールド 海の中道"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "大丈夫です！",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ザ・レジデンシャルスイート・福岡",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkintime",
+          "15時から",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "priceinfo",
+          "普通の料金設定",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "65199",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "name",
+          "マリンワールド 海の中道",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "adultfee",
+          "高校生以上の大人入場料は、2350円です。シニアの場合は、1,880円になります。",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "西日本自動車（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570075678",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "91835",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-27 06:59:31"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。本日はご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "西日本自動車（株）",
+              "value": {
+                "day": [
+                  8,
+                  27
+                ],
+                "time": "16:20",
+                "departurepoint": "ザ・レジデンシャルスイート・福岡",
+                "arrivalpoint": "マリンワールド 海の中道"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "早良区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "東区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-27 06:59:37",
+      "book": {
+        "hotel": {
+          "name": "ザ・レジデンシャルスイート・福岡",
+          "value": {
+            "people": "2",
+            "day": [
+              8,
+              27
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "西日本自動車（株）",
+          "value": {
+            "day": [
+              8,
+              27
+            ],
+            "time": "16:20",
+            "departurepoint": "ザ・レジデンシャルスイート・福岡",
+            "arrivalpoint": "マリンワールド 海の中道"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 3,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [
+            3
+          ],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "誤字「大変申し訳ございません。その条件では、該当するものがありませんでした。」→「大変申し訳ございません。その条件では予約をおとりできませんでした。」",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-27 06:59:50"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": "わかりました。を　わかります。で誤字しています。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-27 07:00:19"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:57",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "福岡",
+      "name": null,
+      "genre": null,
+      "area": "早良区",
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": "福岡",
+      "name": null,
+      "genre": null,
+      "area": "東区",
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "福岡",
+      "name": null,
+      "cashless": null,
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ザ・レジデンシャルスイート・福岡",
+      "value": {
+        "people": "2",
+        "day": [
+          8,
+          27
+        ],
+        "stay": "4"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "西日本自動車（株）",
+      "value": {
+        "day": [
+          8,
+          27
+        ],
+        "time": "16:20",
+        "departurepoint": "ザ・レジデンシャルスイート・福岡",
+        "arrivalpoint": "マリンワールド 海の中道"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

@@ -1,0 +1,2065 @@
+{
+  "id": 4352,
+  "dialogue_code": "dialogue_4352DISE",
+  "status_code": 2,
+  "user": [
+    20,
+    311
+  ],
+  "username": [
+    "operator_0020cvID",
+    "customer_0311kyrH"
+  ],
+  "task": 4622,
+  "task_name": "main2_1602",
+  "task_content": {
+    "goals": {
+      "attraction": {
+        "info": {
+          "city": "仙台",
+          "area": "青葉区",
+          "genre": "教室・ワークショップ・体験",
+          "station": "仙台駅"
+        },
+        "reqt": [
+          "name",
+          "accesstime",
+          "phone"
+        ]
+      },
+      "taxi": {
+        "fail_info": {
+          "city": "仙台",
+          "jumbo": "対応"
+        },
+        "info": {
+          "city": "仙台",
+          "jumbo": "dontcare"
+        },
+        "reqt": [
+          "cashless",
+          "name",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "9/2",
+          "time": "13:00",
+          "departurepoint": "シーガル仙台駅前店",
+          "arrivalpoint": "attraction"
+        },
+        "book": {
+          "day": "9/2",
+          "time": "13:30",
+          "departurepoint": "シーガル仙台駅前店",
+          "arrivalpoint": "attraction"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "仙台",
+          "area": "若林区",
+          "day": "9/2"
+        },
+        "reqt": [
+          "weather",
+          "maxtemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "attraction": [
+        "あなたは<b style='color:blue;'>仙台</b>への旅行を計画しています．",
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．地区は<b style='color:blue;'>青葉区</b>です．ジャンルは<b style='color:blue;'>教室・ワークショップ・体験</b>です．最寄り駅が<b style='color:blue;'>仙台駅</b>のところにしてください．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称，近辺の駅からの所要時間，電話番号</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "希望に合うところが見つからない場合は，ジャンボタクシーの利用可否は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>キャッシュレス対応，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>9/2</b>です．時間は<b style='color:blue;'>13:00</b>です．出発地は<b style='color:blue;'>シーガル仙台駅前店</b>というところです．目的地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>13:30</b>に変更します．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>若林区</b>です．日付は<b style='color:blue;'>9/2</b>です．",
+        "<b style='color:green;'>天気，最高気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "accesstime",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "weather",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "maxtemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "attraction",
+      "taxi",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "仙台に旅行に行こうと考えています、青葉区で最寄り駅が仙台駅のワークショップが体験できる観光名所はありませんか",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:49:21"
+    },
+    {
+      "role": 0,
+      "content": "はい、仙台市天文台がございます。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "教室・ワークショップ・体験",
+            "area": "青葉区",
+            "station": "仙台駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669812597117,
+          "selectedResults": [
+            "仙台市天文台"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": "青葉区",
+          "station": "仙台駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:50:07",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます、近辺の駅からの所要時間と電話番号を教えてください",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "仙台市天文台",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:50:48"
+    },
+    {
+      "role": 0,
+      "content": "はい。仙台駅からタクシーで22分になります。また、電話番号は0223911300です。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "教室・ワークショップ・体験",
+            "area": "青葉区",
+            "station": "仙台駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": "青葉区",
+          "station": "仙台駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:51:11",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "当日、移動にタクシーを利用したいのですがジャンボタクシーを利用できるタクシー会社はありませんか",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "仙台市天文台",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "accesstime",
+          "タクシーで22分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0223911300",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:52:21"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。条件に合うタクシー会社は見つかりませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [],
+          "timestamp": 1669812752655
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": "青葉区",
+          "station": "仙台駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:52:49",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではジャンボタクシーを考慮しない場合はありませんか",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "仙台市天文台",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "accesstime",
+          "タクシーで22分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0223911300",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:53:12"
+    },
+    {
+      "role": 0,
+      "content": "その条件でしたら、宮城タクシー（株）はいかがですか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "宮城タクシー（株）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669812795738,
+          "selectedResults": [
+            "宮城タクシー（株）"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": "青葉区",
+          "station": "仙台駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:53:25",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "宮城タクシー（株）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "キャッシュレスには対応していますか",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "仙台市天文台",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "accesstime",
+          "タクシーで22分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0223911300",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "宮城タクシー（株）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:53:48"
+    },
+    {
+      "role": 0,
+      "content": "はい。しております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "宮城タクシー（株）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": "青葉区",
+          "station": "仙台駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:54:06",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "宮城タクシー（株）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます、9月2日の13時にシーガル仙台駅前店から仙台市天文台まで予約をお願いできますか",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "仙台市天文台",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "accesstime",
+          "タクシーで22分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0223911300",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "対応",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "宮城タクシー（株）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:55:18"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。こちらの条件ではご予約できませんでした。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "宮城タクシー（株）",
+              "value": {
+                "day": [
+                  9,
+                  2
+                ],
+                "time": "13:00",
+                "departurepoint": "シーガル仙台駅前店",
+                "arrivalpoint": "仙台市天文台"
+              },
+              "timestamp": 1669812936445,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": "青葉区",
+          "station": "仙台駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:55:52",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "宮城タクシー（株）",
+          "value": {
+            "day": [
+              9,
+              2
+            ],
+            "time": "13:00",
+            "departurepoint": "シーガル仙台駅前店",
+            "arrivalpoint": "仙台市天文台"
+          },
+          "timestamp": 1669812936445,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "それでは13時30分ではお願いできないでしょうか",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "仙台市天文台",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "accesstime",
+          "タクシーで22分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0223911300",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "対応",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "宮城タクシー（株）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:56:08"
+    },
+    {
+      "role": 0,
+      "content": "ご予約できました。予約番号は84585です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "宮城タクシー（株）",
+              "value": {
+                "day": [
+                  9,
+                  2
+                ],
+                "time": "13:30",
+                "departurepoint": "シーガル仙台駅前店",
+                "arrivalpoint": "仙台市天文台"
+              },
+              "timestamp": 1669812976770,
+              "success": true,
+              "ref": "84585"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": "青葉区",
+          "station": "仙台駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:56:29",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "宮城タクシー（株）",
+          "value": {
+            "day": [
+              9,
+              2
+            ],
+            "time": "13:30",
+            "departurepoint": "シーガル仙台駅前店",
+            "arrivalpoint": "仙台市天文台"
+          },
+          "timestamp": 1669812976770,
+          "success": true,
+          "ref": "84585"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます、当日の若林区の天気と最高気温を教えてください",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "仙台市天文台",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "accesstime",
+          "タクシーで22分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0223911300",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "対応",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "宮城タクシー（株）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "84585",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:57:00"
+    },
+    {
+      "role": 0,
+      "content": "9月2日の若林区の天気と最高気温でよろしかったですか？",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "若林区",
+            "day": [
+              null,
+              null
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": "青葉区",
+          "station": "仙台駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "若林区",
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:57:29",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "宮城タクシー（株）",
+          "value": {
+            "day": [
+              9,
+              2
+            ],
+            "time": "13:30",
+            "departurepoint": "シーガル仙台駅前店",
+            "arrivalpoint": "仙台市天文台"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、お願いします",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "仙台市天文台",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "accesstime",
+          "タクシーで22分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0223911300",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "対応",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "宮城タクシー（株）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "84585",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:57:38"
+    },
+    {
+      "role": 0,
+      "content": "はい。天気は晴のち曇で、最高気温は28.9度でございます。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "若林区",
+            "day": [
+              9,
+              2
+            ]
+          },
+          "book": [],
+          "timestamp": 1669813067857,
+          "selectedResults": [
+            "9/2 仙台 若林区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": "教室・ワークショップ・体験",
+          "area": "青葉区",
+          "station": "仙台駅",
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "若林区",
+          "day": [
+            9,
+            2
+          ]
+        }
+      },
+      "created_at": "2022-11-30 12:58:05",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "宮城タクシー（株）",
+          "value": {
+            "day": [
+              9,
+              2
+            ],
+            "time": "13:30",
+            "departurepoint": "シーガル仙台駅前店",
+            "arrivalpoint": "仙台市天文台"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "仙台市天文台",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "accesstime",
+          "タクシーで22分",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "phone",
+          "0223911300",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "cashless",
+          "対応",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "宮城タクシー（株）",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "84585",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "晴のち曇",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "28.9度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 12:58:16"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 12:58:20"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 12:58:21"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:01",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "仙台",
+      "name": null,
+      "genre": "教室・ワークショップ・体験",
+      "area": "青葉区",
+      "station": "仙台駅",
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "仙台",
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "仙台",
+      "area": "若林区",
+      "day": [
+        9,
+        2
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "宮城タクシー（株）",
+      "value": {
+        "day": [
+          9,
+          2
+        ],
+        "time": "13:30",
+        "departurepoint": "シーガル仙台駅前店",
+        "arrivalpoint": "仙台市天文台"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

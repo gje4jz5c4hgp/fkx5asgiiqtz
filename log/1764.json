@@ -1,0 +1,3444 @@
+{
+  "id": 1764,
+  "dialogue_code": "dialogue_1764xSnz",
+  "status_code": 2,
+  "user": [
+    4,
+    251
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0251Yuvr"
+  ],
+  "task": 1934,
+  "task_name": "main_1614",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "fail_info": {
+          "city": "東京",
+          "station": "銀座駅",
+          "parking": "有り(無料)",
+          "pricerange": "普通"
+        },
+        "info": {
+          "city": "東京",
+          "station": "銀座駅",
+          "parking": "有り(無料)",
+          "pricerange": "dontcare"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "priceinfo"
+        ]
+      },
+      "hotel": {
+        "fail_info": {
+          "city": "東京",
+          "station": "池袋駅",
+          "parking": "有り(無料)"
+        },
+        "info": {
+          "city": "東京",
+          "station": "池袋駅",
+          "parking": "dontcare"
+        },
+        "reqt": [
+          "withrestaurant",
+          "checkintime"
+        ]
+      },
+      "attraction": {
+        "info": {
+          "city": "東京",
+          "area": "台東区",
+          "wifi": "有り(無料)"
+        },
+        "reqt": [
+          "childfee",
+          "parking"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>東京</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．最寄り駅が<b style='color:blue;'>銀座駅</b>のところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．予算は<b style='color:blue;'>普通</b>が希望です．",
+        "希望に合うところが見つからない場合は，予算は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，電話番号，料金情報</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．最寄り駅が<b style='color:blue;'>池袋駅</b>のところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，駐車場の有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>レストランの有無，チェックイン開始時刻</b>を聞いてください．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．地区は<b style='color:blue;'>台東区</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>子供入場料，駐車場の有無</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "phone",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "priceinfo",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "withrestaurant",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "checkintime",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "childfee",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "parking",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "hotel",
+      "attraction"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都への旅行を計画しています。当日利用できる飲食店を探しているのですが、お伺いしてもよろしいですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:18:26"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667431121072
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:18:58",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。最寄り駅が銀座駅で、予算が普通の所を探しています。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:19:17"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。京都に銀座駅が見当たらないのですが、何かお間違いではありませんか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:20:53",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "すみません。東京でした。申し訳ありません。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:21:10"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、エリアでいうと中央区にある、天空飲茶酒家はいかがでしょう？ジャンルは中華料理、居酒屋、となります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": "銀座駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "天空飲茶酒家",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667431313547,
+          "selectedResults": [
+            "天空飲茶酒家"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:22:41",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "天空飲茶酒家",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。それと、駐車場が無料で利用出来るとありがたいのですが、それも該当しますかね？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:23:22"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、駐車場の有無は不明です。その条件を加えると、ご紹介可能な飲食店はございません。いかがされますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": "銀座駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "天空飲茶酒家",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "VAMPIRE CAFE",
+            "天空飲茶酒家",
+            "VAMPIRE CAFE",
+            "天空飲茶酒家"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:24:32",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "天空飲茶酒家",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですね。でしたら、予算については考慮しませんので、最寄り駅が銀座駅で、駐車場が無料で利用できる場所はありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:25:06"
+    },
+    {
+      "role": 0,
+      "content": "はい、エリアでいうと中央区に、NAMIKI667がございます。ジャンルはホテルレストラン、洋食、西洋料理、居酒屋、カフェ、スイーツ、となります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "銀座駅",
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "NAMIKI667",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667431546750,
+          "selectedResults": [
+            "NAMIKI667"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:26:42",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらで検討したいです。こちらのお店の電話番号をお伺いしてもよろしいですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:27:03"
+    },
+    {
+      "role": 0,
+      "content": "はい、電話番号は、0368371300となります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "銀座駅",
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "NAMIKI667",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:27:18",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。このお店の料金情報を知りたいのですが、よろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0368371300",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:27:40"
+    },
+    {
+      "role": 0,
+      "content": "料金情報は、ランチセットTOKYOが5280円、ディナーセット4品が7370円、北海道産真鱈のオーブンロースト東京都産小松菜インカの目覚めが2640円、となります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "銀座駅",
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "NAMIKI667",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:28:18",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。続けて、当日宿泊できる施設を探しているのですが、このまま続けても大丈夫でしょうか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0368371300",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "ランチセットTOKYOが5280円ディナーセット4品が7370円北海道産真鱈のオーブンロースト東京都産小松菜インカの目覚めが2640円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:29:01"
+    },
+    {
+      "role": 0,
+      "content": "はい、ご希望を教えていただけますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:29:30",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。最寄り駅が池袋駅で、駐車場を無料で利用できる所はありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0368371300",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "ランチセットTOKYOが5280円ディナーセット4品が7370円北海道産真鱈のオーブンロースト東京都産小松菜インカの目覚めが2640円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:29:53"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、その条件ではご案内できないのですが、いかが致しましょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "池袋駅",
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1667431824123
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "池袋駅",
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:30:43",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、最寄り駅が池袋駅のみの条件で、ご案内をお願いしてもよろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0368371300",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "ランチセットTOKYOが5280円ディナーセット4品が7370円北海道産真鱈のオーブンロースト東京都産小松菜インカの目覚めが2640円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:31:14"
+    },
+    {
+      "role": 0,
+      "content": "はい、エリアでいうと豊島区に、池袋グランドホテルがございます。タイプはビジネスホテルとなります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "池袋駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "池袋グランドホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667431890227,
+          "selectedResults": [
+            "池袋グランドホテル"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "池袋駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:32:03",
+      "book": {
+        "hotel": {
+          "name": "池袋グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらで考慮しようと思います。このホテルにはレストランはありますかね？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0368371300",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "ランチセットTOKYOが5280円ディナーセット4品が7370円北海道産真鱈のオーブンロースト東京都産小松菜インカの目覚めが2640円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:32:32"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、併設のレストランはございません。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "池袋駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "池袋グランドホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "池袋駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:32:52",
+      "book": {
+        "hotel": {
+          "name": "池袋グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。あっても無くても大丈夫です。こちらのホテルのチェックイン開始時間を教えて貰ってもよろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0368371300",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "ランチセットTOKYOが5280円ディナーセット4品が7370円北海道産真鱈のオーブンロースト東京都産小松菜インカの目覚めが2640円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "無",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:33:29"
+    },
+    {
+      "role": 0,
+      "content": "チェックイン開始時刻は15時となります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "池袋駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "池袋グランドホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "池袋駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:33:51",
+      "book": {
+        "hotel": {
+          "name": "池袋グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。最後に、観光名所も探して頂きたいのですが、よろしいでしょうか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0368371300",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "ランチセットTOKYOが5280円ディナーセット4品が7370円北海道産真鱈のオーブンロースト東京都産小松菜インカの目覚めが2640円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "無",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:34:22"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667432081066
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "池袋駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:34:49",
+      "book": {
+        "hotel": {
+          "name": "池袋グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。台東区で、Wi-Fiが無料で利用できる施設はありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0368371300",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "ランチセットTOKYOが5280円ディナーセット4品が7370円北海道産真鱈のオーブンロースト東京都産小松菜インカの目覚めが2640円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "無",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:35:09"
+    },
+    {
+      "role": 0,
+      "content": "国立西洋美術館はいかがでしょう？ジャンルは美術館、博物館となります。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "台東区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667432139257,
+          "selectedResults": [
+            "上野動物園",
+            "国立西洋美術館",
+            "東京国立博物館",
+            "国立西洋美術館"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "池袋駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "台東区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:36:18",
+      "book": {
+        "hotel": {
+          "name": "池袋グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらにしようかと思います。この施設には駐車場はありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0368371300",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "ランチセットTOKYOが5280円ディナーセット4品が7370円北海道産真鱈のオーブンロースト東京都産小松菜インカの目覚めが2640円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "無",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:36:39"
+    },
+    {
+      "role": 0,
+      "content": "有料ですが、ご用意がございます。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "台東区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "池袋駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "台東区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:37:02",
+      "book": {
+        "hotel": {
+          "name": "池袋グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。子供もいるので、子供の入場料も知りたいのですが、わかりますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0368371300",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "ランチセットTOKYOが5280円ディナーセット4品が7370円北海道産真鱈のオーブンロースト東京都産小松菜インカの目覚めが2640円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "無",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "有",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:37:27"
+    },
+    {
+      "role": 0,
+      "content": "子供入場料は無料となっております。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "台東区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "池袋駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "台東区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:37:48",
+      "book": {
+        "hotel": {
+          "name": "池袋グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。これで当日は大丈夫そうです。ご案内、ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "NAMIKI667",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0368371300",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "priceinfo",
+          "ランチセットTOKYOが5280円ディナーセット4品が7370円北海道産真鱈のオーブンロースト東京都産小松菜インカの目覚めが2640円",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "withrestaurant",
+          "無",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15:00",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "無料",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "parking",
+          "有",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-02 23:38:12"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": "台東区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "銀座駅",
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "池袋駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": "台東区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-02 23:38:23",
+      "book": {
+        "hotel": {
+          "name": "池袋グランドホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "NAMIKI667",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-02 23:38:29"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-02 23:38:34"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:06",
+  "final_state": {
+    "restaurant": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "銀座駅",
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "池袋駅",
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": "台東区",
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "池袋グランドホテル",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "NAMIKI667",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

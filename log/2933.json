@@ -1,0 +1,2865 @@
+{
+  "id": 2933,
+  "dialogue_code": "dialogue_2933avpO",
+  "status_code": 2,
+  "user": [
+    25,
+    272
+  ],
+  "username": [
+    "operator_0025tpXO",
+    "customer_0272SIEo"
+  ],
+  "task": 3203,
+  "task_name": "main2_183",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "仙台",
+          "pricerange": "普通",
+          "withrestaurant": "有り",
+          "wifi": "有り(無料)"
+        },
+        "reqt": [
+          "genre",
+          "checkouttime",
+          "address",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "7/10",
+          "stay": 2
+        }
+      },
+      "restaurant": {
+        "fail_info": {
+          "city": "仙台",
+          "parking": "有り(無料)",
+          "area": "宮城野区",
+          "genre": "焼肉・ホルモン"
+        },
+        "info": {
+          "city": "仙台",
+          "parking": "有り(無料)",
+          "area": "dontcare",
+          "genre": "焼肉・ホルモン"
+        },
+        "reqt": [
+          "opentime",
+          "pricerange",
+          "address"
+        ]
+      },
+      "weather": {
+        "info": {
+          "city": "仙台",
+          "area": "宮城野区",
+          "day": "7/10"
+        },
+        "reqt": [
+          "weather"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>仙台</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．予算は<b style='color:blue;'>普通</b>が希望です．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>タイプ，チェックアウト終了時刻，住所</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>7/10</b>です．宿泊日数は<b style='color:blue;'>2</b>泊です．"
+      ],
+      "restaurant": [
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>宮城野区</b>です．ジャンルは<b style='color:blue;'>焼肉・ホルモン</b>です．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>営業時間，値段帯，住所</b>を聞いてください．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>宮城野区</b>です．日付は<b style='color:blue;'>7/10</b>です．",
+        "<b style='color:green;'>天気</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "genre",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "checkouttime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "address",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "opentime",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "pricerange",
+        ""
+      ],
+      [
+        2,
+        "restaurant",
+        "address",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "weather",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "restaurant",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "仙台に行くのですが、宿泊施設を探しています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:39:07"
+    },
+    {
+      "role": 0,
+      "content": "はい、ご希望の条件をおきかせください。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1669707553155
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:39:24",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "レストランが併設されていて、Wi-Fiが無料のところがいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:39:51"
+    },
+    {
+      "role": 0,
+      "content": "仙台でWiFi無料、レストラン併設の宿泊施設は多数ありますが、ホテルメトロポリタン仙台をお勧めします。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ホテルメトロポリタン仙台",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669707597616,
+          "selectedResults": [
+            "ホテルメトロポリタン仙台"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:40:28",
+      "book": {
+        "hotel": {
+          "name": "ホテルメトロポリタン仙台",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予算は普通がいいのですが、そちらはどうですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:40:50"
+    },
+    {
+      "role": 0,
+      "content": "メトロポリタンは高めになってしまいますね。仙台でWiFi無料、レストラン併設、値段帯普通の中だと、アパホテル<仙台勾当台公園>、こちらがオススメです。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "アパホテル<仙台勾当台公園>",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669707666888,
+          "selectedResults": [
+            "アパホテル<仙台勾当台公園>"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:41:39",
+      "book": {
+        "hotel": {
+          "name": "アパホテル<仙台勾当台公園>",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。どういうタイプのホテルですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:42:01"
+    },
+    {
+      "role": 0,
+      "content": "ビジネスホテルです。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "アパホテル<仙台勾当台公園>",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:42:08",
+      "book": {
+        "hotel": {
+          "name": "アパホテル<仙台勾当台公園>",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "チェックアウト終了時刻と住所も知りたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:42:36"
+    },
+    {
+      "role": 0,
+      "content": "チェックアウトは１１時終了、住所は宮城県仙台市青葉区二日町4-10になります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "アパホテル<仙台勾当台公園>",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:42:53",
+      "book": {
+        "hotel": {
+          "name": "アパホテル<仙台勾当台公園>",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "7/10から2泊、3人で予約をお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "ビジネスホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１１時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "宮城県仙台市青葉区二日町4-10",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:43:40"
+    },
+    {
+      "role": 0,
+      "content": "予約成功しました。予約番号は44382です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "アパホテル<仙台勾当台公園>",
+              "value": {
+                "people": "3",
+                "day": [
+                  7,
+                  10
+                ],
+                "stay": "2"
+              },
+              "timestamp": 1669707831013,
+              "success": true,
+              "ref": "44382"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:44:08",
+      "book": {
+        "hotel": {
+          "name": "アパホテル<仙台勾当台公園>",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              10
+            ],
+            "stay": "2"
+          },
+          "timestamp": 1669707831013,
+          "success": true,
+          "ref": "44382"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あと宮城野区で焼肉・ホルモンが食べれるところを探しています。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "ビジネスホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１１時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "宮城県仙台市青葉区二日町4-10",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "44382",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:44:52"
+    },
+    {
+      "role": 0,
+      "content": "宮城野区で焼肉ホルモンならば、仙台らしく、黒毛和牛一頭切り 伊達哉、こちらをオススメします。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "焼肉・ホルモン",
+            "area": "宮城野区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "黒毛和牛一頭切り 伊達哉",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669707908254,
+          "selectedResults": [
+            "黒毛和牛一頭切り 伊達哉",
+            "やきにく家 香煙",
+            "黒毛和牛一頭切り 伊達哉"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": "宮城野区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:45:39",
+      "book": {
+        "hotel": {
+          "name": "アパホテル<仙台勾当台公園>",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              10
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "黒毛和牛一頭切り 伊達哉",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "駐車場が無料なところがいいのですが、そちらはどうですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "ビジネスホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１１時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "宮城県仙台市青葉区二日町4-10",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "44382",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:46:06"
+    },
+    {
+      "role": 0,
+      "content": "こちらは駐車場はありません。宮城野区で焼肉ホルモンだともう一軒あるのですが、そちらは有料駐車場になってしまいます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "焼肉・ホルモン",
+            "area": "宮城野区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "やきにく家 香煙",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "やきにく家 香煙"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": "宮城野区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:46:44",
+      "book": {
+        "hotel": {
+          "name": "アパホテル<仙台勾当台公園>",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              10
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "やきにく家 香煙",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "じゃ宮城野区でなくてもいいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "ビジネスホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１１時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "宮城県仙台市青葉区二日町4-10",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "44382",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:47:06"
+    },
+    {
+      "role": 0,
+      "content": "仙台で焼肉ホルモン、駐車場無料だと、ときわ亭 上杉店をお勧めします。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "焼肉・ホルモン",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ときわ亭 上杉店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669708032540,
+          "selectedResults": [
+            "ジンギスカン山力",
+            "ときわ亭 上杉店",
+            "やみつきホルモン 利久 仙台GIGS荒井店",
+            "ときわ亭 上杉店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:47:39",
+      "book": {
+        "hotel": {
+          "name": "アパホテル<仙台勾当台公園>",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              10
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ときわ亭 上杉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。値段帯はどうなっていますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "ビジネスホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１１時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "宮城県仙台市青葉区二日町4-10",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "44382",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:47:55"
+    },
+    {
+      "role": 0,
+      "content": "値段帯は安めです。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "焼肉・ホルモン",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ときわ亭 上杉店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:48:03",
+      "book": {
+        "hotel": {
+          "name": "アパホテル<仙台勾当台公園>",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              10
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ときわ亭 上杉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "営業時間と住所も伺いたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "ビジネスホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１１時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "宮城県仙台市青葉区二日町4-10",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "44382",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:48:27"
+    },
+    {
+      "role": 0,
+      "content": "営業時間は夕方５時から夜１２時まで、住所は宮城県仙台市青葉区上杉3丁目3-9になります。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "焼肉・ホルモン",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [
+            {
+              "name": "ときわ亭 上杉店",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:48:54",
+      "book": {
+        "hotel": {
+          "name": "アパホテル<仙台勾当台公園>",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              10
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ときわ亭 上杉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ちなみに宮城野区ですが、7/10の天気はわかりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "ビジネスホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１１時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "宮城県仙台市青葉区二日町4-10",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "44382",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "夕方５時から夜１２時まで",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "宮城県仙台市青葉区上杉3丁目3-9",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:49:46"
+    },
+    {
+      "role": 0,
+      "content": "7/10 仙台 宮城野区 の天気は雨のち曇、最低気温19.7度、最高気温24.2度です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "宮城野区",
+            "day": [
+              7,
+              10
+            ]
+          },
+          "book": [],
+          "timestamp": 1669708197103,
+          "selectedResults": [
+            "7/10 仙台 宮城野区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "宮城野区",
+          "day": [
+            7,
+            10
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:50:19",
+      "book": {
+        "hotel": {
+          "name": "アパホテル<仙台勾当台公園>",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              10
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ときわ亭 上杉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "genre",
+          "ビジネスホテル",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "checkouttime",
+          "１１時",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "address",
+          "宮城県仙台市青葉区二日町4-10",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "44382",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "opentime",
+          "夕方５時から夜１２時まで",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "pricerange",
+          "安め",
+          false
+        ],
+        [
+          2,
+          "restaurant",
+          "address",
+          "宮城県仙台市青葉区上杉3丁目3-9",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "weather",
+          "雨のち曇",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-29 07:50:34"
+    },
+    {
+      "role": 0,
+      "content": "よい旅を。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "宮城野区",
+            "day": [
+              7,
+              10
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "焼肉・ホルモン",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "宮城野区",
+          "day": [
+            7,
+            10
+          ]
+        }
+      },
+      "created_at": "2022-11-29 07:50:42",
+      "book": {
+        "hotel": {
+          "name": "アパホテル<仙台勾当台公園>",
+          "value": {
+            "people": "3",
+            "day": [
+              7,
+              10
+            ],
+            "stay": "2"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "ときわ亭 上杉店",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 07:50:48"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-29 07:50:51"
+    }
+  ],
+  "created_at": "2022-11-24 08:54:52",
+  "final_state": {
+    "restaurant": {
+      "city": "仙台",
+      "name": null,
+      "genre": "焼肉・ホルモン",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": "有り(無料)"
+    },
+    "hotel": {
+      "city": "仙台",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "仙台",
+      "area": "宮城野区",
+      "day": [
+        7,
+        10
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "アパホテル<仙台勾当台公園>",
+      "value": {
+        "people": "3",
+        "day": [
+          7,
+          10
+        ],
+        "stay": "2"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "ときわ亭 上杉店",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

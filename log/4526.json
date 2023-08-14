@@ -1,0 +1,2216 @@
+{
+  "id": 4526,
+  "dialogue_code": "dialogue_4526BOLG",
+  "status_code": 2,
+  "user": [
+    8,
+    268
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0268pGnH"
+  ],
+  "task": 4796,
+  "task_name": "main2_1776",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "仙台",
+          "genre": "郷土料理",
+          "pricerange": "安め"
+        },
+        "reqt": [
+          "name",
+          "address",
+          "accesstime",
+          "reference"
+        ],
+        "book": {
+          "people": 2,
+          "day": "9/21",
+          "time": "11:40"
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "仙台",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "reference"
+        ],
+        "book": {
+          "day": "9/21",
+          "time": "09:50",
+          "departurepoint": "restaurant",
+          "arrivalpoint": "大戸屋ごはん処 仙台MTビル店"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "仙台",
+          "day": "9/21",
+          "area": "宮城野区"
+        },
+        "reqt": [
+          "mintemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>仙台</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．ジャンルは<b style='color:blue;'>郷土料理</b>です．予算は<b style='color:blue;'>安め</b>が希望です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，住所，近辺の駅からの所要時間</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>9/21</b>です．時間は<b style='color:blue;'>11:40</b>です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>9/21</b>です．時間は<b style='color:blue;'>09:50</b>です．出発地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．目的地は<b style='color:blue;'>大戸屋ごはん処 仙台MTビル店</b>というところです．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>9/21</b>です．地区は<b style='color:blue;'>宮城野区</b>です．",
+        "<b style='color:green;'>最低気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "address",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "accesstime",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "mintemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "taxi",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "仙台への旅行を計画しているのですが、その時に利用する飲食店を探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:03:47"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。１０９件ございますが、ご希望の条件はございますか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1669813435253
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:04:09",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですね、お値段が安めで郷土料理が食べられたらと思っています。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:04:33"
+    },
+    {
+      "role": 0,
+      "content": "でしたら、おばんざい らくらはいかがでしょうか。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "郷土料理",
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "おばんざい らくら",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669813482084,
+          "selectedResults": [
+            "おばんざい らくら"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "郷土料理",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:04:54",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おばんざい らくら",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらにします。住所と近辺の駅からの所要時間も教えてもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "おばんざい らくら",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:05:27"
+    },
+    {
+      "role": 0,
+      "content": "はい。住所は宮城県仙台市青葉区中央3丁目10-3で、あおば通駅から徒歩で5分となっております。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "郷土料理",
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "おばんざい らくら",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "郷土料理",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:05:50",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おばんざい らくら",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。そちらのお店を9/21の午前11時40分に2名で予約して頂けますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "おばんざい らくら",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市青葉区中央3丁目10-3",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "あおば通駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:06:34"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。予約が完了いたしました。予約番号は82460でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": "郷土料理",
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "おばんざい らくら",
+              "value": {
+                "people": "2",
+                "day": [
+                  9,
+                  21
+                ],
+                "time": "11:40"
+              },
+              "timestamp": 1669813609113,
+              "success": true,
+              "ref": "82460"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "郷土料理",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:07:04",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おばんざい らくら",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              21
+            ],
+            "time": "11:40"
+          },
+          "timestamp": 1669813609113,
+          "success": true,
+          "ref": "82460"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "キャッシュレス払い対応のタクシー会社も探して頂けますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "おばんざい らくら",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市青葉区中央3丁目10-3",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "あおば通駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "82460",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:07:31"
+    },
+    {
+      "role": 0,
+      "content": "では（有）光泉タクシーがございます。こちらジャンボタクシーにも対応しております。電話番号は0223752525でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "（有）光泉タクシー",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669813659378,
+          "selectedResults": [
+            "（有）光泉タクシー"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "郷土料理",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:08:08",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おばんざい らくら",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              21
+            ],
+            "time": "11:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（有）光泉タクシー",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "じゃあそちらのタクシー会社で、9/21の午前9時50分に予約をお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "おばんざい らくら",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市青葉区中央3丁目10-3",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "あおば通駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "82460",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0223752525",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "（有）光泉タクシー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:08:47"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では予約の詳細をお聞かせいただけますか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "（有）光泉タクシー",
+              "value": {
+                "day": [
+                  9,
+                  21
+                ],
+                "time": "09:50",
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "郷土料理",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:09:09",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おばんざい らくら",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              21
+            ],
+            "time": "11:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（有）光泉タクシー",
+          "value": {
+            "day": [
+              9,
+              21
+            ],
+            "time": "09:50",
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "おばんざい らくらから、大戸屋ごはん処 仙台MTビル店までお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "おばんざい らくら",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市青葉区中央3丁目10-3",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "あおば通駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "82460",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0223752525",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "（有）光泉タクシー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:09:39"
+    },
+    {
+      "role": 0,
+      "content": "はい。予約が完了いたしました。予約番号は3575でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "（有）光泉タクシー",
+              "value": {
+                "day": [
+                  9,
+                  21
+                ],
+                "time": "09:50",
+                "departurepoint": "おばんざい らくら",
+                "arrivalpoint": "大戸屋ごはん処 仙台MTビル店"
+              },
+              "timestamp": 1669813789129,
+              "success": true,
+              "ref": "3575"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "郷土料理",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:10:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おばんざい らくら",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              21
+            ],
+            "time": "11:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（有）光泉タクシー",
+          "value": {
+            "day": [
+              9,
+              21
+            ],
+            "time": "09:50",
+            "departurepoint": "おばんざい らくら",
+            "arrivalpoint": "大戸屋ごはん処 仙台MTビル店"
+          },
+          "timestamp": 1669813789129,
+          "success": true,
+          "ref": "3575"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あと、9/21の宮城野区の最低気温を調べてほしいのですが。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "おばんざい らくら",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市青葉区中央3丁目10-3",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "あおば通駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "82460",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0223752525",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "（有）光泉タクシー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "3575",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:10:33"
+    },
+    {
+      "role": 0,
+      "content": "当日の最低気温は20.5の予想でございます。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "宮城野区",
+            "day": [
+              9,
+              21
+            ]
+          },
+          "book": [],
+          "timestamp": 1669813846361,
+          "selectedResults": [
+            "9/21 仙台 宮城野区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "郷土料理",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "宮城野区",
+          "day": [
+            9,
+            21
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:11:01",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おばんざい らくら",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              21
+            ],
+            "time": "11:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（有）光泉タクシー",
+          "value": {
+            "day": [
+              9,
+              21
+            ],
+            "time": "09:50",
+            "departurepoint": "おばんざい らくら",
+            "arrivalpoint": "大戸屋ごはん処 仙台MTビル店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "おばんざい らくら",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市青葉区中央3丁目10-3",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "あおば通駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "82460",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0223752525",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "（有）光泉タクシー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "3575",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "20.5度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:11:24"
+    },
+    {
+      "role": 0,
+      "content": "ほかにご用件はございませんか。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "宮城野区",
+            "day": [
+              9,
+              21
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "郷土料理",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "宮城野区",
+          "day": [
+            9,
+            21
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:11:33",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おばんざい らくら",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              21
+            ],
+            "time": "11:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（有）光泉タクシー",
+          "value": {
+            "day": [
+              9,
+              21
+            ],
+            "time": "09:50",
+            "departurepoint": "おばんざい らくら",
+            "arrivalpoint": "大戸屋ごはん処 仙台MTビル店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい、大丈夫です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "おばんざい らくら",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "宮城県仙台市青葉区中央3丁目10-3",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "accesstime",
+          "あおば通駅から徒歩5分",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "82460",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0223752525",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "（有）光泉タクシー",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "3575",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "20.5度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 13:11:35"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "仙台",
+            "area": "宮城野区",
+            "day": [
+              9,
+              21
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "仙台",
+          "name": null,
+          "genre": "郷土料理",
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "仙台",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "仙台",
+          "area": "宮城野区",
+          "day": [
+            9,
+            21
+          ]
+        }
+      },
+      "created_at": "2022-11-30 13:11:44",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "おばんざい らくら",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              21
+            ],
+            "time": "11:40"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "（有）光泉タクシー",
+          "value": {
+            "day": [
+              9,
+              21
+            ],
+            "time": "09:50",
+            "departurepoint": "おばんざい らくら",
+            "arrivalpoint": "大戸屋ごはん処 仙台MTビル店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 13:11:51"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 1,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 13:11:54"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:02",
+  "final_state": {
+    "restaurant": {
+      "city": "仙台",
+      "name": null,
+      "genre": "郷土料理",
+      "area": null,
+      "pricerange": "安め",
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "仙台",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": "仙台",
+      "area": "宮城野区",
+      "day": [
+        9,
+        21
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "おばんざい らくら",
+      "value": {
+        "people": "2",
+        "day": [
+          9,
+          21
+        ],
+        "time": "11:40"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "（有）光泉タクシー",
+      "value": {
+        "day": [
+          9,
+          21
+        ],
+        "time": "09:50",
+        "departurepoint": "おばんざい らくら",
+        "arrivalpoint": "大戸屋ごはん処 仙台MTビル店"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

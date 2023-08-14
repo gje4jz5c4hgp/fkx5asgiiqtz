@@ -1,0 +1,2739 @@
+{
+  "id": 1559,
+  "dialogue_code": "dialogue_1559WoXx",
+  "status_code": 2,
+  "user": [
+    2,
+    270
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0270xRuW"
+  ],
+  "task": 1729,
+  "task_name": "main_1409",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "fail_info": {
+          "city": "仙台",
+          "pricerange": "高め",
+          "withrestaurant": "有り",
+          "area": "宮城野区"
+        },
+        "info": {
+          "city": "仙台",
+          "pricerange": "高め",
+          "withrestaurant": "有り",
+          "area": "太白区"
+        },
+        "reqt": [
+          "accesstime",
+          "phone"
+        ]
+      },
+      "attraction": {
+        "info": {
+          "city": "仙台",
+          "wifi": "有り(無料)",
+          "area": "青葉区"
+        },
+        "reqt": [
+          "opentime",
+          "genre",
+          "parking"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>仙台</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．予算は<b style='color:blue;'>高め</b>が希望です．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．地区は<b style='color:blue;'>宮城野区</b>です．",
+        "希望に合うところが見つからない場合は，地区を<b style='color:blue;'>太白区</b>とします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>近辺の駅からの所要時間，電話番号</b>を聞いてください．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．地区は<b style='color:blue;'>青葉区</b>です．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>営業時間，ジャンル，駐車場の有無</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "accesstime",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "opentime",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "attraction",
+        "parking",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "attraction"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "仙台に旅行をしたいのですが。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:17:13"
+    },
+    {
+      "role": 0,
+      "content": "仙台のご旅行ですね。本日はどのようなお手伝いをいたしましょうか？",
+      "payload": [
+        {}
+      ],
+      "state": {},
+      "created_at": "2022-10-31 13:17:23",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "宿泊施設を探してほしいです。予算は高くて大丈夫です。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:17:59"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。そうしますと、秋保温泉 茶寮宗園など、9件ほどご案内可能です。何か他にご希望はありませんか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "秋保温泉 茶寮宗園",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667222284512,
+          "selectedResults": [
+            "秋保温泉 茶寮宗園"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:18:28",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。レストランが併設されているところがよいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:19:27"
+    },
+    {
+      "role": 0,
+      "content": "では、ウェスティンホテル仙台はいかがでしょうか？青葉区エリアにあるリゾートホテルでございます。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ウェスティンホテル仙台",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667222369064,
+          "selectedResults": [
+            "ウェスティンホテル仙台"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:19:47",
+      "book": {
+        "hotel": {
+          "name": "ウェスティンホテル仙台",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "すみません、宮城野区ではありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:20:21"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件ですと、ご案内できるところが見つかりませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "宮城野区",
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ウェスティンホテル仙台",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667222426022
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "宮城野区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:20:35",
+      "book": {
+        "hotel": {
+          "name": "ウェスティンホテル仙台",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、太白区ではありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:21:08"
+    },
+    {
+      "role": 0,
+      "content": "はい、2件ご案内可能です。例えば、秋保温泉 茶寮宗園というところは、いかがでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "太白区",
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "秋保温泉 茶寮宗園",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667222470990,
+          "selectedResults": [
+            "秋保温泉 茶寮宗園"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:21:34",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらの施設の最寄り駅からの所要時間と電話番号を教えていただけますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:23:39"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。最寄りの仙台駅からタクシーで30分、またはバスで30分ほどかかります。電話番号は、0223982311です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "太白区",
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "秋保温泉 茶寮宗園",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:24:16",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "仙台駅からタクシーで30分、またはバスで30分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0223982311",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:25:16"
+    },
+    {
+      "role": 0,
+      "content": "他にお調べすることはございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "太白区",
+            "pricerange": "高め",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "秋保温泉 茶寮宗園",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:25:21",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では青葉区でおすすめの観光名所はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "仙台駅からタクシーで30分、またはバスで30分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0223982311",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:26:01"
+    },
+    {
+      "role": 0,
+      "content": "25件ほどご案内できますが、AER展望テラスなどはご興味ございませんか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "青葉区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667222771103,
+          "selectedResults": [
+            "AER展望テラス"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "青葉区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:26:36",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いいですね。そちらは無料Wi-Fiはありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "仙台駅からタクシーで30分、またはバスで30分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0223982311",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:27:25"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。こちらの施設はWiFiがございません。無料WiFiがある観光名所をご希望でしょうか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "青葉区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "青葉区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:27:52",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "はい。できればお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "仙台駅からタクシーで30分、またはバスで30分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0223982311",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:28:14"
+    },
+    {
+      "role": 0,
+      "content": "では、エル・パーク仙台はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "青葉区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667222899631,
+          "selectedResults": [
+            "エル・パーク仙台"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "青葉区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:28:31",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そちらはジャンルでいうとどのような施設ですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "仙台駅からタクシーで30分、またはバスで30分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0223982311",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:29:32"
+    },
+    {
+      "role": 0,
+      "content": "ジャンルは、その他となっております",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "青葉区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "青葉区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:29:47",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "駐車場はありますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "仙台駅からタクシーで30分、またはバスで30分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0223982311",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:30:23"
+    },
+    {
+      "role": 0,
+      "content": "はい、有料ですが、ございます。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "青葉区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "青葉区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:30:40",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。営業時間は何時から何時までですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "仙台駅からタクシーで30分、またはバスで30分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0223982311",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "その他",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "あり（有料）",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:31:30"
+    },
+    {
+      "role": 0,
+      "content": "営業時間は、9:00～21:30となっております。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "青葉区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "青葉区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:31:50",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "仙台駅からタクシーで30分、またはバスで30分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0223982311",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "9:00～21:30",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "その他",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "あり（有料）",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:32:18"
+    },
+    {
+      "role": 0,
+      "content": "ほかにお知りになりたい情報はございませんか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "青葉区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "青葉区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:32:27",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "特にありません。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "accesstime",
+          "仙台駅からタクシーで30分、またはバスで30分",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "phone",
+          "0223982311",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "opentime",
+          "9:00～21:30",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "genre",
+          "その他",
+          false
+        ],
+        [
+          2,
+          "attraction",
+          "parking",
+          "あり（有料）",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 13:32:45"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。では本日はご利用ありがとうございました。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "仙台",
+            "name": null,
+            "genre": null,
+            "area": "青葉区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "太白区",
+          "pricerange": "高め",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": "仙台",
+          "name": null,
+          "genre": null,
+          "area": "青葉区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 13:32:52",
+      "book": {
+        "hotel": {
+          "name": "秋保温泉 茶寮宗園",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 13:33:03"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 13:33:08"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:05",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "仙台",
+      "name": null,
+      "genre": null,
+      "area": "太白区",
+      "pricerange": "高め",
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": "仙台",
+      "name": null,
+      "genre": null,
+      "area": "青葉区",
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "秋保温泉 茶寮宗園",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

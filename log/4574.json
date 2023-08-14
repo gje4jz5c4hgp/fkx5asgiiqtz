@@ -1,0 +1,1918 @@
+{
+  "id": 4574,
+  "dialogue_code": "dialogue_4574PiNr",
+  "status_code": 2,
+  "user": [
+    25,
+    249
+  ],
+  "username": [
+    "operator_0025tpXO",
+    "customer_0249tplm"
+  ],
+  "task": 4844,
+  "task_name": "main2_1824",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "那覇",
+          "name": "空港食堂"
+        },
+        "reqt": [
+          "parking",
+          "opentime",
+          "reference"
+        ],
+        "book": {
+          "people": 2,
+          "day": "9/14",
+          "time": "11:30"
+        }
+      },
+      "hotel": {
+        "fail_info": {
+          "city": "那覇",
+          "station": "古島駅",
+          "area": "小禄"
+        },
+        "info": {
+          "city": "那覇",
+          "station": "古島駅",
+          "area": "dontcare"
+        },
+        "reqt": [
+          "priceinfo",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 3,
+          "day": "9/14",
+          "stay": 4
+        },
+        "book": {
+          "people": 2,
+          "day": "9/14",
+          "stay": 4
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "那覇",
+          "day": "9/14",
+          "area": "小禄"
+        },
+        "reqt": [
+          "mintemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>那覇</b>への旅行を計画しています．",
+        "当日は<b style='color:blue;'>空港食堂</b>という飲食店で食事をする予定です．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>駐車場の有無，営業時間</b>を聞いてください．",
+        "見つけたお店を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>9/14</b>です．時間は<b style='color:blue;'>11:30</b>です．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．最寄り駅が<b style='color:blue;'>古島駅</b>のところにしてください．地区は<b style='color:blue;'>小禄</b>です．",
+        "希望に合うところが見つからない場合は，地区は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>料金情報</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>9/14</b>です．宿泊日数は<b style='color:blue;'>4</b>泊です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>2</b>に変更します．"
+      ],
+      "weather": [
+        "当日の天候を調べます．日付は<b style='color:blue;'>9/14</b>です．地区は<b style='color:blue;'>小禄</b>です．",
+        "<b style='color:green;'>最低気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "parking",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "opentime",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "priceinfo",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "mintemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "hotel",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "那覇の空港食堂というお店に行く予定なのですが、このお店は駐車場はありますか？営業時間も教えてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:56:28"
+    },
+    {
+      "role": 0,
+      "content": "那覇の空港食堂ですね。朝１０時から夜６時半まで、駐車場は不明です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": "空港食堂",
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "空港食堂",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669625804084,
+          "selectedResults": [
+            "空港食堂"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": "空港食堂",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:57:19",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "空港食堂",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。このお店を9/14の11：30に2人で予約したいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "朝１０時から夜６時半まで",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:58:05"
+    },
+    {
+      "role": 0,
+      "content": "予約成功しました。予約番号は81838です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "那覇",
+            "name": "空港食堂",
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "空港食堂",
+              "value": {
+                "people": "2",
+                "day": [
+                  9,
+                  14
+                ],
+                "time": "11:30"
+              },
+              "timestamp": 1669625902984,
+              "success": true,
+              "ref": "81838"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": "空港食堂",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 08:58:39",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "空港食堂",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              14
+            ],
+            "time": "11:30"
+          },
+          "timestamp": 1669625902984,
+          "success": true,
+          "ref": "81838"
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。あと小禄地区の古島駅近くで宿泊施設はありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "朝１０時から夜６時半まで",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "81838",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 08:59:17"
+    },
+    {
+      "role": 0,
+      "content": "小禄地区の古島駅では宿泊施設がヒットしません。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": "小禄",
+            "pricerange": null,
+            "station": "古島駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1669625989666
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": "空港食堂",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": "小禄",
+          "pricerange": null,
+          "station": "古島駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:00:05",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "空港食堂",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              14
+            ],
+            "time": "11:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では地区はどこでも大丈夫です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "朝１０時から夜６時半まで",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "81838",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:00:16"
+    },
+    {
+      "role": 0,
+      "content": "古島駅の宿泊施設ならば、HOTEL COZY STAY IN 那覇曙、こちら一択です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "古島駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "HOTEL COZY STAY IN 那覇曙",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669626021358,
+          "selectedResults": [
+            "HOTEL COZY STAY IN 那覇曙"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": "空港食堂",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "古島駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:00:37",
+      "book": {
+        "hotel": {
+          "name": "HOTEL COZY STAY IN 那覇曙",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "空港食堂",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              14
+            ],
+            "time": "11:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "料金情報はなにかありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "朝１０時から夜６時半まで",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "81838",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:00:55"
+    },
+    {
+      "role": 0,
+      "content": "値段帯は安めですが、料金情報詳細は不明ですね。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "古島駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "HOTEL COZY STAY IN 那覇曙",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": "空港食堂",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "古島駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:01:12",
+      "book": {
+        "hotel": {
+          "name": "HOTEL COZY STAY IN 那覇曙",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "空港食堂",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              14
+            ],
+            "time": "11:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ではそのホテルを9/14に3人で4泊で予約したいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "朝１０時から夜６時半まで",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "81838",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:01:41"
+    },
+    {
+      "role": 0,
+      "content": "その条件だと予約に失敗してしまいました。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "古島駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "HOTEL COZY STAY IN 那覇曙",
+              "value": {
+                "people": "3",
+                "day": [
+                  9,
+                  14
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1669626113448,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": "空港食堂",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "古島駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:02:05",
+      "book": {
+        "hotel": {
+          "name": "HOTEL COZY STAY IN 那覇曙",
+          "value": {
+            "people": "3",
+            "day": [
+              9,
+              14
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1669626113448,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "空港食堂",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              14
+            ],
+            "time": "11:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では人数を２人にしたら大丈夫ですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "朝１０時から夜６時半まで",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "81838",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:02:25"
+    },
+    {
+      "role": 0,
+      "content": "9/14に2人で4泊、予約成功しました。予約番号は45143です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "那覇",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "古島駅",
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "HOTEL COZY STAY IN 那覇曙",
+              "value": {
+                "people": "2",
+                "day": [
+                  9,
+                  14
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1669626159573,
+              "success": true,
+              "ref": "45143"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": "空港食堂",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "古島駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:02:57",
+      "book": {
+        "hotel": {
+          "name": "HOTEL COZY STAY IN 那覇曙",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              14
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1669626159573,
+          "success": true,
+          "ref": "45143"
+        },
+        "restaurant": {
+          "name": "空港食堂",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              14
+            ],
+            "time": "11:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "最後に9/14の小禄地区の気温を教えてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "朝１０時から夜６時半まで",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "81838",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "45143",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:03:28"
+    },
+    {
+      "role": 0,
+      "content": "9/14 那覇 小禄 の天気は晴時々曇、最低気温22.8度、最高気温30.1度です。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "那覇",
+            "area": "小禄",
+            "day": [
+              9,
+              14
+            ]
+          },
+          "book": [],
+          "timestamp": 1669626223925,
+          "selectedResults": [
+            "9/14 那覇 小禄 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": "空港食堂",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "古島駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "那覇",
+          "area": "小禄",
+          "day": [
+            9,
+            14
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:04:07",
+      "book": {
+        "hotel": {
+          "name": "HOTEL COZY STAY IN 那覇曙",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              14
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "空港食堂",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              14
+            ],
+            "time": "11:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "なし",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "opentime",
+          "朝１０時から夜６時半まで",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "reference",
+          "81838",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "priceinfo",
+          "不明",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "reference",
+          "45143",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "mintemperature",
+          "22.8度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-28 09:04:18"
+    },
+    {
+      "role": 0,
+      "content": "よい旅を",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "那覇",
+            "area": "小禄",
+            "day": [
+              9,
+              14
+            ]
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "那覇",
+          "name": "空港食堂",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "那覇",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "古島駅",
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": "那覇",
+          "area": "小禄",
+          "day": [
+            9,
+            14
+          ]
+        }
+      },
+      "created_at": "2022-11-28 09:04:24",
+      "book": {
+        "hotel": {
+          "name": "HOTEL COZY STAY IN 那覇曙",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              14
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "空港食堂",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              14
+            ],
+            "time": "11:30"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 09:04:34"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-28 09:04:36"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:02",
+  "final_state": {
+    "restaurant": {
+      "city": "那覇",
+      "name": "空港食堂",
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "那覇",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "古島駅",
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": "那覇",
+      "area": "小禄",
+      "day": [
+        9,
+        14
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "HOTEL COZY STAY IN 那覇曙",
+      "value": {
+        "people": "2",
+        "day": [
+          9,
+          14
+        ],
+        "stay": "4"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "空港食堂",
+      "value": {
+        "people": "2",
+        "day": [
+          9,
+          14
+        ],
+        "time": "11:30"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

@@ -1,0 +1,1674 @@
+{
+  "id": 4802,
+  "dialogue_code": "dialogue_4802DFKw",
+  "status_code": 2,
+  "user": [
+    25,
+    215
+  ],
+  "username": [
+    "operator_0025tpXO",
+    "customer_0215OCMG"
+  ],
+  "task": 5072,
+  "task_name": "main2_2052",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "東京",
+          "withrestaurant": "有り",
+          "pricerange": "普通"
+        },
+        "reqt": [
+          "name",
+          "wifi",
+          "station",
+          "reference"
+        ],
+        "book": {
+          "people": 3,
+          "day": "1/11",
+          "stay": 4
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "東京",
+          "jumbo": "対応",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "1/11",
+          "time": "13:00",
+          "departurepoint": "KIDDY LAND原宿店",
+          "arrivalpoint": "hotel"
+        },
+        "book": {
+          "day": "1/11",
+          "time": "13:40",
+          "departurepoint": "KIDDY LAND原宿店",
+          "arrivalpoint": "hotel"
+        }
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>東京</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．予算は<b style='color:blue;'>普通</b>が希望です．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，Wi-Fiの有無，最寄り駅</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>3</b>人です．日付は<b style='color:blue;'>1/11</b>です．宿泊日数は<b style='color:blue;'>4</b>泊です．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>1/11</b>です．時間は<b style='color:blue;'>13:00</b>です．出発地は<b style='color:blue;'>KIDDY LAND原宿店</b>というところです．目的地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>13:40</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "wifi",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "station",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "東京へ旅行に行くので、レストランがある、普通の値段位の宿泊施設を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 15:44:33"
+    },
+    {
+      "role": 0,
+      "content": "東京には、普通価格帯でレストラン併設の宿泊施設は１１件ありますが、ANAインターコンチネンタルホテル東京をお勧めします。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ANAインターコンチネンタルホテル東京",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669823092513,
+          "selectedResults": [
+            "ANAインターコンチネンタルホテル東京"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 15:45:23",
+      "book": {
+        "hotel": {
+          "name": "ANAインターコンチネンタルホテル東京",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "よさそうですね。そちらのWi-Fiの有無と最寄り駅を教えてください。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ANAインターコンチネンタルホテル東京",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "wifi",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 15:45:45"
+    },
+    {
+      "role": 0,
+      "content": "WiFiは無料、最寄り駅は溜池山王駅です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ANAインターコンチネンタルホテル東京",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 15:46:01",
+      "book": {
+        "hotel": {
+          "name": "ANAインターコンチネンタルホテル東京",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。3人で1/11から4泊予約できますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ANAインターコンチネンタルホテル東京",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "wifi",
+          "無料であり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "溜池山王駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 15:46:38"
+    },
+    {
+      "role": 0,
+      "content": "予約成功しました。予約番号は88537です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "ANAインターコンチネンタルホテル東京",
+              "value": {
+                "people": "3",
+                "day": [
+                  1,
+                  11
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1669823207599,
+              "success": true,
+              "ref": "88537"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 15:46:59",
+      "book": {
+        "hotel": {
+          "name": "ANAインターコンチネンタルホテル東京",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1669823207599,
+          "success": true,
+          "ref": "88537"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、ジャンボタクシーを利用する予定なので、キャッシュレス払いできるようなタクシー会社を調べてもらえますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ANAインターコンチネンタルホテル東京",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "wifi",
+          "無料であり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "溜池山王駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88537",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 15:47:28"
+    },
+    {
+      "role": 0,
+      "content": "両方対応しているところで、銀星交通をおすすめします。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "銀星交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1669823262269,
+          "selectedResults": [
+            "銀星交通"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 15:48:00",
+      "book": {
+        "hotel": {
+          "name": "ANAインターコンチネンタルホテル東京",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "銀星交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですね。電話番号はわかりますか。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ANAインターコンチネンタルホテル東京",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "wifi",
+          "無料であり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "溜池山王駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88537",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "銀星交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 15:48:20"
+    },
+    {
+      "role": 0,
+      "content": "0425750458です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "銀星交通",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 15:48:26",
+      "book": {
+        "hotel": {
+          "name": "ANAインターコンチネンタルホテル東京",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "銀星交通",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。では、1/11の13:00にKIDDY LAND原宿店を出発してANAインターコンチネンタルホテル東京まで送ってほしいので、予約をお願いできますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ANAインターコンチネンタルホテル東京",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "wifi",
+          "無料であり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "溜池山王駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88537",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "銀星交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0425750458",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 15:49:06"
+    },
+    {
+      "role": 0,
+      "content": "その条件だと予約に失敗してしまいました。少し条件を変更していただけないでしょうか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "銀星交通",
+              "value": {
+                "day": [
+                  1,
+                  11
+                ],
+                "time": "13:00",
+                "departurepoint": "KIDDY LAND原宿店",
+                "arrivalpoint": "ANAインターコンチネンタルホテル東京ま"
+              },
+              "timestamp": 1669823366066,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 15:49:34",
+      "book": {
+        "hotel": {
+          "name": "ANAインターコンチネンタルホテル東京",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "銀星交通",
+          "value": {
+            "day": [
+              1,
+              11
+            ],
+            "time": "13:00",
+            "departurepoint": "KIDDY LAND原宿店",
+            "arrivalpoint": "ANAインターコンチネンタルホテル東京ま"
+          },
+          "timestamp": 1669823366066,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、時間を13:40に変更します。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ANAインターコンチネンタルホテル東京",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "wifi",
+          "無料であり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "溜池山王駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88537",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "銀星交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0425750458",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 15:49:45"
+    },
+    {
+      "role": 0,
+      "content": "13:40なら予約成功しました。予約番号は65755です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "銀星交通",
+              "value": {
+                "day": [
+                  1,
+                  11
+                ],
+                "time": "13:40",
+                "departurepoint": "KIDDY LAND原宿店",
+                "arrivalpoint": "ANAインターコンチネンタルホテル東京ま"
+              },
+              "timestamp": 1669823389276,
+              "success": true,
+              "ref": "65755"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-11-30 15:50:14",
+      "book": {
+        "hotel": {
+          "name": "ANAインターコンチネンタルホテル東京",
+          "value": {
+            "people": "3",
+            "day": [
+              1,
+              11
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "銀星交通",
+          "value": {
+            "day": [
+              1,
+              11
+            ],
+            "time": "13:40",
+            "departurepoint": "KIDDY LAND原宿店",
+            "arrivalpoint": "ANAインターコンチネンタルホテル東京ま"
+          },
+          "timestamp": 1669823389276,
+          "success": true,
+          "ref": "65755"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "ANAインターコンチネンタルホテル東京",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "wifi",
+          "無料であり",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "station",
+          "溜池山王駅",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "88537",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "銀星交通",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "phone",
+          "0425750458",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "65755",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-11-30 15:50:24"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 15:50:30"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-11-30 15:50:33"
+    }
+  ],
+  "created_at": "2022-11-24 08:55:04",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "普通",
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "東京",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ANAインターコンチネンタルホテル東京",
+      "value": {
+        "people": "3",
+        "day": [
+          1,
+          11
+        ],
+        "stay": "4"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "銀星交通",
+      "value": {
+        "day": [
+          1,
+          11
+        ],
+        "time": "13:40",
+        "departurepoint": "KIDDY LAND原宿店",
+        "arrivalpoint": "ANAインターコンチネンタルホテル東京ま"
+      },
+      "timestamp": 1669823389276,
+      "success": true,
+      "ref": "65755"
+    }
+  }
+}

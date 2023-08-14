@@ -1,0 +1,3332 @@
+{
+  "id": 168,
+  "dialogue_code": "dialogue_0168Pwxx",
+  "status_code": 2,
+  "user": [
+    2,
+    205
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0205tFcD"
+  ],
+  "task": 338,
+  "task_name": "main_18",
+  "task_content": {
+    "goals": {
+      "attraction": {
+        "info": {
+          "city": "東京",
+          "genre": "美術館・博物館",
+          "wifi": "有り(無料)"
+        },
+        "reqt": [
+          "name",
+          "priceinfo",
+          "parking"
+        ]
+      },
+      "hotel": {
+        "fail_info": {
+          "city": "東京",
+          "parking": "有り(無料)",
+          "station": "東京駅"
+        },
+        "info": {
+          "city": "東京",
+          "parking": "有り(有料)",
+          "station": "東京駅"
+        },
+        "reqt": [
+          "name",
+          "checkintime"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "東京",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "phone",
+          "name",
+          "cashless",
+          "reference"
+        ],
+        "book": {
+          "day": "10/21",
+          "time": "13:10",
+          "departurepoint": "attraction",
+          "arrivalpoint": "hotel"
+        }
+      }
+    },
+    "descriptions": {
+      "attraction": [
+        "あなたは<b style='color:blue;'>東京</b>への旅行を計画しています．",
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．ジャンルは<b style='color:blue;'>美術館・博物館</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>名称，料金情報，駐車場の有無</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>東京駅</b>のところにしてください．",
+        "希望に合う場所が見つからない場合は，<b style='color:blue;'>有料</b>の駐車場でもよいものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名，チェックイン開始時刻</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>電話番号，タクシー会社名，キャッシュレス対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>10/21</b>です．時間は<b style='color:blue;'>13:10</b>です．出発地は先ほど見つけた<b style='color:blue;'>観光施設</b>です．目的地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "attraction",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "priceinfo",
+        ""
+      ],
+      [
+        1,
+        "attraction",
+        "parking",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "checkintime",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "cashless",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "attraction",
+      "hotel",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "すみません。東京にいく予定があるんですが、美術館・博物館といった観光施設はありますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 15:55:00"
+    },
+    {
+      "role": 0,
+      "content": "東京の美術館・博物館ですね。16件ほどございますが、ご希望の条件は他に何かございますでしょうか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "美術館・博物館",
+            "area": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666281308587
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 15:55:53",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "フリーWiFiがあるところが良いです。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 15:56:11"
+    },
+    {
+      "role": 0,
+      "content": "無料のWiFiをご利用いただける美術館・博物館は、江戸東京博物館など、8件ほどございます。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "美術館・博物館",
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666281372259
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 15:56:54",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "江戸東京博物館ですか。そこは駐車場はついていますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 15:57:21"
+    },
+    {
+      "role": 0,
+      "content": "駐車場は、有料でご利用いただけます。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "美術館・博物館",
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0,
+          "selectedResults": [
+            "江戸東京博物館"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 15:57:58",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうなんですか。駐車場以外で、料金についても詳しく教えてもらえますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 15:58:29"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。料金は、一般600円、65歳以上300円、大学生・専門学校生は480円です。高校生・中学生の場合は、都内在学または在住であれば無料、都外ですと300円です。また小学生・未就学児童は無料です。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": "美術館・博物館",
+            "area": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:00:44",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "詳しくありがとうございます。あとですね、泊る場所も調べてもらいたいんですけど。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:01:51"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。東京の宿泊施設ですね。ご希望の条件などはございますでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666281722587
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:02:25",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "無料駐車場完備で、東京駅の近くでありますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:03:02"
+    },
+    {
+      "role": 0,
+      "content": "大変申し訳ございません。その条件ですと、該当する施設を見つけられませんでした。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "東京駅",
+            "wifi": null,
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666281797134
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "東京駅",
+          "wifi": null,
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:03:39",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、駐車場は有料でも構いません。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:03:52"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。東京駅近くで有料駐車場のある宿泊施設は、3件ございます。東京ステーションホテル、センターホテル東京、星のや東京のうち、気になるところはございますでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "東京駅",
+            "wifi": null,
+            "parking": "有り(有料)",
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666281842474
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "東京駅",
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:05:02",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "東京ステーションホテルが良さそうですね。チェックインは何時からOKですかね？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "東京ステーションホテル",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:05:42"
+    },
+    {
+      "role": 0,
+      "content": "チェックイン開始時刻は、15時となっております。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": "東京駅",
+            "wifi": null,
+            "parking": "有り(有料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "東京ステーションホテル",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "東京ステーションホテル"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "東京駅",
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:06:05",
+      "book": {
+        "hotel": {
+          "name": "東京ステーションホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "分かりました。あとですね、タクシー会社も探してもらえますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "東京ステーションホテル",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:06:37"
+    },
+    {
+      "role": 0,
+      "content": "東京のタクシー会社ですね。何かご希望の条件などございますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": null
+          },
+          "book": [],
+          "timestamp": 1666282004675
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "東京駅",
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:07:07",
+      "book": {
+        "hotel": {
+          "name": "東京ステーションホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ジャンボタクシーを使いたいです。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "東京ステーションホテル",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:07:20"
+    },
+    {
+      "role": 0,
+      "content": "ジャンボタクシーに対応している会社ですと、東京エムケイは、いかがでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "東京エムケイ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666282042275,
+          "selectedResults": [
+            "東京エムケイ"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "東京駅",
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:07:48",
+      "book": {
+        "hotel": {
+          "name": "東京ステーションホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東京エムケイ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこは、キャッシュレスで払えますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "東京ステーションホテル",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:08:04"
+    },
+    {
+      "role": 0,
+      "content": "はい。キャッシュレスのお支払いにも対応しております。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "東京エムケイ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "東京駅",
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:08:29",
+      "book": {
+        "hotel": {
+          "name": "東京ステーションホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東京エムケイ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "良かった。では電話番号を教えてください。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "東京ステーションホテル",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "東京エムケイ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "対応可能",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:09:05"
+    },
+    {
+      "role": 0,
+      "content": "はい、かしこまりました。東京エムケイの電話番号は、0355475551です。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "東京エムケイ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "東京駅",
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:09:21",
+      "book": {
+        "hotel": {
+          "name": "東京ステーションホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東京エムケイ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そこで、予約もお願いできますか？",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "東京ステーションホテル",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0355475551",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "東京エムケイ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "対応可能",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:09:42"
+    },
+    {
+      "role": 0,
+      "content": "はい、承ります。ご利用の日時などはお決まりでしょうか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "東京エムケイ",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "東京駅",
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:10:27",
+      "book": {
+        "hotel": {
+          "name": "東京ステーションホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東京エムケイ",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "えっとですね、10月21日の13時10分に、さっきの博物館から東京ステーションホテルまでお願いしたいです。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "東京ステーションホテル",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0355475551",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "東京エムケイ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "対応可能",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:11:53"
+    },
+    {
+      "role": 0,
+      "content": "ご予約完了いたしました。予約番号は、82285となりますので、お手元にお控えくださいませ。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "東京エムケイ",
+              "value": {
+                "day": [
+                  10,
+                  21
+                ],
+                "time": "13:10",
+                "departurepoint": "江戸東京博物館",
+                "arrivalpoint": "東京ステーションホテル"
+              },
+              "timestamp": 1666282358266,
+              "success": true,
+              "ref": "82285"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "東京駅",
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:13:12",
+      "book": {
+        "hotel": {
+          "name": "東京ステーションホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東京エムケイ",
+          "value": {
+            "day": [
+              10,
+              21
+            ],
+            "time": "13:10",
+            "departurepoint": "江戸東京博物館",
+            "arrivalpoint": "東京ステーションホテル"
+          },
+          "timestamp": 1666282358266,
+          "success": true,
+          "ref": "82285"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。メモしました。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "東京ステーションホテル",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0355475551",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "東京エムケイ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "対応可能",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "82285",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:13:25"
+    },
+    {
+      "role": 0,
+      "content": "他に何かお手伝い出来ることはございますか？",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "東京",
+            "name": null,
+            "cashless": null,
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "東京エムケイ",
+              "value": {
+                "day": [
+                  10,
+                  21
+                ],
+                "time": "13:10",
+                "departurepoint": "江戸東京博物館",
+                "arrivalpoint": "東京ステーションホテル"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "東京",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": "東京駅",
+          "wifi": null,
+          "parking": "有り(有料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "東京",
+          "name": null,
+          "genre": "美術館・博物館",
+          "area": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "東京",
+          "name": null,
+          "cashless": null,
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-20 16:13:36",
+      "book": {
+        "hotel": {
+          "name": "東京ステーションホテル",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "東京エムケイ",
+          "value": {
+            "day": [
+              10,
+              21
+            ],
+            "time": "13:10",
+            "departurepoint": "江戸東京博物館",
+            "arrivalpoint": "東京ステーションホテル"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いえ、今のところないです。今日はありがとうございました。",
+      "payload": [
+        [
+          1,
+          "attraction",
+          "name",
+          "江戸東京博物館",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "priceinfo",
+          "般600円、65歳以上300円、大学生・専門学校生は480円、高校生・中学生は都内在学または在住であれば無料・都外は300円、小学生・未就学児童は無料",
+          false
+        ],
+        [
+          1,
+          "attraction",
+          "parking",
+          "有り・有料",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "name",
+          "東京ステーションホテル",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "checkintime",
+          "15時",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0355475551",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "東京エムケイ",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "cashless",
+          "対応可能",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "82285",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-20 16:13:48"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-20 16:14:01"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-20 16:14:07"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:55",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "東京",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": "東京駅",
+      "wifi": null,
+      "parking": "有り(有料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "東京",
+      "name": null,
+      "genre": "美術館・博物館",
+      "area": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "東京",
+      "name": null,
+      "cashless": null,
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "東京ステーションホテル",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "東京エムケイ",
+      "value": {
+        "day": [
+          10,
+          21
+        ],
+        "time": "13:10",
+        "departurepoint": "江戸東京博物館",
+        "arrivalpoint": "東京ステーションホテル"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

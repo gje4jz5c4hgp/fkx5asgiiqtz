@@ -1,0 +1,2370 @@
+{
+  "id": 616,
+  "dialogue_code": "dialogue_0616DSmn",
+  "status_code": 2,
+  "user": [
+    4,
+    239
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0239vzdO"
+  ],
+  "task": 786,
+  "task_name": "main_466",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "fail_info": {
+          "city": "横浜",
+          "parking": "有り(無料)",
+          "pricerange": "安め"
+        },
+        "info": {
+          "city": "横浜",
+          "parking": "有り(有料)",
+          "pricerange": "安め"
+        },
+        "reqt": [
+          "name",
+          "phone"
+        ]
+      },
+      "hotel": {
+        "fail_info": {
+          "city": "横浜",
+          "pricerange": "普通",
+          "wifi": "有り(無料)",
+          "genre": "リゾートホテル"
+        },
+        "info": {
+          "city": "横浜",
+          "pricerange": "dontcare",
+          "wifi": "有り(無料)",
+          "genre": "リゾートホテル"
+        },
+        "reqt": [
+          "area"
+        ]
+      },
+      "attraction": {
+        "fail_info": {
+          "city": "横浜",
+          "area": "旭区",
+          "wifi": "有り(無料)"
+        },
+        "info": {
+          "city": "横浜",
+          "area": "旭区",
+          "wifi": "dontcare"
+        },
+        "reqt": [
+          "priceinfo",
+          "childfee"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>横浜</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．予算は<b style='color:blue;'>安め</b>が希望です．",
+        "希望に合う場所が見つからない場合は，<b style='color:blue;'>有料</b>の駐車場でもよいものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店名，電話番号</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．予算は<b style='color:blue;'>普通</b>が希望です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．宿のタイプは<b style='color:blue;'>リゾートホテル</b>です．",
+        "希望に合うところが見つからない場合は，予算は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>エリア</b>を聞いてください．"
+      ],
+      "attraction": [
+        "当日訪れる<b style='color:blue;'>観光名所</b>を探してください．地区は<b style='color:blue;'>旭区</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "希望に合うところが見つからない場合は，Wi-Fiの有無は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件に合う観光地が見つかったら，<b style='color:green;'>料金情報，子供入場料</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "area",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "priceinfo",
+        ""
+      ],
+      [
+        3,
+        "attraction",
+        "childfee",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "hotel",
+      "attraction"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "横浜へ旅行に行くんですが、飲食店を探していただけますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:07:14"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。何かご希望はございますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667117245247
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:07:39",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予算は安めで、無料駐車場があるところがいいです！",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:07:52"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません。その条件ではご案内ができません。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667117288358
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(無料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:08:26",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では有料の駐車場のところだと、どうですか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:08:41"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。景徳鎮はいかがでしょう？何かご案内致しましょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(有料)"
+          },
+          "book": [
+            {
+              "name": "景徳鎮",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667117329548,
+          "selectedResults": [
+            "ウラ横 焼肉センター",
+            "景徳鎮"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:09:18",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "景徳鎮",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。電話番号も教えてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:09:29"
+    },
+    {
+      "role": 0,
+      "content": "はい、電話番号は0456414688となります。予約はされますか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "pricerange": "安め",
+            "station": null,
+            "wifi": null,
+            "parking": "有り(有料)"
+          },
+          "book": [
+            {
+              "name": "景徳鎮",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)"
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:09:52",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "景徳鎮",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "予約は大丈夫です。宿泊施設も探していただけますか？リゾートホテルがいいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "景徳鎮",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0456414688",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:10:33"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。他にご希望はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ホテルアソシア新横浜",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667117456466,
+          "selectedResults": [
+            "ホテルアソシア新横浜"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)"
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:11:12",
+      "book": {
+        "hotel": {
+          "name": "ホテルアソシア新横浜",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "景徳鎮",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "Wi-Fiが無料で、予算は普通がいいです！",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "景徳鎮",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0456414688",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:11:27"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、その条件ではご案内ができません。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1667117510682
+        },
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": "普通",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ホテルアソシア新横浜",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667117545264
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)"
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": "普通",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:12:27",
+      "book": {
+        "hotel": {
+          "name": "ホテルアソシア新横浜",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "景徳鎮",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "では、予算は無視してください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "景徳鎮",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0456414688",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:12:39"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。では、ハイアットリージェンシー横浜はいかがでしょう？何かご案内致しましょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ハイアットリージェンシー横浜",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667117569232,
+          "selectedResults": [
+            "ハイアットリージェンシー横浜"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)"
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:13:20",
+      "book": {
+        "hotel": {
+          "name": "ハイアットリージェンシー横浜",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "景徳鎮",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。エリアってどこですかね？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "景徳鎮",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0456414688",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:13:34"
+    },
+    {
+      "role": 0,
+      "content": "はい、エリアは中区となります。他にご案内できることはございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": "リゾートホテル",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "ハイアットリージェンシー横浜",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)"
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:14:01",
+      "book": {
+        "hotel": {
+          "name": "ハイアットリージェンシー横浜",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "景徳鎮",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "なるほどです！旭区の観光名所も探していただけますか？Wi-Fiが無料のところがいいです！",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "景徳鎮",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0456414688",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "中区",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:14:32"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ありません、その条件ではご案内ができません。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": "旭区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667117687150
+        },
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": "旭区",
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667117697878
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)"
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:15:16",
+      "book": {
+        "hotel": {
+          "name": "ハイアットリージェンシー横浜",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "景徳鎮",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ではWi-Fiの有無はどちらでも大丈夫です。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "景徳鎮",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0456414688",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "中区",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:15:29"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。ズーラシアはいかがでしょう？必要なご案内はございますか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": "旭区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1667117737149,
+          "selectedResults": [
+            "ズーラシア"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)"
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:16:05",
+      "book": {
+        "hotel": {
+          "name": "ハイアットリージェンシー横浜",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "景徳鎮",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。料金情報と子供入場料を教えてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "景徳鎮",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0456414688",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "中区",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:16:21"
+    },
+    {
+      "role": 0,
+      "content": "はい、子供入場料は200円となります。料金情報としては、大人入場料800円、20名様以上の団体は640円、高校生は300円、団体240円、小中学生200円、団体160円、小学生未満無料、となっております。他に必要なご案内はございますか？",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": "旭区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)"
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:19:17",
+      "book": {
+        "hotel": {
+          "name": "ハイアットリージェンシー横浜",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "景徳鎮",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "これで大丈夫です。ご丁寧にありがとうございました！",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "name",
+          "景徳鎮",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0456414688",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "area",
+          "中区",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "priceinfo",
+          "大人入場料800円、20名様以上の団体は640円、高校生は300円、団体240円、小中学生200円、団体160円、小学生未満無料",
+          false
+        ],
+        [
+          3,
+          "attraction",
+          "childfee",
+          "200円",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-30 08:19:59"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございました。",
+      "payload": [
+        {
+          "field": "attraction",
+          "query": {
+            "city": "横浜",
+            "name": null,
+            "genre": null,
+            "area": "旭区",
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": "安め",
+          "station": null,
+          "wifi": null,
+          "parking": "有り(有料)"
+        },
+        "hotel": {
+          "city": "横浜",
+          "name": null,
+          "genre": "リゾートホテル",
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": "横浜",
+          "name": null,
+          "genre": null,
+          "area": "旭区",
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-30 08:20:08",
+      "book": {
+        "hotel": {
+          "name": "ハイアットリージェンシー横浜",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "景徳鎮",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-30 08:20:15"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 1,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-30 08:20:16"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:58",
+  "final_state": {
+    "restaurant": {
+      "city": "横浜",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": "安め",
+      "station": null,
+      "wifi": null,
+      "parking": "有り(有料)"
+    },
+    "hotel": {
+      "city": "横浜",
+      "name": null,
+      "genre": "リゾートホテル",
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": "横浜",
+      "name": null,
+      "genre": null,
+      "area": "旭区",
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "ハイアットリージェンシー横浜",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "景徳鎮",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

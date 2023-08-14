@@ -1,0 +1,1459 @@
+{
+  "id": 184,
+  "dialogue_code": "dialogue_0184IkAT",
+  "status_code": 2,
+  "user": [
+    2,
+    214
+  ],
+  "username": [
+    "operator_0002vBQH",
+    "customer_0214XrbI"
+  ],
+  "task": 354,
+  "task_name": "main_34",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "fail_info": {
+          "city": "福岡",
+          "station": "渡辺通駅",
+          "genre": "ラーメン・つけ麺"
+        },
+        "info": {
+          "city": "福岡",
+          "station": "dontcare",
+          "genre": "ラーメン・つけ麺"
+        },
+        "reqt": [
+          "parking",
+          "phone"
+        ]
+      },
+      "hotel": {
+        "info": {
+          "city": "福岡",
+          "area": "博多区",
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)"
+        },
+        "reqt": [
+          "phone"
+        ]
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>福岡</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．最寄り駅が<b style='color:blue;'>渡辺通駅</b>のところにしてください．ジャンルは<b style='color:blue;'>ラーメン・つけ麺</b>です．",
+        "希望に合うところが見つからない場合は，最寄り駅は<b style='color:blue;'>考慮しない</b>ものとします．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>駐車場の有無，電話番号</b>を聞いてください．"
+      ],
+      "hotel": [
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．地区は<b style='color:blue;'>博多区</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>電話番号</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "parking",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "phone",
+        ""
+      ],
+      [
+        2,
+        "hotel",
+        "phone",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "hotel"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "こんにちは、福岡へ旅行に行きたいと考えています。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "phone",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:28:25"
+    },
+    {
+      "role": 0,
+      "content": "こんにちは。福岡のどういった情報をお探しでしょうか？",
+      "payload": [
+        {}
+      ],
+      "state": {},
+      "created_at": "2022-10-23 12:28:40",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "福岡旅行の際に利用できる飲食店を探しています。渡辺通駅周辺でラーメンやつけ麺が楽しめるお店はありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "phone",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:29:25"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。そのご希望条件ですと、ご案内できるお店がありませんでした。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": "ラーメン・つけ麺",
+            "area": null,
+            "pricerange": null,
+            "station": "渡辺通駅",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [],
+          "timestamp": 1666528182276
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ラーメン・つけ麺",
+          "area": null,
+          "pricerange": null,
+          "station": "渡辺通駅",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:30:08",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そうですか。では、渡辺通駅以外の所でも大丈夫なので、ラーメンやつけ麺が食べられるお店をお願いします。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "phone",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:30:52"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。では、博多屋台 中洲 十番はいかがでしょうか？",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": "ラーメン・つけ麺",
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "博多屋台 中洲 十番",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666528259780,
+          "selectedResults": [
+            "博多屋台 中洲 十番"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ラーメン・つけ麺",
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:31:21",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多屋台 中洲 十番",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "こちらのお店は駐車場はありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "phone",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:31:39"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。駐車場は無しとなっております。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": "ラーメン・つけ麺",
+            "area": null,
+            "pricerange": null,
+            "station": "",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "博多屋台 中洲 十番",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ラーメン・つけ麺",
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:31:58",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多屋台 中洲 十番",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。こちらの店に行ってみたいので、電話番号を教えてもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "無",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "phone",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:32:36"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は、0924087327です。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": "ラーメン・つけ麺",
+            "area": null,
+            "pricerange": null,
+            "station": "",
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "博多屋台 中洲 十番",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ラーメン・つけ麺",
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:32:53",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多屋台 中洲 十番",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "あと、博多で泊まれる場所を探しています。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "無",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0924087327",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "phone",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:33:30"
+    },
+    {
+      "role": 0,
+      "content": "博多区の宿泊施設は６７件ほど候補がございますが、何かご希望の条件などはありますでしょうか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "博多区",
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null,
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666528419355
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ラーメン・つけ麺",
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "博多区",
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:34:10",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多屋台 中洲 十番",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "Wi-Fiと駐車場が無料で利用できるところだとありがたいです。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "無",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0924087327",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "phone",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:34:40"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。そういたしますと２件ございます。WITH THE STYLE FUKUOKAと、HOTEL AZ 福岡金の隈店がありますが、気になる方はございますか？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "博多区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [],
+          "timestamp": 1666528484473
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ラーメン・つけ麺",
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "博多区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:35:32",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多屋台 中洲 十番",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "WITH THE STYLE FUKUOKAが気になります。自身で予約を取ろうと思うので電話番号を教えてもらえないでしょうか。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "無",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0924087327",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "phone",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:36:13"
+    },
+    {
+      "role": 0,
+      "content": "WITH THE STYLE FUKUOKAの電話番号は、0924333900です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": "博多区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": "有り(無料)",
+            "withrestaurant": null
+          },
+          "book": [
+            {
+              "name": "WITH THE STYLE FUKUOKA",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0,
+          "selectedResults": [
+            "WITH THE STYLE FUKUOKA"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": null,
+          "genre": "ラーメン・つけ麺",
+          "area": null,
+          "pricerange": null,
+          "station": "",
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": "博多区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": "有り(無料)",
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-23 12:36:38",
+      "book": {
+        "hotel": {
+          "name": "WITH THE STYLE FUKUOKA",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "博多屋台 中洲 十番",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "わかりました。ご対応ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "parking",
+          "無",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "phone",
+          "0924087327",
+          false
+        ],
+        [
+          2,
+          "hotel",
+          "phone",
+          "0924333900",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-23 12:36:54"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-23 12:37:02"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-23 12:37:03"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:55",
+  "final_state": {
+    "restaurant": {
+      "city": "福岡",
+      "name": null,
+      "genre": "ラーメン・つけ麺",
+      "area": null,
+      "pricerange": null,
+      "station": "",
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "福岡",
+      "name": null,
+      "genre": null,
+      "area": "博多区",
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": "有り(無料)",
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": null,
+      "name": null,
+      "cashless": null,
+      "jumbo": null
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "WITH THE STYLE FUKUOKA",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "博多屋台 中洲 十番",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": null,
+      "value": {
+        "day": [
+          null,
+          null
+        ],
+        "time": null,
+        "departurepoint": null,
+        "arrivalpoint": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

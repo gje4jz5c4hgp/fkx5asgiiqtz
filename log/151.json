@@ -1,0 +1,1616 @@
+{
+  "id": 151,
+  "dialogue_code": "dialogue_0151qXrw",
+  "status_code": 2,
+  "user": [
+    4,
+    202
+  ],
+  "username": [
+    "operator_0004xDpJ",
+    "customer_0202FLfk"
+  ],
+  "task": 321,
+  "task_name": "main_1",
+  "task_content": {
+    "goals": {
+      "hotel": {
+        "info": {
+          "city": "京都",
+          "area": "下京区",
+          "wifi": "有り(無料)",
+          "withrestaurant": "有り"
+        },
+        "reqt": [
+          "name",
+          "reference"
+        ],
+        "fail_book": {
+          "people": 2,
+          "day": "9/13",
+          "stay": 4
+        },
+        "book": {
+          "people": 1,
+          "day": "9/13",
+          "stay": 4
+        }
+      },
+      "taxi": {
+        "info": {
+          "city": "京都",
+          "cashless": "対応"
+        },
+        "reqt": [
+          "name",
+          "jumbo",
+          "reference"
+        ],
+        "book": {
+          "day": "9/13",
+          "time": "11:30",
+          "departurepoint": "hotel",
+          "arrivalpoint": "東映太秦映画村"
+        }
+      },
+      "weather": {
+        "info": {
+          "city": "京都",
+          "area": "左京区",
+          "day": "9/13"
+        },
+        "reqt": [
+          "maxtemperature"
+        ]
+      }
+    },
+    "descriptions": {
+      "hotel": [
+        "あなたは<b style='color:blue;'>京都</b>への旅行を計画しています．",
+        "当日泊まる<b style='color:blue;'>宿泊施設</b>を探してください．地区は<b style='color:blue;'>下京区</b>です．Wi-Fiが<b style='color:blue;'>無料</b>で利用できるところにしてください．<b style='color:blue;'>レストランが併設されている</b>ところにしてください．",
+        "条件に合う宿泊施設が見つかったら，<b style='color:green;'>施設名</b>を聞いてください．",
+        "見つけた宿泊施設を予約してください．人数は<b style='color:blue;'>2</b>人です．日付は<b style='color:blue;'>9/13</b>です．宿泊日数は<b style='color:blue;'>4</b>泊です．",
+        "希望の条件が合わない場合は，人数を<b style='color:blue;'>1</b>に変更します．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，ジャンボタクシー対応</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>9/13</b>です．時間は<b style='color:blue;'>11:30</b>です．出発地は先ほど見つけた<b style='color:blue;'>宿泊所</b>です．目的地は<b style='color:blue;'>東映太秦映画村</b>というところです．"
+      ],
+      "weather": [
+        "当日の天候を調べます．地区は<b style='color:blue;'>左京区</b>です．日付は<b style='color:blue;'>9/13</b>です．",
+        "<b style='color:green;'>最高気温</b>を聞いてください．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "hotel",
+        "name",
+        ""
+      ],
+      [
+        1,
+        "hotel",
+        "reference",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "jumbo",
+        ""
+      ],
+      [
+        2,
+        "taxi",
+        "reference",
+        ""
+      ],
+      [
+        3,
+        "weather",
+        "maxtemperature",
+        ""
+      ]
+    ],
+    "domains": [
+      "hotel",
+      "taxi",
+      "weather"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "京都の下京区で宿を探しています。Wi-Fi無料でレストランが一緒になっている所、みつくろってもらえませんか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-21 04:12:52"
+    },
+    {
+      "role": 0,
+      "content": "承知致しました。それでは、リーガロイヤルホテル京都はいかがでしょう？値段帯は安めのシティホテルとなります。最寄りの京都駅から徒歩で7分です。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "下京区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "リーガロイヤルホテル京都",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "stay": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666325602063,
+          "selectedResults": [
+            "なごみ宿 都和",
+            "京都東急ホテル",
+            "アパホテル〈京都駅前〉",
+            "リーガロイヤルホテル京都"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-21 04:15:26",
+      "book": {
+        "hotel": {
+          "name": "リーガロイヤルホテル京都",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "駅からも近くていいですね。9月13日から4泊予約したいんですけど。人数は2人でお願いします。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "リーガロイヤルホテル京都",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-21 04:16:18"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません、その条件では予約できませんでした。いかが致しましょう？",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "下京区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "リーガロイヤルホテル京都",
+              "value": {
+                "people": "2",
+                "day": [
+                  9,
+                  13
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1666325801607,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-21 04:17:21",
+      "book": {
+        "hotel": {
+          "name": "リーガロイヤルホテル京都",
+          "value": {
+            "people": "2",
+            "day": [
+              9,
+              13
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1666325801607,
+          "success": false,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "えー、しょうがないなあ、じゃあ、1人だけならなんとかなりますか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "リーガロイヤルホテル京都",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-21 04:17:49"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません、人数の変更ありがとうございます。予約が可能になりまして、ご予約番号は、30247となります。",
+      "payload": [
+        {
+          "field": "hotel",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "genre": null,
+            "area": "下京区",
+            "pricerange": null,
+            "station": null,
+            "wifi": "有り(無料)",
+            "parking": null,
+            "withrestaurant": "有り"
+          },
+          "book": [
+            {
+              "name": "リーガロイヤルホテル京都",
+              "value": {
+                "people": "1",
+                "day": [
+                  9,
+                  13
+                ],
+                "stay": "4"
+              },
+              "timestamp": 1666325878679,
+              "success": true,
+              "ref": "30247"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-21 04:18:55",
+      "book": {
+        "hotel": {
+          "name": "リーガロイヤルホテル京都",
+          "value": {
+            "people": "1",
+            "day": [
+              9,
+              13
+            ],
+            "stay": "4"
+          },
+          "timestamp": 1666325878679,
+          "success": true,
+          "ref": "30247"
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ああ、よかった。あと、キャッシュレス払いができるタクシー会社を教えてほしいんですけど。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "リーガロイヤルホテル京都",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "30247",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-21 04:19:57"
+    },
+    {
+      "role": 0,
+      "content": "承知致しました。それでは、都タクシー株式会社はいかがでしょう？キャッシュレスの他、ジャンボタクシーにも対応しております。電話番号は、0756616611となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "都タクシー株式会社",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1666326012669,
+          "selectedResults": [
+            "都タクシー株式会社"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-21 04:21:21",
+      "book": {
+        "hotel": {
+          "name": "リーガロイヤルホテル京都",
+          "value": {
+            "people": "1",
+            "day": [
+              9,
+              13
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "都タクシー株式会社",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ジャンボも使えるのはいいですね。9月13日に予約したいんですけど。11時半にリーガロイヤルホテル京都を出て、東映太秦映画村まで行きたいんです。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "リーガロイヤルホテル京都",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "30247",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "都タクシー株式会社",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "可",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-21 04:22:52"
+    },
+    {
+      "role": 0,
+      "content": "ありがとうございます。予約が完了致しました。ご予約番号は、94362となります。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "都タクシー株式会社",
+              "value": {
+                "day": [
+                  9,
+                  13
+                ],
+                "time": "11:30",
+                "departurepoint": "リーガロイヤルホテル京都",
+                "arrivalpoint": "東映太秦映画村"
+              },
+              "timestamp": 1666326203597,
+              "success": true,
+              "ref": "94362"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-21 04:24:06",
+      "book": {
+        "hotel": {
+          "name": "リーガロイヤルホテル京都",
+          "value": {
+            "people": "1",
+            "day": [
+              9,
+              13
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "都タクシー株式会社",
+          "value": {
+            "day": [
+              9,
+              13
+            ],
+            "time": "11:30",
+            "departurepoint": "リーガロイヤルホテル京都",
+            "arrivalpoint": "東映太秦映画村"
+          },
+          "timestamp": 1666326203597,
+          "success": true,
+          "ref": "94362"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "一揃い予約してもらえて助かりました。お世話になりました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "リーガロイヤルホテル京都",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "30247",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "都タクシー株式会社",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "可",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "94362",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-21 04:24:44"
+    },
+    {
+      "role": 0,
+      "content": "承知致しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "京都",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": null
+          },
+          "book": [
+            {
+              "name": "都タクシー株式会社",
+              "value": {
+                "day": [
+                  9,
+                  13
+                ],
+                "time": "11:30",
+                "departurepoint": "リーガロイヤルホテル京都",
+                "arrivalpoint": "東映太秦映画村"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-21 04:25:16",
+      "book": {
+        "hotel": {
+          "name": "リーガロイヤルホテル京都",
+          "value": {
+            "people": "1",
+            "day": [
+              9,
+              13
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "都タクシー株式会社",
+          "value": {
+            "day": [
+              9,
+              13
+            ],
+            "time": "11:30",
+            "departurepoint": "リーガロイヤルホテル京都",
+            "arrivalpoint": "東映太秦映画村"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "すみません、あと一つだけ聞いていいですか？9月13日の左京区、暑くなりそうですか？",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "リーガロイヤルホテル京都",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "30247",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "都タクシー株式会社",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "可",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "94362",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-21 04:25:53"
+    },
+    {
+      "role": 0,
+      "content": "配慮が足りず、申し訳ございませんでした。当日の天気は曇のち晴、最低気温19度、最高気温は34.8度ですので、まだまだ暑さが残りそうです。",
+      "payload": [
+        {
+          "field": "weather",
+          "query": {
+            "city": "京都",
+            "area": "左京区",
+            "day": [
+              9,
+              13
+            ]
+          },
+          "book": [],
+          "timestamp": 1666326388627,
+          "selectedResults": [
+            "9/13 京都 左京区 の天気"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": "京都",
+          "name": null,
+          "genre": null,
+          "area": "下京区",
+          "pricerange": null,
+          "station": null,
+          "wifi": "有り(無料)",
+          "parking": null,
+          "withrestaurant": "有り"
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": "京都",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": null
+        },
+        "weather": {
+          "city": "京都",
+          "area": "左京区",
+          "day": [
+            9,
+            13
+          ]
+        }
+      },
+      "created_at": "2022-10-21 04:28:32",
+      "book": {
+        "hotel": {
+          "name": "リーガロイヤルホテル京都",
+          "value": {
+            "people": "1",
+            "day": [
+              9,
+              13
+            ],
+            "stay": "4"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "都タクシー株式会社",
+          "value": {
+            "day": [
+              9,
+              13
+            ],
+            "time": "11:30",
+            "departurepoint": "リーガロイヤルホテル京都",
+            "arrivalpoint": "東映太秦映画村"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "いやあ、やっぱり京都は暑いですね。忘れずに確認できてよかったです。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "hotel",
+          "name",
+          "リーガロイヤルホテル京都",
+          false
+        ],
+        [
+          1,
+          "hotel",
+          "reference",
+          "30247",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "name",
+          "都タクシー株式会社",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "jumbo",
+          "可",
+          false
+        ],
+        [
+          2,
+          "taxi",
+          "reference",
+          "94362",
+          false
+        ],
+        [
+          3,
+          "weather",
+          "maxtemperature",
+          "34.8度",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-21 04:29:22"
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-21 04:29:33"
+    },
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 3,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": "お世話になりました。という言葉から対話の終了と勘違いしてしまいました。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-21 04:30:50"
+    }
+  ],
+  "created_at": "2022-10-14 03:22:55",
+  "final_state": {
+    "restaurant": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": "京都",
+      "name": null,
+      "genre": null,
+      "area": "下京区",
+      "pricerange": null,
+      "station": null,
+      "wifi": "有り(無料)",
+      "parking": null,
+      "withrestaurant": "有り"
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "parking": null
+    },
+    "taxi": {
+      "city": "京都",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": null
+    },
+    "weather": {
+      "city": "京都",
+      "area": "左京区",
+      "day": [
+        9,
+        13
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": "リーガロイヤルホテル京都",
+      "value": {
+        "people": "1",
+        "day": [
+          9,
+          13
+        ],
+        "stay": "4"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "都タクシー株式会社",
+      "value": {
+        "day": [
+          9,
+          13
+        ],
+        "time": "11:30",
+        "departurepoint": "リーガロイヤルホテル京都",
+        "arrivalpoint": "東映太秦映画村"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}

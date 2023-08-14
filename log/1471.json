@@ -1,0 +1,2317 @@
+{
+  "id": 1471,
+  "dialogue_code": "dialogue_1471wMCF",
+  "status_code": 2,
+  "user": [
+    8,
+    269
+  ],
+  "username": [
+    "operator_0008yXZl",
+    "customer_0269bUGK"
+  ],
+  "task": 1641,
+  "task_name": "main_1321",
+  "task_content": {
+    "goals": {
+      "restaurant": {
+        "info": {
+          "city": "福岡",
+          "name": "一斗五合"
+        },
+        "reqt": [
+          "pricerange",
+          "station",
+          "address"
+        ]
+      },
+      "shopping": {
+        "info": {
+          "city": "福岡",
+          "parking": "有り(無料)",
+          "station": "橋本駅"
+        },
+        "reqt": [
+          "name",
+          "genre",
+          "phone"
+        ]
+      },
+      "taxi": {
+        "info": {
+          "city": "福岡",
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "reqt": [
+          "name",
+          "phone",
+          "reference"
+        ],
+        "fail_book": {
+          "day": "9/12",
+          "time": "13:00",
+          "departurepoint": "restaurant",
+          "arrivalpoint": "shopping"
+        },
+        "book": {
+          "day": "9/12",
+          "time": "14:00",
+          "departurepoint": "restaurant",
+          "arrivalpoint": "shopping"
+        }
+      }
+    },
+    "descriptions": {
+      "restaurant": [
+        "あなたは<b style='color:blue;'>福岡</b>への旅行を計画しています．",
+        "当日食事ができる<b style='color:blue;'>飲食店</b>を探してください．店名が<b style='color:blue;'>一斗五合</b>というところです．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>値段帯，最寄り駅，住所</b>を聞いてください．"
+      ],
+      "shopping": [
+        "当日<b style='color:blue;'>買い物</b>ができるところを探してください．駐車場を<b style='color:blue;'>無料</b>で利用できるところにしてください．最寄り駅が<b style='color:blue;'>橋本駅</b>のところにしてください．",
+        "条件が合うお店が見つかったら，<b style='color:green;'>店舗名，ジャンル，電話番号</b>を聞いてください．"
+      ],
+      "taxi": [
+        "当日利用できる<b style='color:blue;'>タクシー会社</b>を探してください．<b style='color:blue;'>キャッシュレス払い</b>できるところにしてください．<b style='color:blue;'>ジャンボタクシーを利用できる</b>ところにしてください．",
+        "条件が合うタクシー会社が見つかったら，<b style='color:green;'>タクシー会社名，電話番号</b>を聞いてください．",
+        "見つけたタクシー会社で当日のタクシーを予約してください．日付は<b style='color:blue;'>9/12</b>です．時間は<b style='color:blue;'>13:00</b>です．出発地は先ほど見つけた<b style='color:blue;'>飲食店</b>です．目的地は先ほど見つけた<b style='color:blue;'>買い物店舗</b>です．",
+        "希望の条件が合わない場合は，時間を<b style='color:blue;'>14:00</b>に変更します．"
+      ]
+    },
+    "items": [
+      [
+        1,
+        "restaurant",
+        "pricerange",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "station",
+        ""
+      ],
+      [
+        1,
+        "restaurant",
+        "address",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "name",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "genre",
+        ""
+      ],
+      [
+        2,
+        "shopping",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "name",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "phone",
+        ""
+      ],
+      [
+        3,
+        "taxi",
+        "reference",
+        ""
+      ]
+    ],
+    "domains": [
+      "restaurant",
+      "shopping",
+      "taxi"
+    ]
+  },
+  "messages": [
+    {
+      "role": 1,
+      "content": "福岡にある一斗五合というお店の値段帯を教えてください。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 06:00:37"
+    },
+    {
+      "role": 0,
+      "content": "かしこまりました。こちら値段帯は普通となっております。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": "一斗五合",
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "一斗五合",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667196055665,
+          "selectedResults": [
+            "一斗五合"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": "一斗五合",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 06:01:17",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "一斗五合",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。あと、住所と最寄り駅も教えてもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 06:01:31"
+    },
+    {
+      "role": 0,
+      "content": "住所は福岡県福岡市早良区祖原14-25でございます。最寄り駅は西新駅でございます。",
+      "payload": [
+        {
+          "field": "restaurant",
+          "query": {
+            "city": "福岡",
+            "name": "一斗五合",
+            "genre": null,
+            "area": null,
+            "pricerange": null,
+            "station": null,
+            "wifi": null,
+            "parking": null
+          },
+          "book": [
+            {
+              "name": "一斗五合",
+              "value": {
+                "people": null,
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": "一斗五合",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "parking": null
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 06:01:53",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "一斗五合",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日買い物もしたいのですが、橋本駅近くで無料駐車場のあるところはないでしょうか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "西新駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "福岡県福岡市早良区祖原14-25",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 06:02:41"
+    },
+    {
+      "role": 0,
+      "content": "ではホームセンター グッデイ 西福岡店はいかがでしょうか。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "橋本駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 1667196178828,
+          "selectedResults": [
+            "ホームセンター グッデイ 西福岡店"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": "一斗五合",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "橋本駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 06:03:16",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "一斗五合",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。そのお店のジャンルと電話番号を教えてもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "西新駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "福岡県福岡市早良区祖原14-25",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ホームセンター グッデイ 西福岡店",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "genre",
+          "",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 06:03:42"
+    },
+    {
+      "role": 0,
+      "content": "ジャンルはその他、電話番号は0928911122でございます。",
+      "payload": [
+        {
+          "field": "shopping",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "genre": null,
+            "area": null,
+            "station": "橋本駅",
+            "parking": "有り(無料)"
+          },
+          "book": [],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": "一斗五合",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "橋本駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": null,
+          "name": null,
+          "cashless": null,
+          "jumbo": null
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 06:04:00",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "一斗五合",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": null,
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。当日タクシーを利用しようと思っていますが、キャッシュレス払いとジャンボタクシーが利用できる会社はありますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "西新駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "福岡県福岡市早良区祖原14-25",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ホームセンター グッデイ 西福岡店",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "genre",
+          "その他",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "phone",
+          "0928911122",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 06:04:48"
+    },
+    {
+      "role": 0,
+      "content": "はい。福岡西鉄タクシー（株）がございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡西鉄タクシー（株）",
+              "value": {
+                "day": [
+                  null,
+                  null
+                ],
+                "time": null,
+                "departurepoint": null,
+                "arrivalpoint": null
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 1667196301069,
+          "selectedResults": [
+            "福岡西鉄タクシー（株）"
+          ]
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": "一斗五合",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "橋本駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 06:05:09",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "一斗五合",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡西鉄タクシー（株）",
+          "value": {
+            "day": [
+              null,
+              null
+            ],
+            "time": null,
+            "departurepoint": null,
+            "arrivalpoint": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "そちらを、９月１２日の１３時に、一斗五合からホームセンター グッデイ 西福岡店まで予約お願いできますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "西新駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "福岡県福岡市早良区祖原14-25",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ホームセンター グッデイ 西福岡店",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "genre",
+          "その他",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "phone",
+          "0928911122",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "福岡西鉄タクシー（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 06:06:08"
+    },
+    {
+      "role": 0,
+      "content": "申し訳ございません。その条件では予約ができませんでした。いかがなさいますか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡西鉄タクシー（株）",
+              "value": {
+                "day": [
+                  9,
+                  12
+                ],
+                "time": "13:00",
+                "departurepoint": "一斗五合",
+                "arrivalpoint": "ホームセンター グッデイ 西福岡店"
+              },
+              "timestamp": 1667196389805,
+              "success": false,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": "一斗五合",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "橋本駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 06:06:45",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "一斗五合",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡西鉄タクシー（株）",
+          "value": {
+            "day": [
+              9,
+              12
+            ],
+            "time": "13:00",
+            "departurepoint": "一斗五合",
+            "arrivalpoint": "ホームセンター グッデイ 西福岡店"
+          },
+          "timestamp": 1667196389805,
+          "success": false,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "時間を１４時に変更すれば可能でしょうか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "西新駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "福岡県福岡市早良区祖原14-25",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ホームセンター グッデイ 西福岡店",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "genre",
+          "その他",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "phone",
+          "0928911122",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "福岡西鉄タクシー（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 06:06:58"
+    },
+    {
+      "role": 0,
+      "content": "その時間ですと予約が可能でございました。予約が完了いたしました。予約番号は14170でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡西鉄タクシー（株）",
+              "value": {
+                "day": [
+                  9,
+                  12
+                ],
+                "time": "14:00",
+                "departurepoint": "一斗五合",
+                "arrivalpoint": "ホームセンター グッデイ 西福岡店"
+              },
+              "timestamp": 1667196424103,
+              "success": true,
+              "ref": "14170"
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": "一斗五合",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "橋本駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 06:07:19",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "一斗五合",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡西鉄タクシー（株）",
+          "value": {
+            "day": [
+              9,
+              12
+            ],
+            "time": "14:00",
+            "departurepoint": "一斗五合",
+            "arrivalpoint": "ホームセンター グッデイ 西福岡店"
+          },
+          "timestamp": 1667196424103,
+          "success": true,
+          "ref": "14170"
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。電話番号も教えてもらえますか？",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "西新駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "福岡県福岡市早良区祖原14-25",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ホームセンター グッデイ 西福岡店",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "genre",
+          "その他",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "phone",
+          "0928911122",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "福岡西鉄タクシー（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 06:07:34"
+    },
+    {
+      "role": 0,
+      "content": "電話番号は0570010531でございます。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡西鉄タクシー（株）",
+              "value": {
+                "day": [
+                  9,
+                  12
+                ],
+                "time": "14:00",
+                "departurepoint": "一斗五合",
+                "arrivalpoint": "ホームセンター グッデイ 西福岡店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": "一斗五合",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "橋本駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 06:07:43",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "一斗五合",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡西鉄タクシー（株）",
+          "value": {
+            "day": [
+              9,
+              12
+            ],
+            "time": "14:00",
+            "departurepoint": "一斗五合",
+            "arrivalpoint": "ホームセンター グッデイ 西福岡店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "ありがとうございます。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "西新駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "福岡県福岡市早良区祖原14-25",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ホームセンター グッデイ 西福岡店",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "genre",
+          "その他",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "phone",
+          "0928911122",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "福岡西鉄タクシー（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570010531",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "14170",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 06:07:59"
+    },
+    {
+      "role": 0,
+      "content": "ほかにご用件はございますか。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡西鉄タクシー（株）",
+              "value": {
+                "day": [
+                  9,
+                  12
+                ],
+                "time": "14:00",
+                "departurepoint": "一斗五合",
+                "arrivalpoint": "ホームセンター グッデイ 西福岡店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": "一斗五合",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "橋本駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 06:08:03",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "一斗五合",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡西鉄タクシー（株）",
+          "value": {
+            "day": [
+              9,
+              12
+            ],
+            "time": "14:00",
+            "departurepoint": "一斗五合",
+            "arrivalpoint": "ホームセンター グッデイ 西福岡店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    },
+    {
+      "role": 1,
+      "content": "大丈夫です。ありがとうございました。",
+      "payload": [
+        [
+          1,
+          "restaurant",
+          "pricerange",
+          "普通",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "station",
+          "西新駅",
+          false
+        ],
+        [
+          1,
+          "restaurant",
+          "address",
+          "福岡県福岡市早良区祖原14-25",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "name",
+          "ホームセンター グッデイ 西福岡店",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "genre",
+          "その他",
+          false
+        ],
+        [
+          2,
+          "shopping",
+          "phone",
+          "0928911122",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "name",
+          "福岡西鉄タクシー（株）",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "phone",
+          "0570010531",
+          false
+        ],
+        [
+          3,
+          "taxi",
+          "reference",
+          "14170",
+          false
+        ]
+      ],
+      "state": null,
+      "created_at": "2022-10-31 06:08:08"
+    },
+    {
+      "role": 0,
+      "content": "承知しました。ありがとうございました。",
+      "payload": [
+        {
+          "field": "taxi",
+          "query": {
+            "city": "福岡",
+            "name": null,
+            "cashless": "対応",
+            "jumbo": "対応"
+          },
+          "book": [
+            {
+              "name": "福岡西鉄タクシー（株）",
+              "value": {
+                "day": [
+                  9,
+                  12
+                ],
+                "time": "14:00",
+                "departurepoint": "一斗五合",
+                "arrivalpoint": "ホームセンター グッデイ 西福岡店"
+              },
+              "timestamp": 0,
+              "success": null,
+              "ref": ""
+            }
+          ],
+          "timestamp": 0
+        }
+      ],
+      "state": {
+        "restaurant": {
+          "city": "福岡",
+          "name": "一斗五合",
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "hotel": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "pricerange": null,
+          "station": null,
+          "wifi": null,
+          "parking": null,
+          "withrestaurant": null
+        },
+        "attraction": {
+          "city": null,
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": null,
+          "wifi": null,
+          "parking": null
+        },
+        "shopping": {
+          "city": "福岡",
+          "name": null,
+          "genre": null,
+          "area": null,
+          "station": "橋本駅",
+          "parking": "有り(無料)"
+        },
+        "taxi": {
+          "city": "福岡",
+          "name": null,
+          "cashless": "対応",
+          "jumbo": "対応"
+        },
+        "weather": {
+          "city": null,
+          "area": null,
+          "day": [
+            null,
+            null
+          ]
+        }
+      },
+      "created_at": "2022-10-31 06:08:12",
+      "book": {
+        "hotel": {
+          "name": null,
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "stay": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "restaurant": {
+          "name": "一斗五合",
+          "value": {
+            "people": null,
+            "day": [
+              null,
+              null
+            ],
+            "time": null
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        },
+        "taxi": {
+          "name": "福岡西鉄タクシー（株）",
+          "value": {
+            "day": [
+              9,
+              12
+            ],
+            "time": "14:00",
+            "departurepoint": "一斗五合",
+            "arrivalpoint": "ホームセンター グッデイ 西福岡店"
+          },
+          "timestamp": 0,
+          "success": null,
+          "ref": ""
+        }
+      }
+    }
+  ],
+  "questionnaires": [
+    {
+      "role": 0,
+      "content": [
+        {
+          "id": "w1",
+          "params": 0,
+          "description": "顧客の要望（施設の検索，情報の提供など）に適切に応答し，対話を円滑に進められましたか．"
+        },
+        {
+          "id": "w2_v2",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "w3",
+          "params": null,
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 06:08:23"
+    },
+    {
+      "role": 1,
+      "content": [
+        {
+          "id": "u1",
+          "params": 0,
+          "description": "対話シナリオ通りに対話を進め，タスク（希望の条件を伝える，必要な情報を聞き出すなど）を達成できましたか．"
+        },
+        {
+          "id": "u2_v3",
+          "params": [],
+          "description": "対話中，マニュアル通りに作業できなかった項目があればチェックしてください．"
+        },
+        {
+          "id": "u3",
+          "params": "３ページ目のシナリオ2で電話番号を聞かないといけないのに、先に3に進んでしまいました。予約をした後で電話番号を聞いてしまいました。",
+          "description": "その他，マニュアル通りに作業できなかった点や失敗してしまった点があれば，簡単に記述してください．"
+        }
+      ],
+      "created_at": "2022-10-31 06:09:31"
+    }
+  ],
+  "created_at": "2022-10-14 03:23:04",
+  "final_state": {
+    "restaurant": {
+      "city": "福岡",
+      "name": "一斗五合",
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "hotel": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "pricerange": null,
+      "station": null,
+      "wifi": null,
+      "parking": null,
+      "withrestaurant": null
+    },
+    "attraction": {
+      "city": null,
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": null,
+      "wifi": null,
+      "parking": null
+    },
+    "shopping": {
+      "city": "福岡",
+      "name": null,
+      "genre": null,
+      "area": null,
+      "station": "橋本駅",
+      "parking": "有り(無料)"
+    },
+    "taxi": {
+      "city": "福岡",
+      "name": null,
+      "cashless": "対応",
+      "jumbo": "対応"
+    },
+    "weather": {
+      "city": null,
+      "area": null,
+      "day": [
+        null,
+        null
+      ]
+    }
+  },
+  "final_book": {
+    "hotel": {
+      "name": null,
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "stay": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "restaurant": {
+      "name": "一斗五合",
+      "value": {
+        "people": null,
+        "day": [
+          null,
+          null
+        ],
+        "time": null
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    },
+    "taxi": {
+      "name": "福岡西鉄タクシー（株）",
+      "value": {
+        "day": [
+          9,
+          12
+        ],
+        "time": "14:00",
+        "departurepoint": "一斗五合",
+        "arrivalpoint": "ホームセンター グッデイ 西福岡店"
+      },
+      "timestamp": 0,
+      "success": null,
+      "ref": ""
+    }
+  }
+}
